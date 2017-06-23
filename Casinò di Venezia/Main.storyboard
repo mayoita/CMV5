@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="slu-Nr-jMh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Controller-->
+        <scene sceneID="Jbe-hV-XQg">
+            <objects>
+                <collectionViewController id="YfG-RZ-DNo" customClass="HomeController" customModule="Casino__di_Venezia" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xJF-r7-1Zb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XcV-I3-aXh">
+                            <size key="itemSize" width="319" height="236"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellId" id="8q7-NV-Gm5" customClass="EventListCell" customModule="Casino__di_Venezia" customModuleProvider="target">
+                                <rect key="frame" x="28" y="0.0" width="319" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="319" height="236"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sediciNoni.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ya-fO-PSb">
+                                            <rect key="frame" x="0.0" y="0.0" width="319" height="173.5"/>
+                                            <color key="backgroundColor" red="0.058823529409999999" green="0.79215686269999996" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="8ya-fO-PSb" secondAttribute="height" multiplier="101:55" id="Diu-5e-rIa"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xr6-EP-1WN">
+                                            <rect key="frame" x="13" y="178.5" width="42" height="42"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="42" id="Dnf-rf-yBK"/>
+                                                <constraint firstAttribute="width" constant="42" id="tSh-Op-S6y"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titolo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2RB-A4-f7W">
+                                            <rect key="frame" x="60" y="181.5" width="246" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="7CP-9S-FzS"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="intro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k80-Lz-t4a">
+                                            <rect key="frame" x="60" y="198.5" width="246" height="15"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="15" id="UZf-E6-tnI"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.42412159974093255" green="0.42412159974093255" blue="0.42412159974093255" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="2RB-A4-f7W" firstAttribute="top" secondItem="8ya-fO-PSb" secondAttribute="bottom" constant="8" id="25h-wu-dj3"/>
+                                    <constraint firstItem="8ya-fO-PSb" firstAttribute="top" secondItem="8q7-NV-Gm5" secondAttribute="top" id="3WP-4Q-qV4"/>
+                                    <constraint firstItem="2RB-A4-f7W" firstAttribute="leading" secondItem="xr6-EP-1WN" secondAttribute="trailing" constant="5" id="4T1-Cp-FKc"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="2RB-A4-f7W" secondAttribute="trailing" constant="5" id="HMD-8b-2bk"/>
+                                    <constraint firstItem="xr6-EP-1WN" firstAttribute="top" secondItem="8ya-fO-PSb" secondAttribute="bottom" constant="5" id="IYP-C6-ajQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="8ya-fO-PSb" secondAttribute="trailing" id="OOk-do-lov"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="k80-Lz-t4a" secondAttribute="trailing" constant="5" id="Pqt-8u-g2f"/>
+                                    <constraint firstItem="k80-Lz-t4a" firstAttribute="leading" secondItem="xr6-EP-1WN" secondAttribute="trailing" constant="5" id="T0U-cj-7lk"/>
+                                    <constraint firstItem="xr6-EP-1WN" firstAttribute="leading" secondItem="8q7-NV-Gm5" secondAttribute="leadingMargin" constant="5" id="Xop-yL-c75"/>
+                                    <constraint firstItem="8ya-fO-PSb" firstAttribute="leading" secondItem="8q7-NV-Gm5" secondAttribute="leading" id="bQ2-kD-p6W"/>
+                                    <constraint firstItem="k80-Lz-t4a" firstAttribute="top" secondItem="2RB-A4-f7W" secondAttribute="bottom" constant="2" id="vyC-sM-WTK"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="data" destination="xr6-EP-1WN" id="hVK-tc-ouZ"/>
+                                    <outlet property="image" destination="8ya-fO-PSb" id="vmQ-Za-KWc"/>
+                                    <outlet property="intro" destination="k80-Lz-t4a" id="Ldd-IQ-eVH"/>
+                                    <outlet property="titolo" destination="2RB-A4-f7W" id="6RW-GB-vIM"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="YfG-RZ-DNo" id="Gp8-fs-Oat"/>
+                            <outlet property="delegate" destination="YfG-RZ-DNo" id="jGN-9s-gmg"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="9uN-pP-a07"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KKs-Su-xif" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053.5999999999999" y="89.505247376311857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8cf-kM-M0y">
+            <objects>
+                <navigationController id="slu-Nr-jMh" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bvi-0W-k8j">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YfG-RZ-DNo" kind="relationship" relationship="rootViewController" id="c7o-Bb-n7z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kQV-bz-M5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="35"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sediciNoni.png" width="1000" height="560"/>
+    </resources>
+</document>

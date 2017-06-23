@@ -1,0 +1,6 @@
+framework module Pods_Casino__di_Venezia {
+  umbrella header "Pods-Casinò di Venezia-umbrella.h"
+
+  export *
+  module * { export * }
+}
