@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import SDWebImage
+import QuartzCore
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
@@ -19,10 +20,33 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         super.viewDidLoad()
         loadDatabase()
         navigationItem.title = "Home"
+        
+        
+        let titleLabel = UILabel(frame: CGRect(x: 0,y: 0,width: view.frame.width - 32,height:  view.frame.height))
+        titleLabel.text = "Home"
+        titleLabel.textColor = UIColor.black
+        titleLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightLight)
+        navigationItem.titleView = titleLabel
         collectionView?.backgroundColor = UIColor.white
-       // collectionView?.register(UICollectionViewCell.self,forCellWithReuseIdentifier:"cellId")
+       
+        setupMenuBar()
     }
 
+    let menuBar: MenuBar = {
+        let mb = MenuBar()
+        return mb
+    } ()
+    
+    private func setupMenuBar(){
+        view.addSubview(menuBar)
+        let views = ["view": menuBar]
+      
+        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutFormatOptions.alignAllCenterY, metrics: nil, views: views)
+        let verticalConstraints =  NSLayoutConstraint.constraints(withVisualFormat: "V:|[view(50)]|", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: views)
+        
+        view.addConstraints(horizontalConstraints)
+        view.addConstraints(verticalConstraints)
+    }
    
    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return feedArray.count
@@ -30,12 +54,17 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell( withReuseIdentifier: "cellId",  for: indexPath) as! EventListCell
-        formatter.dateFormat = "dd/MM"
+        formatter.dateFormat = "dd"
         let myDate = formatter.string(from: feedArray[indexPath.row].StartDate as Date)
-        cell.backgroundColor = UIColor.red
+        formatter.dateFormat = "MMM"
+        let myMonth = formatter.string(from: feedArray[indexPath.row].StartDate as Date)
+        
         cell.titolo.text = feedArray[indexPath.row].Name
         cell.intro.text = feedArray[indexPath.row].Description
         cell.data.text = myDate
+        cell.data.layer.masksToBounds = true
+        cell.data.layer.cornerRadius = 5.0
+        cell.mese.text = myMonth
         cell.image.sd_setImage(with: URL(string: feedArray[indexPath.row].ImageName), placeholderImage: UIImage(named: "sediciNoni"))
         
         return cell
@@ -96,17 +125,20 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
               
                 var ImageEvent1 = ""
                 if (events.value(forKey: "ImageEvent1") != nil) {
-                    ImageEvent1 = events.value(forKey: "ImageEvent1") as! String!
+                    let fileName = events.value(forKey: "ImageEvent1") as! String!
+                    ImageEvent1 = "https://firebasestorage.googleapis.com/v0/b/cmv-gioco.appspot.com/o/Events%2F" + fileName! + "?alt=media&token=b6d4d280-da7d-4428-a508-02db6a6ed526"
                 }
                 
                 var ImageEvent2 = ""
                 if (events.value(forKey: "ImageEvent2") != nil) {
-                    ImageEvent2 = events.value(forKey: "ImageEvent2") as! String!
+                    let fileName = events.value(forKey: "ImageEvent2") as! String!
+                    ImageEvent2 = "https://firebasestorage.googleapis.com/v0/b/cmv-gioco.appspot.com/o/Events%2F" + fileName! + "?alt=media&token=b6d4d280-da7d-4428-a508-02db6a6ed526"
                 }
                 
                 var ImageEvent3 = ""
                 if (events.value(forKey: "ImageEvent3") != nil) {
-                    ImageEvent3 = events.value(forKey: "ImageEvent3") as! String!
+                    let fileName = events.value(forKey: "ImageEvent3") as! String!
+                    ImageEvent3 = "https://firebasestorage.googleapis.com/v0/b/cmv-gioco.appspot.com/o/Events%2F" + fileName! + "?alt=media&token=b6d4d280-da7d-4428-a508-02db6a6ed526"
                 }
              
                 var ImageName = ""
@@ -222,8 +254,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                 
                 
                 self.feedArray.append(Events(Book: Book, Description: Description, DescriptionDE: DescriptionDE, DescriptionES: DescriptionES, DescriptionFR: DescriptionFR, DescriptionIT: DescriptionIT, DescriptionRU: DescriptionRU, DescriptionZH: DescriptionZH, ImageEvent1: ImageEvent1, ImageEvent2: ImageEvent2, ImageEvent3: ImageEvent3, ImageName: ImageName, isSlotEvents: isSlotEvents, memo: memo, memoDE: memoDE, memoES: memoES, memoFR: memoFR, memoIT: memoIT, memoRU: memoRU, memoZH: memoZH, Name: Name, NameDE: NameDE, NameES: NameES, NameFR: NameFR, NameIT: NameIT, NameRU: NameRU, NameZH: NameZH, StartDate: StartDate, EndDate: EndDate, EventType: EventType, office: office, URL: URL, URLBook: URLBook))
-                self.collectionView?.reloadData()
+                
             }
+            self.feedArray.sort(by: { $0.StartDate.compare($1.StartDate as Date) == ComparisonResult.orderedDescending })
+            self.collectionView?.reloadData()
         })
         
     }

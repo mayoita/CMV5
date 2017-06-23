@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22208DCF1EFD50EA007DA39D /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DCE1EFD50EA007DA39D /* MenuBar.swift */; };
 		229583951EFCFDC700409D7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295838D1EFCFDC700409D7A /* AppDelegate.swift */; };
 		229583961EFCFDC700409D7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295838F1EFCFDC700409D7A /* Constants.swift */; };
 		229583971EFCFDC700409D7A /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229583901EFCFDC700409D7A /* EventListCell.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		0E8526CA15B3B18DA96C3E36 /* Pods-Casinò di Venezia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Casinò di Venezia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Casinò di Venezia/Pods-Casinò di Venezia.debug.xcconfig"; sourceTree = "<group>"; };
 		1D50E0540626459F2E41608E /* Pods_Casino__di_VeneziaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Casino__di_VeneziaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		22208DCE1EFD50EA007DA39D /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuBar.swift; path = "Casinò di Venezia/MenuBar.swift"; sourceTree = "<group>"; };
 		2295838D1EFCFDC700409D7A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Casinò di Venezia/AppDelegate.swift"; sourceTree = "<group>"; };
 		2295838F1EFCFDC700409D7A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "Casinò di Venezia/Constants.swift"; sourceTree = "<group>"; };
 		229583901EFCFDC700409D7A /* EventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventListCell.swift; path = "Casinò di Venezia/EventListCell.swift"; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				229583A11EFD1B8200409D7A /* Images.xcassets */,
 				2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */,
 				2295838D1EFCFDC700409D7A /* AppDelegate.swift */,
+				22208DCE1EFD50EA007DA39D /* MenuBar.swift */,
 				2295838F1EFCFDC700409D7A /* Constants.swift */,
 				229583901EFCFDC700409D7A /* EventListCell.swift */,
 				229583911EFCFDC700409D7A /* HomeController.swift */,
@@ -211,7 +214,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CMV;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Casinò di Venezia SPA";
 				TargetAttributes = {
 					22CF4458181A9AD70062FC38 = {
@@ -384,6 +387,7 @@
 			files = (
 				229583971EFCFDC700409D7A /* EventListCell.swift in Sources */,
 				229583981EFCFDC700409D7A /* HomeController.swift in Sources */,
+				22208DCF1EFD50EA007DA39D /* MenuBar.swift in Sources */,
 				229583951EFCFDC700409D7A /* AppDelegate.swift in Sources */,
 				229583961EFCFDC700409D7A /* Constants.swift in Sources */,
 				229583A01EFD13AA00409D7A /* Events.swift in Sources */,
@@ -433,7 +437,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Pietro Michielan (HEMRV793PY)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = NO;
