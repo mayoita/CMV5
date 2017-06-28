@@ -13,14 +13,85 @@ import QuartzCore
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
+    @IBOutlet var tabBarView: TabBarView!
     var databaseRef:FIRDatabaseReference!
     var feedArray = [Events]()
     let formatter = DateFormatter()
+    var index: Int?
+    var isMenuOpen = false
+    var verticalConstraints: NSLayoutConstraint!
+    var currentMaxDisplayedCell = 0
+    var currentMaxDisplayedSection = 0
+    var cellZoomXScaleFactor = 1.25;
+    var cellZoomYScaleFactor = 1.25;
+    var cellZoomAnimationDuration = 0.70;
+    var cellZoomInitialAlpha = 0.3;
+    var cellZoomXOffset = 0;
+    var cellZoomYOffset = 0;
+    
+    //MARK: Methods
+    func customization()  {
+     
+        
+        //TabbarView setup
+        self.view.addSubview(self.tabBarView)
+        self.tabBarView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let descHorizontal = "H:|[tabBarView]|"
+        let descVertical = "V:|[tabBarView(60)]|"
+        
+        let viewsDict = ["tabBarView": tabBarView]
+        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: descHorizontal,
+                                                                   options: NSLayoutFormatOptions(rawValue: 0),
+                                                                   metrics: nil,
+                                                                   views: viewsDict)
+        //verticalConstraints.constraints(withVisualFormat: descVertical,
+                                                                  // options: NSLayoutFormatOptions(rawValue: 0),
+                                                                //   metrics: nil,
+                                                                //   views: viewsDict)
+        verticalConstraints = NSLayoutConstraint.init(item: self.tabBarView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 60)
+        
+        
+        view.addConstraints(horizontalConstraints)
+        view.addConstraints([verticalConstraints])
+        
+        let btn:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        btn.backgroundColor = UIColor.green
+        btn.addTarget(self, action: #selector(self.buttonAction), for: .touchUpInside)
+        btn.tag = 1
+        self.view.addSubview(btn)
+       
+        
+//        let _ = NSLayoutConstraint.init(item: self.view, attribute: .top, relatedBy: .equal, toItem: self.tabBarView, attribute: .top, multiplier: 1.0, constant: -64).isActive = true
+//        let _ = NSLayoutConstraint.init(item: self.view, attribute: .left, relatedBy: .equal, toItem: self.tabBarView, attribute: .left, multiplier: 1.0, constant: 0).isActive = true
+//        let _ = NSLayoutConstraint.init(item: self.view, attribute: .right, relatedBy: .equal, toItem: self.tabBarView, attribute: .right, multiplier: 1.0, constant: 0).isActive = true
+//        self.tabBarView.heightAnchor.constraint(equalToConstant: 44).isActive = true
+        //ViewController init
+        
+        }
+    func buttonAction() {
+        
+            isMenuOpen = !isMenuOpen
+            verticalConstraints.constant = isMenuOpen ? 60 : 0
+        
+        UIView.animate(withDuration: 0.33, delay: 0, options: .curveEaseIn, animations: {
+            self.view.layoutIfNeeded()
+        }, completion: nil)
+        
+        
+        
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let index = self.index {
+            //self.label.text = "Page " + String(index)
+            //self.promptLabel.isHidden = index != 1
+        }
+        self.customization()
         loadDatabase()
         navigationItem.title = "Home"
-        
+        //self.collectionView?.contentInset = UIEdgeInsetsMake(44, 0, 0, 0)
         
         let titleLabel = UILabel(frame: CGRect(x: 0,y: 0,width: view.frame.width - 32,height:  view.frame.height))
         titleLabel.text = "Home"
@@ -59,19 +130,70 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         formatter.dateFormat = "MMM"
         let myMonth = formatter.string(from: feedArray[indexPath.row].StartDate as Date)
         
+        
+        //  Converted with Swiftify v1.0.6381 - https://objectivec2swift.com/
+        if (indexPath.section == 0 && currentMaxDisplayedCell == 0) || indexPath.section > currentMaxDisplayedSection {
+            //first item in a new section, reset the max row count
+            currentMaxDisplayedCell = -1
+            //-1 because the check for currentMaxDisplayedCell has to be > rather than >= (otherwise the last cell is ALWAYS animated), so we need to set this to -1 otherwise the first cell in a section is never animated.
+        }
+     //   if indexPath.section >= currentMaxDisplayedSection && indexPath.row > currentMaxDisplayedCell {
+            //this check makes cells only animate the first time you view them (as you're scrolling down) and stops them re-animating as you scroll back up, or scroll past them for a second time.
+            //now make the image view a bit bigger, so we can do a zoomout effect when it becomes visible
+            cell.contentView.alpha = CGFloat(cellZoomInitialAlpha)
+            let transformScale = CGAffineTransform(scaleX: CGFloat(cellZoomXScaleFactor), y: CGFloat(cellZoomYScaleFactor))
+            let transformTranslate = CGAffineTransform(translationX: CGFloat(cellZoomXOffset), y: CGFloat(cellZoomYOffset))
+            cell.contentView.transform = transformScale.concatenating(transformTranslate)
+            collectionView.bringSubview(toFront: cell.contentView)
+            UIView.animate(withDuration: cellZoomAnimationDuration, delay: 0.1, options: .allowUserInteraction, animations: {() -> Void in
+                cell.contentView.alpha = 1
+                //clear the transform
+                cell.contentView.transform = CGAffineTransform.identity
+            }, completion: { _ in })
+            currentMaxDisplayedCell = indexPath.row
+            currentMaxDisplayedSection = indexPath.section
+     //   }
+        
         cell.titolo.text = feedArray[indexPath.row].Name
         cell.intro.text = feedArray[indexPath.row].Description
         cell.data.text = myDate
         cell.data.layer.masksToBounds = true
         cell.data.layer.cornerRadius = 5.0
         cell.mese.text = myMonth
+        cell.speakingText = feedArray[indexPath.row].Description
         cell.image.sd_setImage(with: URL(string: feedArray[indexPath.row].ImageName), placeholderImage: UIImage(named: "sediciNoni"))
+       
+        if estimateRect(rect:cell.frame, data: feedArray[indexPath.row].Name)  > 21{
+            cell.titoloHeight?.constant = 42
+        } else {
+            cell.titoloHeight?.constant = 21
+        }
         
         return cell
     }
+    func resetViewedCells() {
+        currentMaxDisplayedSection = 0
+        currentMaxDisplayedCell = 0
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width,height: view.frame.width * Constants.sediciNoni)
+        
+        let height = view.frame.width*9/16
+      
+        
+        if estimateRect(rect:view.frame, data: feedArray[indexPath.row].Name)  > 21 {
+            return CGSize(width: view.frame.width,height: height + 5 + 42 + 21 + 5 + 7)
+        } else {
+            return CGSize(width: view.frame.width,height: height + 5 + 21 + 21 + 5 + 7)
+        }
+       
+    }
+    func estimateRect(rect: CGRect, data: String) -> CGFloat {
+        let size = CGSize(width: rect.width - 10 - 42 - 10, height: 1000)
+        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        let attributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 14)]
+        let estimateRect = NSString(string: data).boundingRect(with: size, options: options, attributes: attributes, context: nil)
+        return estimateRect.size.height
     }
     
     func loadDatabase(){

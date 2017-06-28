@@ -8,6 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		22208DCF1EFD50EA007DA39D /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DCE1EFD50EA007DA39D /* MenuBar.swift */; };
+		225805581EFEBF3100F2826D /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805571EFEBF3100F2826D /* TabBarView.swift */; };
+		225805771EFED83900F2826D /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805641EFED83900F2826D /* ChildViewController.swift */; };
+		225805781EFED83900F2826D /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805651EFED83900F2826D /* CircularButton.swift */; };
+		225805791EFED83900F2826D /* CustomTabmanBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805661EFED83900F2826D /* CustomTabmanBar.swift */; };
+		2258057A1EFED83900F2826D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805671EFED83900F2826D /* GradientView.swift */; };
+		2258057B1EFED83900F2826D /* PresetAppearanceConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805681EFED83900F2826D /* PresetAppearanceConfigs.swift */; };
+		2258057C1EFED83900F2826D /* SettingsCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805691EFED83900F2826D /* SettingsCells.swift */; };
+		2258057D1EFED83900F2826D /* SettingsDismissTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258056A1EFED83900F2826D /* SettingsDismissTransitionController.swift */; };
+		2258057E1EFED83900F2826D /* SettingsEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258056B1EFED83900F2826D /* SettingsEntries.swift */; };
+		2258057F1EFED83900F2826D /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258056C1EFED83900F2826D /* SettingsItem.swift */; };
+		225805801EFED83900F2826D /* SettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258056D1EFED83900F2826D /* SettingsNavigationController.swift */; };
+		225805811EFED83900F2826D /* SettingsOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258056E1EFED83900F2826D /* SettingsOptionsViewController.swift */; };
+		225805821EFED83900F2826D /* SettingsPopTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258056F1EFED83900F2826D /* SettingsPopTransitionController.swift */; };
+		225805831EFED83900F2826D /* SettingsPresentTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805701EFED83900F2826D /* SettingsPresentTransitionController.swift */; };
+		225805841EFED83900F2826D /* SettingsPushTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805711EFED83900F2826D /* SettingsPushTransitionController.swift */; };
+		225805851EFED83900F2826D /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805721EFED83900F2826D /* SettingsSection.swift */; };
+		225805861EFED83900F2826D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805731EFED83900F2826D /* SettingsViewController.swift */; };
+		225805871EFED83900F2826D /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805741EFED83900F2826D /* TabViewController.swift */; };
+		225805881EFED83900F2826D /* TabViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805751EFED83900F2826D /* TabViewController+Extras.swift */; };
+		225805891EFED83900F2826D /* TransparentNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805761EFED83900F2826D /* TransparentNavigationBar.swift */; };
 		229583951EFCFDC700409D7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295838D1EFCFDC700409D7A /* AppDelegate.swift */; };
 		229583961EFCFDC700409D7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295838F1EFCFDC700409D7A /* Constants.swift */; };
 		229583971EFCFDC700409D7A /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229583901EFCFDC700409D7A /* EventListCell.swift */; };
@@ -36,6 +56,26 @@
 		0E8526CA15B3B18DA96C3E36 /* Pods-Casinò di Venezia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Casinò di Venezia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Casinò di Venezia/Pods-Casinò di Venezia.debug.xcconfig"; sourceTree = "<group>"; };
 		1D50E0540626459F2E41608E /* Pods_Casino__di_VeneziaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Casino__di_VeneziaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22208DCE1EFD50EA007DA39D /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuBar.swift; path = "Casinò di Venezia/MenuBar.swift"; sourceTree = "<group>"; };
+		225805571EFEBF3100F2826D /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarView.swift; path = "Casinò di Venezia/TabBarView.swift"; sourceTree = "<group>"; };
+		225805641EFED83900F2826D /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
+		225805651EFED83900F2826D /* CircularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
+		225805661EFED83900F2826D /* CustomTabmanBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabmanBar.swift; sourceTree = "<group>"; };
+		225805671EFED83900F2826D /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		225805681EFED83900F2826D /* PresetAppearanceConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetAppearanceConfigs.swift; sourceTree = "<group>"; };
+		225805691EFED83900F2826D /* SettingsCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCells.swift; sourceTree = "<group>"; };
+		2258056A1EFED83900F2826D /* SettingsDismissTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDismissTransitionController.swift; sourceTree = "<group>"; };
+		2258056B1EFED83900F2826D /* SettingsEntries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsEntries.swift; sourceTree = "<group>"; };
+		2258056C1EFED83900F2826D /* SettingsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
+		2258056D1EFED83900F2826D /* SettingsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsNavigationController.swift; sourceTree = "<group>"; };
+		2258056E1EFED83900F2826D /* SettingsOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewController.swift; sourceTree = "<group>"; };
+		2258056F1EFED83900F2826D /* SettingsPopTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPopTransitionController.swift; sourceTree = "<group>"; };
+		225805701EFED83900F2826D /* SettingsPresentTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPresentTransitionController.swift; sourceTree = "<group>"; };
+		225805711EFED83900F2826D /* SettingsPushTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPushTransitionController.swift; sourceTree = "<group>"; };
+		225805721EFED83900F2826D /* SettingsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
+		225805731EFED83900F2826D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		225805741EFED83900F2826D /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		225805751EFED83900F2826D /* TabViewController+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TabViewController+Extras.swift"; sourceTree = "<group>"; };
+		225805761EFED83900F2826D /* TransparentNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentNavigationBar.swift; sourceTree = "<group>"; };
 		2295838D1EFCFDC700409D7A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Casinò di Venezia/AppDelegate.swift"; sourceTree = "<group>"; };
 		2295838F1EFCFDC700409D7A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "Casinò di Venezia/Constants.swift"; sourceTree = "<group>"; };
 		229583901EFCFDC700409D7A /* EventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventListCell.swift; path = "Casinò di Venezia/EventListCell.swift"; sourceTree = "<group>"; };
@@ -96,6 +136,7 @@
 				2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */,
 				2295838D1EFCFDC700409D7A /* AppDelegate.swift */,
 				22208DCE1EFD50EA007DA39D /* MenuBar.swift */,
+				225805571EFEBF3100F2826D /* TabBarView.swift */,
 				2295838F1EFCFDC700409D7A /* Constants.swift */,
 				229583901EFCFDC700409D7A /* EventListCell.swift */,
 				229583911EFCFDC700409D7A /* HomeController.swift */,
@@ -123,6 +164,25 @@
 		22CF4462181A9AD70062FC38 /* Casinò di Venezia */ = {
 			isa = PBXGroup;
 			children = (
+				225805641EFED83900F2826D /* ChildViewController.swift */,
+				225805651EFED83900F2826D /* CircularButton.swift */,
+				225805661EFED83900F2826D /* CustomTabmanBar.swift */,
+				225805671EFED83900F2826D /* GradientView.swift */,
+				225805681EFED83900F2826D /* PresetAppearanceConfigs.swift */,
+				225805691EFED83900F2826D /* SettingsCells.swift */,
+				2258056A1EFED83900F2826D /* SettingsDismissTransitionController.swift */,
+				2258056B1EFED83900F2826D /* SettingsEntries.swift */,
+				2258056C1EFED83900F2826D /* SettingsItem.swift */,
+				2258056D1EFED83900F2826D /* SettingsNavigationController.swift */,
+				2258056E1EFED83900F2826D /* SettingsOptionsViewController.swift */,
+				2258056F1EFED83900F2826D /* SettingsPopTransitionController.swift */,
+				225805701EFED83900F2826D /* SettingsPresentTransitionController.swift */,
+				225805711EFED83900F2826D /* SettingsPushTransitionController.swift */,
+				225805721EFED83900F2826D /* SettingsSection.swift */,
+				225805731EFED83900F2826D /* SettingsViewController.swift */,
+				225805741EFED83900F2826D /* TabViewController.swift */,
+				225805751EFED83900F2826D /* TabViewController+Extras.swift */,
+				225805761EFED83900F2826D /* TransparentNavigationBar.swift */,
 				22A65A07185EF5AE0018FD0C /* Casinò di Venezia.entitlements */,
 				22CF4463181A9AD70062FC38 /* Supporting Files */,
 			);
@@ -300,7 +360,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2DD4A5115AF3152CCB696637 /* [CP] Copy Pods Resources */ = {
@@ -345,7 +405,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A00B2351ACED315F8C494068 /* [CP] Embed Pods Frameworks */ = {
@@ -385,12 +445,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225805871EFED83900F2826D /* TabViewController.swift in Sources */,
 				229583971EFCFDC700409D7A /* EventListCell.swift in Sources */,
+				2258057E1EFED83900F2826D /* SettingsEntries.swift in Sources */,
+				225805791EFED83900F2826D /* CustomTabmanBar.swift in Sources */,
+				2258057A1EFED83900F2826D /* GradientView.swift in Sources */,
 				229583981EFCFDC700409D7A /* HomeController.swift in Sources */,
+				225805831EFED83900F2826D /* SettingsPresentTransitionController.swift in Sources */,
+				225805581EFEBF3100F2826D /* TabBarView.swift in Sources */,
+				225805881EFED83900F2826D /* TabViewController+Extras.swift in Sources */,
 				22208DCF1EFD50EA007DA39D /* MenuBar.swift in Sources */,
+				2258057C1EFED83900F2826D /* SettingsCells.swift in Sources */,
 				229583951EFCFDC700409D7A /* AppDelegate.swift in Sources */,
+				225805801EFED83900F2826D /* SettingsNavigationController.swift in Sources */,
 				229583961EFCFDC700409D7A /* Constants.swift in Sources */,
+				225805891EFED83900F2826D /* TransparentNavigationBar.swift in Sources */,
+				225805821EFED83900F2826D /* SettingsPopTransitionController.swift in Sources */,
+				2258057B1EFED83900F2826D /* PresetAppearanceConfigs.swift in Sources */,
+				225805851EFED83900F2826D /* SettingsSection.swift in Sources */,
+				225805861EFED83900F2826D /* SettingsViewController.swift in Sources */,
 				229583A01EFD13AA00409D7A /* Events.swift in Sources */,
+				225805771EFED83900F2826D /* ChildViewController.swift in Sources */,
+				225805841EFED83900F2826D /* SettingsPushTransitionController.swift in Sources */,
+				2258057F1EFED83900F2826D /* SettingsItem.swift in Sources */,
+				2258057D1EFED83900F2826D /* SettingsDismissTransitionController.swift in Sources */,
+				225805811EFED83900F2826D /* SettingsOptionsViewController.swift in Sources */,
+				225805781EFED83900F2826D /* CircularButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

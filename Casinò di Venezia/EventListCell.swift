@@ -7,12 +7,39 @@
 //
 
 import UIKit
+import AVFoundation
 
 class EventListCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var data: UILabel!
     @IBOutlet weak var mese: UILabel!
     @IBOutlet weak var titolo: UILabel!
+    @IBOutlet weak var titoloHeight: NSLayoutConstraint!
+    var speakingText: String = "Nothing to read";
+    let synthesizer = AVSpeechSynthesizer()
+    var isSpeaking:Bool = false
+    
+    @IBAction func speaking(_ sender: Any) {
+        isSpeaking = !isSpeaking
+        let utterance = AVSpeechUtterance(string: speakingText)
+        if isSpeaking {
+            synthesizer.speak(utterance)
+        }else {
+           synthesizer.stopSpeaking(at: .immediate)
+        }
+    }
+  
     @IBOutlet weak var intro: UILabel!
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+       
+    
+    }
+    
+ 
 }

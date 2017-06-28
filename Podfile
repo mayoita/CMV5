@@ -11,6 +11,10 @@ target 'Casinò di Venezia' do
 	pod 'Firebase/Database’
 	pod 'Firebase/Auth’
   pod 'SDWebImage', '~>3.8'
+  pod 'PureLayout'
+  pod 'Pageboy'
+  pod 'Tabman'
+
 	
   target 'Casinò di VeneziaTests' do
     inherit! :search_paths
