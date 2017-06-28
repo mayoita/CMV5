@@ -11,7 +11,7 @@ import Firebase
 import SDWebImage
 import QuartzCore
 
-class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate {
     
     @IBOutlet var tabBarView: TabBarView!
     var databaseRef:FIRDatabaseReference!
@@ -188,12 +188,44 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         }
        
     }
+    
+    //Funzione per calcolare l'altezza dell'etichetta titolo - la proprietà number lines è impostata a 2 nella storyboard
     func estimateRect(rect: CGRect, data: String) -> CGFloat {
         let size = CGSize(width: rect.width - 10 - 42 - 10, height: 1000)
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
         let attributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 14)]
         let estimateRect = NSString(string: data).boundingRect(with: size, options: options, attributes: attributes, context: nil)
         return estimateRect.size.height
+    }
+    
+    var openingFrame: CGRect?
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let presentationAnimator = ExpandAnimator.animator
+        presentationAnimator.openingFrame = openingFrame!
+        presentationAnimator.transitionMode = .Present
+        return presentationAnimator
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        let presentationAnimator = ExpandAnimator.animator
+        presentationAnimator.openingFrame = openingFrame!
+        presentationAnimator.transitionMode = .Dismiss
+        return presentationAnimator
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //Set frame of cell
+        let attributes = self.collectionView?.layoutAttributesForItem(at: indexPath)
+        let attributesFrame = attributes?.frame
+        let frameToOpenFrom = self.collectionView?.convert(attributesFrame!, to: self.collectionView?.superview)
+        openingFrame = frameToOpenFrom
+        
+        //Present view controller
+        let expandedVC = EventDetails()
+        expandedVC.transitioningDelegate = self
+        expandedVC.modalPresentationStyle = .custom
+        present(expandedVC, animated: true, completion: nil)
     }
     
     func loadDatabase(){
