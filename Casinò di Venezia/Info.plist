@@ -98,6 +98,8 @@
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
+	<true/>
+	<key>NSRemindersUsageDescription</key>
+	<string>This access is required to set up reminders.</string>
 </dict>
 </plist>

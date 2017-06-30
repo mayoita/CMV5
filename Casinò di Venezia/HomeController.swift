@@ -29,6 +29,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     var cellZoomXOffset = 0;
     var cellZoomYOffset = 0;
     
+    //Property for interaction controller
+    private let closeOnScrollDown = CloseOnScrollDown()
+    
     //MARK: Methods
     func customization()  {
      
@@ -84,6 +87,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         if let index = self.index {
             //self.label.text = "Page " + String(index)
             //self.promptLabel.isHidden = index != 1
@@ -102,6 +106,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
        
         setupMenuBar()
     }
+    
 
     let menuBar: MenuBar = {
         let mb = MenuBar()
@@ -198,6 +203,25 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         return estimateRect.size.height
     }
     
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //Set frame of cell
+        let attributes = self.collectionView?.layoutAttributesForItem(at: indexPath)
+        let attributesFrame = attributes?.frame
+        let frameToOpenFrom = self.collectionView?.convert(attributesFrame!, to: self.collectionView?.superview)
+        openingFrame = CGRect(x: (frameToOpenFrom?.origin.x)!, y: (frameToOpenFrom?.origin.y)! + 64, width: (frameToOpenFrom?.size.width)!, height: (frameToOpenFrom?.size.height)!)
+        
+        //Present view controller
+        let expandedVC = storyboard?.instantiateViewController(withIdentifier: "EventDetails") as! EventDetails
+        expandedVC.transitioningDelegate = self
+        expandedVC.modalPresentationStyle = .currentContext
+        expandedVC.event = feedArray[indexPath.row]
+        closeOnScrollDown.wireToViewController(viewController: expandedVC)
+        present(expandedVC, animated: true, completion: nil)
+    }
+    
+    //MARK: Transition delegate
+    
     var openingFrame: CGRect?
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
@@ -213,20 +237,9 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         presentationAnimator.transitionMode = .Dismiss
         return presentationAnimator
     }
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        //Set frame of cell
-        let attributes = self.collectionView?.layoutAttributesForItem(at: indexPath)
-        let attributesFrame = attributes?.frame
-        let frameToOpenFrom = self.collectionView?.convert(attributesFrame!, to: self.collectionView?.superview)
-        openingFrame = frameToOpenFrom
+    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
         
-        //Present view controller
-        let expandedVC = storyboard?.instantiateViewController(withIdentifier: "EventDetails") as! EventDetails
-        expandedVC.transitioningDelegate = self
-        expandedVC.modalPresentationStyle = .currentContext
-        expandedVC.event = feedArray[indexPath.row] 
-        present(expandedVC, animated: true, completion: nil)
+        return closeOnScrollDown.hasStarted ? closeOnScrollDown : nil
     }
     
     func loadDatabase(){
