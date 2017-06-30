@@ -49,6 +49,42 @@ class Events {
     var URL: String
     var URLBook: String
     
+    init() {
+        self.Book = ""
+        self.Description = ""
+        self.DescriptionDE = ""
+        self.DescriptionES = ""
+        self.DescriptionFR = ""
+        self.DescriptionIT = ""
+        self.DescriptionRU = ""
+        self.DescriptionZH = ""
+        self.ImageName = ""
+        self.ImageEvent1 = ""
+        self.ImageEvent2 = ""
+        self.ImageEvent3 = ""
+        self.isSlotEvents = false
+        self.memo = ""
+        self.memoDE = ""
+        self.memoES = ""
+        self.memoFR = ""
+        self.memoIT = ""
+        self.memoRU = ""
+        self.memoZH = ""
+        self.Name = ""
+        self.NameDE = ""
+        self.NameES = ""
+        self.NameFR = ""
+        self.NameIT = ""
+        self.NameRU = ""
+        self.NameZH = ""
+        self.StartDate = NSDate()
+        self.EndDate = NSDate()
+        self.EventType = ""
+        self.office = ""
+        self.URL = ""
+        self.URLBook = ""
+    }
+    
     init( Book: String,
           Description: String,
           DescriptionDE:String,

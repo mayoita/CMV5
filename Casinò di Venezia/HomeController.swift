@@ -222,9 +222,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         openingFrame = frameToOpenFrom
         
         //Present view controller
-        let expandedVC = EventDetails()
+        let expandedVC = storyboard?.instantiateViewController(withIdentifier: "EventDetails") as! EventDetails
         expandedVC.transitioningDelegate = self
-        expandedVC.modalPresentationStyle = .custom
+        expandedVC.modalPresentationStyle = .currentContext
+        expandedVC.event = feedArray[indexPath.row] 
         present(expandedVC, animated: true, completion: nil)
     }
     

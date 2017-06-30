@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		22208DCF1EFD50EA007DA39D /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DCE1EFD50EA007DA39D /* MenuBar.swift */; };
 		22208DD31F03C1A7007DA39D /* ButtonSpeaking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DD21F03C1A6007DA39D /* ButtonSpeaking.swift */; };
-		22208DD51F03CF96007DA39D /* EventSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DD41F03CF96007DA39D /* EventSegue.swift */; };
 		22208DD71F03E61C007DA39D /* ExpandAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DD61F03E61C007DA39D /* ExpandAnimator.swift */; };
 		22208DD91F03F268007DA39D /* EventDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DD81F03F268007DA39D /* EventDetails.swift */; };
 		225805581EFEBF3100F2826D /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805571EFEBF3100F2826D /* TabBarView.swift */; };
@@ -61,7 +60,6 @@
 		1D50E0540626459F2E41608E /* Pods_Casino__di_VeneziaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Casino__di_VeneziaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		22208DCE1EFD50EA007DA39D /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuBar.swift; path = "Casinò di Venezia/MenuBar.swift"; sourceTree = "<group>"; };
 		22208DD21F03C1A6007DA39D /* ButtonSpeaking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonSpeaking.swift; path = "Casinò di Venezia/ButtonSpeaking.swift"; sourceTree = "<group>"; };
-		22208DD41F03CF96007DA39D /* EventSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventSegue.swift; path = "Casinò di Venezia/EventSegue.swift"; sourceTree = "<group>"; };
 		22208DD61F03E61C007DA39D /* ExpandAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandAnimator.swift; sourceTree = "<group>"; };
 		22208DD81F03F268007DA39D /* EventDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventDetails.swift; path = "Casinò di Venezia/EventDetails.swift"; sourceTree = "<group>"; };
 		225805571EFEBF3100F2826D /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarView.swift; path = "Casinò di Venezia/TabBarView.swift"; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 				229583A11EFD1B8200409D7A /* Images.xcassets */,
 				2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */,
 				2295838D1EFCFDC700409D7A /* AppDelegate.swift */,
-				22208DD41F03CF96007DA39D /* EventSegue.swift */,
 				22208DD61F03E61C007DA39D /* ExpandAnimator.swift */,
 				22208DCE1EFD50EA007DA39D /* MenuBar.swift */,
 				225805571EFEBF3100F2826D /* TabBarView.swift */,
@@ -472,7 +469,6 @@
 				2258057C1EFED83900F2826D /* SettingsCells.swift in Sources */,
 				229583951EFCFDC700409D7A /* AppDelegate.swift in Sources */,
 				225805801EFED83900F2826D /* SettingsNavigationController.swift in Sources */,
-				22208DD51F03CF96007DA39D /* EventSegue.swift in Sources */,
 				229583961EFCFDC700409D7A /* Constants.swift in Sources */,
 				225805891EFED83900F2826D /* TransparentNavigationBar.swift in Sources */,
 				225805821EFED83900F2826D /* SettingsPopTransitionController.swift in Sources */,

@@ -10,10 +10,20 @@ import UIKit
 
 class EventDetails: UIViewController {
 
+    @IBOutlet weak var image: UIImageView!
+    var event = Events()
     override func viewDidLoad() {
         super.viewDidLoad()
+      //  view.backgroundColor = UIColor.yellow
 
         // Do any additional setup after loading the view.
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(EventDetails.handledTap))
+        self.view.addGestureRecognizer(tapGesture)
+        image.sd_setImage(with: URL(string: event.ImageName), placeholderImage: UIImage(named: "sediciNoni"))
+    }
+    
+    func handledTap () {
+        self.dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
