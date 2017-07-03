@@ -14,6 +14,7 @@ target 'Casinò di Venezia' do
   pod 'PureLayout'
   pod 'Pageboy'
   pod 'Tabman'
+  pod 'Canvas', '~> 0.1.2'
 
 	
   target 'Casinò di VeneziaTests' do

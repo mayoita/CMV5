@@ -14,6 +14,8 @@
 		22208DDB1F06561A007DA39D /* CloseOnScrollDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DDA1F06561A007DA39D /* CloseOnScrollDown.swift */; };
 		22208DDD1F066F17007DA39D /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DDC1F066F17007DA39D /* Gradient.swift */; };
 		22208DDF1F067CBC007DA39D /* GradientInv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DDE1F067CBC007DA39D /* GradientInv.swift */; };
+		2227D59F1F0A78B500F09669 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227D59E1F0A78B500F09669 /* CircularTransition.swift */; };
+		2228F76B1F0A41E500F3C94A /* CanvasButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2228F76A1F0A41E500F3C94A /* CanvasButton.swift */; };
 		2252541D1F06EFA8005F1FF7 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2252541C1F06EFA8005F1FF7 /* MapsViewController.swift */; };
 		225254221F06F1E0005F1FF7 /* Venezia.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2252541E1F06F1E0005F1FF7 /* Venezia.gpx */; };
 		225254231F06F1E0005F1FF7 /* CaNoghera.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2252541F1F06F1E0005F1FF7 /* CaNoghera.gpx */; };
@@ -74,6 +76,8 @@
 		22208DDA1F06561A007DA39D /* CloseOnScrollDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloseOnScrollDown.swift; path = "Casinò di Venezia/CloseOnScrollDown.swift"; sourceTree = "<group>"; };
 		22208DDC1F066F17007DA39D /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gradient.swift; path = "Casinò di Venezia/Gradient.swift"; sourceTree = "<group>"; };
 		22208DDE1F067CBC007DA39D /* GradientInv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientInv.swift; path = "Casinò di Venezia/GradientInv.swift"; sourceTree = "<group>"; };
+		2227D59E1F0A78B500F09669 /* CircularTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularTransition.swift; path = "Casinò di Venezia/CircularTransition.swift"; sourceTree = "<group>"; };
+		2228F76A1F0A41E500F3C94A /* CanvasButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CanvasButton.swift; path = "Casinò di Venezia/CanvasButton.swift"; sourceTree = "<group>"; };
 		2252541C1F06EFA8005F1FF7 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsViewController.swift; path = "Casinò di Venezia/MapsViewController.swift"; sourceTree = "<group>"; };
 		2252541E1F06F1E0005F1FF7 /* Venezia.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Venezia.gpx; sourceTree = "<group>"; };
 		2252541F1F06F1E0005F1FF7 /* CaNoghera.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CaNoghera.gpx; sourceTree = "<group>"; };
@@ -153,6 +157,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2227D5A01F0A9A9300F09669 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				22208DD61F03E61C007DA39D /* ExpandAnimator.swift */,
+				2227D59E1F0A78B500F09669 /* CircularTransition.swift */,
+			);
+			name = Transition;
+			sourceTree = "<group>";
+		};
 		22CF4450181A9AD70062FC38 = {
 			isa = PBXGroup;
 			children = (
@@ -164,9 +177,10 @@
 				2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */,
 				2295838D1EFCFDC700409D7A /* AppDelegate.swift */,
 				22208DDC1F066F17007DA39D /* Gradient.swift */,
+				2228F76A1F0A41E500F3C94A /* CanvasButton.swift */,
 				22208DDE1F067CBC007DA39D /* GradientInv.swift */,
 				22208DDA1F06561A007DA39D /* CloseOnScrollDown.swift */,
-				22208DD61F03E61C007DA39D /* ExpandAnimator.swift */,
+				2227D5A01F0A9A9300F09669 /* Transition */,
 				22208DCE1EFD50EA007DA39D /* MenuBar.swift */,
 				225805571EFEBF3100F2826D /* TabBarView.swift */,
 				22208DD21F03C1A6007DA39D /* ButtonSpeaking.swift */,
@@ -400,7 +414,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2DD4A5115AF3152CCB696637 /* [CP] Copy Pods Resources */ = {
@@ -445,7 +459,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A00B2351ACED315F8C494068 /* [CP] Embed Pods Frameworks */ = {
@@ -507,6 +521,7 @@
 				229583961EFCFDC700409D7A /* Constants.swift in Sources */,
 				225805891EFED83900F2826D /* TransparentNavigationBar.swift in Sources */,
 				225805821EFED83900F2826D /* SettingsPopTransitionController.swift in Sources */,
+				2228F76B1F0A41E500F3C94A /* CanvasButton.swift in Sources */,
 				2252541D1F06EFA8005F1FF7 /* MapsViewController.swift in Sources */,
 				2258057B1EFED83900F2826D /* PresetAppearanceConfigs.swift in Sources */,
 				225805851EFED83900F2826D /* SettingsSection.swift in Sources */,
@@ -515,6 +530,7 @@
 				225805771EFED83900F2826D /* ChildViewController.swift in Sources */,
 				225805841EFED83900F2826D /* SettingsPushTransitionController.swift in Sources */,
 				2258057F1EFED83900F2826D /* SettingsItem.swift in Sources */,
+				2227D59F1F0A78B500F09669 /* CircularTransition.swift in Sources */,
 				22208DD71F03E61C007DA39D /* ExpandAnimator.swift in Sources */,
 				2258057D1EFED83900F2826D /* SettingsDismissTransitionController.swift in Sources */,
 				225805811EFED83900F2826D /* SettingsOptionsViewController.swift in Sources */,

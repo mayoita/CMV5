@@ -11,14 +11,17 @@ import EventKit
 import Social
 
 
-class EventDetails: UIViewController {
+class EventDetails: UIViewController, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var titolo: UILabel!
     @IBOutlet weak var data: UILabel!
     @IBOutlet weak var corpo: UITextView!
+    @IBOutlet weak var map: UIButton!
+    
     
     let formatter = DateFormatter()
+    let transition = CircularTransition()
     let appDelegate = UIApplication.shared.delegate
         as! AppDelegate
     var event = Events()
@@ -26,9 +29,6 @@ class EventDetails: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-       
-        
 
         // Do any additional setup after loading the view.
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(EventDetails.handledTap))
@@ -52,7 +52,7 @@ class EventDetails: UIViewController {
                 to: .event , completion: {(granted, error) in
                     if !granted {
                         print("Access to store not granted")
-                        print(error?.localizedDescription)
+                        print(error?.localizedDescription as Any)
                     } else {
                         print("Access granted")
                     }
@@ -142,8 +142,29 @@ class EventDetails: UIViewController {
     @IBAction func openMaps(_ sender: Any) {
         let mapVC = storyboard?.instantiateViewController(withIdentifier: "MapView") as! MapsViewController
         mapVC.event = self.event
+        mapVC.transitioningDelegate = self
+        mapVC.modalPresentationStyle = .custom
         present(mapVC, animated: true, completion: nil)
         
+    }
+    
+
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .present
+        transition.startingPoint = map.center
+        transition.circleColor = UIColor.black
+        
+        return transition
+        
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.transitionMode = .dismiss
+        transition.startingPoint = map.center
+        transition.circleColor = UIColor.black
+        
+        return transition
     }
     /*
     // MARK: - Navigation

@@ -1,4 +1,5 @@
 PODS:
+  - Canvas (0.1.2)
   - Firebase/Auth (3.9.0):
     - Firebase/Core
     - FirebaseAuth (= 3.0.6)
@@ -54,6 +55,7 @@ PODS:
     - PureLayout (~> 3.0.0)
 
 DEPENDENCIES:
+  - Canvas (~> 0.1.2)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -64,6 +66,7 @@ DEPENDENCIES:
   - Tabman
 
 SPEC CHECKSUMS:
+  Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
   Firebase: ff77ffb77b317c3720fef57a60e9335cebf962e6
   FirebaseAnalytics: 6e58fc9b397664369ac7617fb0ba93fab6ba7b5b
   FirebaseAuth: 96e9674ff31d6e1f826d53e26aa003a57cab0295
@@ -80,6 +83,6 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Tabman: c176297899fd28e087a6506f9b56b8ca05195aa5
 
-PODFILE CHECKSUM: aae3f7f57fd27bd91c5b7060f6a85ca325085e62
+PODFILE CHECKSUM: 7d8923ee892e1d64d1d7793959c715232c8e2666
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

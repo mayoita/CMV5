@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import Canvas
 
 class EventListCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
@@ -15,6 +16,15 @@ class EventListCell: UICollectionViewCell {
     @IBOutlet weak var mese: UILabel!
     @IBOutlet weak var titolo: UILabel!
     @IBOutlet weak var titoloHeight: NSLayoutConstraint!
+    @IBOutlet weak var speaking: UIButton! {
+        didSet {
+            let animation = CSAnimationView()
+            speaking.addSubview(animation)
+            //speaking.customView = CSAnimationView()
+        }
+    }
+    
+    
     var speakingText: String = "Nothing to read";
     let synthesizer = AVSpeechSynthesizer()
     var isSpeaking:Bool = false
@@ -40,6 +50,7 @@ class EventListCell: UICollectionViewCell {
        
     
     }
+    
     
  
 }
