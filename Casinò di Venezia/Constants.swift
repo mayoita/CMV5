@@ -11,4 +11,6 @@ import UIKit
 
 struct Constants {
     static let sediciNoni = CGFloat(0.66)
+    static let PALAZZO_LOREDAN_VENDRAMIN = [45.44284, 12.32988]
+    static let CA_NOGHERA = [45.520532, 12.358032]
 }

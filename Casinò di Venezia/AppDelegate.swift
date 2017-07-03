@@ -14,11 +14,13 @@ import EventKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
    var window: UIWindow?
     var eventStore: EKEventStore?
+    var locale: Locale?
  
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FIRApp.configure()
+        locale = Locale.current
         
        
         return true

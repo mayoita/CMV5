@@ -139,6 +139,12 @@ class EventDetails: UIViewController {
         
     }
  
+    @IBAction func openMaps(_ sender: Any) {
+        let mapVC = storyboard?.instantiateViewController(withIdentifier: "MapView") as! MapsViewController
+        mapVC.event = self.event
+        present(mapVC, animated: true, completion: nil)
+        
+    }
     /*
     // MARK: - Navigation
 

@@ -28,6 +28,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     var cellZoomInitialAlpha = 0.3;
     var cellZoomXOffset = 0;
     var cellZoomYOffset = 0;
+    let appDelegate = UIApplication.shared.delegate
+        as! AppDelegate
     
     //Property for interaction controller
     private let closeOnScrollDown = CloseOnScrollDown()
@@ -258,38 +260,11 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                     Book = events.value(forKey: "Book") as! String!
                 }
                 var Description = ""
-                if (events.value(forKey: "Description") != nil) {
-                    Description = events.value(forKey: "Description") as! String!
-                }
-                var DescriptionDE = ""
-                if (events.value(forKey: "DescriptionDE") != nil) {
-                    DescriptionDE = events.value(forKey: "DescriptionDE") as! String!
+                let DescriptionLocale = "Description" + self.getLocale()
+                if (events.value(forKey: DescriptionLocale) != nil) {
+                    Description = events.value(forKey: DescriptionLocale) as! String!
                 }
                 
-                var DescriptionES = ""
-                if (events.value(forKey: "DescriptionES") != nil) {
-                    DescriptionES = events.value(forKey: "DescriptionES") as! String!
-                }
-                
-                var DescriptionFR = ""
-                if (events.value(forKey: "DescriptionFR") != nil) {
-                    DescriptionFR = events.value(forKey: "DescriptionFR") as! String!
-                }
-                
-                var DescriptionIT = ""
-                if (events.value(forKey: "DescriptionIT") != nil) {
-                    DescriptionIT = events.value(forKey: "DescriptionIT") as! String!
-                }
-             
-                var DescriptionRU = ""
-                if (events.value(forKey: "DescriptionRU") != nil) {
-                    DescriptionRU = events.value(forKey: "DescriptionRU") as! String!
-                }
-               
-                var DescriptionZH = ""
-                if (events.value(forKey: "DescriptionZH") != nil) {
-                    DescriptionZH = events.value(forKey: "DescriptionZH") as! String!
-                }
               
                 var ImageEvent1 = ""
                 if (events.value(forKey: "ImageEvent1") != nil) {
@@ -321,73 +296,15 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                 }
            
                 var memo = ""
-                if (events.value(forKey: "memo") != nil) {
-                    memo = events.value(forKey: "memo") as! String!
+                let memoLocale = "memo" + self.getLocale()
+                if (events.value(forKey: memoLocale) != nil) {
+                    memo = events.value(forKey: memoLocale) as! String!
                 }
              
-                var memoDE = ""
-                if (events.value(forKey: "memoDE") != nil) {
-                    memoDE = events.value(forKey: "memoDE") as! String!
-                }
-                
-                var memoES = ""
-                if (events.value(forKey: "memoES") != nil) {
-                    memoES = events.value(forKey: "memoES") as! String!
-                }
-           
-                var memoFR = ""
-                if (events.value(forKey: "memoFR") != nil) {
-                    memoFR = events.value(forKey: "memoFR") as! String!
-                }
-             
-                var memoIT = ""
-                if (events.value(forKey: "memoIT") != nil) {
-                    memoIT = events.value(forKey: "memoIT") as! String!
-                }
-                
-                var memoRU = ""
-                if (events.value(forKey: "memoRU") != nil) {
-                    memoRU = events.value(forKey: "memoRU") as! String!
-                }
-              
-                var memoZH = ""
-                if (events.value(forKey: "memoZH") != nil) {
-                    memoZH = events.value(forKey: "memoZH") as! String!
-                }
-              
                 var Name = ""
-                if (events.value(forKey: "Name") != nil) {
-                    Name = events.value(forKey: "Name") as! String!
-                }
-               
-                var NameDE = ""
-                if (events.value(forKey: "NameDE") != nil) {
-                    NameDE = events.value(forKey: "NameDE") as! String!
-                }
-               
-                var NameES = ""
-                if (events.value(forKey: "NameES") != nil) {
-                    NameES = events.value(forKey: "NameES") as! String!
-                }
-               
-                var NameFR = ""
-                if (events.value(forKey: "NameFR") != nil) {
-                    NameFR = events.value(forKey: "NameFR") as! String!
-                }
-                
-                var NameIT = ""
-                if (events.value(forKey: "NameIT") != nil) {
-                    NameIT = events.value(forKey: "NameIT") as! String!
-                }
-              
-                var NameRU = ""
-                if (events.value(forKey: "NameRU") != nil) {
-                    NameRU = events.value(forKey: "NameRU") as! String!
-                }
-               
-                var NameZH = ""
-                if (events.value(forKey: "NameZH") != nil) {
-                    NameZH = events.value(forKey: "NameZH") as! String!
+                let NameLocale = "Name" + self.getLocale()
+                if (events.value(forKey: NameLocale) != nil) {
+                    Name = events.value(forKey: NameLocale) as! String!
                 }
                 
                 var StartDate = NSDate()
@@ -421,13 +338,22 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                 }
                 
                 
-                self.feedArray.append(Events(Book: Book, Description: Description, DescriptionDE: DescriptionDE, DescriptionES: DescriptionES, DescriptionFR: DescriptionFR, DescriptionIT: DescriptionIT, DescriptionRU: DescriptionRU, DescriptionZH: DescriptionZH, ImageEvent1: ImageEvent1, ImageEvent2: ImageEvent2, ImageEvent3: ImageEvent3, ImageName: ImageName, isSlotEvents: isSlotEvents, memo: memo, memoDE: memoDE, memoES: memoES, memoFR: memoFR, memoIT: memoIT, memoRU: memoRU, memoZH: memoZH, Name: Name, NameDE: NameDE, NameES: NameES, NameFR: NameFR, NameIT: NameIT, NameRU: NameRU, NameZH: NameZH, StartDate: StartDate, EndDate: EndDate, EventType: EventType, office: office, URL: URL, URLBook: URLBook))
+                self.feedArray.append(Events(Book: Book, Description: Description, ImageEvent1: ImageEvent1, ImageEvent2: ImageEvent2, ImageEvent3: ImageEvent3, ImageName: ImageName, isSlotEvents: isSlotEvents, memo: memo, Name: Name, StartDate: StartDate, EndDate: EndDate, EventType: EventType, office: office, URL: URL, URLBook: URLBook))
                 
             }
             self.feedArray.sort(by: { $0.StartDate.compare($1.StartDate as Date) == ComparisonResult.orderedDescending })
             self.collectionView?.reloadData()
         })
         
+    }
+    func getLocale() -> String {
+        var locale = ""
+        if appDelegate.locale?.languageCode != "en" {
+            locale = (appDelegate.locale?.languageCode?.uppercased())!
+            return locale
+        }
+        
+        return locale
     }
     
 }

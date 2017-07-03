@@ -14,6 +14,12 @@
 		22208DDB1F06561A007DA39D /* CloseOnScrollDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DDA1F06561A007DA39D /* CloseOnScrollDown.swift */; };
 		22208DDD1F066F17007DA39D /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DDC1F066F17007DA39D /* Gradient.swift */; };
 		22208DDF1F067CBC007DA39D /* GradientInv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DDE1F067CBC007DA39D /* GradientInv.swift */; };
+		2252541D1F06EFA8005F1FF7 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2252541C1F06EFA8005F1FF7 /* MapsViewController.swift */; };
+		225254221F06F1E0005F1FF7 /* Venezia.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2252541E1F06F1E0005F1FF7 /* Venezia.gpx */; };
+		225254231F06F1E0005F1FF7 /* CaNoghera.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2252541F1F06F1E0005F1FF7 /* CaNoghera.gpx */; };
+		225254241F06F1E0005F1FF7 /* Mestre.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 225254201F06F1E0005F1FF7 /* Mestre.gpx */; };
+		225254251F06F1E0005F1FF7 /* SanGeremia.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 225254211F06F1E0005F1FF7 /* SanGeremia.gpx */; };
+		225254271F06F4BB005F1FF7 /* CasinoAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225254261F06F4BB005F1FF7 /* CasinoAnnotation.swift */; };
 		225805581EFEBF3100F2826D /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805571EFEBF3100F2826D /* TabBarView.swift */; };
 		225805771EFED83900F2826D /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805641EFED83900F2826D /* ChildViewController.swift */; };
 		225805781EFED83900F2826D /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805651EFED83900F2826D /* CircularButton.swift */; };
@@ -68,6 +74,12 @@
 		22208DDA1F06561A007DA39D /* CloseOnScrollDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CloseOnScrollDown.swift; path = "Casinò di Venezia/CloseOnScrollDown.swift"; sourceTree = "<group>"; };
 		22208DDC1F066F17007DA39D /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gradient.swift; path = "Casinò di Venezia/Gradient.swift"; sourceTree = "<group>"; };
 		22208DDE1F067CBC007DA39D /* GradientInv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientInv.swift; path = "Casinò di Venezia/GradientInv.swift"; sourceTree = "<group>"; };
+		2252541C1F06EFA8005F1FF7 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsViewController.swift; path = "Casinò di Venezia/MapsViewController.swift"; sourceTree = "<group>"; };
+		2252541E1F06F1E0005F1FF7 /* Venezia.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Venezia.gpx; sourceTree = "<group>"; };
+		2252541F1F06F1E0005F1FF7 /* CaNoghera.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CaNoghera.gpx; sourceTree = "<group>"; };
+		225254201F06F1E0005F1FF7 /* Mestre.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Mestre.gpx; sourceTree = "<group>"; };
+		225254211F06F1E0005F1FF7 /* SanGeremia.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SanGeremia.gpx; sourceTree = "<group>"; };
+		225254261F06F4BB005F1FF7 /* CasinoAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CasinoAnnotation.swift; path = "Casinò di Venezia/CasinoAnnotation.swift"; sourceTree = "<group>"; };
 		225805571EFEBF3100F2826D /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarView.swift; path = "Casinò di Venezia/TabBarView.swift"; sourceTree = "<group>"; };
 		225805641EFED83900F2826D /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		225805651EFED83900F2826D /* CircularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
@@ -145,6 +157,10 @@
 			isa = PBXGroup;
 			children = (
 				229583A11EFD1B8200409D7A /* Images.xcassets */,
+				2252541E1F06F1E0005F1FF7 /* Venezia.gpx */,
+				2252541F1F06F1E0005F1FF7 /* CaNoghera.gpx */,
+				225254201F06F1E0005F1FF7 /* Mestre.gpx */,
+				225254211F06F1E0005F1FF7 /* SanGeremia.gpx */,
 				2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */,
 				2295838D1EFCFDC700409D7A /* AppDelegate.swift */,
 				22208DDC1F066F17007DA39D /* Gradient.swift */,
@@ -157,6 +173,8 @@
 				22208DD81F03F268007DA39D /* EventDetails.swift */,
 				2295838F1EFCFDC700409D7A /* Constants.swift */,
 				229583901EFCFDC700409D7A /* EventListCell.swift */,
+				2252541C1F06EFA8005F1FF7 /* MapsViewController.swift */,
+				225254261F06F4BB005F1FF7 /* CasinoAnnotation.swift */,
 				229583911EFCFDC700409D7A /* HomeController.swift */,
 				2295839F1EFD13AA00409D7A /* Events.swift */,
 				229583921EFCFDC700409D7A /* Info.plist */,
@@ -349,10 +367,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225254231F06F1E0005F1FF7 /* CaNoghera.gpx in Resources */,
 				2295839B1EFCFDC700409D7A /* sediciNoni.png in Resources */,
+				225254221F06F1E0005F1FF7 /* Venezia.gpx in Resources */,
+				225254241F06F1E0005F1FF7 /* Mestre.gpx in Resources */,
 				229583A21EFD1B8200409D7A /* Images.xcassets in Resources */,
 				2295839E1EFD02BB00409D7A /* GoogleService-Info.plist in Resources */,
 				2295839A1EFCFDC700409D7A /* Main.storyboard in Resources */,
+				225254251F06F1E0005F1FF7 /* SanGeremia.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +496,7 @@
 				22208DD31F03C1A7007DA39D /* ButtonSpeaking.swift in Sources */,
 				229583981EFCFDC700409D7A /* HomeController.swift in Sources */,
 				22208DDD1F066F17007DA39D /* Gradient.swift in Sources */,
+				225254271F06F4BB005F1FF7 /* CasinoAnnotation.swift in Sources */,
 				225805831EFED83900F2826D /* SettingsPresentTransitionController.swift in Sources */,
 				225805581EFEBF3100F2826D /* TabBarView.swift in Sources */,
 				225805881EFED83900F2826D /* TabViewController+Extras.swift in Sources */,
@@ -484,6 +507,7 @@
 				229583961EFCFDC700409D7A /* Constants.swift in Sources */,
 				225805891EFED83900F2826D /* TransparentNavigationBar.swift in Sources */,
 				225805821EFED83900F2826D /* SettingsPopTransitionController.swift in Sources */,
+				2252541D1F06EFA8005F1FF7 /* MapsViewController.swift in Sources */,
 				2258057B1EFED83900F2826D /* PresetAppearanceConfigs.swift in Sources */,
 				225805851EFED83900F2826D /* SettingsSection.swift in Sources */,
 				225805861EFED83900F2826D /* SettingsViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="slu-Nr-jMh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="C2X-Lk-OHe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -16,7 +16,7 @@
         <scene sceneID="Jbe-hV-XQg">
             <objects>
                 <collectionViewController storyboardIdentifier="Massimo" id="YfG-RZ-DNo" customClass="HomeController" customModule="Casino__di_Venezia" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="xJF-r7-1Zb">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="xJF-r7-1Zb">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="XcV-I3-aXh">
@@ -307,6 +307,9 @@
                                     <constraint firstAttribute="width" constant="25" id="SQi-kl-NoE"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="maps"/>
+                                <connections>
+                                    <action selector="openMaps:" destination="It4-n6-bD8" eventType="touchUpInside" id="SWv-dj-eBm"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condividi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RH7-z2-lgM">
                                 <rect key="frame" x="319" y="287" width="45" height="10"/>
@@ -390,6 +393,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yet-1A-5EY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1781.5999999999999" y="89.505247376311857"/>
+        </scene>
+        <!--Maps View Controller-->
+        <scene sceneID="jEB-Xo-eKe">
+            <objects>
+                <viewController storyboardIdentifier="MapView" id="4wx-Hs-Ism" customClass="MapsViewController" customModule="Casino__di_Venezia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mbf-hW-KSR"/>
+                        <viewControllerLayoutGuide type="bottom" id="dyE-sh-oel"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zsd-PN-Gen">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lcT-o8-Tgc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                            </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k38-hS-u4o">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Es1-Wq-jWf"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Item" id="VL3-WA-ueS">
+                                        <connections>
+                                            <action selector="show:" destination="4wx-Hs-Ism" id="Yfg-Im-iLc"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YSI-gD-rMa">
+                                <rect key="frame" x="339" y="5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="DKr-Cy-izd"/>
+                                    <constraint firstAttribute="width" constant="25" id="iaE-bs-QKc"/>
+                                </constraints>
+                                <state key="normal" image="close"/>
+                                <connections>
+                                    <action selector="close:" destination="4wx-Hs-Ism" eventType="touchUpInside" id="hMh-an-iDx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dyE-sh-oel" firstAttribute="top" secondItem="k38-hS-u4o" secondAttribute="bottom" id="04K-FZ-e8j"/>
+                            <constraint firstItem="YSI-gD-rMa" firstAttribute="trailing" secondItem="zsd-PN-Gen" secondAttribute="trailingMargin" constant="5" id="0Bv-T5-jQP"/>
+                            <constraint firstItem="lcT-o8-Tgc" firstAttribute="top" secondItem="zsd-PN-Gen" secondAttribute="top" id="4Ka-Jw-gby"/>
+                            <constraint firstItem="k38-hS-u4o" firstAttribute="top" secondItem="lcT-o8-Tgc" secondAttribute="bottom" id="A84-D0-OOK"/>
+                            <constraint firstItem="lcT-o8-Tgc" firstAttribute="leading" secondItem="zsd-PN-Gen" secondAttribute="leading" id="Glx-HE-pAY"/>
+                            <constraint firstAttribute="trailing" secondItem="lcT-o8-Tgc" secondAttribute="trailing" id="Qem-to-heM"/>
+                            <constraint firstItem="YSI-gD-rMa" firstAttribute="top" secondItem="zsd-PN-Gen" secondAttribute="topMargin" constant="5" id="SLi-An-UY3"/>
+                            <constraint firstAttribute="trailing" secondItem="k38-hS-u4o" secondAttribute="trailing" id="bJf-DZ-HhA"/>
+                            <constraint firstItem="k38-hS-u4o" firstAttribute="leading" secondItem="zsd-PN-Gen" secondAttribute="leading" id="iJF-it-nMX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="lcT-o8-Tgc" id="mQo-sh-otP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2G-Y1-khX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2757.5999999999999" y="26.53673163418291"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8cf-kM-M0y">
@@ -539,7 +603,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hq6-IJ-lFp" id="5In-yn-FLM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="94.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CEF-u7-21W">
@@ -598,7 +662,7 @@
                                         <rect key="frame" x="0.0" y="123" width="375" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="38E-WZ-hxz" id="EIT-5W-vpg">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="94.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0c0-xy-qh5">
