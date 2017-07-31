@@ -1,5 +1,15 @@
 PODS:
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
   - Canvas (0.1.2)
+  - FBSDKCoreKit (4.23.0):
+    - Bolts (~> 1.7)
+  - FBSDKLoginKit (4.23.0):
+    - FBSDKCoreKit
   - Firebase/Auth (3.9.0):
     - Firebase/Core
     - FirebaseAuth (= 3.0.6)
@@ -56,6 +66,7 @@ PODS:
 
 DEPENDENCIES:
   - Canvas (~> 0.1.2)
+  - FBSDKLoginKit
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -66,7 +77,10 @@ DEPENDENCIES:
   - Tabman
 
 SPEC CHECKSUMS:
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
+  FBSDKCoreKit: d7829f5a69901cd7296105328e4c3c3fc7da6518
+  FBSDKLoginKit: 6b92bd65f319d669d2b0730e49db495ef1660566
   Firebase: ff77ffb77b317c3720fef57a60e9335cebf962e6
   FirebaseAnalytics: 6e58fc9b397664369ac7617fb0ba93fab6ba7b5b
   FirebaseAuth: 96e9674ff31d6e1f826d53e26aa003a57cab0295
@@ -83,6 +97,6 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Tabman: c176297899fd28e087a6506f9b56b8ca05195aa5
 
-PODFILE CHECKSUM: 7d8923ee892e1d64d1d7793959c715232c8e2666
+PODFILE CHECKSUM: eae2d72807c54635e3e7ff867bec502728160b5f
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.2.0

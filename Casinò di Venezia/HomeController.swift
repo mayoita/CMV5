@@ -13,6 +13,7 @@ import QuartzCore
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate {
     
+   
     @IBOutlet var tabBarView: TabBarView!
     var databaseRef:FIRDatabaseReference!
     var feedArray = [Events]()
@@ -87,13 +88,14 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
     }
         
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-    
-        if let index = self.index {
+        databaseRef = FIRDatabase.database().reference()
+     //   if let index = self.index {
             //self.label.text = "Page " + String(index)
             //self.promptLabel.isHidden = index != 1
-        }
+      //  }
         self.customization()
         loadDatabase()
         navigationItem.title = "Home"
@@ -107,6 +109,35 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.backgroundColor = UIColor.white
        
         setupMenuBar()
+        setupNavBarButtons()
+    }
+    
+    func setupNavBarButtons(){
+        let loginImage = UIImage(named: "user")?.withRenderingMode(.alwaysOriginal)
+        let loginButtonItem = UIBarButtonItem(image: loginImage, style: .plain, target: self, action: #selector(handledLogIn))
+        navigationItem.rightBarButtonItem = loginButtonItem
+    }
+    
+    func handledLogIn () {
+        
+        let userID = appDelegate.currentUser?.uid
+        databaseRef.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            let isAnonymous = value?["isAnonymous"] as? Bool ?? true
+//            if isAnonymous {
+//                let signIn = self.storyboard?.instantiateViewController(withIdentifier: "signIn") as! SignInViewController
+//                self.present(signIn, animated: true, completion: nil)
+//            } else {
+                let logIn = self.storyboard?.instantiateViewController(withIdentifier: "logIn") as! LogInViewController
+                self.present(logIn, animated: true, completion: nil)
+           // }
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+
     }
     
 
@@ -245,7 +276,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     func loadDatabase(){
-        databaseRef = FIRDatabase.database().reference()
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         dateFormatter.locale = Locale.current

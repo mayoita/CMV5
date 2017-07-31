@@ -8,12 +8,15 @@
 
 import UIKit
 
-class CircularTransition: NSObject, UIViewControllerAnimatedTransitioning {
+class CircularTransition: NSObject, UIViewControllerAnimatedTransitioning, CAAnimationDelegate {
     var circle = UIView()
     
    let maskLayer = CAShapeLayer()
     var animation: CABasicAnimation!
     var topView: UIView!
+    var openingFrame: UIButton?
+    var transitionContext: UIViewControllerContextTransitioning?
+    var origin = CGPoint.zero
     
     var startingPoint = CGPoint.zero {
         didSet {
@@ -22,12 +25,12 @@ class CircularTransition: NSObject, UIViewControllerAnimatedTransitioning {
     }
     
     var circleColor = UIColor.white
-    var duration = 0.3
+    var duration = 0.5
     enum CircularTransitionMode: Int {
-        case present, dismiss, pop
+        case Present, Dismiss
     }
     
-    var transitionMode: CircularTransitionMode = .present
+    var transitionMode: CircularTransitionMode = .Present
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration
@@ -36,60 +39,71 @@ class CircularTransition: NSObject, UIViewControllerAnimatedTransitioning {
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         //From view controller
         let fromViewController = transitionContext.viewController(forKey:.from)
-        let fromViewFrame = fromViewController?.view.frame
+        
         
         //To view controller
         let toViewController = transitionContext.viewController(forKey: .to)
+        let originalCenter = toViewController?.view.center
+        let originalSize = toViewController?.view.frame.size
         //Container view
         let containerView = transitionContext.containerView
+        self.transitionContext = transitionContext
         
-        if transitionMode == .present{
+        
+        if transitionMode == .Present{
+            // add our views to the container
+            
+           // containerView.addSubview((fromViewController?.view)!)
+            containerView.addSubview((toViewController?.view)!)
+            
+            let maskPath = UIBezierPath(ovalIn: openingFrame!.frame)
+            
+            // define the masking layer to be able to show that circle animation
+            let maskLayer = CAShapeLayer()
+            maskLayer.frame = (toViewController?.view.frame)!
+            maskLayer.path = maskPath.cgPath
+            toViewController?.view.layer.mask = maskLayer
            
-                
-                topView = fromViewController?.view.resizableSnapshotView(from: fromViewFrame!, afterScreenUpdates: true, withCapInsets: UIEdgeInsetsMake(0, 0, 0, 0))
-                
-              //  let viewCenter = presentedView.center
-              //  let viewSize = presentedView.frame.size
-                maskLayer.frame = (toViewController?.view.frame)!
-                // Create the frame for the circle.
-                let radius: CGFloat = 50.0
-                // Rectangle in which circle will be drawn
-                let rect = CGRect(x: 100, y: 100, width: 2 * radius, height: 2 * radius)
-                let circlePath = UIBezierPath(ovalIn: rect)
-                // Create a path
-                let path = UIBezierPath(rect: (toViewController?.view.bounds)!)
-                // Append additional path which will create a circle
-                path.append(circlePath)
-                // Setup the fill rule to EvenOdd to properly mask the specified area and make a crater
-                maskLayer.fillRule = kCAFillRuleEvenOdd
-                // Append the circle to the path so that it is subtracted.
-                maskLayer.path = path.cgPath
-                // Mask our view with Blue background so that portion of red background is visible
-                topView.layer.mask = maskLayer
-                
-//                circle = UIView()
-//                circle.frame = frameCircle(withViewCenter: viewCenter, size: viewSize, starPoint: startingPoint)
-//                circle.layer.cornerRadius = circle.frame.size.height / 2
-//                circle.center = startingPoint
-//                circle.backgroundColor = circleColor
-//                circle.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
-//                containerView.addSubview(circle)
-                
-             //   presentedView.center = startingPoint
-             //   presentedView.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
-             //   presentedView.alpha = 0
-                containerView.addSubview((toViewController?.view)!)
-                containerView.addSubview(topView)
-                
-                UIView.animate(withDuration: duration, animations: {
-                    self.circle.transform = CGAffineTransform.identity
-                    self.topView.transform = CGAffineTransform.identity
-                    self.topView.alpha = 1
-                  //  topView.center = viewCenter
-                }, completion: { (success:Bool) in
-                    transitionContext.completeTransition(success)
-                    
-                })
+            // define the end frame
+            var ret = frameCircle(withViewCenter: originalCenter!, size: originalSize!, starPoint: origin)
+            ret.origin = CGPoint(x: ret.origin.x - (ret.midX - origin.x) , y: ret.origin.y - (ret.midY - origin.y))
+            
+            let bigCirclePath = UIBezierPath(ovalIn: ret)
+            
+            // create the animation
+            let pathAnimation = CABasicAnimation(keyPath: "path")
+            pathAnimation.delegate = self
+            pathAnimation.fromValue = maskPath.cgPath
+            pathAnimation.toValue = bigCirclePath
+            pathAnimation.duration = transitionDuration(using: transitionContext)
+            maskLayer.path = bigCirclePath.cgPath
+            maskLayer.add(pathAnimation, forKey: "pathAnimation")
+        } else{
+            
+            containerView.addSubview((fromViewController?.view)!)
+            //containerView.addSubview((toViewController?.view)!)
+            //Define the start frame
+            var ret = frameCircle(withViewCenter: originalCenter!, size: originalSize!, starPoint: origin)
+            ret.origin = CGPoint(x: ret.origin.x - (ret.midX - origin.x) , y: ret.origin.y - (ret.midY - origin.y))
+            let maskPath = UIBezierPath(ovalIn: ret)
+            
+            // define the masking layer to be able to show that circle animation
+            let maskLayer = CAShapeLayer()
+            maskLayer.frame = (toViewController?.view.frame)!
+            maskLayer.path = maskPath.cgPath
+            fromViewController?.view.layer.mask = maskLayer
+            
+            // define the end frame
+            let bigCirclePath = UIBezierPath(ovalIn: openingFrame!.frame)
+            
+            // create the animation
+            let pathAnimation = CABasicAnimation(keyPath: "path")
+            pathAnimation.delegate = self
+            pathAnimation.fromValue = maskPath.cgPath
+            pathAnimation.toValue = bigCirclePath
+            pathAnimation.duration = transitionDuration(using: transitionContext)
+            maskLayer.path = bigCirclePath.cgPath
+            maskLayer.add(pathAnimation, forKey: "pathAnimation")
             
         }
         }
@@ -99,10 +113,17 @@ class CircularTransition: NSObject, UIViewControllerAnimatedTransitioning {
         let xLength = fmax(starPoint.x, viewSize.width - starPoint.x)
         let yLenght = fmax(starPoint.y, viewSize.height - starPoint.y)
         
-        let offsetVector = sqrt(xLength * xLength + yLenght*yLenght)
+        let offsetVector = sqrt(xLength * xLength + yLenght * yLenght) * 2
         let size = CGSize(width: offsetVector, height: offsetVector)
         
         return CGRect(origin: CGPoint.zero, size: size)
+    }
+    
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        if let transitionContext = self.transitionContext {
+            
+            transitionContext.completeTransition(true)
+        }
     }
     
 }

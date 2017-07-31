@@ -15,6 +15,9 @@ target 'Casinò di Venezia' do
   pod 'Pageboy'
   pod 'Tabman'
   pod 'Canvas', '~> 0.1.2'
+  
+# These are pods used for the auth providers.
+  pod 'FBSDKLoginKit'
 
 	
   target 'Casinò di VeneziaTests' do

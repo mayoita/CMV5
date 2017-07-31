@@ -9,22 +9,62 @@
 import UIKit
 import Firebase
 import EventKit
+import FBSDKCoreKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
    var window: UIWindow?
     var eventStore: EKEventStore?
     var locale: Locale?
- 
+    var ref = FIRDatabaseReference()
+    var currentUser = FIRAuth.auth()?.currentUser
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FIRApp.configure()
         locale = Locale.current
+        ref = FIRDatabase.database().reference()
+//        let firebaseAuth = FIRAuth.auth()
+//        do {
+//            try firebaseAuth?.signOut()
+//        } catch let signOutError as NSError {
+//            print ("Error signing out: %@", signOutError)
+//        }
+        currentUser = FIRAuth.auth()?.currentUser
+        //LogIn Anonymous
+        if currentUser == nil {
+            
+            // No user is signed in.
+            FIRAuth.auth()?.signInAnonymously(completion: {
+                (user, error) in
+                
+                if error != nil {
+                    print(error ?? "")
+                }
+                let values = ["name": "Anonymous", "email": "Anonymous","profileImageURL": "" ,"isAnonymous": true] as [String : Any]
+                self.ref.child("users").child((user?.uid)!).setValue(values)
+                
+            })
+        } else {
+            print("Current User ID: ", currentUser?.uid)
+        }
+        
+        
+        
+        
+       
+        FBSDKApplicationDelegate.sharedInstance().application(application,  didFinishLaunchingWithOptions: launchOptions)
         
        
         return true
     }
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String, annotation: options[UIApplicationOpenURLOptionsKey.sourceApplication])
+        
+        return handled
+    }
+    
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

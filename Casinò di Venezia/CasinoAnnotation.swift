@@ -10,12 +10,17 @@ import UIKit
 import MapKit
 
 class CasinoAnnotation: NSObject, MKAnnotation {
-    
-    var coordinate: CLLocationCoordinate2D
-    var title: String?
-    var image: UIImage?
+    var coordinate: CLLocationCoordinate2D { return location.location }
+    var location: Location
     var eta: String?
     
-    init(coordinate: CLLocationCoordinate2D) {
-        self.coordinate = coordinate
-    }}
+  
+    init(location: Location) {
+        self.location = location
+        super.init()
+    }
+    
+    var name: String? {
+        return location.name
+    }
+}

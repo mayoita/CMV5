@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2214AD2E1F1661B900F9EBA7 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2214AD2D1F1661B900F9EBA7 /* LogInViewController.swift */; };
 		22208DCF1EFD50EA007DA39D /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DCE1EFD50EA007DA39D /* MenuBar.swift */; };
 		22208DD31F03C1A7007DA39D /* ButtonSpeaking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DD21F03C1A6007DA39D /* ButtonSpeaking.swift */; };
 		22208DD71F03E61C007DA39D /* ExpandAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DD61F03E61C007DA39D /* ExpandAnimator.swift */; };
@@ -15,7 +16,9 @@
 		22208DDD1F066F17007DA39D /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DDC1F066F17007DA39D /* Gradient.swift */; };
 		22208DDF1F067CBC007DA39D /* GradientInv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22208DDE1F067CBC007DA39D /* GradientInv.swift */; };
 		2227D59F1F0A78B500F09669 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227D59E1F0A78B500F09669 /* CircularTransition.swift */; };
+		2227FF151F13CDDB0032AA30 /* UIView+BezierPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227FF141F13CDDB0032AA30 /* UIView+BezierPaths.swift */; };
 		2228F76B1F0A41E500F3C94A /* CanvasButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2228F76A1F0A41E500F3C94A /* CanvasButton.swift */; };
+		22419E9D1F1932F400F4735A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22419E9C1F1932F400F4735A /* SignInViewController.swift */; };
 		2252541D1F06EFA8005F1FF7 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2252541C1F06EFA8005F1FF7 /* MapsViewController.swift */; };
 		225254221F06F1E0005F1FF7 /* Venezia.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2252541E1F06F1E0005F1FF7 /* Venezia.gpx */; };
 		225254231F06F1E0005F1FF7 /* CaNoghera.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2252541F1F06F1E0005F1FF7 /* CaNoghera.gpx */; };
@@ -42,6 +45,9 @@
 		225805871EFED83900F2826D /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805741EFED83900F2826D /* TabViewController.swift */; };
 		225805881EFED83900F2826D /* TabViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805751EFED83900F2826D /* TabViewController+Extras.swift */; };
 		225805891EFED83900F2826D /* TransparentNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805761EFED83900F2826D /* TransparentNavigationBar.swift */; };
+		22630A1F1F0F98AE00168D1F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22630A1E1F0F98AE00168D1F /* Location.swift */; };
+		22630A251F0FBD9200168D1F /* PersonDetailMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22630A241F0FBD9200168D1F /* PersonDetailMapView.xib */; };
+		22630A271F0FBDAF00168D1F /* PersonDetailMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22630A261F0FBDAF00168D1F /* PersonDetailMapView.swift */; };
 		229583951EFCFDC700409D7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295838D1EFCFDC700409D7A /* AppDelegate.swift */; };
 		229583961EFCFDC700409D7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295838F1EFCFDC700409D7A /* Constants.swift */; };
 		229583971EFCFDC700409D7A /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229583901EFCFDC700409D7A /* EventListCell.swift */; };
@@ -52,6 +58,7 @@
 		229583A01EFD13AA00409D7A /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295839F1EFD13AA00409D7A /* Events.swift */; };
 		229583A21EFD1B8200409D7A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229583A11EFD1B8200409D7A /* Images.xcassets */; };
 		22CF448B181A9AD70062FC38 /* Casino__di_VeneziaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CF448A181A9AD70062FC38 /* Casino__di_VeneziaTests.m */; };
+		22E93AE11F0BF8D800675342 /* CasinoAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E93AE01F0BF8D800675342 /* CasinoAnnotationView.swift */; };
 		A34396063423EBBAC13846CC /* Pods_Casino__di_Venezia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7BF60459BDF63750E622B8 /* Pods_Casino__di_Venezia.framework */; };
 		F6EAD3FB606CEFED596C5709 /* Pods_Casino__di_VeneziaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D50E0540626459F2E41608E /* Pods_Casino__di_VeneziaTests.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +76,7 @@
 /* Begin PBXFileReference section */
 		0E8526CA15B3B18DA96C3E36 /* Pods-Casinò di Venezia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Casinò di Venezia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Casinò di Venezia/Pods-Casinò di Venezia.debug.xcconfig"; sourceTree = "<group>"; };
 		1D50E0540626459F2E41608E /* Pods_Casino__di_VeneziaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Casino__di_VeneziaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2214AD2D1F1661B900F9EBA7 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInViewController.swift; path = "Casinò di Venezia/LogInViewController.swift"; sourceTree = "<group>"; };
 		22208DCE1EFD50EA007DA39D /* MenuBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuBar.swift; path = "Casinò di Venezia/MenuBar.swift"; sourceTree = "<group>"; };
 		22208DD21F03C1A6007DA39D /* ButtonSpeaking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonSpeaking.swift; path = "Casinò di Venezia/ButtonSpeaking.swift"; sourceTree = "<group>"; };
 		22208DD61F03E61C007DA39D /* ExpandAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandAnimator.swift; sourceTree = "<group>"; };
@@ -77,7 +85,9 @@
 		22208DDC1F066F17007DA39D /* Gradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Gradient.swift; path = "Casinò di Venezia/Gradient.swift"; sourceTree = "<group>"; };
 		22208DDE1F067CBC007DA39D /* GradientInv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GradientInv.swift; path = "Casinò di Venezia/GradientInv.swift"; sourceTree = "<group>"; };
 		2227D59E1F0A78B500F09669 /* CircularTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularTransition.swift; path = "Casinò di Venezia/CircularTransition.swift"; sourceTree = "<group>"; };
+		2227FF141F13CDDB0032AA30 /* UIView+BezierPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+BezierPaths.swift"; sourceTree = "<group>"; };
 		2228F76A1F0A41E500F3C94A /* CanvasButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CanvasButton.swift; path = "Casinò di Venezia/CanvasButton.swift"; sourceTree = "<group>"; };
+		22419E9C1F1932F400F4735A /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = "Casinò di Venezia/SignInViewController.swift"; sourceTree = "<group>"; };
 		2252541C1F06EFA8005F1FF7 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsViewController.swift; path = "Casinò di Venezia/MapsViewController.swift"; sourceTree = "<group>"; };
 		2252541E1F06F1E0005F1FF7 /* Venezia.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Venezia.gpx; sourceTree = "<group>"; };
 		2252541F1F06F1E0005F1FF7 /* CaNoghera.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = CaNoghera.gpx; sourceTree = "<group>"; };
@@ -104,6 +114,9 @@
 		225805741EFED83900F2826D /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		225805751EFED83900F2826D /* TabViewController+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TabViewController+Extras.swift"; sourceTree = "<group>"; };
 		225805761EFED83900F2826D /* TransparentNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentNavigationBar.swift; sourceTree = "<group>"; };
+		22630A1E1F0F98AE00168D1F /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = "Casinò di Venezia/Location.swift"; sourceTree = "<group>"; };
+		22630A241F0FBD9200168D1F /* PersonDetailMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonDetailMapView.xib; sourceTree = "<group>"; };
+		22630A261F0FBDAF00168D1F /* PersonDetailMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailMapView.swift; sourceTree = "<group>"; };
 		2295838D1EFCFDC700409D7A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Casinò di Venezia/AppDelegate.swift"; sourceTree = "<group>"; };
 		2295838F1EFCFDC700409D7A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "Casinò di Venezia/Constants.swift"; sourceTree = "<group>"; };
 		229583901EFCFDC700409D7A /* EventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventListCell.swift; path = "Casinò di Venezia/EventListCell.swift"; sourceTree = "<group>"; };
@@ -120,6 +133,7 @@
 		22CF4486181A9AD70062FC38 /* Casinò di VeneziaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Casinò di VeneziaTests-Info.plist"; sourceTree = "<group>"; };
 		22CF448A181A9AD70062FC38 /* Casino__di_VeneziaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Casino__di_VeneziaTests.m; sourceTree = "<group>"; };
 		22DAAD34189FE77F00435B50 /* Restaurant.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Restaurant.plist; sourceTree = "<group>"; };
+		22E93AE01F0BF8D800675342 /* CasinoAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CasinoAnnotationView.swift; path = "Casinò di Venezia/CasinoAnnotationView.swift"; sourceTree = "<group>"; };
 		6F7BF60459BDF63750E622B8 /* Pods_Casino__di_Venezia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Casino__di_Venezia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA45BB608DD76C9B8ED16D0E /* Pods-Casinò di VeneziaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Casinò di VeneziaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Casinò di VeneziaTests/Pods-Casinò di VeneziaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E39FA7C9CB046AA71D005EB0 /* Pods-Casinò di VeneziaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Casinò di VeneziaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Casinò di VeneziaTests/Pods-Casinò di VeneziaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +171,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2214AD2F1F1665E400F9EBA7 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				2214AD2D1F1661B900F9EBA7 /* LogInViewController.swift */,
+				22419E9C1F1932F400F4735A /* SignInViewController.swift */,
+			);
+			name = LogIn;
+			sourceTree = "<group>";
+		};
 		2227D5A01F0A9A9300F09669 /* Transition */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,9 +189,18 @@
 			name = Transition;
 			sourceTree = "<group>";
 		};
+		2227FF161F13CDE70032AA30 /* Categories and Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2227FF141F13CDDB0032AA30 /* UIView+BezierPaths.swift */,
+			);
+			name = "Categories and Extensions";
+			sourceTree = "<group>";
+		};
 		22CF4450181A9AD70062FC38 = {
 			isa = PBXGroup;
 			children = (
+				2227FF161F13CDE70032AA30 /* Categories and Extensions */,
 				229583A11EFD1B8200409D7A /* Images.xcassets */,
 				2252541E1F06F1E0005F1FF7 /* Venezia.gpx */,
 				2252541F1F06F1E0005F1FF7 /* CaNoghera.gpx */,
@@ -180,6 +212,7 @@
 				2228F76A1F0A41E500F3C94A /* CanvasButton.swift */,
 				22208DDE1F067CBC007DA39D /* GradientInv.swift */,
 				22208DDA1F06561A007DA39D /* CloseOnScrollDown.swift */,
+				2214AD2F1F1665E400F9EBA7 /* LogIn */,
 				2227D5A01F0A9A9300F09669 /* Transition */,
 				22208DCE1EFD50EA007DA39D /* MenuBar.swift */,
 				225805571EFEBF3100F2826D /* TabBarView.swift */,
@@ -187,8 +220,7 @@
 				22208DD81F03F268007DA39D /* EventDetails.swift */,
 				2295838F1EFCFDC700409D7A /* Constants.swift */,
 				229583901EFCFDC700409D7A /* EventListCell.swift */,
-				2252541C1F06EFA8005F1FF7 /* MapsViewController.swift */,
-				225254261F06F4BB005F1FF7 /* CasinoAnnotation.swift */,
+				22E93ADF1F0BF84C00675342 /* Maps */,
 				229583911EFCFDC700409D7A /* HomeController.swift */,
 				2295839F1EFD13AA00409D7A /* Events.swift */,
 				229583921EFCFDC700409D7A /* Info.plist */,
@@ -262,6 +294,19 @@
 				22CF4486181A9AD70062FC38 /* Casinò di VeneziaTests-Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22E93ADF1F0BF84C00675342 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				22630A261F0FBDAF00168D1F /* PersonDetailMapView.swift */,
+				22630A241F0FBD9200168D1F /* PersonDetailMapView.xib */,
+				2252541C1F06EFA8005F1FF7 /* MapsViewController.swift */,
+				22630A1E1F0F98AE00168D1F /* Location.swift */,
+				22E93AE01F0BF8D800675342 /* CasinoAnnotationView.swift */,
+				225254261F06F4BB005F1FF7 /* CasinoAnnotation.swift */,
+			);
+			name = Maps;
 			sourceTree = "<group>";
 		};
 		69CAEFE764E8D28F53DE18B5 /* Frameworks */ = {
@@ -385,6 +430,7 @@
 				2295839B1EFCFDC700409D7A /* sediciNoni.png in Resources */,
 				225254221F06F1E0005F1FF7 /* Venezia.gpx in Resources */,
 				225254241F06F1E0005F1FF7 /* Mestre.gpx in Resources */,
+				22630A251F0FBD9200168D1F /* PersonDetailMapView.xib in Resources */,
 				229583A21EFD1B8200409D7A /* Images.xcassets in Resources */,
 				2295839E1EFD02BB00409D7A /* GoogleService-Info.plist in Resources */,
 				2295839A1EFCFDC700409D7A /* Main.storyboard in Resources */,
@@ -414,7 +460,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		2DD4A5115AF3152CCB696637 /* [CP] Copy Pods Resources */ = {
@@ -459,7 +505,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A00B2351ACED315F8C494068 /* [CP] Embed Pods Frameworks */ = {
@@ -504,6 +550,8 @@
 				22208DDB1F06561A007DA39D /* CloseOnScrollDown.swift in Sources */,
 				229583971EFCFDC700409D7A /* EventListCell.swift in Sources */,
 				2258057E1EFED83900F2826D /* SettingsEntries.swift in Sources */,
+				22E93AE11F0BF8D800675342 /* CasinoAnnotationView.swift in Sources */,
+				22630A271F0FBDAF00168D1F /* PersonDetailMapView.swift in Sources */,
 				225805791EFED83900F2826D /* CustomTabmanBar.swift in Sources */,
 				2258057A1EFED83900F2826D /* GradientView.swift in Sources */,
 				22208DDF1F067CBC007DA39D /* GradientInv.swift in Sources */,
@@ -511,11 +559,15 @@
 				229583981EFCFDC700409D7A /* HomeController.swift in Sources */,
 				22208DDD1F066F17007DA39D /* Gradient.swift in Sources */,
 				225254271F06F4BB005F1FF7 /* CasinoAnnotation.swift in Sources */,
+				22419E9D1F1932F400F4735A /* SignInViewController.swift in Sources */,
 				225805831EFED83900F2826D /* SettingsPresentTransitionController.swift in Sources */,
+				22630A1F1F0F98AE00168D1F /* Location.swift in Sources */,
 				225805581EFEBF3100F2826D /* TabBarView.swift in Sources */,
 				225805881EFED83900F2826D /* TabViewController+Extras.swift in Sources */,
 				22208DCF1EFD50EA007DA39D /* MenuBar.swift in Sources */,
 				2258057C1EFED83900F2826D /* SettingsCells.swift in Sources */,
+				2227FF151F13CDDB0032AA30 /* UIView+BezierPaths.swift in Sources */,
+				2214AD2E1F1661B900F9EBA7 /* LogInViewController.swift in Sources */,
 				229583951EFCFDC700409D7A /* AppDelegate.swift in Sources */,
 				225805801EFED83900F2826D /* SettingsNavigationController.swift in Sources */,
 				229583961EFCFDC700409D7A /* Constants.swift in Sources */,

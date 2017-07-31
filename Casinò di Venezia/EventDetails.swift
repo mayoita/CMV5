@@ -151,18 +151,19 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate {
 
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .present
-        transition.startingPoint = map.center
-        transition.circleColor = UIColor.black
+        transition.transitionMode = .Present
+        transition.openingFrame = self.map
+        transition.origin = self.map.center
+       
         
         return transition
         
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.transitionMode = .dismiss
-        transition.startingPoint = map.center
-        transition.circleColor = UIColor.black
+        transition.transitionMode = .Dismiss
+        transition.openingFrame = self.map
+        transition.origin = self.map.center
         
         return transition
     }
