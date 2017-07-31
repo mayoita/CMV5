@@ -9,11 +9,11 @@
 import UIKit
 
 func degreesToRadians (_ value:CGFloat) -> CGFloat {
-    return value * CGFloat(M_PI) / 180.0
+    return value * CGFloat(Double.pi) / 180.0
 }
 
 func radiansToDegrees (_ value:CGFloat) -> CGFloat {
-    return value * 180.0 / CGFloat(M_PI)
+    return value * 180.0 / CGFloat(Double.pi)
 }
 
 func dialogBezierPathWithFrame(_ frame: CGRect, arrowOrientation orientation: UIImageOrientation, arrowLength: CGFloat = 20.0) -> UIBezierPath {

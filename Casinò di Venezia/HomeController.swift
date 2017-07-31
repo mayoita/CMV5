@@ -15,14 +15,15 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
    
     @IBOutlet var tabBarView: TabBarView!
-    var databaseRef:FIRDatabaseReference!
+    var databaseRef:DatabaseReference!
+ 
     var feedArray = [Events]()
     let formatter = DateFormatter()
     var index: Int?
     var isMenuOpen = false
     var verticalConstraints: NSLayoutConstraint!
     var currentMaxDisplayedCell = 0
-    var currentMaxDisplayedSection = 0
+    var currentMaxDisplayedSection = 0    
     var cellZoomXScaleFactor = 1.25;
     var cellZoomYScaleFactor = 1.25;
     var cellZoomAnimationDuration = 0.70;
@@ -44,13 +45,13 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         self.tabBarView.translatesAutoresizingMaskIntoConstraints = false
         
         let descHorizontal = "H:|[tabBarView]|"
-        let descVertical = "V:|[tabBarView(60)]|"
+        //let descVertical = "V:|[tabBarView(60)]|"
         
         let viewsDict = ["tabBarView": tabBarView]
         let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: descHorizontal,
                                                                    options: NSLayoutFormatOptions(rawValue: 0),
                                                                    metrics: nil,
-                                                                   views: viewsDict)
+                                                                   views: viewsDict as Any as! [String : Any])
         //verticalConstraints.constraints(withVisualFormat: descVertical,
                                                                   // options: NSLayoutFormatOptions(rawValue: 0),
                                                                 //   metrics: nil,
@@ -91,7 +92,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        databaseRef = FIRDatabase.database().reference()
+        databaseRef = Database.database().reference()
      //   if let index = self.index {
             //self.label.text = "Page " + String(index)
             //self.promptLabel.isHidden = index != 1

@@ -17,26 +17,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
    var window: UIWindow?
     var eventStore: EKEventStore?
     var locale: Locale?
-    var ref = FIRDatabaseReference()
-    var currentUser = FIRAuth.auth()?.currentUser
+    var ref = DatabaseReference()
+    var currentUser: User?
+    var currentUserIsAnonymous: Bool = true
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        FIRApp.configure()
+        FirebaseApp.configure()
         locale = Locale.current
-        ref = FIRDatabase.database().reference()
+        ref = Database.database().reference()
 //        let firebaseAuth = FIRAuth.auth()
 //        do {
 //            try firebaseAuth?.signOut()
 //        } catch let signOutError as NSError {
 //            print ("Error signing out: %@", signOutError)
 //        }
-        currentUser = FIRAuth.auth()?.currentUser
+        currentUser = Auth.auth().currentUser
         //LogIn Anonymous
         if currentUser == nil {
             
             // No user is signed in.
-            FIRAuth.auth()?.signInAnonymously(completion: {
+            Auth.auth().signInAnonymously(completion: {
                 (user, error) in
                 
                 if error != nil {
@@ -47,7 +48,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 
             })
         } else {
-            print("Current User ID: ", currentUser?.uid)
+            ref.child("users").child((currentUser?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
+                // Get user value
+                let value = snapshot.value as? NSDictionary
+                self.currentUserIsAnonymous = value?["isAnonymous"] as? Bool ?? true
+                
+                // ...
+            }) { (error) in
+                print(error.localizedDescription)
+            }
+            print("Current User ID: ", currentUser?.uid as Any)
         }
         
         
