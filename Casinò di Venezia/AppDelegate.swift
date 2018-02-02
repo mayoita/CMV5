@@ -8,6 +8,9 @@
 
 import UIKit
 import Firebase
+import FirebaseAuthUI
+import FirebaseGoogleAuthUI
+import FirebaseFacebookAuthUI
 import EventKit
 import FBSDKCoreKit
 
@@ -24,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
+        
+        
         locale = Locale.current
         ref = Database.database().reference()
 //        let firebaseAuth = FIRAuth.auth()
@@ -45,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
                 let values = ["name": "Anonymous", "email": "Anonymous","profileImageURL": "" ,"isAnonymous": true] as [String : Any]
                 self.ref.child("users").child((user?.uid)!).setValue(values)
-                
+                print("Current User ID: ", user?.uid as Any)
             })
         } else {
             ref.child("users").child((currentUser?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
@@ -59,10 +64,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             print("Current User ID: ", currentUser?.uid as Any)
         }
-        
-        
-        
-        
        
         FBSDKApplicationDelegate.sharedInstance().application(application,  didFinishLaunchingWithOptions: launchOptions)
         
@@ -70,6 +71,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
         let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String, annotation: options[UIApplicationOpenURLOptionsKey.sourceApplication])
         
         return handled

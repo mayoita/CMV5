@@ -48,6 +48,7 @@
 		22630A1F1F0F98AE00168D1F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22630A1E1F0F98AE00168D1F /* Location.swift */; };
 		22630A251F0FBD9200168D1F /* PersonDetailMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22630A241F0FBD9200168D1F /* PersonDetailMapView.xib */; };
 		22630A271F0FBDAF00168D1F /* PersonDetailMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22630A261F0FBDAF00168D1F /* PersonDetailMapView.swift */; };
+		22899D8D201A00EE000CDE7E /* CMVLogInFirebaseUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22899D8C201A00EE000CDE7E /* CMVLogInFirebaseUI.swift */; };
 		229583951EFCFDC700409D7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295838D1EFCFDC700409D7A /* AppDelegate.swift */; };
 		229583961EFCFDC700409D7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295838F1EFCFDC700409D7A /* Constants.swift */; };
 		229583971EFCFDC700409D7A /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229583901EFCFDC700409D7A /* EventListCell.swift */; };
@@ -56,9 +57,13 @@
 		2295839B1EFCFDC700409D7A /* sediciNoni.png in Resources */ = {isa = PBXBuildFile; fileRef = 229583941EFCFDC700409D7A /* sediciNoni.png */; };
 		2295839E1EFD02BB00409D7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */; };
 		229583A01EFD13AA00409D7A /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295839F1EFD13AA00409D7A /* Events.swift */; };
-		229583A21EFD1B8200409D7A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 229583A11EFD1B8200409D7A /* Images.xcassets */; };
 		22CF448B181A9AD70062FC38 /* Casino__di_VeneziaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CF448A181A9AD70062FC38 /* Casino__di_VeneziaTests.m */; };
+		22D406D62022216C00D71A6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D406D52022216A00D71A6F /* Images.xcassets */; };
+		22D406D82023281F00D71A6F /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D406D72023281E00D71A6F /* StyleKit.swift */; };
+		22D406DB202328DF00D71A6F /* Dove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D406DA202328DF00D71A6F /* Dove.swift */; };
 		22E93AE11F0BF8D800675342 /* CasinoAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E93AE01F0BF8D800675342 /* CasinoAnnotationView.swift */; };
+		22EB73592024A43200759094 /* Quando.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB73582024A43200759094 /* Quando.swift */; };
+		22EB735B2024C5EA00759094 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB735A2024C5EA00759094 /* MainTabBar.swift */; };
 		A34396063423EBBAC13846CC /* Pods_Casino__di_Venezia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7BF60459BDF63750E622B8 /* Pods_Casino__di_Venezia.framework */; };
 		F6EAD3FB606CEFED596C5709 /* Pods_Casino__di_VeneziaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D50E0540626459F2E41608E /* Pods_Casino__di_VeneziaTests.framework */; };
 /* End PBXBuildFile section */
@@ -117,6 +122,7 @@
 		22630A1E1F0F98AE00168D1F /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = "Casinò di Venezia/Location.swift"; sourceTree = "<group>"; };
 		22630A241F0FBD9200168D1F /* PersonDetailMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonDetailMapView.xib; sourceTree = "<group>"; };
 		22630A261F0FBDAF00168D1F /* PersonDetailMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailMapView.swift; sourceTree = "<group>"; };
+		22899D8C201A00EE000CDE7E /* CMVLogInFirebaseUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMVLogInFirebaseUI.swift; sourceTree = "<group>"; };
 		2295838D1EFCFDC700409D7A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Casinò di Venezia/AppDelegate.swift"; sourceTree = "<group>"; };
 		2295838F1EFCFDC700409D7A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "Casinò di Venezia/Constants.swift"; sourceTree = "<group>"; };
 		229583901EFCFDC700409D7A /* EventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventListCell.swift; path = "Casinò di Venezia/EventListCell.swift"; sourceTree = "<group>"; };
@@ -126,14 +132,18 @@
 		229583941EFCFDC700409D7A /* sediciNoni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sediciNoni.png; path = "Casinò di Venezia/sediciNoni.png"; sourceTree = "<group>"; };
 		2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2295839F1EFD13AA00409D7A /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Events.swift; path = "Casinò di Venezia/Events.swift"; sourceTree = "<group>"; };
-		229583A11EFD1B8200409D7A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		22A65A07185EF5AE0018FD0C /* Casinò di Venezia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Casinò di Venezia.entitlements"; sourceTree = "<group>"; };
 		22CF4459181A9AD70062FC38 /* Casinò di Venezia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Casinò di Venezia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CF447D181A9AD70062FC38 /* Casinò di VeneziaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Casinò di VeneziaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CF4486181A9AD70062FC38 /* Casinò di VeneziaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Casinò di VeneziaTests-Info.plist"; sourceTree = "<group>"; };
 		22CF448A181A9AD70062FC38 /* Casino__di_VeneziaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Casino__di_VeneziaTests.m; sourceTree = "<group>"; };
+		22D406D52022216A00D71A6F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Casinò di Venezia/Images.xcassets"; sourceTree = "<group>"; };
+		22D406D72023281E00D71A6F /* StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleKit.swift; path = "Casinò di Venezia/StyleKit.swift"; sourceTree = "<group>"; };
+		22D406DA202328DF00D71A6F /* Dove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dove.swift; path = "Casinò di Venezia/Dove.swift"; sourceTree = "<group>"; };
 		22DAAD34189FE77F00435B50 /* Restaurant.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Restaurant.plist; sourceTree = "<group>"; };
 		22E93AE01F0BF8D800675342 /* CasinoAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CasinoAnnotationView.swift; path = "Casinò di Venezia/CasinoAnnotationView.swift"; sourceTree = "<group>"; };
+		22EB73582024A43200759094 /* Quando.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quando.swift; sourceTree = "<group>"; };
+		22EB735A2024C5EA00759094 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		6F7BF60459BDF63750E622B8 /* Pods_Casino__di_Venezia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Casino__di_Venezia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA45BB608DD76C9B8ED16D0E /* Pods-Casinò di VeneziaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Casinò di VeneziaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Casinò di VeneziaTests/Pods-Casinò di VeneziaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E39FA7C9CB046AA71D005EB0 /* Pods-Casinò di VeneziaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Casinò di VeneziaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Casinò di VeneziaTests/Pods-Casinò di VeneziaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +186,7 @@
 			children = (
 				2214AD2D1F1661B900F9EBA7 /* LogInViewController.swift */,
 				22419E9C1F1932F400F4735A /* SignInViewController.swift */,
+				22899D8C201A00EE000CDE7E /* CMVLogInFirebaseUI.swift */,
 			);
 			name = LogIn;
 			sourceTree = "<group>";
@@ -201,8 +212,9 @@
 			isa = PBXGroup;
 			children = (
 				2227FF161F13CDE70032AA30 /* Categories and Extensions */,
-				229583A11EFD1B8200409D7A /* Images.xcassets */,
 				2252541E1F06F1E0005F1FF7 /* Venezia.gpx */,
+				22D406D72023281E00D71A6F /* StyleKit.swift */,
+				22D406D52022216A00D71A6F /* Images.xcassets */,
 				2252541F1F06F1E0005F1FF7 /* CaNoghera.gpx */,
 				225254201F06F1E0005F1FF7 /* Mestre.gpx */,
 				225254211F06F1E0005F1FF7 /* SanGeremia.gpx */,
@@ -215,7 +227,9 @@
 				2214AD2F1F1665E400F9EBA7 /* LogIn */,
 				2227D5A01F0A9A9300F09669 /* Transition */,
 				22208DCE1EFD50EA007DA39D /* MenuBar.swift */,
+				22D406D9202328B300D71A6F /* Design */,
 				225805571EFEBF3100F2826D /* TabBarView.swift */,
+				22EB735A2024C5EA00759094 /* MainTabBar.swift */,
 				22208DD21F03C1A6007DA39D /* ButtonSpeaking.swift */,
 				22208DD81F03F268007DA39D /* EventDetails.swift */,
 				2295838F1EFCFDC700409D7A /* Constants.swift */,
@@ -294,6 +308,15 @@
 				22CF4486181A9AD70062FC38 /* Casinò di VeneziaTests-Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		22D406D9202328B300D71A6F /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				22D406DA202328DF00D71A6F /* Dove.swift */,
+				22EB73582024A43200759094 /* Quando.swift */,
+			);
+			name = Design;
 			sourceTree = "<group>";
 		};
 		22E93ADF1F0BF84C00675342 /* Maps */ = {
@@ -426,12 +449,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22D406D62022216C00D71A6F /* Images.xcassets in Resources */,
 				225254231F06F1E0005F1FF7 /* CaNoghera.gpx in Resources */,
 				2295839B1EFCFDC700409D7A /* sediciNoni.png in Resources */,
 				225254221F06F1E0005F1FF7 /* Venezia.gpx in Resources */,
 				225254241F06F1E0005F1FF7 /* Mestre.gpx in Resources */,
 				22630A251F0FBD9200168D1F /* PersonDetailMapView.xib in Resources */,
-				229583A21EFD1B8200409D7A /* Images.xcassets in Resources */,
 				2295839E1EFD02BB00409D7A /* GoogleService-Info.plist in Resources */,
 				2295839A1EFCFDC700409D7A /* Main.storyboard in Resources */,
 				225254251F06F1E0005F1FF7 /* SanGeremia.gpx in Resources */,
@@ -454,13 +477,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Casinò di VeneziaTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2DD4A5115AF3152CCB696637 /* [CP] Copy Pods Resources */ = {
@@ -499,13 +525,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Casinò di Venezia-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A00B2351ACED315F8C494068 /* [CP] Embed Pods Frameworks */ = {
@@ -514,9 +543,32 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Casinò di Venezia/Pods-Casinò di Venezia-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Canvas/Canvas.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Tabman/Tabman.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Canvas.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tabman.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -529,9 +581,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Casinò di Venezia/Pods-Casinò di Venezia-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -559,6 +620,7 @@
 				229583981EFCFDC700409D7A /* HomeController.swift in Sources */,
 				22208DDD1F066F17007DA39D /* Gradient.swift in Sources */,
 				225254271F06F4BB005F1FF7 /* CasinoAnnotation.swift in Sources */,
+				22D406D82023281F00D71A6F /* StyleKit.swift in Sources */,
 				22419E9D1F1932F400F4735A /* SignInViewController.swift in Sources */,
 				225805831EFED83900F2826D /* SettingsPresentTransitionController.swift in Sources */,
 				22630A1F1F0F98AE00168D1F /* Location.swift in Sources */,
@@ -579,12 +641,16 @@
 				225805851EFED83900F2826D /* SettingsSection.swift in Sources */,
 				225805861EFED83900F2826D /* SettingsViewController.swift in Sources */,
 				229583A01EFD13AA00409D7A /* Events.swift in Sources */,
+				22899D8D201A00EE000CDE7E /* CMVLogInFirebaseUI.swift in Sources */,
 				225805771EFED83900F2826D /* ChildViewController.swift in Sources */,
+				22EB73592024A43200759094 /* Quando.swift in Sources */,
 				225805841EFED83900F2826D /* SettingsPushTransitionController.swift in Sources */,
 				2258057F1EFED83900F2826D /* SettingsItem.swift in Sources */,
 				2227D59F1F0A78B500F09669 /* CircularTransition.swift in Sources */,
+				22EB735B2024C5EA00759094 /* MainTabBar.swift in Sources */,
 				22208DD71F03E61C007DA39D /* ExpandAnimator.swift in Sources */,
 				2258057D1EFED83900F2826D /* SettingsDismissTransitionController.swift in Sources */,
+				22D406DB202328DF00D71A6F /* Dove.swift in Sources */,
 				225805811EFED83900F2826D /* SettingsOptionsViewController.swift in Sources */,
 				225805781EFED83900F2826D /* CircularButton.swift in Sources */,
 			);
@@ -649,7 +715,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LIBRARY_SEARCH_PATHS = "";
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
@@ -693,7 +759,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = "";
 				"OTHER_LDFLAGS[arch=*]" = "$(inherited)";
@@ -725,7 +791,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Casinò di Venezia/Casinò di Venezia-Prefix.pch";
 				INFOPLIST_FILE = "Casinò di Venezia/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -764,7 +830,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Casinò di Venezia/Casinò di Venezia-Prefix.pch";
 				INFOPLIST_FILE = "Casinò di Venezia/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

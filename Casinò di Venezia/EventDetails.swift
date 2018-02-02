@@ -154,7 +154,6 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate {
         transition.transitionMode = .Present
         transition.openingFrame = self.map
         transition.origin = self.map.center
-       
         
         return transition
         

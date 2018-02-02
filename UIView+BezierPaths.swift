@@ -7,6 +7,11 @@
 //
 
 import UIKit
+extension String {
+    var localized: String {
+        return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
+    }
+}
 
 func degreesToRadians (_ value:CGFloat) -> CGFloat {
     return value * CGFloat(Double.pi) / 180.0

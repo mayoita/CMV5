@@ -10,13 +10,15 @@ import UIKit
 import Firebase
 import SDWebImage
 import QuartzCore
+import FirebaseStorage
+import FBSDKLoginKit
 
 class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate {
     
    
-    @IBOutlet var tabBarView: TabBarView!
+   
     var databaseRef:DatabaseReference!
- 
+    var sedi:[String:String] = ["CN":"Ca' Noghera","VE":"Venezia"]
     var feedArray = [Events]()
     let formatter = DateFormatter()
     var index: Int?
@@ -30,52 +32,21 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     var cellZoomInitialAlpha = 0.3;
     var cellZoomXOffset = 0;
     var cellZoomYOffset = 0;
+    var loginImage = UIImage()
+    var loginButtonItem = UIBarButtonItem()
+    var rightView:UIView = UIView()
+    var imageViewRight:UIImageView = UIImageView()
+    
     let appDelegate = UIApplication.shared.delegate
         as! AppDelegate
+    
+    
     
     //Property for interaction controller
     private let closeOnScrollDown = CloseOnScrollDown()
     
     //MARK: Methods
-    func customization()  {
-     
-        
-        //TabbarView setup
-        self.view.addSubview(self.tabBarView)
-        self.tabBarView.translatesAutoresizingMaskIntoConstraints = false
-        
-        let descHorizontal = "H:|[tabBarView]|"
-        //let descVertical = "V:|[tabBarView(60)]|"
-        
-        let viewsDict = ["tabBarView": tabBarView]
-        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: descHorizontal,
-                                                                   options: NSLayoutFormatOptions(rawValue: 0),
-                                                                   metrics: nil,
-                                                                   views: viewsDict as Any as! [String : Any])
-        //verticalConstraints.constraints(withVisualFormat: descVertical,
-                                                                  // options: NSLayoutFormatOptions(rawValue: 0),
-                                                                //   metrics: nil,
-                                                                //   views: viewsDict)
-        verticalConstraints = NSLayoutConstraint.init(item: self.tabBarView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: 60)
-        
-        
-        view.addConstraints(horizontalConstraints)
-        view.addConstraints([verticalConstraints])
-        
-        let btn:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
-        btn.backgroundColor = UIColor.green
-        btn.addTarget(self, action: #selector(self.buttonAction), for: .touchUpInside)
-        btn.tag = 1
-        self.view.addSubview(btn)
-       
-        
-//        let _ = NSLayoutConstraint.init(item: self.view, attribute: .top, relatedBy: .equal, toItem: self.tabBarView, attribute: .top, multiplier: 1.0, constant: -64).isActive = true
-//        let _ = NSLayoutConstraint.init(item: self.view, attribute: .left, relatedBy: .equal, toItem: self.tabBarView, attribute: .left, multiplier: 1.0, constant: 0).isActive = true
-//        let _ = NSLayoutConstraint.init(item: self.view, attribute: .right, relatedBy: .equal, toItem: self.tabBarView, attribute: .right, multiplier: 1.0, constant: 0).isActive = true
-//        self.tabBarView.heightAnchor.constraint(equalToConstant: 44).isActive = true
-        //ViewController init
-        
-        }
+
     func buttonAction() {
         
             isMenuOpen = !isMenuOpen
@@ -84,9 +55,6 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         UIView.animate(withDuration: 0.33, delay: 0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)
-        
-        
-        
     }
         
   
@@ -97,48 +65,67 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             //self.label.text = "Page " + String(index)
             //self.promptLabel.isHidden = index != 1
       //  }
-        self.customization()
+      
         loadDatabase()
-        navigationItem.title = "Home"
+        navigationItem.title = "Home".localized
         //self.collectionView?.contentInset = UIEdgeInsetsMake(44, 0, 0, 0)
         
         let titleLabel = UILabel(frame: CGRect(x: 0,y: 0,width: view.frame.width - 32,height:  view.frame.height))
-        titleLabel.text = "Home"
+        titleLabel.text = "Home".localized
         titleLabel.textColor = UIColor.black
         titleLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightLight)
         navigationItem.titleView = titleLabel
         collectionView?.backgroundColor = UIColor.white
        
         setupMenuBar()
-        setupNavBarButtons()
+       setupNavBarButtons()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        refreshButtonImage()
+    }
+    func refreshButtonImage() {
+        if let token = FBSDKAccessToken.current() {
+            let storage = Storage.storage()
+            var storageRef = StorageReference()
+            storageRef = storage.reference(forURL: "gs://cmv-gioco.appspot.com/")
+            let profilePicRef = storageRef.child("profile_images/").child((Auth.auth().currentUser?.uid)!+".jpg")
+            profilePicRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                if let error = error {
+                    // Uh-oh, an error occurred!
+                    
+                } else {
+                    if (data != nil) {
+                        self.loginImage = UIImage(data: data!)!.withRenderingMode(.alwaysOriginal)
+                        self.imageViewRight.image = self.loginImage
+                    }
+                }
+            }
+        } else {
+            loginImage = (UIImage(named: "user")?.withRenderingMode(.alwaysOriginal))!
+            imageViewRight.image = loginImage
+        }
+    }
     func setupNavBarButtons(){
-        let loginImage = UIImage(named: "user")?.withRenderingMode(.alwaysOriginal)
-        let loginButtonItem = UIBarButtonItem(image: loginImage, style: .plain, target: self, action: #selector(handledLogIn))
-        navigationItem.rightBarButtonItem = loginButtonItem
+        
+        imageViewRight.frame = CGRect(x:0,y: 0,width: 40,height: 40)
+        loginImage = UIImage(named: "user")!
+        imageViewRight.image = loginImage
+        //put the imageView inside a uiview
+        rightView.frame = imageViewRight.frame
+        rightView.layer.cornerRadius = imageViewRight.frame.size.width/2
+        rightView.layer.borderColor = UIColor.white.cgColor
+        rightView.layer.borderWidth = 1.0
+        rightView.clipsToBounds = true
+        rightView.addSubview(imageViewRight)
+        //create the tap gesture recognizer for that uiview
+        let rightGestureRecognizer:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.handledLogIn))
+        rightView.addGestureRecognizer(rightGestureRecognizer)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightView)
     }
     
     func handledLogIn () {
-        
-        let userID = appDelegate.currentUser?.uid
-        databaseRef.child("users").child(userID!).observeSingleEvent(of: .value, with: { (snapshot) in
-            // Get user value
-            let value = snapshot.value as? NSDictionary
-            let isAnonymous = value?["isAnonymous"] as? Bool ?? true
-//            if isAnonymous {
-//                let signIn = self.storyboard?.instantiateViewController(withIdentifier: "signIn") as! SignInViewController
-//                self.present(signIn, animated: true, completion: nil)
-//            } else {
-                let logIn = self.storyboard?.instantiateViewController(withIdentifier: "logIn") as! LogInViewController
-                self.present(logIn, animated: true, completion: nil)
-           // }
-            
-            // ...
-        }) { (error) in
-            print(error.localizedDescription)
-        }
-
+        let logIn = self.storyboard?.instantiateViewController(withIdentifier: "logIn") as! LogInViewController
+        self.present(logIn, animated: true, completion: nil)
     }
     
 
@@ -161,13 +148,16 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return feedArray.count
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell( withReuseIdentifier: "cellId",  for: indexPath) as! EventListCell
-        formatter.dateFormat = "dd"
+        formatter.dateFormat = "dd MMM"
         let myDate = formatter.string(from: feedArray[indexPath.row].StartDate as Date)
-        formatter.dateFormat = "MMM"
-        let myMonth = formatter.string(from: feedArray[indexPath.row].StartDate as Date)
+        let myDateEnd = formatter.string(from: feedArray[indexPath.row].EndDate as Date)
+       
         
         
         //  Converted with Swiftify v1.0.6381 - https://objectivec2swift.com/
@@ -192,13 +182,15 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             currentMaxDisplayedCell = indexPath.row
             currentMaxDisplayedSection = indexPath.section
      //   }
+        if (feedArray[indexPath.row].EndDate != feedArray[indexPath.row].StartDate) {
+            cell.QuandoLabel.text = "Dal \(myDate) al \(myDateEnd)".localized
+        } else {
+            cell.QuandoLabel.text = myDate
+        }
         
         cell.titolo.text = feedArray[indexPath.row].Name
         cell.intro.text = feedArray[indexPath.row].Description
-        cell.data.text = myDate
-        cell.data.layer.masksToBounds = true
-        cell.data.layer.cornerRadius = 5.0
-        cell.mese.text = myMonth
+        cell.DoveLabel.text = sedi[feedArray[indexPath.row].office]
         cell.speakingText = feedArray[indexPath.row].Description
         cell.image.sd_setImage(with: URL(string: feedArray[indexPath.row].ImageName), placeholderImage: UIImage(named: "sediciNoni"))
        
@@ -214,16 +206,15 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         currentMaxDisplayedSection = 0
         currentMaxDisplayedCell = 0
     }
-    
+    //Metodo utilizzato per dimensionare la cella - deve essere impostato il delegate UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
+       
         let height = view.frame.width*9/16
-      
         
         if estimateRect(rect:view.frame, data: feedArray[indexPath.row].Name)  > 21 {
-            return CGSize(width: view.frame.width,height: height + 5 + 42 + 21 + 5 + 7)
+            return CGSize(width: view.frame.width,height: height + 5 + 42 + 21 + 5 + 25 + 5 + 7)
         } else {
-            return CGSize(width: view.frame.width,height: height + 5 + 21 + 21 + 5 + 7)
+            return CGSize(width: view.frame.width,height: height + 5 + 21 + 21 + 5 + 25 + 5 + 7)
         }
        
     }
