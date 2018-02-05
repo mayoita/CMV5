@@ -19,6 +19,7 @@ class EventListCell: UICollectionViewCell {
     @IBOutlet weak var QuandoLabel: UILabel!
     @IBOutlet weak var speaking: UIButton! {
         didSet {
+            
             let animation = CSAnimationView()
             speaking.addSubview(animation)
             //speaking.customView = CSAnimationView()
