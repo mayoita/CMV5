@@ -63,7 +63,6 @@
 		22D406DB202328DF00D71A6F /* Dove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D406DA202328DF00D71A6F /* Dove.swift */; };
 		22E93AE11F0BF8D800675342 /* CasinoAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E93AE01F0BF8D800675342 /* CasinoAnnotationView.swift */; };
 		22EB73592024A43200759094 /* Quando.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB73582024A43200759094 /* Quando.swift */; };
-		22EB735B2024C5EA00759094 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB735A2024C5EA00759094 /* MainTabBar.swift */; };
 		A34396063423EBBAC13846CC /* Pods_Casino__di_Venezia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7BF60459BDF63750E622B8 /* Pods_Casino__di_Venezia.framework */; };
 		F6EAD3FB606CEFED596C5709 /* Pods_Casino__di_VeneziaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D50E0540626459F2E41608E /* Pods_Casino__di_VeneziaTests.framework */; };
 /* End PBXBuildFile section */
@@ -143,7 +142,6 @@
 		22DAAD34189FE77F00435B50 /* Restaurant.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Restaurant.plist; sourceTree = "<group>"; };
 		22E93AE01F0BF8D800675342 /* CasinoAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CasinoAnnotationView.swift; path = "Casinò di Venezia/CasinoAnnotationView.swift"; sourceTree = "<group>"; };
 		22EB73582024A43200759094 /* Quando.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quando.swift; sourceTree = "<group>"; };
-		22EB735A2024C5EA00759094 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
 		6F7BF60459BDF63750E622B8 /* Pods_Casino__di_Venezia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Casino__di_Venezia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA45BB608DD76C9B8ED16D0E /* Pods-Casinò di VeneziaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Casinò di VeneziaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Casinò di VeneziaTests/Pods-Casinò di VeneziaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E39FA7C9CB046AA71D005EB0 /* Pods-Casinò di VeneziaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Casinò di VeneziaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Casinò di VeneziaTests/Pods-Casinò di VeneziaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -219,6 +217,7 @@
 				225254201F06F1E0005F1FF7 /* Mestre.gpx */,
 				225254211F06F1E0005F1FF7 /* SanGeremia.gpx */,
 				2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */,
+				22E8A8FC20289E2E000C3CBE /* View */,
 				2295838D1EFCFDC700409D7A /* AppDelegate.swift */,
 				22208DDC1F066F17007DA39D /* Gradient.swift */,
 				2228F76A1F0A41E500F3C94A /* CanvasButton.swift */,
@@ -226,10 +225,8 @@
 				22208DDA1F06561A007DA39D /* CloseOnScrollDown.swift */,
 				2214AD2F1F1665E400F9EBA7 /* LogIn */,
 				2227D5A01F0A9A9300F09669 /* Transition */,
-				22208DCE1EFD50EA007DA39D /* MenuBar.swift */,
 				22D406D9202328B300D71A6F /* Design */,
 				225805571EFEBF3100F2826D /* TabBarView.swift */,
-				22EB735A2024C5EA00759094 /* MainTabBar.swift */,
 				22208DD21F03C1A6007DA39D /* ButtonSpeaking.swift */,
 				22208DD81F03F268007DA39D /* EventDetails.swift */,
 				2295838F1EFCFDC700409D7A /* Constants.swift */,
@@ -317,6 +314,14 @@
 				22EB73582024A43200759094 /* Quando.swift */,
 			);
 			name = Design;
+			sourceTree = "<group>";
+		};
+		22E8A8FC20289E2E000C3CBE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				22208DCE1EFD50EA007DA39D /* MenuBar.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		22E93ADF1F0BF84C00675342 /* Maps */ = {
@@ -647,7 +652,6 @@
 				225805841EFED83900F2826D /* SettingsPushTransitionController.swift in Sources */,
 				2258057F1EFED83900F2826D /* SettingsItem.swift in Sources */,
 				2227D59F1F0A78B500F09669 /* CircularTransition.swift in Sources */,
-				22EB735B2024C5EA00759094 /* MainTabBar.swift in Sources */,
 				22208DD71F03E61C007DA39D /* ExpandAnimator.swift in Sources */,
 				2258057D1EFED83900F2826D /* SettingsDismissTransitionController.swift in Sources */,
 				22D406DB202328DF00D71A6F /* Dove.swift in Sources */,

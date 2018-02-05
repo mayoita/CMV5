@@ -136,10 +136,14 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     private func setupMenuBar(){
         view.addSubview(menuBar)
+        let a = UIView()
+        let myNewView=UIView(frame: CGRect(x: 10, y: 100, width: 300, height: 200))
+        
+        self.view.addSubview(myNewView)
         let views = ["view": menuBar]
       
         let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutFormatOptions.alignAllCenterY, metrics: nil, views: views)
-        let verticalConstraints =  NSLayoutConstraint.constraints(withVisualFormat: "V:|[view(50)]|", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: views)
+        let verticalConstraints =  NSLayoutConstraint.constraints(withVisualFormat: "V:[view(50)]|", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: views)
         
         view.addConstraints(horizontalConstraints)
         view.addConstraints(verticalConstraints)
