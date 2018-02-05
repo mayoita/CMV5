@@ -268,13 +268,17 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     func loadDatabase(){
+       
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         dateFormatter.locale = Locale.current
         let events = databaseRef.child("Events")
         events.observe(.value, with: {(eventsSnapshot)in
+            
             let eventsDictionary = eventsSnapshot.value as! NSDictionary
+            // creo un array temporaneo per la conversione del dizionario in Specialist
+            var specialistArray: [Events] = []
             for(p) in eventsDictionary {
                 let events = p.value as! NSDictionary
           
@@ -360,10 +364,12 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
                     URLBook = events.value(forKey: "URLBook") as! String!
                 }
                 
+                let event = Events(Book: Book, Description: Description, ImageEvent1: ImageEvent1, ImageEvent2: ImageEvent2, ImageEvent3: ImageEvent3, ImageName: ImageName, isSlotEvents: isSlotEvents, memo: memo, Name: Name, StartDate: StartDate, EndDate: EndDate, EventType: EventType, office: office, URL: URL, URLBook: URLBook)
                 
-                self.feedArray.append(Events(Book: Book, Description: Description, ImageEvent1: ImageEvent1, ImageEvent2: ImageEvent2, ImageEvent3: ImageEvent3, ImageName: ImageName, isSlotEvents: isSlotEvents, memo: memo, Name: Name, StartDate: StartDate, EndDate: EndDate, EventType: EventType, office: office, URL: URL, URLBook: URLBook))
+                specialistArray.append(event)
                 
             }
+            self.feedArray = specialistArray
             self.feedArray.sort(by: { $0.StartDate.compare($1.StartDate as Date) == ComparisonResult.orderedDescending })
             self.collectionView?.reloadData()
         })
