@@ -13,37 +13,23 @@ import QuartzCore
 import FirebaseStorage
 import FBSDKLoginKit
 
-class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout, UIViewControllerTransitioningDelegate {
-    
-   
-   
-    var databaseRef:DatabaseReference!
-    var sedi:[String:String] = ["CN":"Ca' Noghera","VE":"Venezia"]
-    var feedArray = [Events]()
-    let formatter = DateFormatter()
+class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+ 
     var index: Int?
     var isMenuOpen = false
     var verticalConstraints: NSLayoutConstraint!
-    var currentMaxDisplayedCell = 0
-    var currentMaxDisplayedSection = 0    
-    var cellZoomXScaleFactor = 1.25;
-    var cellZoomYScaleFactor = 1.25;
-    var cellZoomAnimationDuration = 0.70;
-    var cellZoomInitialAlpha = 0.3;
-    var cellZoomXOffset = 0;
-    var cellZoomYOffset = 0;
+
     var loginImage = UIImage()
     var loginButtonItem = UIBarButtonItem()
     var rightView:UIView = UIView()
     var imageViewRight:UIImageView = UIImageView()
-    
+    let cellId = "cellId"
+    let cellIdTornei = "cellIdTornei"
     let appDelegate = UIApplication.shared.delegate
         as! AppDelegate
-    
-    
-    
-    //Property for interaction controller
-    private let closeOnScrollDown = CloseOnScrollDown()
+    let titoli = ["Home".localized, "Eventi".localized, "Tornei".localized, "Promozioni".localized,"Giochi".localized,"Slot".localized]
+
+
     
     //MARK: Methods
 
@@ -60,29 +46,35 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        databaseRef = Database.database().reference()
-     //   if let index = self.index {
-            //self.label.text = "Page " + String(index)
-            //self.promptLabel.isHidden = index != 1
-      //  }
-      
-        loadDatabase()
-        navigationItem.title = "Home".localized
+        //navigationItem.title = "  Home".localized
         //self.collectionView?.contentInset = UIEdgeInsetsMake(44, 0, 0, 0)
         
         let titleLabel = UILabel(frame: CGRect(x: 0,y: 0,width: view.frame.width - 32,height:  view.frame.height))
-        titleLabel.text = "Home".localized
-        titleLabel.textColor = UIColor.black
+        titleLabel.text = titoli[0]
+        titleLabel.textColor = UIColor.white
         titleLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightLight)
         navigationItem.titleView = titleLabel
-        collectionView?.backgroundColor = UIColor.white
-       
+        setupCollectionView ()
         setupMenuBar()
-       setupNavBarButtons()
+        setupNavBarButtons()
     }
     override func viewWillAppear(_ animated: Bool) {
         refreshButtonImage()
     }
+    
+    func setupCollectionView () {
+        if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.scrollDirection = .horizontal
+            flowLayout.minimumLineSpacing = 0
+        }
+        collectionView?.isPagingEnabled = true
+        collectionView?.backgroundColor = UIColor.white
+        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
+        collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
+        collectionView?.register(Sezione.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(TorneiCell.self, forCellWithReuseIdentifier: cellIdTornei)
+    }
+    
     func refreshButtonImage() {
         if let token = FBSDKAccessToken.current() {
             let storage = Storage.storage()
@@ -92,7 +84,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             profilePicRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
                 if let error = error {
                     // Uh-oh, an error occurred!
-                    
+                    print(error.localizedDescription)
                 } else {
                     if (data != nil) {
                         self.loginImage = UIImage(data: data!)!.withRenderingMode(.alwaysOriginal)
@@ -122,115 +114,72 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         rightView.addGestureRecognizer(rightGestureRecognizer)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: rightView)
     }
-    
+    func scrollToMenuIndex (menuIndex: Int) {
+        let indexPath = IndexPath(item: menuIndex, section: 0)
+        collectionView?.scrollToItem(at: indexPath, at: [], animated: true)
+        setTitleForIndex(index: menuIndex)
+    }
+    private func setTitleForIndex(index: Int) {
+        if let titleLabel = navigationItem.titleView as? UILabel {
+            titleLabel.text = "  \(titoli[index])"
+        }
+    }
     func handledLogIn () {
         let logIn = self.storyboard?.instantiateViewController(withIdentifier: "logIn") as! LogInViewController
         self.present(logIn, animated: true, completion: nil)
     }
     
 
-    let menuBar: MenuBar = {
+    lazy var menuBar: MenuBar = {
         let mb = MenuBar()
+        mb.homeController = self
         return mb
     } ()
     
     private func setupMenuBar(){
+       // navigationController?.hidesBarsOnSwipe = true
+        let goldView = UIView()
+        goldView.backgroundColor = StyleKit.fillColor
+        view.addSubview(goldView)
+        view.addConstraintsWithFormnat(format: "H:|[v0]|", views: goldView)
+        view.addConstraintsWithFormnat(format: "V:[v0(50)]", views: goldView)
+        
         view.addSubview(menuBar)
-        let a = UIView()
-        let myNewView=UIView(frame: CGRect(x: 10, y: 100, width: 300, height: 200))
+        view.addConstraintsWithFormnat(format: "H:|[v0]|", views: menuBar)
+        view.addConstraintsWithFormnat(format: "V:[v0(50)]", views: menuBar)
         
-        self.view.addSubview(myNewView)
-        let views = ["view": menuBar]
-      
-        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutFormatOptions.alignAllCenterY, metrics: nil, views: views)
-        let verticalConstraints =  NSLayoutConstraint.constraints(withVisualFormat: "V:[view(50)]|", options: NSLayoutFormatOptions.alignAllCenterX, metrics: nil, views: views)
-        
-        view.addConstraints(horizontalConstraints)
-        view.addConstraints(verticalConstraints)
-    }
-   
-   override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return feedArray.count
-    }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell( withReuseIdentifier: "cellId",  for: indexPath) as! EventListCell
-        formatter.dateFormat = "dd MMM"
-        let myDate = formatter.string(from: feedArray[indexPath.row].StartDate as Date)
-        let myDateEnd = formatter.string(from: feedArray[indexPath.row].EndDate as Date)
-       
-        
-        
-        //  Converted with Swiftify v1.0.6381 - https://objectivec2swift.com/
-        if (indexPath.section == 0 && currentMaxDisplayedCell == 0) || indexPath.section > currentMaxDisplayedSection {
-            //first item in a new section, reset the max row count
-            currentMaxDisplayedCell = -1
-            //-1 because the check for currentMaxDisplayedCell has to be > rather than >= (otherwise the last cell is ALWAYS animated), so we need to set this to -1 otherwise the first cell in a section is never animated.
-        }
-     //   if indexPath.section >= currentMaxDisplayedSection && indexPath.row > currentMaxDisplayedCell {
-            //this check makes cells only animate the first time you view them (as you're scrolling down) and stops them re-animating as you scroll back up, or scroll past them for a second time.
-            //now make the image view a bit bigger, so we can do a zoomout effect when it becomes visible
-            cell.contentView.alpha = CGFloat(cellZoomInitialAlpha)
-            let transformScale = CGAffineTransform(scaleX: CGFloat(cellZoomXScaleFactor), y: CGFloat(cellZoomYScaleFactor))
-            let transformTranslate = CGAffineTransform(translationX: CGFloat(cellZoomXOffset), y: CGFloat(cellZoomYOffset))
-            cell.contentView.transform = transformScale.concatenating(transformTranslate)
-            collectionView.bringSubview(toFront: cell.contentView)
-            UIView.animate(withDuration: cellZoomAnimationDuration, delay: 0.1, options: .allowUserInteraction, animations: {() -> Void in
-                cell.contentView.alpha = 1
-                //clear the transform
-                cell.contentView.transform = CGAffineTransform.identity
-            }, completion: { _ in })
-            currentMaxDisplayedCell = indexPath.row
-            currentMaxDisplayedSection = indexPath.section
-     //   }
-        if (feedArray[indexPath.row].EndDate != feedArray[indexPath.row].StartDate) {
-            cell.QuandoLabel.text = "Dal \(myDate) al \(myDateEnd)".localized
-        } else {
-            cell.QuandoLabel.text = myDate
-        }
-        
-        cell.titolo.text = feedArray[indexPath.row].Name
-        cell.intro.text = feedArray[indexPath.row].Description
-        cell.DoveLabel.text = sedi[feedArray[indexPath.row].office]
-        cell.speakingText = feedArray[indexPath.row].Description
-        cell.image.sd_setImage(with: URL(string: feedArray[indexPath.row].ImageName), placeholderImage: UIImage(named: "sediciNoni"))
-       
-        if estimateRect(rect:cell.frame, data: feedArray[indexPath.row].Name)  > 21{
-            cell.titoloHeight?.constant = 42
-        } else {
-            cell.titoloHeight?.constant = 21
-        }
-        
-        return cell
-    }
-    func resetViewedCells() {
-        currentMaxDisplayedSection = 0
-        currentMaxDisplayedCell = 0
-    }
-    //Metodo utilizzato per dimensionare la cella - deve essere impostato il delegate UICollectionViewDelegateFlowLayout
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-       
-        let height = view.frame.width*9/16
-        
-        if estimateRect(rect:view.frame, data: feedArray[indexPath.row].Name)  > 21 {
-            return CGSize(width: view.frame.width,height: height + 5 + 42 + 21 + 5 + 25 + 5 + 7)
-        } else {
-            return CGSize(width: view.frame.width,height: height + 5 + 21 + 21 + 5 + 25 + 5 + 7)
-        }
-       
+        menuBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
     }
     
-    //Funzione per calcolare l'altezza dell'etichetta titolo - la proprietà number lines è impostata a 2 nella storyboard
-    func estimateRect(rect: CGRect, data: String) -> CGFloat {
-        let size = CGSize(width: rect.width - 10 - 42 - 10, height: 1000)
-        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
-        let attributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 14)]
-        let estimateRect = NSString(string: data).boundingRect(with: size, options: options, attributes: attributes, context: nil)
-        return estimateRect.size.height
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        menuBar.horizontalBarLeftAnchorConstraints?.constant = scrollView.contentOffset.x / CGFloat(numeroPulsanti)
     }
+    
+    override func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let index = targetContentOffset.pointee.x / view.frame.width
+        let indexPath = IndexPath(item: Int(index), section: 0)
+       menuBar.collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
+        
+       setTitleForIndex(index: Int(index))
+    }
+     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let identifier: String
+        if indexPath.item == 0 {
+            identifier = cellId
+        } else if indexPath.item == 1 {
+            identifier = cellIdTornei
+        } else {
+            identifier = cellId
+        }
+        
+        let cell = collectionView.dequeueReusableCell( withReuseIdentifier: identifier,  for: indexPath)
+        return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: view.frame.height - 50)
+    }
+<<<<<<< HEAD
     
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -378,16 +327,18 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             self.collectionView?.reloadData()
         })
         
+=======
+   
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+>>>>>>> 51756f7f0026a219a475a216c6ce34863d521afa
     }
-    func getLocale() -> String {
-        var locale = ""
-        if appDelegate.locale?.languageCode != "en" {
-            locale = (appDelegate.locale?.languageCode?.uppercased())!
-            return locale
-        }
-        
-        return locale
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return numeroPulsanti
     }
+
+   
+
     
 }
 

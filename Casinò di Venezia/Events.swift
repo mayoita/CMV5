@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Events {
+class Events: NSObject {
     var Book: String
     
     var Description: String
@@ -31,7 +31,7 @@ class Events {
     var URL: String
     var URLBook: String
     
-    init() {
+    override init() {
         self.Book = ""
         self.Description = ""
         self.ImageName = ""

@@ -18,18 +18,29 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate {
     @IBOutlet weak var data: UILabel!
     @IBOutlet weak var corpo: UITextView!
     @IBOutlet weak var map: UIButton!
+    @IBOutlet weak var calendarioIcona: UIButton!
     
-    
+    var salvatoInCAlendario:Bool = false
     let formatter = DateFormatter()
     let transition = CircularTransition()
     let appDelegate = UIApplication.shared.delegate
         as! AppDelegate
     var event = Events()
-    
+    let defaults = UserDefaults.standard
+    let suffissoBOOL = "BOOL"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if  defaults.bool(forKey: suffissoBOOL + event.Name)  {
+            salvatoInCAlendario = defaults.bool(forKey: suffissoBOOL + event.Name)
+            if salvatoInCAlendario {
+                calendarioIcona.setImage(StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true), for: .normal)
+            } else {
+                calendarioIcona.setImage(StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false), for: .normal)
+            }
+        } else {
+            defaults.set(false, forKey: suffissoBOOL + event.Name)
+        }
         // Do any additional setup after loading the view.
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(EventDetails.handledTap))
         self.view.addGestureRecognizer(tapGesture)
@@ -42,6 +53,7 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate {
         data.text = myDate
         corpo.textContainerInset = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0);
         corpo.text = event.Description
+        
     }
     
     func configureReminder(){
@@ -58,8 +70,6 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate {
                     }
             })
         }
-        
-    
     }
     
     
@@ -77,13 +87,10 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate {
     }
     
     @IBAction func shareOnFacebook(_ sender: Any) {
-        if SLComposeViewController.isAvailable(forServiceType: SLServiceTypeFacebook) {
-            let post = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-            post?.setInitialText(event.Name)
-            post?.add(image.image)
-            self.present(post!, animated: true, completion: nil)
-        }
+        let activityController = UIActivityViewController(activityItems: [image.image,event.Name, event.URL], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
     }
+    
     @IBAction func close(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -94,47 +101,71 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate {
     @IBAction func addEventToCalendar(_ sender: Any) {
         configureReminder()
         if (appDelegate.eventStore != nil) {
-//            let reminder = EKReminder(eventStore: appDelegate.eventStore!)
-            let eventToCalendar:EKEvent = EKEvent(eventStore: appDelegate.eventStore!)
-//            
-//            reminder.title = event.Name
-//            reminder.calendar =
-//                appDelegate.eventStore!.defaultCalendarForNewReminders()
-//                let date = event.StartDate as Date
-//                let alarm = EKAlarm(absoluteDate: date)
-//            
-//                reminder.addAlarm(alarm)
-//            
-//            do {
-//                try appDelegate.eventStore?.save(reminder,
-//                                                 commit: true)
-//            } catch let error {
-//                print("Reminder failed with error \(error.localizedDescription)")
-//            }
- 
-            
-            
-            eventToCalendar.title = event.Name
-            eventToCalendar.startDate = event.StartDate as Date
-            eventToCalendar.endDate = event.EndDate as Date
-            eventToCalendar.notes = event.Description
-            if event.URL != "" {
-               eventToCalendar.url = URL(string: event.URL)
-            }
-            
-            eventToCalendar.calendar = appDelegate.eventStore!.defaultCalendarForNewEvents
-            do {
-                try appDelegate.eventStore!.save(eventToCalendar, span: .thisEvent)
-            } catch let error as NSError {
-                print("failed to save event with error : \(error.localizedDescription)")
-                let alert = UIAlertController(title: "Event could not save", message: (error as NSError).localizedDescription, preferredStyle: .alert)
-                let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alert.addAction(OKAction)
+            if !salvatoInCAlendario {
+                let eventToCalendar:EKEvent = EKEvent(eventStore: appDelegate.eventStore!)
                 
-                self.present(alert, animated: true, completion: nil)
+                eventToCalendar.title = event.Name
+                
+                let gregorian = Calendar.current
+                var componentsEnd = gregorian.dateComponents([.year, .month, .day, .hour, .minute, .second], from: event.EndDate as Date)
+                componentsEnd.hour = 23
+                componentsEnd.minute = 59
+                componentsEnd.second = 0
+                var components = gregorian.dateComponents([.year, .month, .day, .hour, .minute, .second], from: event.StartDate as Date)
+                
+                components.hour = 20
+                components.minute = 30
+                components.second = 0
+                
+                let dateStart = gregorian.date(from: components)
+                let dateEnd = gregorian.date(from: componentsEnd)
+                
+                eventToCalendar.startDate = dateStart!
+                eventToCalendar.endDate = dateEnd!
+                eventToCalendar.notes = event.Description
+                if event.URL != "" {
+                    eventToCalendar.url = URL(string: event.URL)
+                }
+                
+                eventToCalendar.calendar = appDelegate.eventStore!.defaultCalendarForNewEvents
+                do {
+                    try appDelegate.eventStore!.save(eventToCalendar, span: .thisEvent)
+                    let alert = UIAlertController(title: "CALENDARIO", message: "L'evento è stato aggiunto al calendario!", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: nil))
+                    present(alert, animated: true, completion: nil)
+                    defaults.set(true, forKey: suffissoBOOL + event.Name)
+                    salvatoInCAlendario = true
+                    defaults.set(eventToCalendar.eventIdentifier, forKey: event.Name)
+                    calendarioIcona.setImage(StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true), for: .normal)
+                   
+                } catch let error as NSError {
+                    let alert = UIAlertController(title: "L'evento non può essere salvato", message: (error as NSError).localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            
+            } else {
+                let eventoDaRimuovere = appDelegate.eventStore?.event(withIdentifier: defaults.object(forKey: event.Name) as! String)
+                do {
+                    try appDelegate.eventStore?.remove(eventoDaRimuovere!, span: EKSpan.thisEvent)
+                    defaults.set(false, forKey: suffissoBOOL + event.Name)
+                    defaults.removeObject(forKey: event.Name)
+                    defaults.removeObject(forKey: suffissoBOOL + event.Name)
+                    calendarioIcona.setImage(StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false), for: .normal)
+                    salvatoInCAlendario = false
+                    calendarioIcona.imageView?.image = StyleKit.imageOfEvents()
+                    let alert = UIAlertController(title: "CALENDARIO", message: "L'evento è stato eliminato dal calendario!", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: nil))
+                    present(alert, animated: true, completion: nil)
+                } catch let error as NSError{
+                    let alert = UIAlertController(title: "L'evento non può essere cancellato", message: (error as NSError).localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+             
+                
+                
             }
-            
-            
         }
         
     }

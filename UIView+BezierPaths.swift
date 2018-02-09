@@ -7,6 +7,14 @@
 //
 
 import UIKit
+//Utilizzato per creare un array di classi (array contenente le immagini generate da PaintCode da utilizzare nel Menu)
+
+public struct MyConstants{
+    static let immaginiSelezionate = [StyleKit.imageOfMic(imageSize: CGSize(width: 100, height: 100), highlited: true), StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true)]
+    static let immagini = [StyleKit.imageOfMic(), StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false)]
+}
+
+
 extension String {
     var localized: String {
         return NSLocalizedString(self, tableName: nil, bundle: Bundle.main, value: "", comment: "")
@@ -68,6 +76,17 @@ func dialogBezierPathWithFrame(_ frame: CGRect, arrowOrientation orientation: UI
     }
     
     return path
+}
+extension UIView {
+    func addConstraintsWithFormnat(format: String, views: UIView...) {
+        var viewsDictionary = [String: UIView]()
+        for (index, view) in views.enumerated() {
+            let key = "v\(index)"
+            view.translatesAutoresizingMaskIntoConstraints = false
+            viewsDictionary[key] = view
+        }
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
+    }
 }
 
 extension UIView {
