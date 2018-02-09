@@ -75,9 +75,7 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
-  - Tabman (0.7.1):
-    - Pageboy (~> 1.3.0)
-    - PureLayout (~> 3.0.0)
+  - YouTubePlayer (0.4.0)
 
 DEPENDENCIES:
   - Canvas (~> 0.1.2)
@@ -92,7 +90,7 @@ DEPENDENCIES:
   - Pageboy
   - PureLayout
   - SDWebImage (~> 3.8)
-  - Tabman
+  - YouTubePlayer
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -114,8 +112,8 @@ SPEC CHECKSUMS:
   Pageboy: 35efa6ddf10740eff76839116435cad7ea5e9e04
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
-  Tabman: 1b6e92b99cbd56723e4afdd14ca78ac45bfa1ab7
+  YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: 7211ddbb373a2167dd26cc6e379ff8d8e9f56c14
+PODFILE CHECKSUM: 60e6005e3231dc4c62fb2414f86416837a7bca9a
 
 COCOAPODS: 1.4.0

@@ -25,29 +25,10 @@
 		225254241F06F1E0005F1FF7 /* Mestre.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 225254201F06F1E0005F1FF7 /* Mestre.gpx */; };
 		225254251F06F1E0005F1FF7 /* SanGeremia.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 225254211F06F1E0005F1FF7 /* SanGeremia.gpx */; };
 		225254271F06F4BB005F1FF7 /* CasinoAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225254261F06F4BB005F1FF7 /* CasinoAnnotation.swift */; };
-		225805581EFEBF3100F2826D /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805571EFEBF3100F2826D /* TabBarView.swift */; };
-		225805771EFED83900F2826D /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805641EFED83900F2826D /* ChildViewController.swift */; };
-		225805781EFED83900F2826D /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805651EFED83900F2826D /* CircularButton.swift */; };
-		225805791EFED83900F2826D /* CustomTabmanBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805661EFED83900F2826D /* CustomTabmanBar.swift */; };
-		2258057A1EFED83900F2826D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805671EFED83900F2826D /* GradientView.swift */; };
-		2258057B1EFED83900F2826D /* PresetAppearanceConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805681EFED83900F2826D /* PresetAppearanceConfigs.swift */; };
-		2258057C1EFED83900F2826D /* SettingsCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805691EFED83900F2826D /* SettingsCells.swift */; };
-		2258057D1EFED83900F2826D /* SettingsDismissTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258056A1EFED83900F2826D /* SettingsDismissTransitionController.swift */; };
-		2258057E1EFED83900F2826D /* SettingsEntries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258056B1EFED83900F2826D /* SettingsEntries.swift */; };
-		2258057F1EFED83900F2826D /* SettingsItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258056C1EFED83900F2826D /* SettingsItem.swift */; };
-		225805801EFED83900F2826D /* SettingsNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258056D1EFED83900F2826D /* SettingsNavigationController.swift */; };
-		225805811EFED83900F2826D /* SettingsOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258056E1EFED83900F2826D /* SettingsOptionsViewController.swift */; };
-		225805821EFED83900F2826D /* SettingsPopTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2258056F1EFED83900F2826D /* SettingsPopTransitionController.swift */; };
-		225805831EFED83900F2826D /* SettingsPresentTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805701EFED83900F2826D /* SettingsPresentTransitionController.swift */; };
-		225805841EFED83900F2826D /* SettingsPushTransitionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805711EFED83900F2826D /* SettingsPushTransitionController.swift */; };
-		225805851EFED83900F2826D /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805721EFED83900F2826D /* SettingsSection.swift */; };
-		225805861EFED83900F2826D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805731EFED83900F2826D /* SettingsViewController.swift */; };
-		225805871EFED83900F2826D /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805741EFED83900F2826D /* TabViewController.swift */; };
-		225805881EFED83900F2826D /* TabViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805751EFED83900F2826D /* TabViewController+Extras.swift */; };
-		225805891EFED83900F2826D /* TransparentNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225805761EFED83900F2826D /* TransparentNavigationBar.swift */; };
 		22630A1F1F0F98AE00168D1F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22630A1E1F0F98AE00168D1F /* Location.swift */; };
 		22630A251F0FBD9200168D1F /* PersonDetailMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22630A241F0FBD9200168D1F /* PersonDetailMapView.xib */; };
 		22630A271F0FBDAF00168D1F /* PersonDetailMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22630A261F0FBDAF00168D1F /* PersonDetailMapView.swift */; };
+		2276810A202C8E61009B308C /* VideoLuncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22768109202C8E61009B308C /* VideoLuncher.swift */; };
 		22899D8D201A00EE000CDE7E /* CMVLogInFirebaseUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22899D8C201A00EE000CDE7E /* CMVLogInFirebaseUI.swift */; };
 		229583951EFCFDC700409D7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295838D1EFCFDC700409D7A /* AppDelegate.swift */; };
 		229583961EFCFDC700409D7A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295838F1EFCFDC700409D7A /* Constants.swift */; };
@@ -57,10 +38,16 @@
 		2295839B1EFCFDC700409D7A /* sediciNoni.png in Resources */ = {isa = PBXBuildFile; fileRef = 229583941EFCFDC700409D7A /* sediciNoni.png */; };
 		2295839E1EFD02BB00409D7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */; };
 		229583A01EFD13AA00409D7A /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295839F1EFD13AA00409D7A /* Events.swift */; };
+		22C3C301202CAA26004E4145 /* Tornei.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3C300202CAA26004E4145 /* Tornei.swift */; };
+		22C3C303202D9B53004E4145 /* TorneiDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3C302202D9B53004E4145 /* TorneiDetails.swift */; };
 		22CF448B181A9AD70062FC38 /* Casino__di_VeneziaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CF448A181A9AD70062FC38 /* Casino__di_VeneziaTests.m */; };
 		22D406D62022216C00D71A6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D406D52022216A00D71A6F /* Images.xcassets */; };
 		22D406D82023281F00D71A6F /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D406D72023281E00D71A6F /* StyleKit.swift */; };
 		22D406DB202328DF00D71A6F /* Dove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D406DA202328DF00D71A6F /* Dove.swift */; };
+		22E8A901202B5BAC000C3CBE /* Sezione.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E8A900202B5BAC000C3CBE /* Sezione.swift */; };
+		22E8A903202C4754000C3CBE /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22E8A902202C4754000C3CBE /* EventCell.xib */; };
+		22E8A905202C660F000C3CBE /* TorneiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E8A904202C660F000C3CBE /* TorneiCell.swift */; };
+		22E8A908202C68CF000C3CBE /* LoadDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E8A907202C68CF000C3CBE /* LoadDatabase.swift */; };
 		22E93AE11F0BF8D800675342 /* CasinoAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E93AE01F0BF8D800675342 /* CasinoAnnotationView.swift */; };
 		22EB73592024A43200759094 /* Quando.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB73582024A43200759094 /* Quando.swift */; };
 		A34396063423EBBAC13846CC /* Pods_Casino__di_Venezia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7BF60459BDF63750E622B8 /* Pods_Casino__di_Venezia.framework */; };
@@ -98,29 +85,10 @@
 		225254201F06F1E0005F1FF7 /* Mestre.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Mestre.gpx; sourceTree = "<group>"; };
 		225254211F06F1E0005F1FF7 /* SanGeremia.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SanGeremia.gpx; sourceTree = "<group>"; };
 		225254261F06F4BB005F1FF7 /* CasinoAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CasinoAnnotation.swift; path = "Casinò di Venezia/CasinoAnnotation.swift"; sourceTree = "<group>"; };
-		225805571EFEBF3100F2826D /* TabBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarView.swift; path = "Casinò di Venezia/TabBarView.swift"; sourceTree = "<group>"; };
-		225805641EFED83900F2826D /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
-		225805651EFED83900F2826D /* CircularButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
-		225805661EFED83900F2826D /* CustomTabmanBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTabmanBar.swift; sourceTree = "<group>"; };
-		225805671EFED83900F2826D /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
-		225805681EFED83900F2826D /* PresetAppearanceConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresetAppearanceConfigs.swift; sourceTree = "<group>"; };
-		225805691EFED83900F2826D /* SettingsCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCells.swift; sourceTree = "<group>"; };
-		2258056A1EFED83900F2826D /* SettingsDismissTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDismissTransitionController.swift; sourceTree = "<group>"; };
-		2258056B1EFED83900F2826D /* SettingsEntries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsEntries.swift; sourceTree = "<group>"; };
-		2258056C1EFED83900F2826D /* SettingsItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsItem.swift; sourceTree = "<group>"; };
-		2258056D1EFED83900F2826D /* SettingsNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsNavigationController.swift; sourceTree = "<group>"; };
-		2258056E1EFED83900F2826D /* SettingsOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewController.swift; sourceTree = "<group>"; };
-		2258056F1EFED83900F2826D /* SettingsPopTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPopTransitionController.swift; sourceTree = "<group>"; };
-		225805701EFED83900F2826D /* SettingsPresentTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPresentTransitionController.swift; sourceTree = "<group>"; };
-		225805711EFED83900F2826D /* SettingsPushTransitionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPushTransitionController.swift; sourceTree = "<group>"; };
-		225805721EFED83900F2826D /* SettingsSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
-		225805731EFED83900F2826D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		225805741EFED83900F2826D /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
-		225805751EFED83900F2826D /* TabViewController+Extras.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TabViewController+Extras.swift"; sourceTree = "<group>"; };
-		225805761EFED83900F2826D /* TransparentNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransparentNavigationBar.swift; sourceTree = "<group>"; };
 		22630A1E1F0F98AE00168D1F /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = "Casinò di Venezia/Location.swift"; sourceTree = "<group>"; };
 		22630A241F0FBD9200168D1F /* PersonDetailMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonDetailMapView.xib; sourceTree = "<group>"; };
 		22630A261F0FBDAF00168D1F /* PersonDetailMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailMapView.swift; sourceTree = "<group>"; };
+		22768109202C8E61009B308C /* VideoLuncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLuncher.swift; sourceTree = "<group>"; };
 		22899D8C201A00EE000CDE7E /* CMVLogInFirebaseUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMVLogInFirebaseUI.swift; sourceTree = "<group>"; };
 		2295838D1EFCFDC700409D7A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Casinò di Venezia/AppDelegate.swift"; sourceTree = "<group>"; };
 		2295838F1EFCFDC700409D7A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = "Casinò di Venezia/Constants.swift"; sourceTree = "<group>"; };
@@ -132,6 +100,8 @@
 		2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2295839F1EFD13AA00409D7A /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Events.swift; path = "Casinò di Venezia/Events.swift"; sourceTree = "<group>"; };
 		22A65A07185EF5AE0018FD0C /* Casinò di Venezia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Casinò di Venezia.entitlements"; sourceTree = "<group>"; };
+		22C3C300202CAA26004E4145 /* Tornei.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tornei.swift; sourceTree = "<group>"; };
+		22C3C302202D9B53004E4145 /* TorneiDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneiDetails.swift; sourceTree = "<group>"; };
 		22CF4459181A9AD70062FC38 /* Casinò di Venezia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Casinò di Venezia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CF447D181A9AD70062FC38 /* Casinò di VeneziaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Casinò di VeneziaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CF4486181A9AD70062FC38 /* Casinò di VeneziaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Casinò di VeneziaTests-Info.plist"; sourceTree = "<group>"; };
@@ -140,6 +110,10 @@
 		22D406D72023281E00D71A6F /* StyleKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StyleKit.swift; path = "Casinò di Venezia/StyleKit.swift"; sourceTree = "<group>"; };
 		22D406DA202328DF00D71A6F /* Dove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Dove.swift; path = "Casinò di Venezia/Dove.swift"; sourceTree = "<group>"; };
 		22DAAD34189FE77F00435B50 /* Restaurant.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Restaurant.plist; sourceTree = "<group>"; };
+		22E8A900202B5BAC000C3CBE /* Sezione.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sezione.swift; sourceTree = "<group>"; };
+		22E8A902202C4754000C3CBE /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
+		22E8A904202C660F000C3CBE /* TorneiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneiCell.swift; sourceTree = "<group>"; };
+		22E8A907202C68CF000C3CBE /* LoadDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDatabase.swift; sourceTree = "<group>"; };
 		22E93AE01F0BF8D800675342 /* CasinoAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CasinoAnnotationView.swift; path = "Casinò di Venezia/CasinoAnnotationView.swift"; sourceTree = "<group>"; };
 		22EB73582024A43200759094 /* Quando.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quando.swift; sourceTree = "<group>"; };
 		6F7BF60459BDF63750E622B8 /* Pods_Casino__di_Venezia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Casino__di_Venezia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,6 +180,23 @@
 			name = "Categories and Extensions";
 			sourceTree = "<group>";
 		};
+		22768108202C8E4C009B308C /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				22768109202C8E61009B308C /* VideoLuncher.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		22C3C2FF202CAA05004E4145 /* Data structure */ = {
+			isa = PBXGroup;
+			children = (
+				2295839F1EFD13AA00409D7A /* Events.swift */,
+				22C3C300202CAA26004E4145 /* Tornei.swift */,
+			);
+			name = "Data structure";
+			sourceTree = "<group>";
+		};
 		22CF4450181A9AD70062FC38 = {
 			isa = PBXGroup;
 			children = (
@@ -217,23 +208,22 @@
 				225254201F06F1E0005F1FF7 /* Mestre.gpx */,
 				225254211F06F1E0005F1FF7 /* SanGeremia.gpx */,
 				2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */,
+				22768108202C8E4C009B308C /* Helper */,
 				22E8A8FC20289E2E000C3CBE /* View */,
 				2295838D1EFCFDC700409D7A /* AppDelegate.swift */,
 				22208DDC1F066F17007DA39D /* Gradient.swift */,
 				2228F76A1F0A41E500F3C94A /* CanvasButton.swift */,
 				22208DDE1F067CBC007DA39D /* GradientInv.swift */,
 				22208DDA1F06561A007DA39D /* CloseOnScrollDown.swift */,
+				22E8A906202C687B000C3CBE /* Fetch Database */,
 				2214AD2F1F1665E400F9EBA7 /* LogIn */,
 				2227D5A01F0A9A9300F09669 /* Transition */,
 				22D406D9202328B300D71A6F /* Design */,
-				225805571EFEBF3100F2826D /* TabBarView.swift */,
 				22208DD21F03C1A6007DA39D /* ButtonSpeaking.swift */,
-				22208DD81F03F268007DA39D /* EventDetails.swift */,
 				2295838F1EFCFDC700409D7A /* Constants.swift */,
-				229583901EFCFDC700409D7A /* EventListCell.swift */,
 				22E93ADF1F0BF84C00675342 /* Maps */,
-				229583911EFCFDC700409D7A /* HomeController.swift */,
-				2295839F1EFD13AA00409D7A /* Events.swift */,
+				22E8A8FF202B5B47000C3CBE /* Controller */,
+				22C3C2FF202CAA05004E4145 /* Data structure */,
 				229583921EFCFDC700409D7A /* Info.plist */,
 				229583931EFCFDC700409D7A /* Main.storyboard */,
 				229583941EFCFDC700409D7A /* sediciNoni.png */,
@@ -257,25 +247,6 @@
 		22CF4462181A9AD70062FC38 /* Casinò di Venezia */ = {
 			isa = PBXGroup;
 			children = (
-				225805641EFED83900F2826D /* ChildViewController.swift */,
-				225805651EFED83900F2826D /* CircularButton.swift */,
-				225805661EFED83900F2826D /* CustomTabmanBar.swift */,
-				225805671EFED83900F2826D /* GradientView.swift */,
-				225805681EFED83900F2826D /* PresetAppearanceConfigs.swift */,
-				225805691EFED83900F2826D /* SettingsCells.swift */,
-				2258056A1EFED83900F2826D /* SettingsDismissTransitionController.swift */,
-				2258056B1EFED83900F2826D /* SettingsEntries.swift */,
-				2258056C1EFED83900F2826D /* SettingsItem.swift */,
-				2258056D1EFED83900F2826D /* SettingsNavigationController.swift */,
-				2258056E1EFED83900F2826D /* SettingsOptionsViewController.swift */,
-				2258056F1EFED83900F2826D /* SettingsPopTransitionController.swift */,
-				225805701EFED83900F2826D /* SettingsPresentTransitionController.swift */,
-				225805711EFED83900F2826D /* SettingsPushTransitionController.swift */,
-				225805721EFED83900F2826D /* SettingsSection.swift */,
-				225805731EFED83900F2826D /* SettingsViewController.swift */,
-				225805741EFED83900F2826D /* TabViewController.swift */,
-				225805751EFED83900F2826D /* TabViewController+Extras.swift */,
-				225805761EFED83900F2826D /* TransparentNavigationBar.swift */,
 				22A65A07185EF5AE0018FD0C /* Casinò di Venezia.entitlements */,
 				22CF4463181A9AD70062FC38 /* Supporting Files */,
 			);
@@ -320,8 +291,30 @@
 			isa = PBXGroup;
 			children = (
 				22208DCE1EFD50EA007DA39D /* MenuBar.swift */,
+				22E8A900202B5BAC000C3CBE /* Sezione.swift */,
+				22E8A902202C4754000C3CBE /* EventCell.xib */,
+				22E8A904202C660F000C3CBE /* TorneiCell.swift */,
+				22208DD81F03F268007DA39D /* EventDetails.swift */,
+				22C3C302202D9B53004E4145 /* TorneiDetails.swift */,
+				229583901EFCFDC700409D7A /* EventListCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		22E8A8FF202B5B47000C3CBE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				229583911EFCFDC700409D7A /* HomeController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		22E8A906202C687B000C3CBE /* Fetch Database */ = {
+			isa = PBXGroup;
+			children = (
+				22E8A907202C68CF000C3CBE /* LoadDatabase.swift */,
+			);
+			name = "Fetch Database";
 			sourceTree = "<group>";
 		};
 		22E93ADF1F0BF84C00675342 /* Maps */ = {
@@ -462,6 +455,7 @@
 				22630A251F0FBD9200168D1F /* PersonDetailMapView.xib in Resources */,
 				2295839E1EFD02BB00409D7A /* GoogleService-Info.plist in Resources */,
 				2295839A1EFCFDC700409D7A /* Main.storyboard in Resources */,
+				22E8A903202C4754000C3CBE /* EventCell.xib in Resources */,
 				225254251F06F1E0005F1FF7 /* SanGeremia.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,7 +553,7 @@
 				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/Tabman/Tabman.framework",
+				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -573,7 +567,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Tabman.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -611,52 +605,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				225805871EFED83900F2826D /* TabViewController.swift in Sources */,
 				22208DD91F03F268007DA39D /* EventDetails.swift in Sources */,
 				22208DDB1F06561A007DA39D /* CloseOnScrollDown.swift in Sources */,
+				22C3C301202CAA26004E4145 /* Tornei.swift in Sources */,
 				229583971EFCFDC700409D7A /* EventListCell.swift in Sources */,
-				2258057E1EFED83900F2826D /* SettingsEntries.swift in Sources */,
 				22E93AE11F0BF8D800675342 /* CasinoAnnotationView.swift in Sources */,
+				22C3C303202D9B53004E4145 /* TorneiDetails.swift in Sources */,
 				22630A271F0FBDAF00168D1F /* PersonDetailMapView.swift in Sources */,
-				225805791EFED83900F2826D /* CustomTabmanBar.swift in Sources */,
-				2258057A1EFED83900F2826D /* GradientView.swift in Sources */,
 				22208DDF1F067CBC007DA39D /* GradientInv.swift in Sources */,
 				22208DD31F03C1A7007DA39D /* ButtonSpeaking.swift in Sources */,
+				22E8A901202B5BAC000C3CBE /* Sezione.swift in Sources */,
 				229583981EFCFDC700409D7A /* HomeController.swift in Sources */,
 				22208DDD1F066F17007DA39D /* Gradient.swift in Sources */,
 				225254271F06F4BB005F1FF7 /* CasinoAnnotation.swift in Sources */,
 				22D406D82023281F00D71A6F /* StyleKit.swift in Sources */,
+				22E8A905202C660F000C3CBE /* TorneiCell.swift in Sources */,
 				22419E9D1F1932F400F4735A /* SignInViewController.swift in Sources */,
-				225805831EFED83900F2826D /* SettingsPresentTransitionController.swift in Sources */,
 				22630A1F1F0F98AE00168D1F /* Location.swift in Sources */,
-				225805581EFEBF3100F2826D /* TabBarView.swift in Sources */,
-				225805881EFED83900F2826D /* TabViewController+Extras.swift in Sources */,
 				22208DCF1EFD50EA007DA39D /* MenuBar.swift in Sources */,
-				2258057C1EFED83900F2826D /* SettingsCells.swift in Sources */,
 				2227FF151F13CDDB0032AA30 /* UIView+BezierPaths.swift in Sources */,
 				2214AD2E1F1661B900F9EBA7 /* LogInViewController.swift in Sources */,
 				229583951EFCFDC700409D7A /* AppDelegate.swift in Sources */,
-				225805801EFED83900F2826D /* SettingsNavigationController.swift in Sources */,
 				229583961EFCFDC700409D7A /* Constants.swift in Sources */,
-				225805891EFED83900F2826D /* TransparentNavigationBar.swift in Sources */,
-				225805821EFED83900F2826D /* SettingsPopTransitionController.swift in Sources */,
 				2228F76B1F0A41E500F3C94A /* CanvasButton.swift in Sources */,
+				22E8A908202C68CF000C3CBE /* LoadDatabase.swift in Sources */,
 				2252541D1F06EFA8005F1FF7 /* MapsViewController.swift in Sources */,
-				2258057B1EFED83900F2826D /* PresetAppearanceConfigs.swift in Sources */,
-				225805851EFED83900F2826D /* SettingsSection.swift in Sources */,
-				225805861EFED83900F2826D /* SettingsViewController.swift in Sources */,
 				229583A01EFD13AA00409D7A /* Events.swift in Sources */,
 				22899D8D201A00EE000CDE7E /* CMVLogInFirebaseUI.swift in Sources */,
-				225805771EFED83900F2826D /* ChildViewController.swift in Sources */,
 				22EB73592024A43200759094 /* Quando.swift in Sources */,
-				225805841EFED83900F2826D /* SettingsPushTransitionController.swift in Sources */,
-				2258057F1EFED83900F2826D /* SettingsItem.swift in Sources */,
 				2227D59F1F0A78B500F09669 /* CircularTransition.swift in Sources */,
 				22208DD71F03E61C007DA39D /* ExpandAnimator.swift in Sources */,
-				2258057D1EFED83900F2826D /* SettingsDismissTransitionController.swift in Sources */,
 				22D406DB202328DF00D71A6F /* Dove.swift in Sources */,
-				225805811EFED83900F2826D /* SettingsOptionsViewController.swift in Sources */,
-				225805781EFED83900F2826D /* CircularButton.swift in Sources */,
+				2276810A202C8E61009B308C /* VideoLuncher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,6 @@ class EventListCell: UICollectionViewCell {
     @IBOutlet weak var QuandoLabel: UILabel!
     @IBOutlet weak var speaking: UIButton! {
         didSet {
-            
             let animation = CSAnimationView()
             speaking.addSubview(animation)
             //speaking.customView = CSAnimationView()
@@ -50,7 +49,7 @@ class EventListCell: UICollectionViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-       
+       backgroundColor = .white
     
     }
     
