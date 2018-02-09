@@ -10,8 +10,8 @@ import UIKit
 //Utilizzato per creare un array di classi (array contenente le immagini generate da PaintCode da utilizzare nel Menu)
 
 public struct MyConstants{
-    static let immaginiSelezionate = [StyleKit.imageOfMic(imageSize: CGSize(width: 100, height: 100), highlited: true), StyleKit.imageOfEvents(),StyleKit.imageOfEvents(),StyleKit.imageOfEvents(),StyleKit.imageOfEvents(),StyleKit.imageOfEvents()]
-    static let immagini = [StyleKit.imageOfMic(), StyleKit.imageOfEvents(),StyleKit.imageOfEvents(),StyleKit.imageOfEvents(),StyleKit.imageOfEvents(),StyleKit.imageOfEvents()]
+    static let immaginiSelezionate = [StyleKit.imageOfMic(imageSize: CGSize(width: 100, height: 100), highlited: true), StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true)]
+    static let immagini = [StyleKit.imageOfMic(), StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false)]
 }
 
 
