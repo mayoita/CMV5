@@ -38,6 +38,8 @@
 		2295839B1EFCFDC700409D7A /* sediciNoni.png in Resources */ = {isa = PBXBuildFile; fileRef = 229583941EFCFDC700409D7A /* sediciNoni.png */; };
 		2295839E1EFD02BB00409D7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */; };
 		229583A01EFD13AA00409D7A /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295839F1EFD13AA00409D7A /* Events.swift */; };
+		229AACCC202EFB7800644394 /* heart.json in Resources */ = {isa = PBXBuildFile; fileRef = 229AACCB202EFB7800644394 /* heart.json */; };
+		229AACCE202F0F9E00644394 /* Cuore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229AACCD202F0F9E00644394 /* Cuore.swift */; };
 		22C3C301202CAA26004E4145 /* Tornei.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3C300202CAA26004E4145 /* Tornei.swift */; };
 		22C3C303202D9B53004E4145 /* TorneiDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3C302202D9B53004E4145 /* TorneiDetails.swift */; };
 		22CF448B181A9AD70062FC38 /* Casino__di_VeneziaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CF448A181A9AD70062FC38 /* Casino__di_VeneziaTests.m */; };
@@ -99,6 +101,8 @@
 		229583941EFCFDC700409D7A /* sediciNoni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sediciNoni.png; path = "Casinò di Venezia/sediciNoni.png"; sourceTree = "<group>"; };
 		2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2295839F1EFD13AA00409D7A /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Events.swift; path = "Casinò di Venezia/Events.swift"; sourceTree = "<group>"; };
+		229AACCB202EFB7800644394 /* heart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heart.json; sourceTree = "<group>"; };
+		229AACCD202F0F9E00644394 /* Cuore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuore.swift; sourceTree = "<group>"; };
 		22A65A07185EF5AE0018FD0C /* Casinò di Venezia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Casinò di Venezia.entitlements"; sourceTree = "<group>"; };
 		22C3C300202CAA26004E4145 /* Tornei.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tornei.swift; sourceTree = "<group>"; };
 		22C3C302202D9B53004E4145 /* TorneiDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneiDetails.swift; sourceTree = "<group>"; };
@@ -188,6 +192,15 @@
 			name = Helper;
 			sourceTree = "<group>";
 		};
+		229AACC8202EF74000644394 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				229AACCB202EFB7800644394 /* heart.json */,
+				229AACCD202F0F9E00644394 /* Cuore.swift */,
+			);
+			name = Lottie;
+			sourceTree = "<group>";
+		};
 		22C3C2FF202CAA05004E4145 /* Data structure */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +221,7 @@
 				225254201F06F1E0005F1FF7 /* Mestre.gpx */,
 				225254211F06F1E0005F1FF7 /* SanGeremia.gpx */,
 				2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */,
+				229AACC8202EF74000644394 /* Lottie */,
 				22768108202C8E4C009B308C /* Helper */,
 				22E8A8FC20289E2E000C3CBE /* View */,
 				2295838D1EFCFDC700409D7A /* AppDelegate.swift */,
@@ -451,6 +465,7 @@
 				225254231F06F1E0005F1FF7 /* CaNoghera.gpx in Resources */,
 				2295839B1EFCFDC700409D7A /* sediciNoni.png in Resources */,
 				225254221F06F1E0005F1FF7 /* Venezia.gpx in Resources */,
+				229AACCC202EFB7800644394 /* heart.json in Resources */,
 				225254241F06F1E0005F1FF7 /* Mestre.gpx in Resources */,
 				22630A251F0FBD9200168D1F /* PersonDetailMapView.xib in Resources */,
 				2295839E1EFD02BB00409D7A /* GoogleService-Info.plist in Resources */,
@@ -553,7 +568,7 @@
 				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -567,7 +582,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -612,6 +627,7 @@
 				22E93AE11F0BF8D800675342 /* CasinoAnnotationView.swift in Sources */,
 				22C3C303202D9B53004E4145 /* TorneiDetails.swift in Sources */,
 				22630A271F0FBDAF00168D1F /* PersonDetailMapView.swift in Sources */,
+				229AACCE202F0F9E00644394 /* Cuore.swift in Sources */,
 				22208DDF1F067CBC007DA39D /* GradientInv.swift in Sources */,
 				22208DD31F03C1A7007DA39D /* ButtonSpeaking.swift in Sources */,
 				22E8A901202B5BAC000C3CBE /* Sezione.swift in Sources */,

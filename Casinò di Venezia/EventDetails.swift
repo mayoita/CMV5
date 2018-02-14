@@ -9,9 +9,10 @@
 import UIKit
 import EventKit
 import Social
+import Lottie
 
 
-class EventDetails: UIViewController, UIViewControllerTransitioningDelegate {
+class EventDetails: UIViewController, UIViewControllerTransitioningDelegate, CAAnimationDelegate {
 
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var titolo: UILabel!
@@ -28,6 +29,7 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate {
     var event = Events()
     let defaults = UserDefaults.standard
     let suffissoBOOL = "BOOL"
+    var animazione:UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,12 +98,81 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate {
     }
     
     @IBOutlet weak var facebook: UIButton!
-   
+    func cuore() {
+        let fullRotation = CGFloat(Double.pi * 2)
+        let animationView = LOTAnimationView(name: "heart")
+        animazione = animationView
+        animationView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
+        animationView.center = calendarioIcona.center
+        animationView.contentMode = .scaleAspectFill
+        animationView.animationSpeed = 0.8
+        animationView.loopAnimation = false
+        view.addSubview(animationView)
+        animationView.play()
+        
+        let animation = CABasicAnimation(keyPath: "position.y")
+        animation.timingFunction = CAMediaTimingFunction(controlPoints: 1/6, 1, 1, 1)
+        animation.fromValue = calendarioIcona.center.y
+        animation.toValue = calendarioIcona.center.y - 50
+        
+        let opacita = CABasicAnimation(keyPath: "opacity")
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        opacita.fromValue = 1
+        opacita.toValue = 0
+        
+        let rot = CAKeyframeAnimation(keyPath: "transform.rotation.z")
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        rot.values = [0,1/24 * fullRotation,-1/24 * fullRotation,1/24 * fullRotation,0]
+        rot.keyTimes = [0,0.15,0.3,0.55,1]
+        
+        let timingFunction = CAMediaTimingFunction(controlPoints: 1/6, 1, 1, 1)
+        let animationDuration:TimeInterval = 2
+        let animationGroup = CAAnimationGroup()
+        
+        animationGroup.duration = animationDuration
+        animationGroup.timingFunction = timingFunction
+        animationGroup.animations = [animation, opacita,rot]
+        animationGroup.isRemovedOnCompletion = false
+        animationGroup.fillMode = kCAFillModeBoth
+        animationGroup.delegate = self
+        animationView.layer.add(animationGroup, forKey: "cuore")
+    }
+    func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        animazione?.removeFromSuperview()
+    }
+    func testoAggiungi() {
+        let aggiunto = UIView()
+        let testo = UILabel()
+      
+        testo.text = "L'evento è stato aggiunto al calendario".localized
+        testo.textColor = .white
+        testo.backgroundColor = .red
+        aggiunto.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
+        aggiunto.center = view.center
+        testo.frame = aggiunto.frame
+        testo.center = aggiunto.center
+        testo.textAlignment = .center
+        //aggiunto.addSubview(testo)
+        aggiunto.backgroundColor = .red
+        //aggiunto.center.y += 100
+        view.addSubview(testo)
+        testo.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+        UIView.animate(withDuration: 0.3,
+                       animations: {
+                        testo.transform = CGAffineTransform(scaleX: 1, y: 0.01)
+        },
+                       completion: { _ in
+                        UIView.animate(withDuration: 0.2) {
+                             testo.transform = CGAffineTransform(scaleX: 1, y: 1)
+                        }
+        })
+    }
 
     @IBAction func addEventToCalendar(_ sender: Any) {
         configureReminder()
         if (appDelegate.eventStore != nil) {
             if !salvatoInCAlendario {
+                cuore()
                 let eventToCalendar:EKEvent = EKEvent(eventStore: appDelegate.eventStore!)
                 
                 eventToCalendar.title = event.Name
@@ -132,7 +203,8 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate {
                     try appDelegate.eventStore!.save(eventToCalendar, span: .thisEvent)
                     let alert = UIAlertController(title: "CALENDARIO", message: "L'evento è stato aggiunto al calendario!", preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: nil))
-                    present(alert, animated: true, completion: nil)
+                    testoAggiungi()
+                   // present(alert, animated: true, completion: nil)
                     defaults.set(true, forKey: suffissoBOOL + event.Name)
                     salvatoInCAlendario = true
                     defaults.set(eventToCalendar.eventIdentifier, forKey: event.Name)

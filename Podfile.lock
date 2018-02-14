@@ -70,12 +70,12 @@ PODS:
   - GTMSessionFetcher/Core (1.1.10)
   - GTMSessionFetcher/Full (1.1.10):
     - GTMSessionFetcher/Core (= 1.1.10)
+  - lottie-ios (2.5.0)
   - Pageboy (1.3.3)
   - PureLayout (3.0.2)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
-  - YouTubePlayer (0.4.0)
 
 DEPENDENCIES:
   - Canvas (~> 0.1.2)
@@ -87,10 +87,10 @@ DEPENDENCIES:
   - FirebaseUI/Auth
   - FirebaseUI/Facebook
   - FirebaseUI/Google
+  - lottie-ios
   - Pageboy
   - PureLayout
   - SDWebImage (~> 3.8)
-  - YouTubePlayer
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -109,11 +109,11 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
+  lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
   Pageboy: 35efa6ddf10740eff76839116435cad7ea5e9e04
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
-  YouTubePlayer: 028451f6772f372d4759866db99824c676ac1473
 
-PODFILE CHECKSUM: 60e6005e3231dc4c62fb2414f86416837a7bca9a
+PODFILE CHECKSUM: 6777344ebf852b95e3669865fa5b4b87fee7eb7e
 
 COCOAPODS: 1.4.0

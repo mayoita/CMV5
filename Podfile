@@ -18,6 +18,7 @@ target 'Casinò di Venezia' do
   pod 'FirebaseUI/Auth'
   pod 'FirebaseUI/Google'
   pod 'FirebaseUI/Facebook'
+  pod 'lottie-ios'
 
   
 # These are pods used for the auth providers.
