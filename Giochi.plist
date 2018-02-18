@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>titolo</key>
+		<string>CARIBBEAN STUD POKER</string>
+		<key>immagine</key>
+		<string>carribbean.jpg</string>
+		<key>main</key>
+		<string>Il Caribbean Stud Poker è una variante di poker dove i giocatori, invece di sfidarsi tra loro, sfidano il banco cercando di realizzare una combinazione migliore. A Ca&apos; Vendramin Calergi e a Ca&apos; Noghera è possibile trovare sale che ospitano questa variante del poker a cinque carte.
+
+Quali sono le principali differenze? 
+Giocare a Caribbean Stud Poker significa sfidare il banco, non i giocatori. Un’altra differenza è rappresentata dal “jackpot progressive”: il giocatore, puntando su ANTE, acquisisce il diritto a parteciparvi.</string>
+		<key>regola</key>
+		<array>
+			<dict>
+				<key>IL GIOCO</key>
+				<string>Il Caribbean Stud Poker si gioca con cinque carte coperte, il giocatore (player) punta contro il &quot;banco&quot; rappresentato dal Casinó cercando di realizzare una combinazione migliore.
+
+Viene utilizzato un mazzo di cinquantadue carte da gioco formato da tredici carte per ognuno dei quattro semi (Cuori - Quadri - Fiori - Picche) così composti: un Asso (Ace), nove carte numerate in ordine crescente da 2 a 10, un Fante (Jack), una Donna (Queen) e un Re (King). Il loro valore è quello nominale.
+
+Il tavolo è simile nella forma a quello del Black Jack, i sette giocatori seduti hanno davanti a loro due caselle: ANTE e BET.
+
+La partita inizia quando il Dealer (l&apos;impiegato), passando la mano lungo la linea, di gioco invita a effettuare le puntate annun-ciando: &quot;Messieurs faites vos jeux&quot;, per partecipare, ogni giocatore deve obbligatoriamente puntare su ANTE un importo compreso tra il minimo e il massimo indicato al tavolo e facoltativamente il Jackpot.
+
+Il Dealer, dopo aver verificato che tutte le giocate siano regolari dichiarando &quot;Rien ne va plus&quot; determina la fine delle puntate:   partendo da sinistra verso destra, prelevandole da una miscela-trice automatica (shuffle), distribuisce cinque carte coperte a ogni postazione assegnandole per ultimo anche a se stesso.
+
+Il giocatore, prima di raccogliere le carte, dovrà attendere che il Dealer abbia completato la loro distribuzione, girato l&apos;ultima delle sue cinque, determinando in questo modo la regolarità della mano e annunciato: &quot;Prego&quot; (&quot;Go ahead&quot;). Dopo aver preso visione del proprio gioco, potrà scegliere fra tre opportunità: rinunciare, proseguire con quelle ricevute, cambiarne una.
+
+Se rinuncia deve porre le proprie carte, sempre con il dorso verso l&apos;alto, sulla casella BET. Il Dealer provvederà a ritirarle assieme alla puntata su ANTE.
+
+Se decide di proseguire (rilanciare) deve puntare nella casella BET esattamente il doppio di quanto piazzato su ANTE, appoggiare le carte, con il dorso verso l&apos;alto, alla sinistra della casella e attendere, senza poterle più toccare, che il Dealer scopra le proprie.
+
+Se invece intende cambiare una delle cinque carte ricevute, la deve posizionare, senza farla vedere, davanti alla base del lettore ottico utilizzata per la puntata sul Jackpot, sovrapporre alla stessa un importo in gettoni pari a quanto preceden-temente giocato su ANTE e sistemare le quattro rimanenti, con il dorso verso l&apos;alto, alla sinistra della casella. Ricevuta la carta non potrà più toccare quella cambiata.
+
+Dopo aver visionato la nuova composizione potrà decidere se portare a termine la mano o rinunciare attenendosi alle procedure precedentemente esposte.
+
+Quando tutti hanno definito il proprio gioco, il banchiere scopre, ordinandole, le sue carte, però se non forma almeno un &quot;Asso e Re&quot; &quot;non qualifica&quot; (non gioca). A questo punto, partendo dalla sua destra, senza vedere le carte dei giocatori e indipendente-mente dai giochi realizzati, paga alla pari tutte le puntate rimaste che si trovano su ANTE.
+
+Se la mano è composta da &quot;Asso e Re&quot; o migliore, il banchiere &quot;è qualificato&quot; (gioca). Partendo da destra confronta le sue carte con quelle dei giocatori: in base alle combinazioni ritira gli ANTE e BET perdenti e paga quelli vincenti (ANTE alla pari e BET secondo la tabella dei pagamenti).</string>
+			</dict>
+			<dict>
+				<key>JACKPOT PROGRESSIVE</key>
+				<string>Il giocatore, puntando su ANTE, acquisisce il diritto di partecipare al &quot;Jackpot progressive&quot;: per poter aderire deve appoggiare un gettone (bonus) del valore prestabilito nell&apos;apposito alloggiamento con lettore ottico (cerchi giallo e rosso negli esempi); per concor-rere a questa vincita supplementare, realizzabile formando una delle seguenti combinazioni: Colore, Full, Poker, Scala Colore, Scala Reale, non deve aver effettuato il &quot;cambio carta&quot;.
+
+La vincita è indipendente dall&apos;eventuale &quot;qualifica&quot; o &quot;gioco&quot; del banco; gli importi del pagamento sono riportati nella relativa tabella presente in ogni tavolo.
+
+Il Jackpot, collegato a tutti i Caribbean Poker, è incrementato dai BONUS (Side - Bets) giocati dai clienti: un display ne riporta l&apos;ammontare totale. Il giocatore si deve assicurare, una volta giocato il BONUS, che il suo indicatore luminoso sia acceso. In ogni caso, prima che le carte siano ritirate, il giocatore dovrà sempre avvisare il banchiere &quot;non qualificato&quot; informandolo della vincita realizzata sul montepremi progressivo. Non è ammesso giocare solo il Jackpot.</string>
+			</dict>
+			<dict>
+				<key>REGOLE GENERALI</key>
+				<string>Il Caribbean Stud Poker ha delle regole ben precise il cui rispetto vincola la normale prosecuzione del gioco. Si invitano pertanto i clienti a prendere visione delle principali disposizioni.
+
+• Ogni giocatore può occupare una sola postazione, deve sempre tenere ben visibili le carte sopra il tavolo, non può scambiare informazioni riguardanti il proprio gioco, far vedere le carte o guardare quelle distribuite agli altri.
+
+• Se un giocatore, dopo il cambio carta, raccoglie per errore una (anche se è la sua) o più carte scartate perde il diritto di portare a termine il gioco, si annulla la sua mano e gli viene restituita la puntata comprensiva del BONUS.
+
+• Se un cliente punta contemporaneamente sia ANTE che BET la giocata viene considerata al buio, pertanto le puntate e la composizione delle carte saranno accettate e ritenute valide. L&apos;impiegato, in assenza di un tempestivo ripensamento del giocatore, potrà passare alla postazione successiva.
+
+• Se la puntata su ANTE è inferiore al minimo del tavolo, dopo l&apos;attribuzione delle carte sulla postazione, potrà essere integrata solo nel caso in cui queste non siano state viste dal giocatore, diversamente, per quella mano sarà accettata &quot;come valida&quot;.
+
+• Se un giocatore ha puntato sul BET un importo inferiore al doppio dell&apos;ANTE l&apos;eventuale vincita è rapportata all&apos;effettiva puntata.
+
+• Se un giocatore ha puntato sul BET un importo superiore al doppio dell&apos;ANTE l&apos;eventuale vincita viene pagata in base alla puntata consentita, se perdente, viene restituita l&apos;eccedenza.
+
+• Il giocatore che ha realizzato una Scala Reale o una Scala Colore deve sempre dichiararlo appena controllate le proprie carte. In questo caso viene sospesa momentaneamente la partita in tutti i tavoli. Il &quot;Jackpot progressive&quot; realizzato sulla combinazione di Scala Reale sarà diviso in parti uguali se due o più giocatori la realizzano nello stesso momento anche su tavoli diversi.
+La stessa procedura sarà seguita per il &quot;Jackpot progressive&quot; formato con la combinazione di Scala Colore.
+
+• Il giocatore che cambia una carta perde il diritto di partecipare a una eventuale vincita di Jackpot. Nel caso in cui realizzi una Scala Reale, Scala Colore o Poker, e il banco si &quot;qualifichi&quot;, riceverà un pagamento ridotto secondo quanto previsto dalla tabella dei pagamenti. Per tutte le altre combinazioni verranno mantenuti gli stessi pagamenti senza tenere conto del cambio carta.
+
+• Se la combinazione del banchiere è uguale a quelle del giocatore (ad esempio Asso e Re, Coppia, Tris, Colore ecc.) diventerà determinante il valore delle altre carte (vince la carta più alta).
+I semi delle carte non vengono considerati e qualora il valore delle cinque carte fosse uguale per entrambi, la mano è &quot;in parità&quot;.
+
+• Al tavolo può sedere solo chi gioca.
+
+• Il banco gioca anche contro il singolo cliente.
+
+• Le carte ritirate o annullate dal Dealer, anche per errore, dopo esser state posizionate nel porta-carte o mescolate con altre, non potranno in nessun caso essere controllate o rimesse in gioco.
+
+• Le puntate minime e massime sono evidenziate sui singoli tavoli da gioco mediante appositi cartelli, gli importi sono strettamente vincolanti per il giocatore che non può mai superarli, neppure con l&apos;intervento di terzi. La vincita eccedente realizzata superando il massimo consentito non sarà pagata e la differenza della puntata verrà restituita al cliente.
+
+• La soluzione di eventuali controversie in materia di gioco è demandata alla decisione inappellabile della Direzione Giochi.
+
+Circostanze nelle quali si annulla subito tutta la mano
+• Se il Dealer o uno o più giocatori hanno un numero non corretto di carte.
+
+• Se, a carte distribuite, quelle rimanenti nella shuffle si inceppano, fuoriescono o sormontandosi mostrano il loro valore.
+
+• Se il Dealer scopre una carta durante la distribuzione.
+
+• Se il Dealer, a carte distribuite e prima di girare la carta del banco, si accorge che è stata inavvertitamente saltata una postazione. Qualora se ne accorgesse dopo aver girato la propria carta o aver qualificato, la mano è valida.
+
+• Se al Dealer cadono una o più carte a terra o nel budino durante la loro distribuzione.
+
+• Se, dopo il cambio carte, il Dealer, mentre toglie quelle dei clienti che non intendono proseguire, ritira anche le proprie.
+
+• Se un giocatore raccoglie le carte prima che il Dealer finisca di distribuirle.
+
+• Se il Dealer, nella distribuzione, assegna la carta in una postazione non giocata. Se però se ne accorge dopo aver girato la propria carta (i clienti hanno perciò visto le loro) la mano è valida e si porta a termine. In ogni caso la postazione senza puntata non potrà entrare in gioco.</string>
+			</dict>
+		</array>
+		<key>immagine_tavolo</key>
+		<string>carribeantable_due.jpg</string>
+		<key>office</key>
+		<array>
+			<string>VE</string>
+			<string>CN</string>
+		</array>
+	</dict>
+</array>
+</plist>

@@ -72,6 +72,12 @@
 	<string>This will be used to obtain your location on the map.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This app will use your photo library to allow you to chosse your profile picture.</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>This access is required to set up reminders.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>venicecasinoregular.ttf</string>
+	</array>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>
@@ -99,7 +105,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
-	<key>NSRemindersUsageDescription</key>
-	<string>This access is required to set up reminders.</string>
 </dict>
 </plist>

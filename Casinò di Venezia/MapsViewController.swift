@@ -16,24 +16,52 @@ class MapsViewController: UIViewController, MKMapViewDelegate, PersonDetailMapVi
    
     var locationManager: CLLocationManager!
     var isInitialized = false
-    var event = Events()
+
     var sedi = [Location]()
+
+    var sediNome:[String]?
+    var locations:[Int] = []
+    enum nomeSedi: Int {
+        case VE = 0
+        case CN = 1
+    }
 
     @IBOutlet var detailView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        for sede in sediNome! {
+            switch sede {
+            case "VE":
+                locations.append(0)
+            case "CN":
+                locations.append(1)
+            default:
+                return
+            
+            }
+        }
         locationManager = CLLocationManager()
-        locationManager.requestWhenInUseAuthorization()
-        // Show the user current location
-        mapView.showsUserLocation = true
+        //locations = [nomeSedi.CN.rawValue, nomeSedi.VE.rawValue]
         mapView.delegate = self
         popolaSedi()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        checkLocationAuthorizationStatus()
+    }
+    func checkLocationAuthorizationStatus() {
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
+            mapView.showsUserLocation = true
+        } else {
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
     func popolaSedi () {
         sedi = []
-        for index in 0...1 {
+        for index in locations {
             let location = Location(name: Constants.sedi[index], image: Constants.immaginiSedi[index]!, tel: Constants.telefono[index])
             location.location = Constants.coordinates[index]
             location.address = Constants.address[index] as NSDictionary
@@ -47,53 +75,7 @@ class MapsViewController: UIViewController, MKMapViewDelegate, PersonDetailMapVi
        
     }
     
-    func calculateETA(){
 
-        var point = CasinoAnnotation(location: sedi[0])
-        if event.office == "CN" {
-            point = CasinoAnnotation(location: sedi[1])
-        }
-        
-        // 3
-        // Calculate Transit ETA Request
-        let request = MKDirectionsRequest()
-        /* Source MKMapItem */
-        let sourceItem = MKMapItem(placemark: MKPlacemark(coordinate: mapView.userLocation.coordinate, addressDictionary: nil))
-        request.source = sourceItem
-        /* Destination MKMapItem */
-        let destinationItem = MKMapItem(placemark: MKPlacemark(coordinate: point.coordinate, addressDictionary: nil))
-        request.destination = destinationItem
-        request.requestsAlternateRoutes = false
-        // Looking for Transit directions, set the type to Transit
-        request.transportType = .walking
-        // Center the map region around the restaurant coordinates
-        mapView.setCenter(point.coordinate, animated: true)
-        // You use the MKDirectionsRequest object constructed above to initialise an MKDirections object
-        let directions = MKDirections(request: request)
-        directions.calculateETA { (etaResponse, error) -> Void in
-            if let error = error {
-                print("Error while requesting ETA : \(error.localizedDescription)")
-                point.eta = error.localizedDescription
-            }else{
-                point.eta = "\(Int((etaResponse?.expectedTravelTime)!/60)) min"
-            }
-            // 4
-            var isExist = false
-            for annotation in self.mapView.annotations{
-                if annotation.coordinate.longitude == point.coordinate.longitude && annotation.coordinate.latitude == point.coordinate.latitude{
-                    isExist = true
-                    point = annotation as! CasinoAnnotation
-                }
-            }
-            if !isExist{
-                self.mapView.addAnnotation(point)
-            }
-            self.mapView.selectAnnotation(point, animated: true)
-            
-        }
-        
-        setZoomRect()
-    }
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         // If annotation is not of type RestaurantAnnotation (MKUserLocation types for instance), return nil
         if !(annotation is CasinoAnnotation){
@@ -122,9 +104,7 @@ class MapsViewController: UIViewController, MKMapViewDelegate, PersonDetailMapVi
         mapItem.openInMaps(launchOptions: launchOptions)
     }
     func detailsRequestedForPerson(person: Location) {
-       
-      
-        
+
         let placemark = MKPlacemark(coordinate: person.location, addressDictionary: (person.address as! [String : Any]) )
         // The map item is the restaurant location
         let mapItem = MKMapItem(placemark: placemark)
@@ -139,7 +119,13 @@ class MapsViewController: UIViewController, MKMapViewDelegate, PersonDetailMapVi
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
         if !isInitialized {
             isInitialized = true
-        self.calculateETA()
+            for (index, item) in locations.enumerated() {
+                let point = CasinoAnnotation(location: sedi[index])
+                self.mapView.addAnnotation(point)
+                self.mapView.selectAnnotation(point, animated: true)
+            }
+
+            setZoomRect()
         }
     }
 
@@ -150,26 +136,26 @@ class MapsViewController: UIViewController, MKMapViewDelegate, PersonDetailMapVi
     func setZoomRect() {
         let newLocation: CLLocation? = locationManager.location
         var annotationCenter: CLLocationCoordinate2D = CLLocationCoordinate2D()
-        var southwestLat: CLLocationDegrees
-        var southwestLng: CLLocationDegrees
+        var southwestLat: CLLocationDegrees = 0
+        var southwestLng: CLLocationDegrees = 0
         var northeastLat: CLLocationDegrees
         var northeastLng: CLLocationDegrees
         northeastLat = (newLocation?.coordinate.latitude)!
         northeastLng = (newLocation?.coordinate.longitude)!
-        if event.office == "VE" {
-            southwestLat   = Constants.coordinates[0].latitude
-            southwestLng  = Constants.coordinates[0].longitude
-        } else {
-            southwestLat   = Constants.coordinates[1].latitude
-            southwestLng  = Constants.coordinates[1].longitude
+        for index in locations {
+            southwestLat   = southwestLat + Constants.coordinates[index].latitude
+            southwestLng = southwestLng + Constants.coordinates[index].longitude
         }
+        southwestLat = southwestLat / CLLocationDegrees(locations.count)
+        southwestLng = southwestLng / CLLocationDegrees(locations.count)
+
         var span: MKCoordinateSpan = MKCoordinateSpan()
         span.longitudeDelta = fabs(Double(northeastLng - southwestLng))
         span.latitudeDelta = fabs(Double(northeastLat - southwestLat))
         annotationCenter.longitude = (northeastLng + southwestLng) / 2
         annotationCenter.latitude = (northeastLat + southwestLat) / 2
-        span.longitudeDelta = span.longitudeDelta * 1.6
-        span.latitudeDelta = span.latitudeDelta * 1.6
+        span.longitudeDelta = span.longitudeDelta * 3.6
+        span.latitudeDelta = span.latitudeDelta * 3.6
         var region: MKCoordinateRegion = MKCoordinateRegion()
         region.center = annotationCenter
         region.span = span

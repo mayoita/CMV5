@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="giochiCellId" id="TDp-JX-p83" customClass="GiochiCella" customModule="Casino__di_Venezia" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="231"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="231"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sediciNoni.png" translatesAutoresizingMaskIntoConstraints="NO" id="01d-zy-hzx">
+                        <rect key="frame" x="0.0" y="0.0" width="319" height="138"/>
+                        <color key="backgroundColor" red="0.058823529409999999" green="0.79215686269999996" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titolo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LG3-gp-oiK">
+                        <rect key="frame" x="5" y="143" width="309" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="Aa9-jA-3fY"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <color key="textColor" red="0.51539540289999997" green="0.45661699770000003" blue="0.32175162429999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4h-3e-qSM">
+                        <rect key="frame" x="5" y="159" width="309" height="67"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="67" id="orW-g3-akD"/>
+                        </constraints>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="01d-zy-hzx" secondAttribute="trailing" id="0ca-9y-Ag2"/>
+                <constraint firstAttribute="trailing" secondItem="u4h-3e-qSM" secondAttribute="trailing" constant="5" id="6EI-ua-znf"/>
+                <constraint firstItem="LG3-gp-oiK" firstAttribute="top" secondItem="01d-zy-hzx" secondAttribute="bottom" constant="5" id="6g5-IV-Bcn"/>
+                <constraint firstItem="01d-zy-hzx" firstAttribute="top" secondItem="TDp-JX-p83" secondAttribute="top" id="GW3-pK-A69"/>
+                <constraint firstItem="01d-zy-hzx" firstAttribute="leading" secondItem="TDp-JX-p83" secondAttribute="leading" id="Mvr-jN-rXp"/>
+                <constraint firstItem="LG3-gp-oiK" firstAttribute="leading" secondItem="TDp-JX-p83" secondAttribute="leading" constant="5" id="UVz-F8-jRp"/>
+                <constraint firstAttribute="trailing" secondItem="01d-zy-hzx" secondAttribute="trailing" id="WOO-b3-zI8"/>
+                <constraint firstItem="u4h-3e-qSM" firstAttribute="top" secondItem="LG3-gp-oiK" secondAttribute="bottom" id="YM9-7b-Wj0"/>
+                <constraint firstAttribute="trailing" secondItem="LG3-gp-oiK" secondAttribute="trailing" constant="5" id="Yc5-qV-wsd"/>
+                <constraint firstAttribute="trailing" secondItem="01d-zy-hzx" secondAttribute="trailing" id="azF-Jz-Jt0"/>
+                <constraint firstAttribute="bottom" secondItem="u4h-3e-qSM" secondAttribute="bottom" constant="5" id="e2u-yy-GGb"/>
+                <constraint firstItem="01d-zy-hzx" firstAttribute="top" secondItem="TDp-JX-p83" secondAttribute="top" id="gqH-e8-aVH"/>
+                <constraint firstItem="u4h-3e-qSM" firstAttribute="leading" secondItem="TDp-JX-p83" secondAttribute="leading" constant="5" id="hDA-47-Dt0"/>
+                <constraint firstItem="01d-zy-hzx" firstAttribute="top" secondItem="TDp-JX-p83" secondAttribute="top" id="rR9-ko-f9c"/>
+                <constraint firstItem="01d-zy-hzx" firstAttribute="leading" secondItem="TDp-JX-p83" secondAttribute="leading" id="xLr-LF-7hC"/>
+                <constraint firstItem="01d-zy-hzx" firstAttribute="leading" secondItem="TDp-JX-p83" secondAttribute="leading" id="yW1-4c-ovp"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="QbI-65-clX"/>
+            <size key="customSize" width="319" height="231"/>
+            <connections>
+                <outlet property="image" destination="01d-zy-hzx" id="Ehl-P4-nTp"/>
+                <outlet property="intro" destination="u4h-3e-qSM" id="z1j-ON-6Zr"/>
+                <outlet property="titolo" destination="LG3-gp-oiK" id="2SX-MS-lnn"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="59.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="sediciNoni.png" width="1000" height="560"/>
+    </resources>
+</document>

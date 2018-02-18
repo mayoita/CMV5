@@ -37,6 +37,7 @@ class Sezione: UICollectionViewCell,UICollectionViewDelegateFlowLayout,UICollect
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.register(UINib(nibName: "EventCell", bundle: nil), forCellWithReuseIdentifier: "EventCellId")
+        cv.register(UINib(nibName: "GiochiCell", bundle: nil), forCellWithReuseIdentifier: "giochiCellId")
         //cv.register(EventListCell.self, forCellWithReuseIdentifier: "EventCell")
         cv.dataSource = self
         cv.delegate = self
@@ -143,9 +144,6 @@ class Sezione: UICollectionViewCell,UICollectionViewDelegateFlowLayout,UICollect
         if let keyWindow = UIApplication.shared.keyWindow?.rootViewController {
             keyWindow.present(expandedVC, animated: true, completion: nil)
         }
-        
-        //let viewLauncher = VideoLuncher()
-        //viewLauncher.showVideoPlayer()
         
     }
     

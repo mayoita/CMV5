@@ -76,6 +76,7 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - Canvas (~> 0.1.2)
@@ -91,6 +92,7 @@ DEPENDENCIES:
   - Pageboy
   - PureLayout
   - SDWebImage (~> 3.8)
+  - youtube-ios-player-helper (~> 0.1)
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
@@ -113,7 +115,8 @@ SPEC CHECKSUMS:
   Pageboy: 35efa6ddf10740eff76839116435cad7ea5e9e04
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 6777344ebf852b95e3669865fa5b4b87fee7eb7e
+PODFILE CHECKSUM: 5182efdae35fac789bf77507ff99afcf6e298037
 
 COCOAPODS: 1.4.0

@@ -27,7 +27,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         FirebaseApp.configure()
-        
+//        let families = UIFont.familyNames
+//        families.sorted().forEach {
+//            print("\($0)")
+//            let names = UIFont.fontNames(forFamilyName: $0)
+//            print(names)
+//        }
         
         locale = Locale.current
         ref = Database.database().reference()

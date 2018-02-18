@@ -25,6 +25,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     var imageViewRight:UIImageView = UIImageView()
     let cellId = "cellId"
     let cellIdTornei = "cellIdTornei"
+    let cellGiochi = "giochiCell"
     let appDelegate = UIApplication.shared.delegate
         as! AppDelegate
     let titoli = ["Home".localized, "Eventi".localized, "Tornei".localized, "Promozioni".localized,"Giochi".localized,"Slot".localized]
@@ -73,6 +74,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
         collectionView?.register(Sezione.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(TorneiCell.self, forCellWithReuseIdentifier: cellIdTornei)
+        collectionView?.register(GiochiCell.self, forCellWithReuseIdentifier: cellGiochi)
     }
     
     func refreshButtonImage() {
@@ -169,6 +171,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             identifier = cellId
         } else if indexPath.item == 1 {
             identifier = cellIdTornei
+        } else if indexPath.item == 2 {
+            identifier = cellGiochi
         } else {
             identifier = cellId
         }

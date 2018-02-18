@@ -12,6 +12,7 @@ import Social
 import Lottie
 
 
+
 class EventDetails: UIViewController, UIViewControllerTransitioningDelegate, CAAnimationDelegate {
 
     @IBOutlet weak var image: UIImageView!
@@ -43,10 +44,12 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate, CAA
         } else {
             defaults.set(false, forKey: suffissoBOOL + event.Name)
         }
+     
         // Do any additional setup after loading the view.
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(EventDetails.handledTap))
         self.view.addGestureRecognizer(tapGesture)
         image.sd_setImage(with: URL(string: event.ImageName), placeholderImage: UIImage(named: "sediciNoni"))
+        
         
         titolo.text = event.Name
         
@@ -89,7 +92,7 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate, CAA
     }
     
     @IBAction func shareOnFacebook(_ sender: Any) {
-        let activityController = UIActivityViewController(activityItems: [image.image,event.Name, event.URL], applicationActivities: nil)
+        let activityController = UIActivityViewController(activityItems: [image.image!,event.Name, event.URL], applicationActivities: nil)
         present(activityController, animated: true, completion: nil)
     }
     
@@ -140,82 +143,69 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate, CAA
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         animazione?.removeFromSuperview()
     }
-    func testoAggiungi() {
-        let aggiunto = UIView()
-        let testo = UILabel()
-      
-        testo.text = "L'evento è stato aggiunto al calendario".localized
+   
+    func testoAggiungi(testoDa: String, lunghezza: CGFloat, altezza: CGFloat, ydalCentro: CGFloat) {
+        let testo = EdgeInsetLabel()
+        testo.text = testoDa.localized
         testo.textColor = .white
         testo.backgroundColor = .red
-        aggiunto.frame = CGRect(x: 0, y: 0, width: 300, height: 50)
-        aggiunto.center = view.center
-        testo.frame = aggiunto.frame
-        testo.center = aggiunto.center
+        testo.adjustsFontSizeToFitWidth = true
+        testo.leftTextInset = 15
+        testo.rightTextInset = 15
+        testo.frame = CGRect(x: 0, y: 0, width: lunghezza, height: altezza)
+        testo.center = view.center
         testo.textAlignment = .center
-        //aggiunto.addSubview(testo)
-        aggiunto.backgroundColor = .red
-        //aggiunto.center.y += 100
+        testo.center.y += ydalCentro
         view.addSubview(testo)
         testo.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
-        UIView.animate(withDuration: 0.3,
-                       animations: {
-                        testo.transform = CGAffineTransform(scaleX: 1, y: 0.01)
-        },
-                       completion: { _ in
-                        UIView.animate(withDuration: 0.2) {
-                             testo.transform = CGAffineTransform(scaleX: 1, y: 1)
-                        }
-        })
+        testo.scaleInOut()
     }
 
     @IBAction func addEventToCalendar(_ sender: Any) {
+        
         configureReminder()
         if (appDelegate.eventStore != nil) {
             if !salvatoInCAlendario {
                 cuore()
                 let eventToCalendar:EKEvent = EKEvent(eventStore: appDelegate.eventStore!)
-                
+
                 eventToCalendar.title = event.Name
-                
+
                 let gregorian = Calendar.current
                 var componentsEnd = gregorian.dateComponents([.year, .month, .day, .hour, .minute, .second], from: event.EndDate as Date)
                 componentsEnd.hour = 23
                 componentsEnd.minute = 59
                 componentsEnd.second = 0
                 var components = gregorian.dateComponents([.year, .month, .day, .hour, .minute, .second], from: event.StartDate as Date)
-                
+
                 components.hour = 20
                 components.minute = 30
                 components.second = 0
-                
+
                 let dateStart = gregorian.date(from: components)
                 let dateEnd = gregorian.date(from: componentsEnd)
-                
+
                 eventToCalendar.startDate = dateStart!
                 eventToCalendar.endDate = dateEnd!
                 eventToCalendar.notes = event.Description
                 if event.URL != "" {
                     eventToCalendar.url = URL(string: event.URL)
                 }
-                
+
                 eventToCalendar.calendar = appDelegate.eventStore!.defaultCalendarForNewEvents
                 do {
                     try appDelegate.eventStore!.save(eventToCalendar, span: .thisEvent)
-                    let alert = UIAlertController(title: "CALENDARIO", message: "L'evento è stato aggiunto al calendario!", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: nil))
-                    testoAggiungi()
-                   // present(alert, animated: true, completion: nil)
+                    testoAggiungi(testoDa: "L'evento è stato aggiunto al calendario", lunghezza: 300, altezza: 50, ydalCentro: 100)
                     defaults.set(true, forKey: suffissoBOOL + event.Name)
                     salvatoInCAlendario = true
                     defaults.set(eventToCalendar.eventIdentifier, forKey: event.Name)
                     calendarioIcona.setImage(StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true), for: .normal)
-                   
+
                 } catch let error as NSError {
-                    let alert = UIAlertController(title: "L'evento non può essere salvato", message: (error as NSError).localizedDescription, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+                    testoAggiungi(testoDa: "L'evento non può essere salvato", lunghezza: 300, altezza: 50, ydalCentro: 100)
+                    print(error.localizedDescription)
                 }
-            
+
             } else {
                 let eventoDaRimuovere = appDelegate.eventStore?.event(withIdentifier: defaults.object(forKey: event.Name) as! String)
                 do {
@@ -226,17 +216,14 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate, CAA
                     calendarioIcona.setImage(StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false), for: .normal)
                     salvatoInCAlendario = false
                     calendarioIcona.imageView?.image = StyleKit.imageOfEvents()
-                    let alert = UIAlertController(title: "CALENDARIO", message: "L'evento è stato eliminato dal calendario!", preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK".localized, style: .default, handler: nil))
-                    present(alert, animated: true, completion: nil)
+                    testoAggiungi(testoDa: "L'evento è stato eliminato dal calendario!", lunghezza: 300, altezza: 50, ydalCentro: 100)
                 } catch let error as NSError{
-                    let alert = UIAlertController(title: "L'evento non può essere cancellato", message: (error as NSError).localizedDescription, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+                    testoAggiungi(testoDa: "L'evento non può essere cancellato", lunghezza: 300, altezza: 50, ydalCentro: 100)
+                    print(error.localizedDescription)
                 }
-             
-                
-                
+
+
+
             }
         }
         
@@ -244,7 +231,8 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate, CAA
  
     @IBAction func openMaps(_ sender: Any) {
         let mapVC = storyboard?.instantiateViewController(withIdentifier: "MapView") as! MapsViewController
-        mapVC.event = self.event
+        mapVC.sediNome = [event.office]
+
         mapVC.transitioningDelegate = self
         mapVC.modalPresentationStyle = .custom
         present(mapVC, animated: true, completion: nil)

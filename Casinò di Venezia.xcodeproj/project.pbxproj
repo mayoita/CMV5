@@ -28,6 +28,8 @@
 		22630A1F1F0F98AE00168D1F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22630A1E1F0F98AE00168D1F /* Location.swift */; };
 		22630A251F0FBD9200168D1F /* PersonDetailMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22630A241F0FBD9200168D1F /* PersonDetailMapView.xib */; };
 		22630A271F0FBDAF00168D1F /* PersonDetailMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22630A261F0FBDAF00168D1F /* PersonDetailMapView.swift */; };
+		226B3DEA2038A12000520E88 /* Probabilita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226B3DE92038A12000520E88 /* Probabilita.swift */; };
+		226B3DEC2038A13100520E88 /* Probabilita.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226B3DEB2038A13100520E88 /* Probabilita.xib */; };
 		2276810A202C8E61009B308C /* VideoLuncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22768109202C8E61009B308C /* VideoLuncher.swift */; };
 		22899D8D201A00EE000CDE7E /* CMVLogInFirebaseUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22899D8C201A00EE000CDE7E /* CMVLogInFirebaseUI.swift */; };
 		229583951EFCFDC700409D7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295838D1EFCFDC700409D7A /* AppDelegate.swift */; };
@@ -42,6 +44,13 @@
 		229AACCE202F0F9E00644394 /* Cuore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229AACCD202F0F9E00644394 /* Cuore.swift */; };
 		22C3C301202CAA26004E4145 /* Tornei.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3C300202CAA26004E4145 /* Tornei.swift */; };
 		22C3C303202D9B53004E4145 /* TorneiDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3C302202D9B53004E4145 /* TorneiDetails.swift */; };
+		22C3C305203473CA004E4145 /* GiochiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3C304203473CA004E4145 /* GiochiCell.swift */; };
+		22C3C307203474C7004E4145 /* GiochiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22C3C306203474C7004E4145 /* GiochiCell.xib */; };
+		22C3C3092034776F004E4145 /* Giochi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22C3C3082034776F004E4145 /* Giochi.plist */; };
+		22C3C30B203489DF004E4145 /* GiochiCella.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3C30A203489DF004E4145 /* GiochiCella.swift */; };
+		22C3C30D203491AC004E4145 /* venicecasinoregular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22C3C30C203491AB004E4145 /* venicecasinoregular.ttf */; };
+		22C3C30F2035A8D5004E4145 /* GiochiDettaglio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3C30E2035A8D5004E4145 /* GiochiDettaglio.swift */; };
+		22C3C3112035DE69004E4145 /* RegolaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3C3102035DE69004E4145 /* RegolaCell.swift */; };
 		22CF448B181A9AD70062FC38 /* Casino__di_VeneziaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22CF448A181A9AD70062FC38 /* Casino__di_VeneziaTests.m */; };
 		22D406D62022216C00D71A6F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22D406D52022216A00D71A6F /* Images.xcassets */; };
 		22D406D82023281F00D71A6F /* StyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D406D72023281E00D71A6F /* StyleKit.swift */; };
@@ -90,6 +99,8 @@
 		22630A1E1F0F98AE00168D1F /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = "Casinò di Venezia/Location.swift"; sourceTree = "<group>"; };
 		22630A241F0FBD9200168D1F /* PersonDetailMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonDetailMapView.xib; sourceTree = "<group>"; };
 		22630A261F0FBDAF00168D1F /* PersonDetailMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailMapView.swift; sourceTree = "<group>"; };
+		226B3DE92038A12000520E88 /* Probabilita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Probabilita.swift; sourceTree = "<group>"; };
+		226B3DEB2038A13100520E88 /* Probabilita.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Probabilita.xib; sourceTree = "<group>"; };
 		22768109202C8E61009B308C /* VideoLuncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoLuncher.swift; sourceTree = "<group>"; };
 		22899D8C201A00EE000CDE7E /* CMVLogInFirebaseUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMVLogInFirebaseUI.swift; sourceTree = "<group>"; };
 		2295838D1EFCFDC700409D7A /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Casinò di Venezia/AppDelegate.swift"; sourceTree = "<group>"; };
@@ -106,6 +117,13 @@
 		22A65A07185EF5AE0018FD0C /* Casinò di Venezia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Casinò di Venezia.entitlements"; sourceTree = "<group>"; };
 		22C3C300202CAA26004E4145 /* Tornei.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tornei.swift; sourceTree = "<group>"; };
 		22C3C302202D9B53004E4145 /* TorneiDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneiDetails.swift; sourceTree = "<group>"; };
+		22C3C304203473CA004E4145 /* GiochiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiochiCell.swift; sourceTree = "<group>"; };
+		22C3C306203474C7004E4145 /* GiochiCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GiochiCell.xib; sourceTree = "<group>"; };
+		22C3C3082034776F004E4145 /* Giochi.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Giochi.plist; sourceTree = "<group>"; };
+		22C3C30A203489DF004E4145 /* GiochiCella.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiochiCella.swift; sourceTree = "<group>"; };
+		22C3C30C203491AB004E4145 /* venicecasinoregular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = venicecasinoregular.ttf; sourceTree = "<group>"; };
+		22C3C30E2035A8D5004E4145 /* GiochiDettaglio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiochiDettaglio.swift; sourceTree = "<group>"; };
+		22C3C3102035DE69004E4145 /* RegolaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegolaCell.swift; sourceTree = "<group>"; };
 		22CF4459181A9AD70062FC38 /* Casinò di Venezia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Casinò di Venezia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CF447D181A9AD70062FC38 /* Casinò di VeneziaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Casinò di VeneziaTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22CF4486181A9AD70062FC38 /* Casinò di VeneziaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Casinò di VeneziaTests-Info.plist"; sourceTree = "<group>"; };
@@ -215,10 +233,12 @@
 			children = (
 				2227FF161F13CDE70032AA30 /* Categories and Extensions */,
 				2252541E1F06F1E0005F1FF7 /* Venezia.gpx */,
+				22C3C30C203491AB004E4145 /* venicecasinoregular.ttf */,
 				22D406D72023281E00D71A6F /* StyleKit.swift */,
 				22D406D52022216A00D71A6F /* Images.xcassets */,
 				2252541F1F06F1E0005F1FF7 /* CaNoghera.gpx */,
 				225254201F06F1E0005F1FF7 /* Mestre.gpx */,
+				22C3C3082034776F004E4145 /* Giochi.plist */,
 				225254211F06F1E0005F1FF7 /* SanGeremia.gpx */,
 				2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */,
 				229AACC8202EF74000644394 /* Lottie */,
@@ -305,9 +325,16 @@
 			isa = PBXGroup;
 			children = (
 				22208DCE1EFD50EA007DA39D /* MenuBar.swift */,
+				226B3DE92038A12000520E88 /* Probabilita.swift */,
+				22C3C3102035DE69004E4145 /* RegolaCell.swift */,
+				226B3DEB2038A13100520E88 /* Probabilita.xib */,
+				22C3C30E2035A8D5004E4145 /* GiochiDettaglio.swift */,
 				22E8A900202B5BAC000C3CBE /* Sezione.swift */,
 				22E8A902202C4754000C3CBE /* EventCell.xib */,
 				22E8A904202C660F000C3CBE /* TorneiCell.swift */,
+				22C3C306203474C7004E4145 /* GiochiCell.xib */,
+				22C3C30A203489DF004E4145 /* GiochiCella.swift */,
+				22C3C304203473CA004E4145 /* GiochiCell.swift */,
 				22208DD81F03F268007DA39D /* EventDetails.swift */,
 				22C3C302202D9B53004E4145 /* TorneiDetails.swift */,
 				229583901EFCFDC700409D7A /* EventListCell.swift */,
@@ -469,9 +496,13 @@
 				225254241F06F1E0005F1FF7 /* Mestre.gpx in Resources */,
 				22630A251F0FBD9200168D1F /* PersonDetailMapView.xib in Resources */,
 				2295839E1EFD02BB00409D7A /* GoogleService-Info.plist in Resources */,
+				22C3C30D203491AC004E4145 /* venicecasinoregular.ttf in Resources */,
 				2295839A1EFCFDC700409D7A /* Main.storyboard in Resources */,
 				22E8A903202C4754000C3CBE /* EventCell.xib in Resources */,
+				22C3C307203474C7004E4145 /* GiochiCell.xib in Resources */,
 				225254251F06F1E0005F1FF7 /* SanGeremia.gpx in Resources */,
+				226B3DEC2038A13100520E88 /* Probabilita.xib in Resources */,
+				22C3C3092034776F004E4145 /* Giochi.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +600,7 @@
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+				"${BUILT_PRODUCTS_DIR}/youtube-ios-player-helper/youtube_ios_player_helper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -583,6 +615,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/youtube_ios_player_helper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -640,12 +673,17 @@
 				22630A1F1F0F98AE00168D1F /* Location.swift in Sources */,
 				22208DCF1EFD50EA007DA39D /* MenuBar.swift in Sources */,
 				2227FF151F13CDDB0032AA30 /* UIView+BezierPaths.swift in Sources */,
+				22C3C30F2035A8D5004E4145 /* GiochiDettaglio.swift in Sources */,
+				226B3DEA2038A12000520E88 /* Probabilita.swift in Sources */,
 				2214AD2E1F1661B900F9EBA7 /* LogInViewController.swift in Sources */,
+				22C3C30B203489DF004E4145 /* GiochiCella.swift in Sources */,
 				229583951EFCFDC700409D7A /* AppDelegate.swift in Sources */,
+				22C3C305203473CA004E4145 /* GiochiCell.swift in Sources */,
 				229583961EFCFDC700409D7A /* Constants.swift in Sources */,
 				2228F76B1F0A41E500F3C94A /* CanvasButton.swift in Sources */,
 				22E8A908202C68CF000C3CBE /* LoadDatabase.swift in Sources */,
 				2252541D1F06EFA8005F1FF7 /* MapsViewController.swift in Sources */,
+				22C3C3112035DE69004E4145 /* RegolaCell.swift in Sources */,
 				229583A01EFD13AA00409D7A /* Events.swift in Sources */,
 				22899D8D201A00EE000CDE7E /* CMVLogInFirebaseUI.swift in Sources */,
 				22EB73592024A43200759094 /* Quando.swift in Sources */,

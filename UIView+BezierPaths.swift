@@ -13,6 +13,22 @@ public struct MyConstants{
     static let immaginiSelezionate = [StyleKit.imageOfMic(imageSize: CGSize(width: 100, height: 100), highlited: true), StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true)]
     static let immagini = [StyleKit.imageOfMic(), StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false)]
 }
+enum TipoController {
+    case Evento
+    case Gioco
+}
+enum nomeSedi: Int {
+    case VE = 0
+    case CN = 1
+}
+struct giochiDB: Codable {
+    var immagine: String
+    var immagine_tavolo: String
+    var main: String
+    var titolo: String
+    var office: [String]
+    var regola: [[String: String]]
+}
 
 
 extension String {
@@ -98,4 +114,86 @@ extension UIView {
         self.layer.mask = shapeLayer
     }
     
+}
+
+extension UIView {
+    func scaleIn(_ duration: TimeInterval = 1.0, delay: TimeInterval = 0.0, completion: @escaping ((Bool) -> Void) = {(finished: Bool) -> Void in}) {
+        UIView.animate(withDuration: duration, delay: delay, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            
+             self.transform = CGAffineTransform(scaleX: 1, y: 0.01)
+        }, completion: completion)  }
+    
+    func scaleOut(_ duration: TimeInterval = 1.0, delay: TimeInterval = 0.0, completion: @escaping (Bool) -> Void = {(finished: Bool) -> Void in}) {
+        UIView.animate(withDuration: duration, delay: delay, options: UIViewAnimationOptions.curveEaseIn, animations: {
+            self.alpha = 0.0
+        }, completion: completion)
+    }
+    
+    func scaleInOut () {
+        UIView.animate(withDuration: 0.3,
+                       animations: {
+                        self.transform = CGAffineTransform(scaleX: 1, y: 0.01)
+        },
+                       completion: { _ in
+                        UIView.animate(withDuration: 0.2, animations: {
+                            self.transform = CGAffineTransform(scaleX: 1, y: 1)
+                        }, completion: { _ in
+                            UIView.animate(withDuration: 0.2, delay: 1, options: UIViewAnimationOptions(rawValue: 0), animations: {
+                                self.transform = CGAffineTransform(scaleX: 1, y: 0.01)
+                            }, completion: { _ in
+                                UIView.animate(withDuration: 0.3, animations: {
+                                    self.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+                                }, completion: { _ in
+                                    self.removeFromSuperview()
+                                })
+                            })
+                        })
+        })
+    }
+}
+
+class EdgeInsetLabel: UILabel {
+    var textInsets = UIEdgeInsets.zero {
+        didSet { invalidateIntrinsicContentSize() }
+    }
+    
+    override func textRect(forBounds bounds: CGRect, limitedToNumberOfLines numberOfLines: Int) -> CGRect {
+        let insetRect = UIEdgeInsetsInsetRect(bounds, textInsets)
+        let textRect = super.textRect(forBounds: insetRect, limitedToNumberOfLines: numberOfLines)
+        let invertedInsets = UIEdgeInsets(top: -textInsets.top,
+                                          left: -textInsets.left,
+                                          bottom: -textInsets.bottom,
+                                          right: -textInsets.right)
+        return UIEdgeInsetsInsetRect(textRect, invertedInsets)
+    }
+    
+    override func drawText(in rect: CGRect) {
+        super.drawText(in: UIEdgeInsetsInsetRect(rect, textInsets))
+    }
+}
+
+extension EdgeInsetLabel {
+
+    var leftTextInset: CGFloat {
+        set { textInsets.left = newValue }
+        get { return textInsets.left }
+    }
+    
+    @IBInspectable
+    var rightTextInset: CGFloat {
+        set { textInsets.right = newValue }
+        get { return textInsets.right }
+    }
+    
+    @IBInspectable
+    var topTextInset: CGFloat {
+        set { textInsets.top = newValue }
+        get { return textInsets.top }
+    }
+    
+    @IBInspectable
+    var bottomTextInset: CGFloat {
+        set { textInsets.bottom = newValue }
+        get { return textInsets.bottom }
+    }
 }
