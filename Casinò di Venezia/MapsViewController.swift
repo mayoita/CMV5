@@ -71,9 +71,7 @@ class MapsViewController: UIViewController, MKMapViewDelegate, PersonDetailMapVi
         
     }
     
-    @IBAction func show(_ sender: Any) {
-       
-    }
+
     
 
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {

@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Probabilita" customModule="Casino__di_Venezia" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="EWS-ot-cQ1"/>
+                <outlet property="testo" destination="Nj4-9e-rSE" id="SNm-Sx-1gE"/>
                 <outlet property="titolo" destination="9Op-Ep-z5m" id="l7u-C6-bXb"/>
             </connections>
         </placeholder>
@@ -22,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Op-Ep-z5m">
-                    <rect key="frame" x="8" y="20" width="359" height="21"/>
+                    <rect key="frame" x="8" y="40" width="359" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="F8T-Vl-xzA"/>
                     </constraints>
@@ -30,15 +31,39 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nj4-9e-rSE">
+                    <rect key="frame" x="8" y="69" width="359" height="590"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eB-Qm-0EP">
+                    <rect key="frame" x="330" y="20" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="B4R-jy-Lzz"/>
+                        <constraint firstAttribute="width" constant="25" id="WKo-xS-KvQ"/>
+                    </constraints>
+                    <state key="normal" image="closeB"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="9Op-Ep-z5m" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="EdA-JY-5gg"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Nj4-9e-rSE" secondAttribute="bottom" constant="8" id="543-vf-Yks"/>
+                <constraint firstItem="9Op-Ep-z5m" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="EdA-JY-5gg"/>
                 <constraint firstItem="9Op-Ep-z5m" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Ew1-UB-6cV"/>
+                <constraint firstItem="Nj4-9e-rSE" firstAttribute="top" secondItem="9Op-Ep-z5m" secondAttribute="bottom" constant="8" id="HZD-fF-qYG"/>
+                <constraint firstAttribute="trailing" secondItem="6eB-Qm-0EP" secondAttribute="trailing" constant="20" id="KNX-Ta-xJL"/>
+                <constraint firstItem="Nj4-9e-rSE" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="OG4-Av-978"/>
+                <constraint firstItem="6eB-Qm-0EP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="UhQ-jC-avr"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="9Op-Ep-z5m" secondAttribute="trailing" constant="8" id="eST-Co-qkD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Nj4-9e-rSE" secondAttribute="trailing" constant="8" id="z0P-JW-7dP"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="-7" y="-2"/>
         </view>
     </objects>
+    <resources>
+        <image name="closeB" width="52" height="52"/>
+    </resources>
 </document>

@@ -10,6 +10,7 @@ import UIKit
 
 class Probabilita: UIView {
 
+    @IBOutlet weak var testo: UITextView!
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var titolo: UILabel!
     /*
@@ -32,5 +33,8 @@ class Probabilita: UIView {
         Bundle.main.loadNibNamed("Probabilita", owner: self, options: nil)
         addSubview(contentView)
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        titolo.text = "PROBABILITÀ DI VINCITA".localized
+        titolo.font = UIFont(name: "VeniceCasino-Regular", size: 14)
+        titolo.textColor = StyleKit.fillColor
     }
 }

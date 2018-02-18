@@ -107,6 +107,12 @@ Circostanze nelle quali si annulla subito tutta la mano
 			<string>VE</string>
 			<string>CN</string>
 		</array>
+		<key>probabilita</key>
+		<string>hold: 5,22
+percentuale che rimane a favore della casa da gioco sul volume del giocato.
+
+rtp: 94,78
+(Return to player): percentuale che viene restituita in vincite al giocatore.</string>
 	</dict>
 </array>
 </plist>

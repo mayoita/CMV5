@@ -10,6 +10,7 @@ import UIKit
 
 class GiochiDettaglio: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate, CAAnimationDelegate{
     
+    
     @IBOutlet weak var probabilita: UIButton!
     @IBOutlet weak var map: UIButton!
     @IBOutlet weak var immagine_tavolo: UIImageView!
@@ -23,6 +24,9 @@ class GiochiDettaglio: UIViewController, UITableViewDelegate, UITableViewDataSou
         var isExpanded: Bool
         let regole: [String:String]
     }
+    let nero = UIView()
+    let probabilitaV = Probabilita()
+  
      let transition = CircularTransition()
     //Property for interaction controller
     let closeOnScrollDown = CloseOnScrollDown()
@@ -153,28 +157,48 @@ class GiochiDettaglio: UIViewController, UITableViewDelegate, UITableViewDataSou
         mapVC.modalPresentationStyle = .custom
         present(mapVC, animated: true, completion: nil)
     }
-    
+   
     @IBAction func probabilita_pressed(_ sender: Any) {
-        let probabilita = Probabilita()
-        
-        let nero = UIView()
-        nero.frame = view.frame
-        nero.backgroundColor = .black
-        nero.alpha = 0
-        view.addSubview(nero)
-        //let probabilita = UIView()
-        
-        probabilita.contentView.center = self.probabilita.center
-        probabilita.contentView.frame = self.probabilita.frame
-        probabilita.alpha = 0
-        probabilita.backgroundColor = .white
-        view.addSubview(probabilita)
-
-        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
-            probabilita.contentView.frame = CGRect(x: 0, y: 0, width: 300, height: 500)
-            probabilita.contentView.center = self.view.center
-            probabilita.alpha = 1
-            nero.alpha = 0.7
-        }, completion: nil)
+          let pop = PopUp()
+        pop.presentaPopUp(sender: self, icona: probabilita, vista: view, gioco: gioco!.probabilita, titolo: "PROBABILITÀ DI VINCITA".localized)
+//        if let window = UIApplication.shared.keyWindow {
+//            nero.frame = view.frame
+//            nero.backgroundColor = .black
+//            nero.alpha = 0
+//            nero.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
+//            window.addSubview(nero)
+//
+//            probabilitaV.testo.text = gioco?.probabilita
+//            probabilitaV.contentView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
+//            probabilitaV.contentView.center = self.probabilita.center
+//            probabilitaV.alpha = 0
+//            probabilitaV.backgroundColor = .white
+//
+//            probabilitaV.contentView.transform = CGAffineTransform(scaleX: 0.15, y: 0.15)
+//            window.addSubview(probabilitaV)
+//            UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
+//                self.probabilitaV.contentView.transform = CGAffineTransform.identity
+//                self.probabilitaV.contentView.center = self.view.center
+//                self.probabilitaV.alpha = 1
+//                self.nero.alpha = 0.7
+//            }, completion: nil)
+//
+//        }
+//
+       
     }
+    func handleDismiss() {
+        UIView.animate(withDuration: 0.3) {
+            self.nero.alpha = 0
+            self.probabilitaV.alpha = 0
+        }
+    }
+
+  
+    @IBAction func orari_pressed(_ sender: Any) {
+        let pop = PopUp()
+        pop.presentaPopUp(sender: self, icona: probabilita, vista: view, gioco: gioco!.probabilita, titolo: "ORARI DI GIOCO".localized)
+    }
+    
+    
 }

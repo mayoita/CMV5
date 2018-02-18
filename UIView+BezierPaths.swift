@@ -27,6 +27,7 @@ struct giochiDB: Codable {
     var main: String
     var titolo: String
     var office: [String]
+    var probabilita: String
     var regola: [[String: String]]
 }
 
