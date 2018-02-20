@@ -24,7 +24,7 @@ class GiochiCell: Sezione {
         }
     }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return (giochi?.count)!
     }
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -60,10 +60,10 @@ class GiochiCell: Sezione {
         //   }
 
         
-        cell.titolo.text = giochi![0].titolo
+        cell.titolo.text = giochi![indexPath.row].titolo
         cell.titolo.font = UIFont(name: "VeniceCasino-Regular", size: 16)
-        cell.intro.text = giochi![0].main
-        cell.image.image = UIImage(named: giochi![0].immagine)
+        cell.intro.text = giochi![indexPath.row].main
+        cell.image.image = UIImage(named: giochi![indexPath.row].immagine)
         
         return cell
     }

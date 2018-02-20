@@ -27,7 +27,7 @@ class Probabilita: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-        commonInit()
+        //commonInit()
     }
     func commonInit() {
         Bundle.main.loadNibNamed("Probabilita", owner: self, options: nil)
@@ -35,6 +35,7 @@ class Probabilita: UIView {
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         titolo.text = "PROBABILITÀ DI VINCITA".localized
         titolo.font = UIFont(name: "VeniceCasino-Regular", size: 14)
-        titolo.textColor = StyleKit.fillColor
+        titolo.textColor = StyleKit.oro
+        testo.font = UIFont(name: "Lato-Regular", size: 12)
     }
 }

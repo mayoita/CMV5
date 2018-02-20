@@ -15,7 +15,7 @@ class Dove: UIView {
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
         // Drawing code
-        StyleKit.drawIconaDove(frame: rect)
+        StyleKit.drawIconaDove(frame: rect, color: StyleKit.oro)
     }
  
 

@@ -34,6 +34,11 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate, CAA
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        corpo.font = UIFont(name: "Lato-Regular", size: 12)
+        titolo.font = UIFont(name: "VeniceCasino-Regular", size: 22)
+        titolo.textColor = StyleKit.oro
+        
+        map.setImage(StyleKit.imageOfIconaDove(imageSize: CGSize(width: 25, height: 25), color: StyleKit.bianco), for: .normal)
         if  defaults.bool(forKey: suffissoBOOL + event.Name)  {
             salvatoInCAlendario = defaults.bool(forKey: suffissoBOOL + event.Name)
             if salvatoInCAlendario {
@@ -55,7 +60,13 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate, CAA
         
         formatter.dateFormat = "dd MMM"
         let myDate = formatter.string(from: event.StartDate as Date)
-        data.text = myDate
+        let myDateEnd = formatter.string(from: event.EndDate as Date)
+        if (event.EndDate != event.StartDate) {
+            data.text = "Dal \(myDate) al \(myDateEnd)".localized
+        } else {
+            data.text = myDate
+        }
+       
         corpo.textContainerInset = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0);
         corpo.text = event.Description
         

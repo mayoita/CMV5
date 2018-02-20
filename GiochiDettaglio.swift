@@ -11,6 +11,9 @@ import UIKit
 class GiochiDettaglio: UIViewController, UITableViewDelegate, UITableViewDataSource, UIViewControllerTransitioningDelegate, CAAnimationDelegate{
     
     
+    @IBOutlet weak var comeRaggiungerci: UILabel!
+    @IBOutlet weak var probabilitaVincita: UILabel!
+    @IBOutlet weak var orariApertura: UILabel!
     @IBOutlet weak var probabilita: UIButton!
     @IBOutlet weak var map: UIButton!
     @IBOutlet weak var immagine_tavolo: UIImageView!
@@ -18,6 +21,7 @@ class GiochiDettaglio: UIViewController, UITableViewDelegate, UITableViewDataSou
     @IBOutlet weak var titolo: UILabel!
     @IBOutlet weak var main: UITextView!
     @IBOutlet weak var tabella: UITableView!
+    @IBOutlet weak var orari: UIButton!
     var gioco: giochiDB?
     var twoDimensionalArray = [regoleHelp]()
     struct regoleHelp {
@@ -31,7 +35,7 @@ class GiochiDettaglio: UIViewController, UITableViewDelegate, UITableViewDataSou
     //Property for interaction controller
     let closeOnScrollDown = CloseOnScrollDown()
     let tableCellID = "RegolaCell"
-
+    let pop = PopUp()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,15 +46,22 @@ class GiochiDettaglio: UIViewController, UITableViewDelegate, UITableViewDataSou
             let helper = regoleHelp.init(isExpanded: false, regole: item)
             twoDimensionalArray.append(helper)
         }
-        map.setImage(StyleKit.imageOfMic(), for: .normal)
+        titolo.textColor = StyleKit.oro
+       // map.setImage(StyleKit.imageOfMic(), for: .normal)
+        
         tabella.rowHeight = UITableViewAutomaticDimension
         tabella.estimatedRowHeight = 100
         titolo.text = gioco?.titolo
-        titolo.font = UIFont(name: "VeniceCasino-Regular", size: 14)
+        titolo.font = UIFont(name: "VeniceCasino-Regular", size: 22)
         immagine.image = UIImage(named: (gioco?.immagine)!)
         main.text = gioco?.main
         immagine_tavolo.image = UIImage(named: (gioco?.immagine_tavolo)!)
-        
+        orari.setImage(StyleKit.imageOfIconaQuando(imageSize: CGSize(width: 25, height: 25), color: StyleKit.oro), for: .normal)
+        map.setImage(StyleKit.imageOfIconaDove(imageSize: CGSize(width: 25, height: 25), color: StyleKit.oro), for: .normal)
+        probabilita.setImage(StyleKit.imageOfPercentuale(imageSize: CGSize(width: 25, height: 25), color: StyleKit.oro), for: .normal)
+        comeRaggiungerci.text = "Come raggiungerci".localized
+        orariApertura.text = "Orario giochi".localized
+        probabilitaVincita.text = "Probabilità di vincita"
     }
 
     override func didReceiveMemoryWarning() {
@@ -67,7 +78,7 @@ class GiochiDettaglio: UIViewController, UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
      
         let view = UIView()
-        view.backgroundColor = StyleKit.fillColor
+        view.backgroundColor = StyleKit.oro
         let button = UIButton(type: .system)
         button.setTitle("+", for: .normal)
         button.setTitleColor(.black, for: .normal)
@@ -159,45 +170,11 @@ class GiochiDettaglio: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
    
     @IBAction func probabilita_pressed(_ sender: Any) {
-          let pop = PopUp()
-        pop.presentaPopUp(sender: self, icona: probabilita, vista: view, gioco: gioco!.probabilita, titolo: "PROBABILITÀ DI VINCITA".localized)
-//        if let window = UIApplication.shared.keyWindow {
-//            nero.frame = view.frame
-//            nero.backgroundColor = .black
-//            nero.alpha = 0
-//            nero.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleDismiss)))
-//            window.addSubview(nero)
-//
-//            probabilitaV.testo.text = gioco?.probabilita
-//            probabilitaV.contentView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
-//            probabilitaV.contentView.center = self.probabilita.center
-//            probabilitaV.alpha = 0
-//            probabilitaV.backgroundColor = .white
-//
-//            probabilitaV.contentView.transform = CGAffineTransform(scaleX: 0.15, y: 0.15)
-//            window.addSubview(probabilitaV)
-//            UIView.animate(withDuration: 0.6, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0, options: .curveEaseOut, animations: {
-//                self.probabilitaV.contentView.transform = CGAffineTransform.identity
-//                self.probabilitaV.contentView.center = self.view.center
-//                self.probabilitaV.alpha = 1
-//                self.nero.alpha = 0.7
-//            }, completion: nil)
-//
-//        }
-//
-       
-    }
-    func handleDismiss() {
-        UIView.animate(withDuration: 0.3) {
-            self.nero.alpha = 0
-            self.probabilitaV.alpha = 0
-        }
+       pop.presentaPopUp(sender: self, icona: probabilita, vista: view, gioco: gioco!.probabilita, titolo: "PROBABILITÀ DI VINCITA".localized)
     }
 
-  
     @IBAction func orari_pressed(_ sender: Any) {
-        let pop = PopUp()
-        pop.presentaPopUp(sender: self, icona: probabilita, vista: view, gioco: gioco!.probabilita, titolo: "ORARI DI GIOCO".localized)
+        pop.presentaPopUp(sender: self, icona: orari, vista: view, gioco: gioco!.orari, titolo: "ORARI DI GIOCO".localized)
     }
     
     

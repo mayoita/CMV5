@@ -49,7 +49,7 @@ class MenuBar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = StyleKit.fillColor
+        cv.backgroundColor = StyleKit.oro
         cv.dataSource = self
         cv.delegate = self
         return cv
@@ -113,7 +113,7 @@ class MenuCell: UICollectionViewCell {
         }
     }
     func setupViews () {
-        backgroundColor = StyleKit.fillColor
+        backgroundColor = StyleKit.oro
         addSubview(imageView)
         addConstraintsWithFormnat(format: "H:[v0(28)]", views: imageView)
         addConstraintsWithFormnat(format: "V:[v0(28)]", views: imageView)

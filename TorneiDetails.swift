@@ -22,7 +22,13 @@ class TorneiDetails: EventDetails {
         
         formatter.dateFormat = "dd MMM"
         let myDate = formatter.string(from: torneo.StartDate as Date)
-        data.text = myDate
+        let myDateEnd = formatter.string(from: torneo.EndDate as Date)
+        if (torneo.EndDate != torneo.StartDate) {
+            data.text = "Dal \(myDate) al \(myDateEnd)".localized
+        } else {
+            data.text = myDate
+        }
+        
         corpo.textContainerInset = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 0);
         corpo.text = torneo.TournamentDescription
         

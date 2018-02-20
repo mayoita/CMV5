@@ -141,7 +141,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     private func setupMenuBar(){
        // navigationController?.hidesBarsOnSwipe = true
         let goldView = UIView()
-        goldView.backgroundColor = StyleKit.fillColor
+        goldView.backgroundColor = StyleKit.oro
         view.addSubview(goldView)
         view.addConstraintsWithFormnat(format: "H:|[v0]|", views: goldView)
         view.addConstraintsWithFormnat(format: "V:[v0(50)]", views: goldView)

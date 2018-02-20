@@ -14,6 +14,9 @@
         <array key="Georgia.ttf">
             <string>Georgia</string>
         </array>
+        <array key="venicecasinoregular.ttf">
+            <string>VeniceCasino-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Eventi-->
@@ -46,7 +49,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="zkq-Fj-qD5"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                            <fontDescription key="fontDescription" name="VeniceCasino-Regular" family="VeniceCasino" pointSize="22"/>
                                             <color key="textColor" red="0.5153954029083252" green="0.45661699771881104" blue="0.32175162434577942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -834,7 +837,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1CF-eZ-2QY">
-                                <rect key="frame" x="16" y="565" width="343" height="97"/>
+                                <rect key="frame" x="16" y="607" width="343" height="55"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RegolaCell" id="kcL-TB-xu9" customClass="RegolaCell" customModule="Casino__di_Venezia" customModuleProvider="target">
@@ -871,11 +874,10 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Bo-f7-q3B">
-                                <rect key="frame" x="329" y="214" width="25" height="25"/>
-                                <color key="backgroundColor" red="1" green="0.1380007228" blue="0.05437931201" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="280" y="242" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="7Wc-AE-Guc"/>
-                                    <constraint firstAttribute="height" constant="25" id="f4s-rl-I2U"/>
+                                    <constraint firstAttribute="width" constant="25" id="8nx-gh-8jW"/>
+                                    <constraint firstAttribute="height" constant="25" id="pbr-O6-pmD"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="maps"/>
                                 <connections>
@@ -883,17 +885,17 @@
                                     <action selector="openMaps:" destination="It4-n6-bD8" eventType="touchUpInside" id="f7R-9e-2bQ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NG-DW-CYV">
-                                <rect key="frame" x="16" y="216" width="248" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9NG-DW-CYV">
+                                <rect key="frame" x="16" y="216" width="343" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="057-s6-pdU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="VeniceCasino-Regular" family="VeniceCasino" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S0k-J4-TVC">
-                                <rect key="frame" x="16" y="242" width="343" height="120"/>
+                                <rect key="frame" x="16" y="284" width="343" height="120"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="4dG-P8-iMc"/>
@@ -903,69 +905,109 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SPZ-Mp-F4o">
-                                <rect key="frame" x="16" y="367" width="343" height="193"/>
+                                <rect key="frame" x="16" y="409" width="343" height="193"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="SPZ-Mp-F4o" secondAttribute="height" multiplier="16:9" id="ZeB-pG-JRm"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lF0-yS-pLJ">
-                                <rect key="frame" x="299" y="214" width="25" height="25"/>
-                                <color key="backgroundColor" red="0.052788858510000002" green="0.65612729059999997" blue="0.15189558889999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lF0-yS-pLJ">
+                                <rect key="frame" x="175" y="242" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="OeV-wh-I5Q"/>
-                                    <constraint firstAttribute="width" constant="25" id="TWw-sT-z51"/>
+                                    <constraint firstAttribute="height" constant="25" id="BZo-Vp-yWk"/>
+                                    <constraint firstAttribute="width" constant="25" id="feB-oC-izP"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="maps"/>
                                 <connections>
                                     <action selector="probabilita_pressed:" destination="UAw-Yi-TmS" eventType="touchUpInside" id="Q90-zO-2CD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmu-r8-FdX">
-                                <rect key="frame" x="269" y="214" width="25" height="25"/>
-                                <color key="backgroundColor" red="0.95748686790000004" green="0.90286433700000002" blue="0.50970488790000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rmu-r8-FdX">
+                                <rect key="frame" x="70" y="242" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="1Wk-Kg-egA"/>
-                                    <constraint firstAttribute="height" constant="25" id="BMm-f8-7WB"/>
+                                    <constraint firstAttribute="height" constant="25" id="1u3-Vb-YyV"/>
+                                    <constraint firstAttribute="width" constant="25" id="eX7-28-PB1"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Button" image="maps">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="orari_pressed:" destination="UAw-Yi-TmS" eventType="touchUpInside" id="CQI-EN-BO3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Orari" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEU-HC-rrQ">
+                                <rect key="frame" x="47.5" y="269" width="70" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="XqX-DN-e2I"/>
+                                    <constraint firstAttribute="height" constant="10" id="ncT-nn-OOH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.64260602680000001" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Probabilità di vincita" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYl-Dd-8lO">
+                                <rect key="frame" x="135" y="269" width="105" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="met-tK-TbD"/>
+                                    <constraint firstAttribute="width" constant="105" id="zNm-mZ-U3f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.64260602680000001" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Come raggiungerci" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXW-Go-096">
+                                <rect key="frame" x="245" y="269" width="95" height="10"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="bwd-te-eGb"/>
+                                    <constraint firstAttribute="width" constant="95" id="uwm-sD-KGe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="0.64260602680000001" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="S0k-J4-TVC" secondAttribute="trailing" id="0qQ-8d-L76"/>
-                            <constraint firstItem="9Bo-f7-q3B" firstAttribute="leading" secondItem="lF0-yS-pLJ" secondAttribute="trailing" constant="5" id="15h-Li-8YE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="9Bo-f7-q3B" secondAttribute="trailing" constant="5" id="87x-z3-COL"/>
-                            <constraint firstItem="S0k-J4-TVC" firstAttribute="top" secondItem="9NG-DW-CYV" secondAttribute="bottom" constant="5" id="FKv-ht-cTL"/>
-                            <constraint firstItem="Rmu-r8-FdX" firstAttribute="leading" secondItem="9NG-DW-CYV" secondAttribute="trailing" constant="5" id="H96-tc-lls"/>
+                            <constraint firstItem="qXW-Go-096" firstAttribute="top" secondItem="9Bo-f7-q3B" secondAttribute="bottom" constant="2" id="2vO-Ks-t5A"/>
+                            <constraint firstItem="lF0-yS-pLJ" firstAttribute="centerX" secondItem="9NG-DW-CYV" secondAttribute="centerX" id="88g-iS-MCF"/>
+                            <constraint firstItem="qXW-Go-096" firstAttribute="centerX" secondItem="9Bo-f7-q3B" secondAttribute="centerX" id="Aac-4D-lir"/>
+                            <constraint firstItem="oYl-Dd-8lO" firstAttribute="top" secondItem="lF0-yS-pLJ" secondAttribute="bottom" constant="2" id="CT6-Y4-8Ur"/>
+                            <constraint firstItem="oYl-Dd-8lO" firstAttribute="centerX" secondItem="lF0-yS-pLJ" secondAttribute="centerX" id="HDo-T3-JHB"/>
                             <constraint firstItem="9NG-DW-CYV" firstAttribute="top" secondItem="cv5-6y-8Xf" secondAttribute="bottom" constant="5" id="KLJ-KM-CYA"/>
+                            <constraint firstItem="lF0-yS-pLJ" firstAttribute="top" secondItem="9NG-DW-CYV" secondAttribute="bottom" constant="5" id="L9a-gW-DdA"/>
+                            <constraint firstItem="S0k-J4-TVC" firstAttribute="top" secondItem="aEU-HC-rrQ" secondAttribute="bottom" constant="5" id="NCy-1k-dGq"/>
                             <constraint firstItem="cv5-6y-8Xf" firstAttribute="leading" secondItem="KQC-hr-6Mm" secondAttribute="leading" id="OxI-GI-kVp"/>
+                            <constraint firstItem="9Bo-f7-q3B" firstAttribute="top" secondItem="9NG-DW-CYV" secondAttribute="bottom" constant="5" id="P6A-cb-L9e"/>
                             <constraint firstItem="SPZ-Mp-F4o" firstAttribute="centerX" secondItem="S0k-J4-TVC" secondAttribute="centerX" id="RlO-8a-fhv"/>
                             <constraint firstItem="SPZ-Mp-F4o" firstAttribute="leading" secondItem="KQC-hr-6Mm" secondAttribute="leadingMargin" id="Uck-dD-fVB"/>
-                            <constraint firstItem="9Bo-f7-q3B" firstAttribute="centerY" secondItem="9NG-DW-CYV" secondAttribute="centerY" id="UpY-2c-Br2"/>
+                            <constraint firstItem="9Bo-f7-q3B" firstAttribute="leading" secondItem="lF0-yS-pLJ" secondAttribute="trailing" constant="80" id="Uqt-au-ziw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SPZ-Mp-F4o" secondAttribute="trailing" id="V99-qm-8aa"/>
-                            <constraint firstItem="lF0-yS-pLJ" firstAttribute="centerY" secondItem="9NG-DW-CYV" secondAttribute="centerY" id="axd-Tb-z3F"/>
+                            <constraint firstItem="aEU-HC-rrQ" firstAttribute="top" secondItem="Rmu-r8-FdX" secondAttribute="bottom" constant="2" id="bgJ-Rh-yJF"/>
+                            <constraint firstItem="Rmu-r8-FdX" firstAttribute="top" secondItem="9NG-DW-CYV" secondAttribute="bottom" constant="5" id="buB-LJ-8lB"/>
                             <constraint firstItem="1CF-eZ-2QY" firstAttribute="trailing" secondItem="KQC-hr-6Mm" secondAttribute="trailingMargin" id="cqZ-kp-BXV"/>
                             <constraint firstItem="S0k-J4-TVC" firstAttribute="leading" secondItem="KQC-hr-6Mm" secondAttribute="leadingMargin" id="dTz-2a-sKf"/>
                             <constraint firstItem="d8o-Tw-QiY" firstAttribute="top" secondItem="1CF-eZ-2QY" secondAttribute="bottom" constant="5" id="gYr-fb-60w"/>
+                            <constraint firstItem="aEU-HC-rrQ" firstAttribute="centerX" secondItem="Rmu-r8-FdX" secondAttribute="centerX" id="j0x-gY-gEq"/>
                             <constraint firstItem="cv5-6y-8Xf" firstAttribute="top" secondItem="KQC-hr-6Mm" secondAttribute="top" id="lUQ-XP-eeI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9NG-DW-CYV" secondAttribute="trailing" id="oKM-aU-Drs"/>
                             <constraint firstItem="9NG-DW-CYV" firstAttribute="leading" secondItem="KQC-hr-6Mm" secondAttribute="leadingMargin" id="obP-eN-rdZ"/>
                             <constraint firstItem="SPZ-Mp-F4o" firstAttribute="top" secondItem="S0k-J4-TVC" secondAttribute="bottom" constant="5" id="rZo-6O-cRD"/>
-                            <constraint firstItem="Rmu-r8-FdX" firstAttribute="centerY" secondItem="9NG-DW-CYV" secondAttribute="centerY" id="sni-ff-SvK"/>
                             <constraint firstItem="1CF-eZ-2QY" firstAttribute="leading" secondItem="KQC-hr-6Mm" secondAttribute="leadingMargin" id="tvi-fA-6gd"/>
                             <constraint firstItem="1CF-eZ-2QY" firstAttribute="top" secondItem="SPZ-Mp-F4o" secondAttribute="bottom" constant="5" id="vlM-CD-MDA"/>
                             <constraint firstAttribute="trailing" secondItem="cv5-6y-8Xf" secondAttribute="trailing" id="x1W-E8-kSG"/>
-                            <constraint firstItem="lF0-yS-pLJ" firstAttribute="leading" secondItem="Rmu-r8-FdX" secondAttribute="trailing" constant="5" id="xtR-Ya-y8W"/>
+                            <constraint firstItem="lF0-yS-pLJ" firstAttribute="leading" secondItem="Rmu-r8-FdX" secondAttribute="trailing" constant="80" id="ybI-Nr-18s"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="comeRaggiungerci" destination="qXW-Go-096" id="IrG-mu-Jdk"/>
                         <outlet property="immagine" destination="cv5-6y-8Xf" id="DhH-J0-LqL"/>
                         <outlet property="immagine_tavolo" destination="SPZ-Mp-F4o" id="zci-IU-OdG"/>
                         <outlet property="main" destination="S0k-J4-TVC" id="gLj-Xe-HhF"/>
                         <outlet property="map" destination="9Bo-f7-q3B" id="lgh-6a-lRc"/>
+                        <outlet property="orari" destination="Rmu-r8-FdX" id="SeK-qU-EW4"/>
+                        <outlet property="orariApertura" destination="aEU-HC-rrQ" id="DrB-pa-vmp"/>
                         <outlet property="probabilita" destination="lF0-yS-pLJ" id="h2w-Hs-JtW"/>
+                        <outlet property="probabilitaVincita" destination="oYl-Dd-8lO" id="44H-2p-8W2"/>
                         <outlet property="tabella" destination="1CF-eZ-2QY" id="cG5-4I-eSk"/>
                         <outlet property="titolo" destination="9NG-DW-CYV" id="crs-lN-lAa"/>
                     </connections>

@@ -44,7 +44,7 @@ class EventListCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-       
+       titolo.font = UIFont(name: "VeniceCasino-Regular", size: 20)
     }
     
     required init?(coder aDecoder: NSCoder) {

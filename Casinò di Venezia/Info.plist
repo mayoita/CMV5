@@ -77,6 +77,9 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>venicecasinoregular.ttf</string>
+		<string>Lato-Light.ttf</string>
+		<string>Lato-Hairline.ttf</string>
+		<string>Lato-Regular.ttf</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

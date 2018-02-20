@@ -4,6 +4,477 @@
 <array>
 	<dict>
 		<key>titolo</key>
+		<string>ROULETTE FRANCESE</string>
+		<key>immagine</key>
+		<string>french_roulette.jpg</string>
+		<key>main</key>
+		<string>A Ca&apos; Vendramin Calergi e a Ca&apos; Noghera sono presenti room che ospitano tavoli di Roulette Francese, uno dei giochi più importanti e affascinanti di tutto il Casinò di Venezia. Lasciati sedurre dal rumore della boule che termina la sua corsa nel cilindro.
+
+Come vincere alla roulette francese? 
+Il gioco è davvero semplice, bisogna cercare di indovinare in quale numero cadrà la pallina lanciata dal croupier (le bouler) e in base alla combinazione scelta si ha diritto a premi proporzionali.</string>
+		<key>regola</key>
+		<array>
+			<dict>
+				<key>IL GIOCO</key>
+				<string>Il tavolo (table de jeu) ha forma rettangolare, il piano è ricoperto quasi interamente da un tappeto verde (tapis verte) sul quale è disegnato il tracciato (tableau) formato dai numeri, dalle colonne, dozzine e combinazioni semplici.
+In uno dei due lati più corti è posizionata la &quot;roulette&quot;, un cilindro in legno (le cylindre) al cui interno ruota, appoggiato su un meccanismo di precisione, un piatto metallico suddiviso in trentasette caselle (cases), queste comprendono lo 0, diciotto numeri rossi e diciotto numeri neri alternati tra loro dall&apos;1 al 36. Vicino alla roulette è sistemata la dotazione della &quot;banca&quot; composta da gettoni (jetons et plaques) di forma e valore diversi.
+ 
+Il Capo Tavolo (Chef de Table) è responsabile del tavolo; egli ha il compito di sovrintendere le attività di gioco garantendo il rispetto dei regolamenti mentre i tre impiegati (croupiers), seduti al tavolo rispettivamente a destra (droite), a sinistra (gauche) e di fronte (bout de table) allo Chef, hanno l&apos;incarico di condurre la partita eseguendo tutte le operazioni necessarie al suo regolare svolgimento.
+ 
+Il gioco è molto semplice: si scommette contro il banco cercando di indovinare in quale numero cadrà la pallina lanciata dal croupier (le bouler). Le puntate vincenti daranno diritto a dei premi proporzionali sia al valore dei gettoni che al tipo di combinazione scelta.
+ 
+La partita inizia con il tradizionale annuncio dell&apos;impiegato &quot;Messieurs, faites vos jeux&quot;, rivolto ai giocatori (joueurs) per invitarli a effettuare le proprie puntate, termina con il lancio della boule (il giro è inverso a quello del cilindro) e la consueta frase &quot;Rien ne va plus&quot;. Da questo momento in poi non è più permesso giocare, solamente il Capo Tavolo può concedere una deroga.
+ 
+La pallina determina il numero vincente quando si ferma in una delle trentasette caselle del cilindro.
+Le bouler annuncia in francese il numero e le relative combinazioni semplici (rouge o noir, pair o impair, manque o passe). Subito dopo gli impiegati di destra e di sinistra svolgono i seguenti compiti: uno indica il numero sul tappeto con il rastrello (rateau), elenca in francese le combinazioni multiple vincenti e ritira i gettoni perdenti; l&apos;altro paga le vincite, completando una combinazione alla volta, rispettando il seguente ordine: colonna, dozzina, chances semplici, sestine e terzina, carré, cavallo e pieno.
+
+Se il numero uscito è pari rastrella l&apos;impiegato di destra, mentre quello di sinistra paga, se è dispari avviene il contrario.
+ 
+Nelle colonne e dozzine i pagamenti iniziano dai gettoni di valore minore e terminano con quelli di valore maggiore. Nelle combinazioni semplici, indipendentemente dalla puntata, vengono pagati per primi i gettoni fisicamente più lontani rispetto all&apos;impiegato, posizionando le fiches, al pari delle colonne e dozzine, accanto o sopra alla posta iniziale. Nelle &quot;combinazioni multiple&quot; l&apos;impiegato passa con il rateau un pagamento alla volta iniziando dalle vincite realizzate con la puntata di importo inferiore e terminando con quelle di importo maggiore.
+ 
+Con l&apos;uscita dello 0 vincono le puntate su questo numero e sulle sue combinazioni multiple; perdono colonne e dozzine, mentre le giocate sulle combinazioni semplici, dimezzando il loro valore, sono &quot;messe in prigione&quot; (enfermées) e spostate sull&apos;apposita linea.
+
+Le puntate &quot;imprigionate una volta&quot;, se vincenti il colpo successivo, vengono liberate dall&apos;impiegato e possono essere ritirate, se perdenti sono incamerate dal banco.
+
+Le puntate &quot;imprigionate più volte consecutive&quot; (fino ad un massimo di tre, alla quarta l&apos;importo ancora in gioco sarà diviso) per poter essere liberate dovranno vincere tante volte quante sono state imprigionate.
+
+Ad ogni uscita dello 0 il giocatore ha la possibilità di ritirare metà della posta rimasta &quot;à partager&quot; (l&apos;altra sarà trattenuta dal banco), lasciarla dove si trova o farla spostare, sempre vincolata, in un&apos;altra combinazione semplice&quot;.</string>
+			</dict>
+			<dict>
+				<key>COMBINAZIONI E PAGAMENTI</key>
+				<string>In caso di vincita il valore della puntata viene pagato rispettando la seguente tabella:
+
+CHANCES MULTIPLE	 
+PIENO	35 volte
+CAVALLO	17 volte
+CARRÈ	8 volte
+QUATTRO PRIMI	8 volte
+TERZINA	11 volte
+SESTINA	5 volte
+DOZZINA	2 volte
+COLONNA	2 volte
+CHANCES SEMPLICI	 
+PARI	alla pari
+DISPARI	alla pari
+MANQUE (1-18)	alla pari
+PASSE (19-36)	alla pari
+ROSSO	alla pari
+NERO	alla pari
+</string>
+			</dict>
+			<dict>
+				<key>STRAIGHT BET(EN PLEIN)</key>
+				<string>Numero Pieno (En Plein)	È formato da un singolo numero (dallo 0 al 36): si punta posizio-nando il gettone sulla casella del numero prescelto.
+Cavallo (Cheval)	È formato da due numeri attigui, lo si individua pronunciando entrambi i numeri (dal minore al maggiore), può essere orizzontale e verticale. La puntata si effettua posizionando il gettone sulla linea che separa i due numeri.
+Terzina o Trasversale Piena(Transversale Pleine)	È formata da tre numeri progressivi situati sulla stessa linea orizzontale. La terzina è individuata pronunciando il primo e l&apos;ultimo numero (dal minore al maggiore), si gioca posizionando il gettone sulla linea esterna del tracciato. È tradizione chiamare la prima terzina &quot;tre primi&quot; (trois premiers) e l&apos;ultima &quot;tre ultimi&quot; (trois derniers).
+Trasversale dello Zero(Transversale du Zero)	Le terzine, chiamate anche trasversali dello zero (transversales du zero) 0/1/2 e 0/2/3 hanno i numeri sul tracciato posizionati diversamente dalla terzina tradizionale.
+Carré(Carré)	È formato dai quattro numeri, due sopra e due sotto, che compon-gono un quadrato. Si individua pronunciando il primo e l&apos;ultimo numero (dal minore al maggiore), si punta posizionando il gettone al centro tra i quattro numeri.
+Quattro Primi (Quatre Premiers)	La sequenza numerica 0/1/2/3 viene individuata con il nome di &quot;quattro primi&quot; (quatre premiers). Il gettone si posiziona all&apos;incrocio delle linee esterne del tracciato che delimitano lo 0, dall&apos;1 o dal 3.
+Sestina (Sixaine - Transversal Simple)	È formata da sei numeri progressivi che compongono due terzine consecutive, una sopra e l&apos;altra sotto. Si individua pronunciando il primo e l&apos;ultimo numero (dal minore al maggiore). È tradizione chiamare la prima sestina &quot;sei primi&quot; (six premiers) e l&apos;ultima &quot;sei ultimi&quot; (six derniers). Si punta posizio-nando il gettone sulla linea esterna del tracciato tra le due terzine.
+Dozzina (Douzaine)	Sono tre, ognuna delle quali è formata da dodici numeri progressivi. Prima: dall&apos;1 al 12 - douze premiers, seconda: dal 13 al 24 - douze milieu, terza: dal 25 al 36 - douze derniers. La si individua pronunciando &quot;prima dozzina, dozzina di mezzo e ultima dozzina&quot;. Si gioca posizionando il gettone sugli appositi spazi situati alla fine del tracciato.
+Colonna (Colonne)	Sono tre, ognuna delle quali è formata da dodici numeri posizio-nati uno sotto l&apos;altro sul tracciato. La si individua considerando tutti i numeri posti in colonna che partono dal 34, 35 o 36. Si punta collocando il gettone negli appositi spazi situati sotto la colonna dei numeri che la compongono.
+Manque e Passe	Sono formati ciascuno da diciotto numeri:
+
+Manque dall&apos;1 al 18.
+Passe dal 19 al 36.
+
+Si puntano giocando il gettone negli appositi spazi (Manque o Passe) del tracciato.
+Pari e Dispari (Pair et Impair)	Sono formati ciascuno da diciotto numeri:
+
+Impair comprende i numeri dispari.
+Pair comprende i numeri pari.
+Si puntano giocando il gettone negli appositi spazi (Impair o Pair) del tracciato.
+Rosso e Nero (Rouge et Noir)	Sono formati ciascuno da diciotto numeri..
+
+ROSSI
+
+1- 3- 5- 7- 9- 12- 14- 16- 18
+
+19- 21- 23- 25- 27- 30- 32- 34-36
+
+NERI
+
+2-4-6-8-10-11-13-15-17
+
+20-22-24-26-28-29-31-33-35
+
+Si puntano giocando il gettone negli appositi spazi (rosso o nero) del tracciato.</string>
+			</dict>
+			<dict>
+				<key>ANNUNCI</key>
+				<string>Il giocatore può puntare direttamente o affidare le proprie puntate al croupier indicando ad alta voce il loro valore e le combinazioni sulle quali intende giocare. Questi annunci sono sempre ripetuti dall&apos;impiegato.
+
+VICINI DELLO ZERO	9 gettoni
+SERIE 5/8	6 gettoni
+ORFANELLI	5 gettoni
+NASSA	5 gettoni
+ZERO SPIEL	4 gettoni
+SETTORI DI 5 NUMERI	5 gettoni
+FINALI IN PIENO	 
+0 - 1 - 2 - 3 - 4 - 5 - 6	4 gettoni
+7 - 8 - 9	3 gettoni
+FINALI A CAVALLO ORIZZONTALI	 
+0/1 - 1/2 - 2/3 - 4/5 - 5/6	5 gettoni
+7/8 - 8/9	4 gettoni
+FINALI A CAVALLO VERTICALI	 
+0/3 - 1/4 - 2/5 - 3/6	4 gettoni
+4/7 - 5/8 - 6/9 - 7/10 - 8/11 - 9/12	3 gettoni
+</string>
+			</dict>
+			<dict>
+				<key>SETTORI E FINALI</key>
+				<string>La Serie 5/8 e i Vicini dello Zero sono tradizionalmente tenuti &quot;pagati a piazzare&quot; dall&apos;impiegato, i gettoni corrispondenti all&apos;ammontare della giocata sono stesi a fianco della linea esterna che delimita il Passe o il Manque. A numero uscito, il gettone, nella terzina e nel Carré dei Vicini dello Zero sono due, verrà piazzato solo se risulterà vincente la combinazione giocata mentre sarà annullato se perdente.
+
+La Serie 5/8 (Le Tiers du Cylindre)
+
+Si giocano dodici numeri con sei gettoni ed è formata dai seguenti cavalli: 5/8 - 10/11 - 13/16 - 23/24 - 27/30 - 33/36.
+
+I Vicini dello Zero (Les Voisins du Zéro)
+
+Si giocano diciassette numeri con nove gettoni e sono formati dalle seguenti combinazioni: due pezzi sulla terzina 0/2/3 e carré 25/29, un pezzo per ognuno dei seguenti cavalli 4/7 - 12/15 - 18/21 - 19/22 - 32/35.
+
+Gli Orfanelli (Les Orphelins)
+
+Sono formati da due settori del cilindro distanti tra loro che separano i numeri della Serie 5/8 da quelli dei Vicini dello Zero: 17/34/6 da una parte e 1/20/14/31/9 dall&apos;altra.
+
+Gli Orfanelli si accettano giocati a cavallo con cinque gettoni così ripartiti: un pezzo in pieno al numero 1 e un pezzo per ognuno dei seguenti cavalli: 6/9 - 14/17 - 17/20 - 31/34, oppure in pieno con otto gettoni.
+
+La Nassa
+
+Si gioca con cinque pezzi puntando un gettone per ognuna delle seguenti combinazioni: 0/3 - 12/15 - 19 - 26 - 32/35.
+Una variante, nota come &quot;Zero spiel&quot;, non comprende il 19 e quindi si gioca con quattro gettoni posizionati singolarmente: 0/3 - 12/15 - 26 - 32/35.
+
+Settore di 5 Numeri (Un Numéro et Deux Voisins)
+
+È formato da un numero e dai suoi laterali sul cilindro, due a destra e due a sinistra. Si punta con cinque pezzi giocando i pieni.
+
+Le Finali (Les Finales)
+
+Si individuano osservando il tracciato dei numeri sul tappeto, possono essere in pieno e a cavallo. Le finali in pieno sono formate dai numeri che hanno in comune la stessa cifra finale (le unità), ad esempio la &quot;1&quot;: 1/11/21/31. Le finali a cavallo hanno in comune le unità di due numeri vicini tra loro (a cavallo) e, a loro volta, si dividono in orizzontali e verticali.
+- Le Finali Verticali
+Sono formate da due numeri posti uno sopra all&apos;altro, si giocano a cavallo con tre o quattro gettoni determinati dalla posizione dei numeri sul tracciato. Esempio finale 3/6 quattro pezzi: 3/6 - 13/16 -23/26 - 33/36.
+- Le Finali Orizzontali
+Comprendono una sequenza di due numeri consecutivi giocati a cavallo e in pieno (due per Finale) determinati dalla loro collocazione sul tracciato, si puntano con quattro o cinque gettoni. Molto richiesta è la finale 8/9: 8/9 - 18 - 19 - 28/29 (quattro pezzi).
+
+Gli annunci vincenti si possono far rigiocare dall&apos;impiegato utilizzando l&apos;importo del pagamento:
+
+A rifare             Lo stesso numero di pezzi.
+
+A completare    Lo stesso numero di pezzi, meno la puntata.
+
+Per il tutto        (Serie e Vicini) Tutta la vincita e la puntata
+(la serie triplica, i vicini raddoppiano).</string>
+			</dict>
+			<dict>
+				<key>REGOLE GENERALI</key>
+				<string>• Ogni spostamento, correzione o errore anche dell&apos;impiegato di gioco, dovrà essere segnalato al Capo Tavolo prima dell&apos;annuncio del &quot;Rien ne va plus&quot;.
+
+• La vincita è determinata unicamente dalla posizione del gettone all&apos;uscita del numero, quindi il cliente è invitato a seguire attentamente lo svolgimento della partita, a controllare la posizione dei propri gettoni sul tavolo da gioco, anche se piazzati dall&apos;impiegato, e a presenziare ai pagamenti.
+
+• La Direzione declina ogni responsabilità sulle puntate effettuate dall&apos;impiegato in modo non conforme alle richieste del giocatore.
+
+• Non è consentito puntare a cavallo sulle combinazioni semplici, sulle dozzine e sulle colonne.
+
+• Il giocatore che vince conserva la sua puntata iniziale che può essere lasciata nella stessa combinazione oppure, al termine del pagamento, ritirata o spostata.
+
+• I giocatori non possono toccare i gettoni vincenti prima che siano completati tutti i pagamenti.
+
+• Per poter nuovamente puntare i giocatori devono attendere che l&apos;impiegato abbia liberato il numero e ritirato tutte le giocate perdenti (sulle combinazioni vincenti è possibile farlo al termine di tutti i pagamenti).
+
+• Le vincite non riscosse sulle chances multiple sono subito accantonate assieme alle puntate, quelle sulle chances semplici, colonne e dozzine dopo il terzo colpo.
+
+• Le puntate minime e massime sono evidenziate sui singoli tavoli da gioco mediante appositi cartelli, gli importi sono strettamente vincolanti per il giocatore, che non può mai superarli neppure con l&apos;intervento di terzi. La vincita eccedente realizzata superando il massimo consentito non sarà pagata e la differenza della puntata verrà restituita al cliente.
+
+• La Direzione si riserva il diritto di modificare i minimi e i massimi anche nel corso della stessa giornata: il Capo Tavolo avviserà verbalmente i giocatori e disporrà il cambio del relativo cartello.
+
+• È facoltà della Direzione sospendere la partita in qualsiasi momento della giornata.
+
+• La risoluzione di eventuali controversie in materia di gioco è demandata alla decisione inappellabile della Direzione Giochi.</string>
+			</dict>
+		</array>
+		<key>immagine_tavolo</key>
+		<string>francese.png</string>
+		<key>office</key>
+		<array>
+			<string>VE</string>
+			<string>CN</string>
+		</array>
+		<key>probabilita</key>
+		<string>hold: 2,7
+percentuale che rimane a favore della casa da gioco sul volume del giocato.
+rtp: 97,3
+(Return to player): percentuale che viene restituita in vincite al giocatore.</string>
+		<key>orari</key>
+		<string>Ca&apos; Noghera
+dal 1° settembre al 14 giugno:
+ore 15:30 - 3:00
+ore 15:30 - 3:30 sabato e prefestivi
+
+dal 15 giugno al 31 agosto:
+ore 16:00 - 3:00
+ore 16:00 - 3:30 sabato e prefestivi
+
+Ca&apos; Vendramin Calergi
+dal 1° settembre al 14 giugno:
+ore 15:30 - 2:45
+ore 15:30 - 3:15 sabato e prefestivi
+
+dal 15 giugno al 31 agosto:
+ore 16:00 - 2:45
+ore 16:00 - 3:15 sabato e prefestivi</string>
+	</dict>
+	<dict>
+		<key>titolo</key>
+		<string>FAIR ROULETTE</string>
+		<key>immagine</key>
+		<string>roulette_americana.jpg</string>
+		<key>main</key>
+		<string>A Ca&apos; Vendramin Calergi e a Ca&apos; Noghera è possibile giocare a questa variante dinamica della Roulette Francese, la Fair Roulette. Le differenze più significative? La dimensione del tavolo e la forma del tracciato (tableau), il cilindro (le cylindre), la presenza del Capo Tavolo (Chef de Table) e di un solo impiegato (croupier) e l&apos;assegnazione di un colore ai gettoni di ciascun cliente.
+
+Lo scopo del gioco?
+È molto semplice: si deve scommettere contro il banco e cercare di indovinare in quale numero cadrà la pallina lanciata dal croupier (le bouler).</string>
+		<key>regola</key>
+		<array>
+			<dict>
+				<key>IL GIOCO</key>
+				<string>Tra le differenze più significative osserviamo la dimensione del tavolo e la forma del tracciato (tableau), il cilindro (le cylindre) con i numeri disposti in maniera analoga ma privo delle quattro impugnature utilizzate per invertirne la rotazione, la presenza del Capo Tavolo (Chef de Table) e di un solo impiegato (croupier), la dotazione della banca formata da gettoni di valore, ma soprattutto di colore: e infine le procedure per i pagamenti effettuati per colore in modo cumulativo.
+
+Ogni tavolo presenta una dotazione di gettoni dello stesso valore nominale, se non diversamente indicato, che si differenziano tra loro per il colore: a ciascun giocatore ne viene attribuito uno personale. Questo accorgimento agevola il cliente nell&apos;individuazione delle proprie giocate ed elimina le possibili contestazioni relative alle puntate e vincite.
+
+È importante ricordare che i gettoni di colore portano impresso il numero del tavolo di appartenenza, pertanto possono essere giocati soltanto su quello indicato.
+
+Il giocatore effettua personalmente le proprie puntate, però, se lo desidera, ha la possibilità di consegnare al croupier gli annunci riguardanti la Serie 5/8, i Vicini dello Zero, gli Orfanelli e il numero con i suoi laterali sul cilindro, due a destra e due a sinistra.
+
+Il gioco è molto semplice: si scommette contro il banco cercando di indovinare in quale numero cadrà la pallina lanciata dal croupier (le bouler). Le puntate vincenti daranno diritto a dei premi proporzionali sia al valore dei gettoni che al tipo di combinazione scelta.
+
+La partita inizia con il tradizionale invito rivolto dall&apos;impiegato: &quot;Messieurs faites vos jeux&quot; e termina dopo il lancio della boule con il consueto &quot;Rien ne va plus&quot;. Da questo momento in poi non sono più permesse le puntate, solamente il Capo Tavolo, in alcuni casi, può concedere una deroga.
+
+La pallina determina il numero vincente quando si ferma in una delle trentasette caselle del cilindro, il croupier lo annuncia in francese dichiarando le relative combinazioni semplici (rouge o noir, pair o impair, manque o passe), contemporaneamente evidenzia con il dolly il numero corrispondente riportato sul tracciato (tableau) ed elenca le vincite; subito dopo &quot;libera il tappeto&quot; ritirando i gettoni perdenti.
+
+Conclusa questa fase predispone i pagamenti rispettando un ordine prestabilito: colonne, chances semplici, dozzine, infine, dopo aver individuato i proprietari, paga le vincite sulle chances multiple, facendo sempre riferimento alla posizione dei gettoni sul tappeto, iniziando da quelli di colore e terminando con quelli di valore.
+
+Con l&apos;uscita dello 0 vincono le puntate sul numero e sulle sue combinazioni multiple, perdono le colonne e dozzine, mentre le puntate sulle combinazioni semplici, dimezzando il proprio valore, vengono subito divise fra il giocatore e il banco (à partager). Nel caso in cui sulle chances vi sia un numero dispari di gettoni, quello indivisibile rimarrà &quot;in prigione&quot; (en prison) vincolato nell&apos;apposita linea. Il colpo successivo, se risulterà vincente, verrà liberato, mentre sarà incamerato se perdente.</string>
+			</dict>
+			<dict>
+				<key>COMBINAZIONI E PAGAMENTI</key>
+				<string>Numero Pieno (En Plein)
+
+È formato da un numero singolo (dallo 0 al 36): si punta posizio-nando il gettone sulla casella del numero prescelto.
+
+ 
+
+Cavallo (Cheval)
+
+È formato da due numeri attigui, lo si individua pronunciando entrambi i numeri (dal minore al maggiore), può essere orizzontale e verticale. La puntata si effettua posizionando il gettone sulla linea che separa i due numeri.
+
+ 
+
+Terzina o Trasversale Piena (Transversale Pleine)
+
+È formata da tre numeri progressivi situati sulla stessa linea orizzontale. La terzina è individuata pronun-ciando il primo e l&apos;ultimo numero (dal minore al maggiore), si gioca posizionando il gettone sulla linea esterna del tracciato. È tradizione chiamare la prima terzina &quot;tre primi&quot; (trois premiers) e l&apos;ultima &quot;tre ultimi&quot; (trois derniers).
+
+ 
+
+Trasversale dello Zero (Transversale du Zero)
+
+Le terzine, chiamate anche trasver-sali dello zero (transversales du zero), 0/1/2 e 0/2/3 hanno i numeri sul tacciato posizionati diversamente dalla terzina tradizionale.
+
+ 
+
+Carré (Carré)
+
+È formato dai quattro numeri, due sopra e due sotto, che compongono un quadrato. Si individua pronun-ciando il primo e l&apos;ultimo numero (dal minore al maggiore), si punta posizionando il gettone al centro dei quattro numeri.
+
+ 
+
+Quattro Primi (Quatre Premiers)
+
+La sequenza numerica 0/1/2/3 viene individuata con il nome &quot;quattro primi&quot; (quatre premiers). Si punta posizionando il gettone sulla linea esterna del tracciato tra lo 0, l&apos;1 e la prima dozzina.
+
+ 
+
+Sestina (Sixaine - Transversale Simple)
+
+È formata da sei numeri progres-sivi che compongono due terzine consecutive, una sopra e l&apos;altra sotto. La si individua pronunciando il primo e l&apos;ultimo numero (dal minore al maggiore). È tradizione chiamare la prima sestina &quot;sei primi&quot; (six premiers) e l&apos;ultima &quot;sei ultimi&quot; (six derniers). Si punta posizio-nando il gettone sulla linea esterna del tracciato tra le due terzine.
+
+ 
+
+Dozzina (Douzaine)
+
+Sono tre, ognuna delle quali è formata da dodici numeri progressivi.
+
+Prima: dall&apos;1 al 12 - douze premiers, seconda: dal 13 al 24 - douze milieu, terza: dal 25 al 36 - douze derniers.
+
+La si individua pronunciando &quot;prima dozzina, dozzina di mezzo, ultima dozzina&quot;. Si punta posizionando il gettone sugli appositi spazi situati sul tracciato.
+
+ 
+
+Colonna (Colonne)
+
+Sono tre, ognuna delle quali è formata da dodici numeri posizio-nati uno sotto l&apos;altro sul tracciato. La si individua considerando tutti i numeri posizionati in colonna che partono dal 34, 35 o 36. Si punta collocando il gettone negli appositi spazi situati sotto la colonna dei numeri che la compongono.
+
+ 
+
+Manque e Passe
+
+Sono formati ciascuno da diciotto numeri:
+
+Manque dall&apos;1 al 18.
+
+Passe dal 19 al 36.
+
+Si puntano giocando il gettone negli appositi spazi (Manque o Passe) del tracciato.
+
+ 
+
+Pari e Dispari (Pair et Impair)
+
+Comprendono ciascuno diciotto numeri:
+
+Impair comprende i numeri dispari.
+
+Pair comprende i numeri pari.
+
+Si puntano giocando il gettone negli appositi spazi (Impair o Pair) del tracciato.
+
+ 
+
+Rosso e Nero (Rouge et Noir)
+
+Sono formati ciascuno da diciotto numeri.
+
+Si puntano giocando il gettone negli appositi spazi (rosso o nero) del tracciato.
+Rossi
+
+1-3-5-7-9-12-14-16-18
+
+19-21-23-25-27-30-32-34-36
+
+Neri
+
+2-4-6-8-10-11-13-15-17
+
+20-22-24-26-28-29-31-33-35</string>
+			</dict>
+			<dict>
+				<key>ANNUNCI</key>
+				<string>VICINI DELLO ZERO	9 gettoni
+SERIE 5/8	6 gettoni
+ORFANELLI	5 gettoni
+NASSA	5 gettoni
+ZERO SPIEL	4 gettoni
+SETTORI DI 5 NUMERI	5 gettoni
+SETTORI E FINALI	 
+Vicini dello 0 - 1 - 2 - 3 - 4 - 5 - 6 zero	4 gettoni
+7 - 8 - 9	3 gettoni
+FINALI A CAVALLO ORIZZONTALI	 
+0/1  1/2  2/3  4/5  5/6	5 gettoni
+7/8  8/9 	4 gettoni
+FINALI A CAVALLO VERTICALI	 
+0/3  1/4  2/5  3/6	4 gettoni
+4/7  5/8  6/9  7/10  8/11  9/12	3 gettoni
+</string>
+			</dict>
+			<dict>
+				<key>SETTORI E FINALI</key>
+				<string>La Serie 5/8 e i Vicini dello Zero sono tradizionalmente tenuti &quot;pagati a piazzare&quot; dall&apos;impiegato, i gettoni corrispondenti all&apos;ammontare della giocata vengono collocati in appositi spazi disegnati sul tracciato. A numero uscito, il gettone, nella terzina e nel Carré dei Vicini dello Zero sono due, verrà piazzato solo se risulterà vincente un numero della combinazione giocata mentre sarà annullato se perdente.
+
+La Serie 5/8 (Le Tiers du Cylindre)
+Si giocano dodici numeri con sei gettoni, e comprende i seguenti cavalli: 5/8 - 10/11 - 13/16 - 23/24 - 27/30 - 33/36.
+
+I Vicini dello Zero (Les Voisins du Zéro)
+Si giocano diciassette numeri con nove gettoni e sono formati dalle seguenti combinazioni: due gettoni sulla terzina 0/2/3 e il carré 25/29, un gettone per ognuno dei seguenti cavalli 4/7 - 12/15 - 18/21 - 19/22 - 32/35.
+
+Gli Orfanelli (Les Orphelins)
+Sono formati da due settori del cilindro distanti tra loro che separano i numeri della Serie 5/8 da quelli dei Vicini dello Zero: 17/34/6 da una parte: 1/20/14/31/9 dall&apos;altra. Gli Orfanelli si accettano giocati a cavallo con cinque gettoni così ripartiti: un pieno al numero 1 e un pezzo per ognuno dei seguenti cavalli: 6/9 - 14/17 - 17/20 - 31/34, oppure in pieno con otto gettoni.
+
+La Nassa
+Si gioca con 5 pezzi puntando un gettone per ognuno delle seguenti combinazioni: 0/3 - 12/15 - 19 - 26 - 32/35. Una variante, nota come &quot;Zero spiel&quot;, non comprende il 19 e quindi si gioca con quattro pezzi: 0/3 - 12/15 - 26 - 32/35.
+
+Settore di 5 numeri (Un Numéro et Deux Voisins)
+È formato da un numero e dai suoi laterali sul cilindro, due a destra e due a sinistra. Si punta con cinque pezzi giocando i pieni.
+
+Finali (Les finales) Si individuano osservando il tracciato dei numeri sul tappeto, e possono essere in pieno e a cavallo. Le finali in pieno sono formate dai numeri che hanno in comune la stessa cifra finale (le unità), ad esempio la &quot;3&quot;: 3/13/23/33. Le finali a cavallo hanno in comune le unità di due numeri vicini tra loro (a cavallo) e, a loro volta, si dividono in orizzontali e verticali.
+- Le Finali Verticali
+Sono formate da due numeri posti uno sopra all&apos;altro, si giocano a cavallo con tre o quattro gettoni determinati dalla posizione dei numeri sul tracciato. Esempio finale 3/6 quattro gettoni: 3/6 - 13/16 -23/26 - 33/36.
+- Le Finali Orizzontali
+Comprendono una sequenza di due numeri consecutivi giocati a cavallo e in pieno (due per Finale) determinati dalla loro collocazione sul tracciato, si puntano con quattro o cinque gettoni. Molto richiesta è la finale 8/9: 8/9 - 18 - 19 - 28/29 (quattro pezzi).
+Gli annunci vincenti si possono far rigiocare dall&apos;impiegato utilizzando l&apos;importo del pagamento:</string>
+			</dict>
+			<dict>
+				<key>REGOLE GENERALI</key>
+				<string>Per una miglior conoscenza del gioco vengono riportate alcune tra le principali regole che disciplinano lo svolgimento della partita.
+
+• Il valore base del gettone di colore è determinato dal minimo del tavolo.
+
+• La puntata minima con il colore per ognuna delle combinazioni semplici, colonne e dozzine è di almeno cinque gettoni giocati assieme, sempre di almeno cinque pezzi, giocabili anche uno per ogni combinazione, se la puntata è fatta sulle combinazioni dei numeri (sestina, terzina ecc.).
+
+• Durante la partita, il giocatore deve tenere esposti i gettoni di colore collocandoli negli appositi spazi situati fuori dal tracciato sul bordo del tavolo.
+
+• I gettoni di colore devono essere convertiti in gettoni di valuta alla chiusura del tavolo quando il cliente smette di giocare o si allontana, anche se ciò avviene per un breve intervallo di tempo. Ogni altro uso dei gettoni di colore è vietato.
+
+• I gettoni di colore puntati per errore su tavoli diversi saranno pagati, se vincenti, in base al loro reale valore qualora sia determinabile, altrimenti secondo il minimo di apertura del tavolo di provenienza, mentre saranno ritirati se perdenti.
+
+• Possono partecipare al gioco anche i clienti in possesso di gettoni di valuta negoziabili in tutti i tavoli e per i quali, nelle combinazioni multiple, non vi è un limite minimo di pezzi da puntare. Nelle combinazioni semplici il valore minimo della puntata deve corrispondere a cinque gettoni di colore.
+
+• Ogni spostamento, correzione o errore anche dell&apos;impiegato di gioco dovrà essere segnalato al Capo Tavolo prima dell&apos;annuncio del &quot;Rien ne va plus&quot;.
+
+• La vincita è determinata unicamente dalla posizione del gettone all&apos;uscita del numero, quindi il cliente è invitato a seguire attentamente lo svolgimento della partita, controllare la posizione dei propri gettoni sul tavolo da gioco, anche se piazzati dall&apos;impiegato, e a presenziare ai pagamenti.
+
+• La Direzione declina ogni responsabilità sulle puntate effettuate dall&apos;impiegato in modo non conforme alle richieste del giocatore.
+
+• Non è consentito puntare a cavallo sulle combinazioni semplici, sulle dozzine e sulle colonne.
+
+• Il giocatore che vince conserva la sua puntata iniziale e può lasciarla nella stessa combinazione oppure, al termine del pagamento, ritirarla o spostarla.
+
+• I giocatori non possono toccare i gettoni vincenti prima che siano completati tutti i pagamenti.
+
+• Per poter nuovamente puntare i giocatori devono attendere che l&apos;impiegato abbia liberato il numero e ritirato tutte le giocate perdenti (sulle combinazioni vincenti è possibile farlo solo dopo la fine di tutti i pagamenti).
+
+• Le vincite non riscosse sulle chances multiple vengono subito accantonate assieme alle puntate, quelle sulle chances semplici, colonne e dozzine, dopo il terzo colpo.
+
+• Le puntate minime e massime sono evidenziate sui singoli tavoli da gioco mediante appositi cartelli, gli importi sono strettamente vincolanti per il giocatore, che non può mai superarli neppure con l&apos;intervento di terzi. La vincita eccedente realizzata superando il massimo consentito non sarà pagata e la differenza della puntata verrà restituita al cliente.
+
+• La Direzione si riserva il diritto di modificare i minimi e i massimi anche nel corso della stessa giornata: il Capo Tavolo avviserà verbalmente i giocatori e disporrà il cambio del relativo cartello.
+
+• È facoltà della Direzione sospendere la partita in qualsiasi momento della giornata.
+
+• La risoluzione di eventuali controversie in materia di gioco è demandata alla decisione inappellabile della Direzione Giochi.</string>
+			</dict>
+		</array>
+		<key>immagine_tavolo</key>
+		<string>fairtable.jpg</string>
+		<key>office</key>
+		<array>
+			<string>VE</string>
+			<string>CN</string>
+		</array>
+		<key>probabilita</key>
+		<string>hold: 2,7
+percentuale che rimane a favore della casa da gioco sul volume del giocato.
+rtp: 97,3
+(Return to player): percentuale che viene restituita in vincite al giocatore.</string>
+		<key>orari</key>
+		<string>Ca&apos; Noghera
+dal 1° settembre al 14 giugno:
+ore 15:30 - 3:00
+ore 15:30 - 3:30 sabato e prefestivi
+
+dal 15 giugno al 31 agosto:
+ore 16:00 - 3:00
+ore 16:00 - 3:30 sabato e prefestivi
+
+Ca&apos; Vendramin Calergi
+dal 1° settembre al 14 giugno:
+ore 15:30 - 2:45
+ore 15:30 - 3:15 sabato e prefestivi
+
+dal 15 giugno al 31 agosto:
+ore 16:00 - 2:45
+ore 16:00 - 3:15 sabato e prefestivi</string>
+	</dict>
+	<dict>
+		<key>titolo</key>
 		<string>CARIBBEAN STUD POKER</string>
 		<key>immagine</key>
 		<string>carribbean.jpg</string>
@@ -113,6 +584,24 @@ percentuale che rimane a favore della casa da gioco sul volume del giocato.
 
 rtp: 94,78
 (Return to player): percentuale che viene restituita in vincite al giocatore.</string>
+		<key>orari</key>
+		<string>Ca&apos; Noghera
+dal 1° settembre al 14 giugno:
+ore 15:30 - 3:00
+ore 15:30 - 3:30 sabato e prefestivi
+
+dal 15 giugno al 31 agosto:
+ore 16:00 - 3:00
+ore 16:00 - 3:30 sabato e prefestivi
+
+Ca&apos; Vendramin Calergi
+dal 1° settembre al 14 giugno:
+ore 15:30 - 2:45
+ore 15:30 - 3:15 sabato e prefestivi
+
+dal 15 giugno al 31 agosto:
+ore 16:00 - 2:45
+ore 16:00 - 3:15 sabato e prefestivi</string>
 	</dict>
 </array>
 </plist>
