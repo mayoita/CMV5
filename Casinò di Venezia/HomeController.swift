@@ -26,6 +26,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     let cellId = "cellId"
     let cellIdTornei = "cellIdTornei"
     let cellGiochi = "giochiCell"
+    let cellPromo = "Promozione"
     let appDelegate = UIApplication.shared.delegate
         as! AppDelegate
     let titoli = ["Home".localized, "Eventi".localized, "Tornei".localized, "Promozioni".localized,"Giochi".localized,"Slot".localized]
@@ -53,7 +54,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         let titleLabel = UILabel(frame: CGRect(x: 0,y: 0,width: view.frame.width - 32,height:  view.frame.height))
         titleLabel.text = titoli[0]
         titleLabel.textColor = UIColor.white
-        titleLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFontWeightLight)
+        titleLabel.font = UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.light)
         navigationItem.titleView = titleLabel
         setupCollectionView ()
         setupMenuBar()
@@ -75,6 +76,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.register(Sezione.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(TorneiCell.self, forCellWithReuseIdentifier: cellIdTornei)
         collectionView?.register(GiochiCell.self, forCellWithReuseIdentifier: cellGiochi)
+        collectionView?.register(Promozioni.self, forCellWithReuseIdentifier: cellPromo)
     }
     
     func refreshButtonImage() {
@@ -173,6 +175,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             identifier = cellIdTornei
         } else if indexPath.item == 2 {
             identifier = cellGiochi
+        } else if indexPath.item == 3 {
+            identifier = cellPromo
         } else {
             identifier = cellId
         }

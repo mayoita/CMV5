@@ -19,6 +19,14 @@
 		2227D59F1F0A78B500F09669 /* CircularTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227D59E1F0A78B500F09669 /* CircularTransition.swift */; };
 		2227FF151F13CDDB0032AA30 /* UIView+BezierPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2227FF141F13CDDB0032AA30 /* UIView+BezierPaths.swift */; };
 		2228F76B1F0A41E500F3C94A /* CanvasButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2228F76A1F0A41E500F3C94A /* CanvasButton.swift */; };
+		222A9310203C6B9B0068E0D1 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A930F203C6B9B0068E0D1 /* PinterestLayout.swift */; };
+		222A9312203C6C8B0068E0D1 /* Promozioni.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A9311203C6C8B0068E0D1 /* Promozioni.swift */; };
+		222A9314203C6D230068E0D1 /* AnnotatedPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A9313203C6D220068E0D1 /* AnnotatedPhotoCell.swift */; };
+		222A9316203C6D4E0068E0D1 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A9315203C6D4E0068E0D1 /* Photo.swift */; };
+		222A9318203C6D7B0068E0D1 /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 222A9317203C6D7B0068E0D1 /* Photos.plist */; };
+		222A931A203C6DA40068E0D1 /* Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222A9319203C6DA40068E0D1 /* Photos.xcassets */; };
+		222A931C203C6E4D0068E0D1 /* Promozione.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222A931B203C6E4D0068E0D1 /* Promozione.xib */; };
+		222A931F203D72670068E0D1 /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A931E203D72670068E0D1 /* FacebookViewController.swift */; };
 		22419E9D1F1932F400F4735A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22419E9C1F1932F400F4735A /* SignInViewController.swift */; };
 		2252541D1F06EFA8005F1FF7 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2252541C1F06EFA8005F1FF7 /* MapsViewController.swift */; };
 		225254221F06F1E0005F1FF7 /* Venezia.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2252541E1F06F1E0005F1FF7 /* Venezia.gpx */; };
@@ -94,6 +102,14 @@
 		2227D59E1F0A78B500F09669 /* CircularTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularTransition.swift; path = "Casinò di Venezia/CircularTransition.swift"; sourceTree = "<group>"; };
 		2227FF141F13CDDB0032AA30 /* UIView+BezierPaths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+BezierPaths.swift"; sourceTree = "<group>"; };
 		2228F76A1F0A41E500F3C94A /* CanvasButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CanvasButton.swift; path = "Casinò di Venezia/CanvasButton.swift"; sourceTree = "<group>"; };
+		222A930F203C6B9B0068E0D1 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		222A9311203C6C8B0068E0D1 /* Promozioni.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promozioni.swift; sourceTree = "<group>"; };
+		222A9313203C6D220068E0D1 /* AnnotatedPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotatedPhotoCell.swift; sourceTree = "<group>"; };
+		222A9315203C6D4E0068E0D1 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		222A9317203C6D7B0068E0D1 /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
+		222A9319203C6DA40068E0D1 /* Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Photos.xcassets; sourceTree = "<group>"; };
+		222A931B203C6E4D0068E0D1 /* Promozione.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Promozione.xib; sourceTree = "<group>"; };
+		222A931E203D72670068E0D1 /* FacebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
 		22419E9C1F1932F400F4735A /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = "Casinò di Venezia/SignInViewController.swift"; sourceTree = "<group>"; };
 		2252541C1F06EFA8005F1FF7 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsViewController.swift; path = "Casinò di Venezia/MapsViewController.swift"; sourceTree = "<group>"; };
 		2252541E1F06F1E0005F1FF7 /* Venezia.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Venezia.gpx; sourceTree = "<group>"; };
@@ -210,6 +226,28 @@
 			name = "Categories and Extensions";
 			sourceTree = "<group>";
 		};
+		222A930D203C6B370068E0D1 /* Promozioni */ = {
+			isa = PBXGroup;
+			children = (
+				222A9317203C6D7B0068E0D1 /* Photos.plist */,
+				222A9319203C6DA40068E0D1 /* Photos.xcassets */,
+				222A9315203C6D4E0068E0D1 /* Photo.swift */,
+				222A930F203C6B9B0068E0D1 /* PinterestLayout.swift */,
+				222A9313203C6D220068E0D1 /* AnnotatedPhotoCell.swift */,
+				222A9311203C6C8B0068E0D1 /* Promozioni.swift */,
+				222A931B203C6E4D0068E0D1 /* Promozione.xib */,
+			);
+			name = Promozioni;
+			sourceTree = "<group>";
+		};
+		222A931D203D72430068E0D1 /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				222A931E203D72670068E0D1 /* FacebookViewController.swift */,
+			);
+			path = Facebook;
+			sourceTree = "<group>";
+		};
 		22768108202C8E4C009B308C /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,9 +294,11 @@
 				22768108202C8E4C009B308C /* Helper */,
 				22E8A8FC20289E2E000C3CBE /* View */,
 				2295838D1EFCFDC700409D7A /* AppDelegate.swift */,
+				222A931D203D72430068E0D1 /* Facebook */,
 				22208DDC1F066F17007DA39D /* Gradient.swift */,
 				2228F76A1F0A41E500F3C94A /* CanvasButton.swift */,
 				22208DDE1F067CBC007DA39D /* GradientInv.swift */,
+				222A930D203C6B370068E0D1 /* Promozioni */,
 				22208DDA1F06561A007DA39D /* CloseOnScrollDown.swift */,
 				22E8A906202C687B000C3CBE /* Fetch Database */,
 				2214AD2F1F1665E400F9EBA7 /* LogIn */,
@@ -443,12 +483,12 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CMV;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Casinò di Venezia SPA";
 				TargetAttributes = {
 					22CF4458181A9AD70062FC38 = {
 						DevelopmentTeam = 93MU66AW6P;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0920;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -500,6 +540,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				222A9318203C6D7B0068E0D1 /* Photos.plist in Resources */,
 				226B3DF0203ACB3100520E88 /* Lato-Light.ttf in Resources */,
 				22D406D62022216C00D71A6F /* Images.xcassets in Resources */,
 				225254231F06F1E0005F1FF7 /* CaNoghera.gpx in Resources */,
@@ -507,11 +548,13 @@
 				225254221F06F1E0005F1FF7 /* Venezia.gpx in Resources */,
 				229AACCC202EFB7800644394 /* heart.json in Resources */,
 				225254241F06F1E0005F1FF7 /* Mestre.gpx in Resources */,
+				222A931A203C6DA40068E0D1 /* Photos.xcassets in Resources */,
 				22630A251F0FBD9200168D1F /* PersonDetailMapView.xib in Resources */,
 				2295839E1EFD02BB00409D7A /* GoogleService-Info.plist in Resources */,
 				22C3C30D203491AC004E4145 /* venicecasinoregular.ttf in Resources */,
 				2295839A1EFCFDC700409D7A /* Main.storyboard in Resources */,
 				22E8A903202C4754000C3CBE /* EventCell.xib in Resources */,
+				222A931C203C6E4D0068E0D1 /* Promozione.xib in Resources */,
 				226B3DEE203ACB2100520E88 /* Lato-Regular.ttf in Resources */,
 				22C3C307203474C7004E4145 /* GiochiCell.xib in Resources */,
 				226B3DF2203ACB3900520E88 /* Lato-Hairline.ttf in Resources */,
@@ -608,6 +651,10 @@
 				"${BUILT_PRODUCTS_DIR}/Canvas/Canvas.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
@@ -623,6 +670,10 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Canvas.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
@@ -669,6 +720,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22208DD91F03F268007DA39D /* EventDetails.swift in Sources */,
+				222A9314203C6D230068E0D1 /* AnnotatedPhotoCell.swift in Sources */,
 				22208DDB1F06561A007DA39D /* CloseOnScrollDown.swift in Sources */,
 				22C3C301202CAA26004E4145 /* Tornei.swift in Sources */,
 				229583971EFCFDC700409D7A /* EventListCell.swift in Sources */,
@@ -688,8 +740,11 @@
 				22630A1F1F0F98AE00168D1F /* Location.swift in Sources */,
 				22208DCF1EFD50EA007DA39D /* MenuBar.swift in Sources */,
 				2227FF151F13CDDB0032AA30 /* UIView+BezierPaths.swift in Sources */,
+				222A9310203C6B9B0068E0D1 /* PinterestLayout.swift in Sources */,
 				22C3C30F2035A8D5004E4145 /* GiochiDettaglio.swift in Sources */,
 				226B3DEA2038A12000520E88 /* Probabilita.swift in Sources */,
+				222A9312203C6C8B0068E0D1 /* Promozioni.swift in Sources */,
+				222A9316203C6D4E0068E0D1 /* Photo.swift in Sources */,
 				2214AD2E1F1661B900F9EBA7 /* LogInViewController.swift in Sources */,
 				22C3C30B203489DF004E4145 /* GiochiCella.swift in Sources */,
 				229583951EFCFDC700409D7A /* AppDelegate.swift in Sources */,
@@ -700,6 +755,7 @@
 				2252541D1F06EFA8005F1FF7 /* MapsViewController.swift in Sources */,
 				22C3C3112035DE69004E4145 /* RegolaCell.swift in Sources */,
 				229583A01EFD13AA00409D7A /* Events.swift in Sources */,
+				222A931F203D72670068E0D1 /* FacebookViewController.swift in Sources */,
 				22899D8D201A00EE000CDE7E /* CMVLogInFirebaseUI.swift in Sources */,
 				22EB73592024A43200759094 /* Quando.swift in Sources */,
 				2227D59F1F0A78B500F09669 /* CircularTransition.swift in Sources */,
@@ -738,14 +794,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -790,14 +852,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -861,7 +929,8 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -899,7 +968,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

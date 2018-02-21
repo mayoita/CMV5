@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="slu-Nr-jMh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R6c-F6-BEf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -623,6 +623,24 @@
             </objects>
             <point key="canvasLocation" x="-36" y="856"/>
         </scene>
+        <!--Facebook View Controller-->
+        <scene sceneID="EDd-C7-jck">
+            <objects>
+                <viewController id="R6c-F6-BEf" customClass="FacebookViewController" customModule="Casino__di_Venezia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nZh-HZ-nXp"/>
+                        <viewControllerLayoutGuide type="bottom" id="YRz-Z1-K3R"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T3b-i2-z1c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pzO-9X-VNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1346" y="-636"/>
+        </scene>
         <!--Tornei Details-->
         <scene sceneID="ulD-L6-HDB">
             <objects>
@@ -837,18 +855,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1CF-eZ-2QY">
-                                <rect key="frame" x="16" y="607" width="343" height="55"/>
+                                <rect key="frame" x="16" y="444" width="343" height="218"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="SPZ-Mp-F4o">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="193"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RegolaCell" id="kcL-TB-xu9" customClass="RegolaCell" customModule="Casino__di_Venezia" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="44"/>
+                                        <rect key="frame" x="0.0" y="221" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kcL-TB-xu9" id="f8T-Aj-eJw">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXe-FE-zmT">
-                                                    <rect key="frame" x="15" y="11" width="313" height="22"/>
+                                                    <rect key="frame" x="8" y="11" width="327" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -895,21 +917,15 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="S0k-J4-TVC">
-                                <rect key="frame" x="16" y="284" width="343" height="120"/>
+                                <rect key="frame" x="16" y="284" width="343" height="150"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="4dG-P8-iMc"/>
+                                    <constraint firstAttribute="height" constant="150" id="4dG-P8-iMc"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SPZ-Mp-F4o">
-                                <rect key="frame" x="16" y="409" width="343" height="193"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="SPZ-Mp-F4o" secondAttribute="height" multiplier="16:9" id="ZeB-pG-JRm"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lF0-yS-pLJ">
                                 <rect key="frame" x="175" y="242" width="25" height="25"/>
                                 <constraints>
@@ -969,6 +985,7 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="S0k-J4-TVC" secondAttribute="trailing" id="0qQ-8d-L76"/>
                             <constraint firstItem="qXW-Go-096" firstAttribute="top" secondItem="9Bo-f7-q3B" secondAttribute="bottom" constant="2" id="2vO-Ks-t5A"/>
+                            <constraint firstItem="1CF-eZ-2QY" firstAttribute="top" secondItem="S0k-J4-TVC" secondAttribute="bottom" constant="10" id="4Zb-Kr-JWY"/>
                             <constraint firstItem="lF0-yS-pLJ" firstAttribute="centerX" secondItem="9NG-DW-CYV" secondAttribute="centerX" id="88g-iS-MCF"/>
                             <constraint firstItem="qXW-Go-096" firstAttribute="centerX" secondItem="9Bo-f7-q3B" secondAttribute="centerX" id="Aac-4D-lir"/>
                             <constraint firstItem="oYl-Dd-8lO" firstAttribute="top" secondItem="lF0-yS-pLJ" secondAttribute="bottom" constant="2" id="CT6-Y4-8Ur"/>
@@ -978,10 +995,7 @@
                             <constraint firstItem="S0k-J4-TVC" firstAttribute="top" secondItem="aEU-HC-rrQ" secondAttribute="bottom" constant="5" id="NCy-1k-dGq"/>
                             <constraint firstItem="cv5-6y-8Xf" firstAttribute="leading" secondItem="KQC-hr-6Mm" secondAttribute="leading" id="OxI-GI-kVp"/>
                             <constraint firstItem="9Bo-f7-q3B" firstAttribute="top" secondItem="9NG-DW-CYV" secondAttribute="bottom" constant="5" id="P6A-cb-L9e"/>
-                            <constraint firstItem="SPZ-Mp-F4o" firstAttribute="centerX" secondItem="S0k-J4-TVC" secondAttribute="centerX" id="RlO-8a-fhv"/>
-                            <constraint firstItem="SPZ-Mp-F4o" firstAttribute="leading" secondItem="KQC-hr-6Mm" secondAttribute="leadingMargin" id="Uck-dD-fVB"/>
                             <constraint firstItem="9Bo-f7-q3B" firstAttribute="leading" secondItem="lF0-yS-pLJ" secondAttribute="trailing" constant="80" id="Uqt-au-ziw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SPZ-Mp-F4o" secondAttribute="trailing" id="V99-qm-8aa"/>
                             <constraint firstItem="aEU-HC-rrQ" firstAttribute="top" secondItem="Rmu-r8-FdX" secondAttribute="bottom" constant="2" id="bgJ-Rh-yJF"/>
                             <constraint firstItem="Rmu-r8-FdX" firstAttribute="top" secondItem="9NG-DW-CYV" secondAttribute="bottom" constant="5" id="buB-LJ-8lB"/>
                             <constraint firstItem="1CF-eZ-2QY" firstAttribute="trailing" secondItem="KQC-hr-6Mm" secondAttribute="trailingMargin" id="cqZ-kp-BXV"/>
@@ -991,9 +1005,7 @@
                             <constraint firstItem="cv5-6y-8Xf" firstAttribute="top" secondItem="KQC-hr-6Mm" secondAttribute="top" id="lUQ-XP-eeI"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9NG-DW-CYV" secondAttribute="trailing" id="oKM-aU-Drs"/>
                             <constraint firstItem="9NG-DW-CYV" firstAttribute="leading" secondItem="KQC-hr-6Mm" secondAttribute="leadingMargin" id="obP-eN-rdZ"/>
-                            <constraint firstItem="SPZ-Mp-F4o" firstAttribute="top" secondItem="S0k-J4-TVC" secondAttribute="bottom" constant="5" id="rZo-6O-cRD"/>
                             <constraint firstItem="1CF-eZ-2QY" firstAttribute="leading" secondItem="KQC-hr-6Mm" secondAttribute="leadingMargin" id="tvi-fA-6gd"/>
-                            <constraint firstItem="1CF-eZ-2QY" firstAttribute="top" secondItem="SPZ-Mp-F4o" secondAttribute="bottom" constant="5" id="vlM-CD-MDA"/>
                             <constraint firstAttribute="trailing" secondItem="cv5-6y-8Xf" secondAttribute="trailing" id="x1W-E8-kSG"/>
                             <constraint firstItem="lF0-yS-pLJ" firstAttribute="leading" secondItem="Rmu-r8-FdX" secondAttribute="trailing" constant="80" id="ybI-Nr-18s"/>
                         </constraints>

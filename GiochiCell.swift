@@ -80,7 +80,7 @@ class GiochiCell: Sezione {
         expandedVC.transitioningDelegate = self
         expandedVC.modalPresentationStyle = .currentContext
         //expandedVC.torneo = feedArrayTornei[indexPath.row]
-        expandedVC.gioco = giochi?[0]
+        expandedVC.gioco = giochi?[indexPath.row]
         closeOnScrollDown.wireToViewController(viewController: expandedVC)
         if let keyWindow = UIApplication.shared.keyWindow?.rootViewController {
             keyWindow.present(expandedVC, animated: true, completion: nil)

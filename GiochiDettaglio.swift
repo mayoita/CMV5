@@ -46,8 +46,10 @@ class GiochiDettaglio: UIViewController, UITableViewDelegate, UITableViewDataSou
             let helper = regoleHelp.init(isExpanded: false, regole: item)
             twoDimensionalArray.append(helper)
         }
+        if gioco?.immagine_tavolo == "" {
+            immagine_tavolo.frame = .zero
+        }
         titolo.textColor = StyleKit.oro
-       // map.setImage(StyleKit.imageOfMic(), for: .normal)
         
         tabella.rowHeight = UITableViewAutomaticDimension
         tabella.estimatedRowHeight = 100
@@ -81,13 +83,14 @@ class GiochiDettaglio: UIViewController, UITableViewDelegate, UITableViewDataSou
         view.backgroundColor = StyleKit.oro
         let button = UIButton(type: .system)
         button.setTitle("+", for: .normal)
-        button.setTitleColor(.black, for: .normal)
+        button.setTitleColor(.white, for: .normal)
         button.addTarget(self, action: #selector(handleExpandClose), for: .touchUpInside)
         button.tag = section
   
         let label = UILabel()
         label.text = gioco?.regola[section].keys.first
         label.font = UIFont(name: "VeniceCasino-Regular", size: 14)
+        label.textColor = .white
         
         view.addSubview(label)
         view.addSubview(button)

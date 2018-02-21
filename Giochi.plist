@@ -202,6 +202,7 @@ Per il tutto        (Serie e Vicini) Tutta la vincita e la puntata
 		<key>probabilita</key>
 		<string>hold: 2,7
 percentuale che rimane a favore della casa da gioco sul volume del giocato.
+
 rtp: 97,3
 (Return to player): percentuale che viene restituita in vincite al giocatore.</string>
 		<key>orari</key>
@@ -452,6 +453,7 @@ Gli annunci vincenti si possono far rigiocare dall&apos;impiegato utilizzando l&
 		<key>probabilita</key>
 		<string>hold: 2,7
 percentuale che rimane a favore della casa da gioco sul volume del giocato.
+
 rtp: 97,3
 (Return to player): percentuale che viene restituita in vincite al giocatore.</string>
 		<key>orari</key>
@@ -583,6 +585,532 @@ Circostanze nelle quali si annulla subito tutta la mano
 percentuale che rimane a favore della casa da gioco sul volume del giocato.
 
 rtp: 94,78
+(Return to player): percentuale che viene restituita in vincite al giocatore.</string>
+		<key>orari</key>
+		<string>Ca&apos; Noghera
+dal 1° settembre al 14 giugno:
+ore 15:30 - 3:00
+ore 15:30 - 3:30 sabato e prefestivi
+
+dal 15 giugno al 31 agosto:
+ore 16:00 - 3:00
+ore 16:00 - 3:30 sabato e prefestivi
+
+Ca&apos; Vendramin Calergi
+dal 1° settembre al 14 giugno:
+ore 15:30 - 2:45
+ore 15:30 - 3:15 sabato e prefestivi
+
+dal 15 giugno al 31 agosto:
+ore 16:00 - 2:45
+ore 16:00 - 3:15 sabato e prefestivi</string>
+	</dict>
+	<dict>
+		<key>titolo</key>
+		<string>CHEMIN DE FER</string>
+		<key>immagine</key>
+		<string>chemin-de-fer.jpg</string>
+		<key>main</key>
+		<string>Bello, magico e coinvolgente, lo Chemin de Fer appassiona da sempre i più grandi giocatori di tutto il mondo e in tutti i casinò. Sembra che le sue origini risalgano all’epoca medievale, quando un gioco chiamato “Baccarà” veniva praticato con i tarocchi, considerati magici, tanto da essere decorati da illustri artisti e usati come strumenti di divinazione.
+
+Dove si può giocare?
+Nelle sale più riservate della rinascimentale Ca&apos; Vendramin Calergi del Casinò di Venezia, è possibile giocare tutti i venerdì, sabato, domenica, festivi e prefestivi ed inoltre partecipare ad una serie di appuntamenti con gare e tornei dai premi prestigiosi. Tutti i giorni tornei &quot;sit&amp;go&quot; a Ca&apos; Noghera.</string>
+		<key>regola</key>
+		<array>
+			<dict>
+				<key>DALLE ORIGINI A OGGI</key>
+				<string>Lo Chemin de Fer è il più classico e affascinante gioco di carte.
+
+Bello, magico, coinvolgente, appassiona da sempre i più grandi giocatori di tutto il mondo.
+
+Sembra che le sue origini risalgano all’epoca medievale, quando un gioco chiamato “Baccarà” veniva praticato con i tarocchi, considerati magici, tanto da essere decorati da illustri artisti e usati come strumenti di divinazione.
+
+Nei primi anni del Cinquecento arrivò in Francia dove, prima di essere introdotto nei casinò, rimase per lungo tempo un gioco esclusivo riservato alla nobiltà.
+
+Il nome deriva dal particolare disegno rappresentato sul “panno verde” che ricorda le rotaie e dalla forma del sabot (contenitore utilizzato per la distribuzione delle carte) simile a una piccola locomotiva che si muove da un giocatore all’altro: “Chemin de Fer”, ferrovia in francese.
+
+Il Casinò di Venezia ospita nelle sale più riservate della rinascimentale Ca’ Vendramin Calergi una serie di grandi appuntamenti con gare e tornei dai premi prestigiosi, mentre a Ca’ Noghera è possibile partecipare a tornei quotidiani “sit&amp;go” .</string>
+			</dict>
+			<dict>
+				<key>IL GIOCO</key>
+				<string>Il tavolo si presenta di forma ovale, il tracciato delimita nove postazioni, quelle per i giocatori sono otto, numerate in ordine crescente, la rimanente è caratterizzata da una leggera rientranza sul bordo ed è riservata al Capo Partita.
+
+Al centro del tavolo si trovano tre piccole aperture: in quella principale, di dimensione maggiore chiamata “sibilla”, vengono introdotte le carte che sono annullate alla fine di ogni “colpo”, mentre nelle due più piccole, collocate alla destra e alla sinistra della “sibilla”, vengono inserite le mance. Alla destra del Capo Partita è posizionata una quarta fessura nella quale sono collocate le fiches che, come vedremo, costituiscono il pagamento della tassa che spetta alla Casa da Gioco.
+Vicino al tavolo è sempre presente un impiegato chiamato “Changeur”, egli ha il compito di collaborare con il Capo Partita intervenendo sul cambio dei gettoni e banconote. Per la sua mansione utilizza una dotazione di gettoni della Casa da Gioco.
+Il gioco si svolge con l’impiego di sei mazzi di cinquantadue carte (six jeux de 52 cartes): tre hanno il dorso di un colore e tre di un altro. In totale le carte sono 312.
+Lo scopo del gioco è di raggiungere il punto più alto (9) o avvicinarsi il più possibile, sommando i valori delle due o tre carte assegnate.
+Il punteggio più basso è zero (Baccarà). Gli assi valgono un punto, le figure e i 10 zero punti, mentre le altre carte mantengono il loro valore nominale. Il risultato finale si ottiene sommando il valore di ogni carta togliendo la decina quando possibile (8 + 7 = 15 - 10 = 5).
+La partita si svolge esclusivamente tra i giocatori (jouers), mentre il compito del Capo Partita (croupier) è quello di condurla, far rispettare le regole e prelevare la tassa del 5% (cagnotte), a favore della Casa da Gioco, sul solo importo che il banchiere (le banquier) vince di volta in volta.
+La partita può incominciare quando al tavolo sono seduti almeno sei giocatori su otto posti disponibili, chi desidera occupare un posto ha l’obbligo di farne richiesta al Commissario di Gioco. Possono partecipare anche giocatori in piedi, nei limiti previsti dal regolamento, in particolare dovranno effettuare le puntate esclusivamente davanti a loro e non potranno seguire le mani cambiando posizione.
+Inizia la mano il giocatore seduto alla postazione n. 1 (banchiere) il quale scommette una somma pari almeno al minimo del tavolo stabilito dal Commissario di Gioco.
+Se vince, il banchiere continua. Per rimanere in gioco è però obbligato a mettere in palio tutta la posta (puntata e vincita).
+La mano passa dal banchiere al giocatore successivo (da sinistra a destra) quando si verifica una combinazione perdente per il banco (la banque), oppure quando il banchiere si ritira dopo aver terminato almeno un colpo valido (dare seguito).
+Una mano è l’insieme di uno o più colpi.
+Ad ogni colpo il banchiere sfila dal sabot quattro carte: la prima e la terza sono per la “punta” (le ponte), giocatore che si confronta con il banchiere, la seconda e la quarta per il banchiere.
+Conclusa la distribuzione delle carte la “punta”, guardando le sue senza farle vedere, deve dichiarare il gioco per prima chiamando “carta” se vuole la terza carta, “no” se non la vuole (carte ou pas de carte) oppure evidenziare la “battuta” (abatage): mostrare il punteggio di 8 o 9 realizzato con le prime due carte. La battuta preclude all’avversario la possibilità di variare il suo punteggio.
+Il banchiere, dopo che la “punta” ha manifestato il proprio gioco, scopre le sue carte e solo in questo momento assegna l’eventuale carta o la prende rispettando lo svolgimento del gioco.
+Vince il giocatore che con la somma complessiva delle proprie carte si avvicina di più, o raggiunge, il punteggio di 9.
+Se si verifica la parità tra banchiere e punta il colpo è considerato nullo (égalité - le coup est nul).
+Nel caso di combinazione perdente, “la punta” ha la possibilità di rimanere ancora in gioco e chiamare nuovamente “banco” (banco suivi) escludendo dal colpo gli altri giocatori.
+
+Nel gioco vi sono tre puntate consuete:
+• Banco solo
+La punta gioca da sola contro il banchiere
+• Banco con il tavolo
+Il giocatore alla punta scommette metà della somma del banchiere
+• Puntate di singoli giocatori
+Concorrono assieme fino alla copertura del banco senza superarlo. In questo caso le carte della punta sono assegnate al giocatore che ha scommesso la cifra maggiore.
+Il giocatore che vuole partecipare alla mano deve porre la puntata davanti alla propria casella oltre la linea di divisione; quella posta sopra la linea vale la metà del proprio valore, salvo diversa dichiarazione del giocatore. Le puntate dei giocatori in piedi hanno lo stesso valore di quelle effettuate dai giocatori seduti.</string>
+			</dict>
+			<dict>
+				<key>GIOCO ALLA REGOLA</key>
+				<string>I giocatori sono liberi di attenersi o no alla tabella di seguito riportata detta “Regola”. Coloro che intendono attenersi alla tabella della Regola hanno l’obbligo di dichiararlo al Capo Partita, che a sua volta informerà tutti gli altri giocatori.
+
+Il Capo Partita deve sempre evidenziare coloro che giocano alla “Regola”, poiché in caso di errori il cliente è tutelato dal regolamento: i colpi non conformi sono ricostruiti dall’impiegato in base alla Regola stessa.</string>
+			</dict>
+			<dict>
+				<key>REGOLE GENERALI</key>
+				<string>• Il Commissario si riserva il diritto di formare i tavoli “a sua discrezione”, assegnando il posto ai giocatori prenotati.
+
+• Non si possono occupare più posti allo stesso tavolo o a più tavoli.
+
+• Nel Grande Tavolo i posti riservati ai giocatori sono nove.
+
+• Soltanto l’impiegato chiude il gioco con la consueta frase:
+“Rien ne va plus”, le puntate fatte in tempo non potranno essere modificate, dovranno essere individuali e saranno ritenute valide solamente se effettuate con gettoni della Casa da Gioco o con valuta in Euro. Le puntate giocate dopo il “Rien ne va plus” non sono accettate.
+
+• Quando il banchiere passa la mano, l’impiegato offre il seguito “all’altezza” (per l’intero importo del banco) ai giocatori seduti al tavolo partendo da quello seduto alla destra del banchiere uscente. Se non viene assegnato, viene offerto a tutti gli altri giocatori in piedi e sarà aggiudicato a chi “parla per primo”.
+
+• Se la mano non è presa “all’altezza” viene posta “all’asta” e attribuita al miglior offerente senza distinzione fra chi gioca al tavolo seduto o in piedi. Se però l’offerta fra più giocatori ha lo stesso importo, viene preferito quello seduto.
+
+• Le carte, che all’interno del sabot mostrano il loro valore, sono annullate; in nessun caso la carta staccata dal sabot può essere rimessa al suo interno, è rigorosamente vietato guardare le carte mentre si sfilano dal sabot.
+
+• I giocatori seduti ai tavoli da gioco e quelli che assistono sono tenuti a non conversare o commentare ad alta voce lo svolgimento della partita.
+
+• Le puntate e le vincite non riscosse sono ritirate dal Commissario e depositate conformemente alle disposizioni della Direzione Giochi.
+
+• Il Commissario di Gioco ha la possibilità di modificare il minimo del tavolo anche nel corso della partita avvisando verbalmente i giocatori.
+
+• È facoltà della Direzione sospendere la partita in qualsiasi momento della giornata.
+
+• La soluzione di eventuali controversie è demandata alla decisione inappellabile della Direzione Giochi.</string>
+			</dict>
+		</array>
+		<key>immagine_tavolo</key>
+		<string>chemintable.jpg</string>
+		<key>office</key>
+		<array>
+			<string>VE</string>
+			<string>CN</string>
+		</array>
+		<key>probabilita</key>
+		<string>cagnotte:
+5
+commissione a favore della casa da gioco per ogni colpo vincente a banco, ai giochi Chemin de fer e Punto Banco, espressa in percentuale.
+
+Allo Chemin de fer la casa non banca, quindi l&apos;incasso è dato esclusivamente dalla cagnotte. Le percentuali di uscita delle singole chance sono: Punto 49.32%, Banco 50.68%, Egalité 9.55%. Tali percentuali sono valide solo giocando alla regola.</string>
+		<key>orari</key>
+		<string>Ca&apos; Noghera
+dal 1° settembre al 14 giugno:
+ore 15:30 - 3:00
+ore 15:30 - 3:30 sabato e prefestivi
+
+dal 15 giugno al 31 agosto:
+ore 16:00 - 3:00
+ore 16:00 - 3:30 sabato e prefestivi
+
+Ca&apos; Vendramin Calergi
+dal 1° settembre al 14 giugno:
+ore 15:30 - 2:45
+ore 15:30 - 3:15 sabato e prefestivi
+
+dal 15 giugno al 31 agosto:
+ore 16:00 - 2:45
+ore 16:00 - 3:15 sabato e prefestivi</string>
+	</dict>
+	<dict>
+		<key>titolo</key>
+		<string>PUNTO BANCO</string>
+		<key>immagine</key>
+		<string>punto_banco.jpg</string>
+		<key>main</key>
+		<string>Al Casinò di Venezia  ospitiamo tavoli di Midi Punto Banco, dalla forma di un semicerchio, dove nove giocatori sfidano la sorte contro il banchiere.
+
+Quali sono le possibilità di scommessa?
+Ogni giocatore ha a disposizione tre diverse possibilità di scommessa: “Punto”, “Banco” ed “Egalité” (pareggio), pagata quest’ultima 8 a 1. 
+
+Nella sede di Ca&apos; Noghera è presente anche il gioco del Punto Banco 2000.
+Le regole del Punto Banco 2000 sono le medesime del Midi Punto Banco, mente il pagamento delle scommesse avviene secondo le seguenti modalità:
+Egalité: 8 a 1.
+Punto Vincente: 1a 1.
+Banco Vincente con punteggio diverso da sei: 1a 1 (senza commissione).
+Banco Vincente con punteggio uguale a sei: 1 a 2 (la metà).</string>
+		<key>regola</key>
+		<array>
+			<dict>
+				<key>IL GIOCO</key>
+				<string>Il Punto Banco tradizionale (large variant) può ospitare due dealer e fino a quindici giocatori, mentre al tavolo del Midi Punto Banco, dalla forma di semicerchio simile a quello del Black Jack, siedono un banchiere e un numero di giocatori che varia da sette (Mini Punto banco) a nove.
+
+Le carte da 1 (asso) a 9 mantengono il valore, le figure (fante, donna, re) e i 10 si annullano.
+
+Il punteggio della mano si ottiene sommando le carte e eliminando, quando possibile, la decina (es. 8+6=14=4). Il massimo realizzabile è &quot;9 di battuta&quot; (raggiunto con le prime due carte), il più basso è &quot;0&quot;. Vince il punteggio più alto.
+
+Ogni giocatore ha a disposizione tre diverse possibilità di scommessa: &quot;Punto&quot;, &quot;Banco&quot;, &quot;Egalité&quot; (pareggio).
+
+I pagamenti sono alla pari, ad eccezione della combinazione Egalité, pagata 8 a 1. La Casa da Gioco trattiene come cagnotte (tassa) il 5% delle vincite sulle puntate al Banco.
+
+Il banchiere conduce la partita, distribuisce le carte, ritira i gettoni perdenti e paga quelli vincenti.
+
+Per la determinazione dei punteggi ad ogni mano estrae dal sabot, una di seguito all&apos;altra, quattro carte scoperte assegnando la prima e la terza al Punto, la seconda e la quarta al Banco.
+
+Leggendo il valore delle prime due carte si ferma o attribuisce ancora una carta a Punto rispettando la tabella dei tiraggi, (tableau de tirage), che riporta la regola di gioco da seguire per il Punto e per il Banco; successivamente, facendo sempre riferimento alla medesima tabella, termina la mano o serve la terza carta anche per la combinazione Banco.
+
+I punteggi di otto e nove, raggiunti con le prime due carte, danno il &quot;diritto di battuta&quot; (espressione usata allo Chemin de Fer per scoprire le carte) sia al Punto che al Banco.
+
+Queste combinazioni chiudono la mano escludendo la possibilità di effettuare eventuali &quot;tiraggi&quot;.
+
+Il Punto deve attenersi alla regola che impone la terza carta quando le prime due formano una combinazione pari a 0, 1, 2, 3, 4 e 5, obbliga a restare quando raggiungono un punteggio di 6 o 7, e abbattere
+
+con 8 o 9.
+
+Il Banco esercita il diritto di battuta con 8 o 9, prende la terza carta con 0, 1 e 2, resta sempre con 7.
+
+Con un punteggio di 3, 4, 5 e 6 deve rispettare la tabella dei tiraggi.</string>
+			</dict>
+			<dict>
+				<key>TABELLA DEI TIRAGGI</key>
+				<string>PUNTO con punteggio pari a:	 
+0 - 1 - 2 - 3 - 4 - 5	tira carta
+6 - 7	non tira carta
+8 - 9	non tira carta e dichiara  la &quot;battuta&quot;: impedisce così al Banco di variare il proprio punteggio
+BANCO con punteggio pari a:	 	 
+0 - 1 - 2	tira carta sempre	salvo dichiarazione di &quot;battuta&quot;
+8 - 9	non tira carta e dichiara la &quot;battuta&quot;	 
+Con punteggio pari a:	Tira carta se al PUNTO è stato assegnato:	Non tira carta se al PUNTO è stato assegnato:
+3	1 - 2 - 3 - 4 - 5 - 6 - 7 - 9 - 10	8
+4	2 - 3 - 4 - 5 - 6 - 7	1 - 8 - 9 - 10
+5	4 - 5 - 6 - 7	1 - 2 - 3 - 8 - 9 - 10
+6	6 - 7	1 - 2 - 3 - 4 - 5 - 8 - 9 - 10</string>
+			</dict>
+			<dict>
+				<key>NOTE</key>
+				<string>Eventuali errori rilevati durante lo svolgimento della mano verranno corretti ricostruendo il colpo secondo la regola.</string>
+			</dict>
+		</array>
+		<key>immagine_tavolo</key>
+		<string></string>
+		<key>office</key>
+		<array>
+			<string>VE</string>
+			<string>CN</string>
+		</array>
+		<key>probabilita</key>
+		<string>Egalité
+hold: 14,12
+percentuale che rimane a favore della casa da gioco sul volume del giocato.
+
+rtp: 85,88
+(Return to player): percentuale che viene restituita in vincite al giocatore.
+
+Punto
+hold: 1,36
+rtp: 98,64
+
+Banco
+hold: 1,17
+rtp: 98,83
+cagnotte: 5
+</string>
+		<key>orari</key>
+		<string>Ca&apos; Noghera
+dal 1° settembre al 14 giugno:
+ore 15:30 - 3:00
+ore 15:30 - 3:30 sabato e prefestivi
+
+dal 15 giugno al 31 agosto:
+ore 16:00 - 3:00
+ore 16:00 - 3:30 sabato e prefestivi
+
+Ca&apos; Vendramin Calergi
+dal 1° settembre al 14 giugno:
+ore 15:30 - 2:45
+ore 15:30 - 3:15 sabato e prefestivi
+
+dal 15 giugno al 31 agosto:
+ore 16:00 - 2:45
+ore 16:00 - 3:15 sabato e prefestivi</string>
+	</dict>
+	<dict>
+		<key>titolo</key>
+		<string>PUNTO BANCO CARTE IN MANO</string>
+		<key>immagine</key>
+		<string>superpuntobanco.jpg</string>
+		<key>main</key>
+		<string>Premessa: la variante mantiene inalterate le regole del gioco e si rimanda quindi al regolamento generale del Casinò di Venezia che norma il Punto Banco.
+
+Le carte a Punto possono essere lette dal giocatore.
+
+Il Dealer, dopo aver chiuso il gioco pronunciando la frase “Rien ne va plus”, estrae dal sabot, una dopo l’altra, quattro carte coperte (distribuzione), attribuendo la prima e la terza a destra a Punto, la seconda e la quarta a sinistra a Banco.
+
+Terminata la stesura, raccoglie le due carte che giocano per il Punto e le posiziona, senza scoprirle, sul tavolo dinanzi al cliente che in quella mano ha puntato a Punto la somma più elevata. In caso di parità di puntate, il Dealer dà priorità secondo “l’ordine dei giocatori”, partendo dal possessore del “Bottone” la cui funzione è determinare l’ordine di precedenza nella lettura delle carte. Il “Bottone”, assegnato alla postazione n. 1 all’inizio del gioco, viene passato al giocatore successivo al termine di ogni colpo, escluso il “Colpo in Bianco”.
+
+Se nessun giocatore scommette a Punto, la mano viene completata dal Dealer.
+
+Le carte assegnate vanno lette tenendole appoggiate al tappeto.
+
+Il giocatore a cui vengono assegnate le carte deve scoprirle immediatamente se ha conseguito il punteggio di 8 o 9 (battuta), lasciarle coperte e chiedere carta se ha un punteggio che va da 0 a 5, lasciarle coperte e restare se ha totalizzato 6 o 7. Come è indicato nella tabella della Regola.
+
+La richiesta di una terza carta o di restare deve essere espressa chiaramente dal giocatore dichiarando “carta” o “no carta”.
+
+Dopo la dichiarazione del giocatore a Punto, il Dealer scopre le sue carte e chiude il suo gioco rispettando la tabella della Regola. Il giocatore a Punto deve scoprire le sue carte evidenziando il punteggio ottenuto. Il Dealer indica la casella vincente, annunciando prima il punteggio a Banco e poi quello a Punto.
+
+Il punteggio è ottenuto scartando le decine dalla somma dei valori delle singole carte. Gli assi valgono un punto, le figure e i dieci valgono zero e le altre carte hanno valore nominale.
+
+In caso di parità delle due combinazioni, il colpo è dichiarato nullo e vengono pagate le puntate su Égalité.
+
+In nessun caso sono concesse scelte arbitrarie da parte del giocatore a Punto che deve obbligatoriamente attenersi alla tabella della Regola. In caso di errore da parte del Dealer o del giocatore, il colpo deve essere ricostruito alla regola alla presenza dell’Ispettore di Gioco e dell’Ispettore Comunale.</string>
+		<key>regola</key>
+		<array>
+			<dict>
+				<key>GESTIONE DEL GIOCO</key>
+				<string>Articolo 1
+
+Se l’impiegato estrae per errore una carta di troppo e questa non viene vista, il gioco si svolge alla Regola, la carta estratta per errore viene sistemata temporaneamente sotto il sabot ed è rimessa in gioco per la mano successiva. Se invece viene vista, non è bruciata ma utilizzata per il successivo colpo, da svolgersi “in Bianco”, ovvero senza puntate. Il Dealer deve annunciare “colpo in Bianco”.
+
+Nel caso in cui la prima carta della mano sia visibile all’interno del sabot questa non viene bruciata. L’impiegato effettua “un colpo in Bianco”, come nel caso precedente.
+
+Se una qualunque delle rimanenti carte di una mano dovesse essere visibile, il gioco procede regolarmente e tale carta è considerata valida.
+
+Se il Dealer scopre erroneamente una o più carte nel corso della distribuzione, essendo il gioco già chiuso, la mano prosegue regolarmente, e il colpo ritenuto valido.
+
+Articolo 2
+
+Se più carte dovessero uscire dal sabot aderenti tra loro, il Dealer, se possibile, deve ripristinare il corretto ordine d’uscita, in caso contrario le carte uscite devono essere bruciate.
+
+Articolo  3
+
+La carta che cade a terra durante lo svolgimento della partita deve essere raccolta dal personale e rimessa in gioco. Se a cadere è la prima carta di una mano, le puntate devono essere ritirate e la mano giocata “in Bianco”.
+
+Articolo  4
+
+Le carte sgualcite o macchiate devono essere sostituite anche durante la partita.
+
+Alla fine di ogni taglia, l’Ispettore di Gioco potrà decidere di sostituire i sei mazzi (sixain).
+
+Articolo 5
+
+Quando dal sabot esce la mascherina, il Dealer annuncia “Ultimo colpo della taglia”. Se l’ultimo colpo inizia con la mascherina, il Dealer dichiara: “Ultimo colpo della taglia, minimo sette carte o nullo”. In tal caso il Dealer, prima di pagare o di riscuotere, deve estrarre dal sabot le carte rimanenti. Se le carte in tavola sono meno di sette, il colpo è annullato senza possibilità di reclamo.
+
+Articolo 6
+
+Se, nel distribuire le carte, il Dealer inverte l’ordine di emissione assegnando a Banco una o due carte del Punto o viceversa, la distribuzione va rettificata in presenza dell’Ispettore di Gioco. Se il colpo non è chiaramente ricostruibile, viene annullato bruciando le carte uscite.
+
+Articolo 7
+
+Se il Dealer, nel distribuire le carte a Punto e a Banco, attribuisce un numero maggiore o minore delle due carte regolamentari, il colpo viene ricostruito alla presenza dell’Ispettore di Gioco. Se il colpo non è chiaramente ricostruibile, viene annullato bruciando le carte uscite.
+
+Articolo 8
+
+Se il Dealer assegna a Punto o a Banco una terza carta non dovuta in virtù della regola, il colpo viene ricostruito alla presenza dell’Ispettore di Gioco. Il Dealer provvede a utilizzare eventuali carte uscite in più per un colpo in “Bianco”.
+
+Articolo 9
+
+Se il Dealer annuncia un punteggio diverso da quello effettivo, rettifica subito l’errore con la formula “Le carte parlano”.
+
+Articolo 10
+
+Il colpo si ritiene esaurito dopo che le carte sono state bruciate. Ogni eventuale controversia successiva viene risolta dall’Ispettore di Gioco.
+
+Articolo 11
+
+È consentita un’unica puntata per postazione, a Punto o a Banco, oltre all’eventuale puntata su Égalité.
+
+Articolo 12
+
+Le puntate devono essere individuali e rappresentate da gettoni della Casa da Gioco. Le eventuali scommesse effettuate con banconote sono immediatamente sostituite dal Dealer con gettoni della Casa da Gioco.
+
+Articolo 13
+
+I posti al tavolo vengono assegnati, previa prenotazione, dall’Ispettore di Gioco o dal Capo Isola.
+
+È vietato sedersi a un posto segnato, ovvero temporaneamente libero. Il giocatore che si assenta dal tavolo senza aver segnato il posto, perde il diritto allo stesso, che può essere riassegnato solo dall’Ispettore di Gioco o dal Capo Isola.
+
+Un giocatore in piedi può temporaneamente partecipare al gioco a una postazione libera, però se la puntata è a Punto “ non legge le carte”.
+
+Articolo 14
+
+L’Ispettore di Gioco, in qualsiasi momento della taglia, può aumentare o diminuire il minimo e il massimo delle puntate. Ha inoltre facoltà di sospendere la partita senza fornire nessun preavviso o motivazione.
+
+Articolo 15
+
+Le puntate e le vincite non ritirate saranno trattate conformemente alle disposizioni della Direzione.
+
+Articolo  16
+
+Il presente regolamento è soggetto a modifiche e integrazioni migliorative. Nei casi non previsti vale la decisione inappellabile della Direzione Giochi.
+
+PUNTO	BANCO
+RICEVE CARTA	RICEVE CARTA
+NON RICEVE CARTA
+
+se a Punto viene assegnato 8
+
+NON RICEVE CARTA
+
+se a Punto viene assegnato 1-8-9-10
+
+RICEVE CARTA
+
+se a Punto viene assegnato 4-5-6-7
+
+NON RICEVE CARTA	
+RICEVE CARTA
+
+se a Punto viene assegnato 6-7
+
+NON RICEVE CARTA
+
+BATTUTA
+
+(né Banco né Punto ricevono carta)
+
+BATTUTA
+
+(né Banco né Punto ricevono carta)
+
+Il punteggio massimo è 9.
+
+Vince la casella che realizza il punteggio più alto.
+
+Le carte mantengono il loro valore facciale (asso = 1, figure = 10).
+
+Per ottenere il punteggio si sommano i valori delle carte e si scartano le decine (es.: 8+5=3).</string>
+			</dict>
+		</array>
+		<key>immagine_tavolo</key>
+		<string></string>
+		<key>office</key>
+		<array>
+			<string>VE</string>
+			<string>CN</string>
+		</array>
+		<key>probabilita</key>
+		<string></string>
+		<key>orari</key>
+		<string>Ca&apos; Noghera
+dal 1° settembre al 14 giugno:
+ore 15:30 - 3:00
+ore 15:30 - 3:30 sabato e prefestivi
+
+dal 15 giugno al 31 agosto:
+ore 16:00 - 3:00
+ore 16:00 - 3:30 sabato e prefestivi
+
+Ca&apos; Vendramin Calergi
+dal 1° settembre al 14 giugno:
+ore 15:30 - 2:45
+ore 15:30 - 3:15 sabato e prefestivi
+
+dal 15 giugno al 31 agosto:
+ore 16:00 - 2:45
+ore 16:00 - 3:15 sabato e prefestivi</string>
+	</dict>
+	<dict>
+		<key>titolo</key>
+		<string>BLACK JACK</string>
+		<key>immagine</key>
+		<string>black_jack.jpg</string>
+		<key>main</key>
+		<string>Il gioco si svolge tra il banco rappresentato dal Casinò e i giocatori. Vince chi realizza il punteggio più alto, non superiore al 21, determinato dalla somma dei valori delle carte ricevute inizialmente o richieste successivamente. Ogni giocatore (player) conduce una partita autonoma adottando di volta in volta varie strategie.
+
+Dove si può giocare?
+Sia a Ca&apos; Vendramin Calergi che a Ca&apos; Noghera, le due sedi del Casinò di Venezia, è possibile giocare a Black Jack in sale e room che ospitano questo celebre gioco.</string>
+		<key>regola</key>
+		<array>
+			<dict>
+				<key>IL GIOCO</key>
+				<string>Al Black Jack vengono utilizzati sei mazzi di cinquantadue carte da gioco formati da tredici carte per ognuno dei quattro semi (Cuori - Quadri - Fiori - Picche) così composti: un Asso (Ace), nove carte numerate in ordine crescente da 2 a 10, un Fante (Jack), una Donna (Queen) e un Re (King). L’Asso vale 1 o 11 punti, a scelta, determinando il punteggio più favorevole, le figure 10 punti, le altre il loro valore nominale.
+ 
+
+Il tavolo ha la forma di un semicerchio. Da un lato siede il banchiere (Dealer) mentre di fronte prendono posto sette giocatori in corrispondenza di altrettante postazioni: ognuna di queste comprende tre cerchietti per un totale di ventuno clienti (sette seduti e quattordici in piedi).
+
+
+I giocatori seduti puntando sul primo cerchietto (di colore rosso posizionato più vicino al Dealer), diventano titolari di una postazione (box holder), e con le loro decisioni vincolano il gioco di coloro che puntano nei due cerchietti rimasti liberi. Questi ultimi non possono influenzare per nessun motivo i vari titolari o interferire nelle loro scelte.
+
+
+Le giocate terminano nel momento in cui il Dealer, annunciando “Rien ne va plus”, sfila la prima carta dal sabot: dopo questo invito, nessuna puntata può essere aggiunta, tolta o spostata.
+
+
+Il banchiere procedendo da sinistra verso destra distribuisce una carta scoperta in ogni postazione giocata assegnando l’ultima al banco, effettua poi un secondo giro di carte scoperte, una per ogni postazione nello stesso ordine della prima, senza però attribuirla a sé stesso.
+
+
+Il cliente dopo aver preso visione delle proprie carte può decidere se “rimanere” o “sviluppare” il gioco rispettando delle semplici regole: quando il punteggio raggiunto è inferiore o pari a 11 ha l’obbligo di superarlo chiamando almeno un’altra carta, quando arriva al 21 si deve fermare, in tutti gli altri casi la richiesta è libera; se però oltrepassa il 21 “sballa” e per quella mano non ha più la possibilità di rientrare in gioco. Cominciando dalla sua sinistra, postazione per postazione, il Dealer, leggendo il punteggio, inviterà ogni titolare a manifestare il suo gioco. La risposta dovrà essere inequivocabile: “carta” o “no carta”.
+
+
+Quando tutti hanno fatto il proprio gioco il Dealer deve portare a termine il suo, applicando obbligatoriamente “la regola del banco”: se ha un punteggio fino a 16 si attribuisce una o più carte per superarlo, se raggiunge o oltrepassa il 17 si ferma. Se va oltre al 21 la sua mano è perdente, e si conclude con il pagamento di tutte le puntate rimaste.
+
+
+Il Dealer, definiti tutti i punteggi, li confronta con il proprio: procedendo da destra verso sinistra, postazione per postazione, paga le combinazioni superiori alla sua, ritira quelle inferiori e lascia quelle in parità. In caso di vincita il premio è alla pari.
+
+
+Il giocatore che riceve con le due carte iniziali Asso e figura oppure Asso e 10 forma il “Black Jack”: questa combinazione vince sul 21 ed è pagata 3 a 2, se anche il banco realizza “Black Jack” la mano viene considerata in parità. Il “Black Jack” determina sempre in 11 punti il valore dell’asso, pertanto non è consentito richiedere l’attribuzione di altre carte.</string>
+			</dict>
+			<dict>
+				<key>VARIANTI DEL GIOCO</key>
+				<string>RADDOPPIO (Double - Down)
+
+Il giocatore titolare di postazione dopo aver ricevuto le prime due carte, indipendentemente dal punteggio ottenuto, può decidere di raddoppiare la propria puntata. In questo caso il Dealer posiziona l’importo ricevuto sopra alla puntata iniziale e assegna una sola carta, che viene sistemata perpendicolarmente rispetto alle altre due. I giocatori che hanno puntato sulla postazione non sono obbligati a raddoppiare la posta, ma devono accettare l’attribuzione di una sola carta.
+
+DIVISIONE (Splitting)
+
+Se le prime due carte ricevute sono di pari valore (due 3, due Jack, un Re e un 10 ecc.) il titolare di postazione ha la possibilità di dividerle (Split) conducendo il gioco in due mani separate e indipendenti.
+Il Dealer dispone le due carte vicine tra loro, una parallela all’altra, posizionando accanto alla posta iniziale il medesimo importo consegnato dal cliente. Se con la terza carta ricevuta forma un’altra coppia il giocatore può effettuare un’ultima divisione aggiungendo un’ulteriore puntata sempre dello stesso valore.
+Dopo aver diviso due figure, due 10 oppure figura e 10 il titolare di postazione, ricevendo un asso, ha la facoltà di farlo valere 1 o 11 punti: se decide per il valore di 1, determinando il punteggio totale in 11 punti, può richiedere una o più carte o raddoppiare. 
+
+DIVISIONE DI 2 ASSI (Splitting 2 Ace)
+
+Nella divisione di 2 Assi il Dealer attribuisce una sola carta per ciascuno di essi, sistemata perpendicolarmente, senza altre possibilità di gioco. Se la carta è un 10 o una figura, il punteggio realizzato non è “Black Jack” ma solamente “21”.
+Nella divisione la decisione del titolare di postazione è vincolante per gli altri giocatori.
+
+ASSICURAZIONE (Insurance)
+
+Nel caso in cui il Dealer si attribuisca un Asso come prima carta, viene offerta ai giocatori l’opportunità di scommettere sull’eventuale “Black Jack” realizzato dal banco. Questa scelta viene chiamata “Assicurazione”, l’adesione è libera e non è vincolata alla decisione del titolare di postazione.
+Il giocatore che si assicura depone sulla linea con la scritta “Insurance”, davanti alla propria postazione, un importo in gettoni il cui valore non può superare la metà della puntata iniziale. Se il Dealer realizza “Black Jack” paga le “Assicurazioni” 2 a 1 (gli eventuali “Black Jack” non possono essere assicurati, pertanto pareggiano), tutte le altre puntate sono perdenti. Se invece non forma il “Black Jack” le assicurazioni perdono subito, quindi, se non è già determinato, il Dealer completa il punto del banco operando poi contestualmente su ogni casella. 
+
+BLACK JACK ALLA PARI
+
+Quando la prima carta del Dealer è un Asso, figura o 10, ogni giocatore in possesso di “Black Jack”, anche se non è titolare di postazione, può richiedere l’immediato pagamento ricevendo un importo pari alla puntata.</string>
+			</dict>
+			<dict>
+				<key>REGOLE GENERALI</key>
+				<string>• Ogni titolare decide solo su una postazione; se al tavolo ve ne sono alcune di libere ha la possibilità di giocare e decidere momentaneamente anche su queste. Qualora venissero occupate perde questo diritto.
+
+• Il giocatore non può toccare le carte per nessun motivo.
+
+• Nel caso in cui una puntata sia inferiore al minimo del tavolo, attribuita la prima carta alla prima postazione, non potrà più essere integrata e per quella mano sarà accettata come valida.
+
+• Se, in caso di raddoppio, l’importo aggiunto dal cliente fosse inferiore a quello puntato, attribuita la carta, non potrà più essere integrato e sarà considerato valido; l’eventuale pagamento corrisponderà all’importo giocato. Se invece dovesse superare quello puntato, in caso di vincita, l’importo eccedente la somma iniziale non sarà pagato, mentre se perdente verrà restituito.
+
+• Al tavolo può sedere solo chi gioca. Se al tavolo è presente un solo cliente, per poter giocare “solo contro il banco” deve puntare in almeno due postazioni.
+
+• Le puntate minime e massime sono evidenziate sui singoli tavoli da gioco mediante appositi cartelli; gli importi sono strettamente vincolanti per il giocatore, che non può mai superarli, neppure con l’intervento di terzi; la vincita eccedente realizzata superando il massimo consentito non sarà pagata e la differenza della puntata restituita al cliente.
+
+• La soluzione di eventuali controversie è demandata alla decisione inappellabile della Direzione Giochi.</string>
+			</dict>
+		</array>
+		<key>immagine_tavolo</key>
+		<string>img_blackjack.jpg</string>
+		<key>office</key>
+		<array>
+			<string>VE</string>
+			<string>CN</string>
+		</array>
+		<key>probabilita</key>
+		<string>Sei mazzi
+hold: 1,72
+percentuale che rimane a favore della casa da gioco sul volume del giocato.
+
+rtp: 98,28
 (Return to player): percentuale che viene restituita in vincite al giocatore.</string>
 		<key>orari</key>
 		<string>Ca&apos; Noghera

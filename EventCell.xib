@@ -30,7 +30,7 @@
                         <color key="backgroundColor" red="0.058823529409999999" green="0.79215686269999996" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titolo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYy-1Z-RfM">
-                        <rect key="frame" x="16" y="143" width="244" height="21"/>
+                        <rect key="frame" x="16" y="143" width="255" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="Jxp-Zh-Ml6"/>
                         </constraints>
@@ -39,7 +39,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="intro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qr-Kt-yu4">
-                        <rect key="frame" x="16" y="164" width="244" height="21"/>
+                        <rect key="frame" x="16" y="164" width="255" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="MQO-Mj-dvk"/>
                         </constraints>
@@ -47,37 +47,6 @@
                         <color key="textColor" red="0.42412159970000002" green="0.42412159970000002" blue="0.42412159970000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lkY-2r-gQG" customClass="CSAnimationView">
-                        <rect key="frame" x="268" y="144" width="25" height="36"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IdC-6L-Fxa">
-                                <rect key="frame" x="0.0" y="0.0" width="25" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="R1E-2n-NIO"/>
-                                    <constraint firstAttribute="width" constant="25" id="f24-SA-EXO"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="micro"/>
-                                <connections>
-                                    <action selector="speaking:" destination="GDo-Bt-uY6" eventType="touchUpInside" id="6e7-kd-AmA"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="IdC-6L-Fxa" firstAttribute="top" secondItem="lkY-2r-gQG" secondAttribute="top" id="0AK-HK-wnQ"/>
-                            <constraint firstAttribute="height" constant="36" id="2Wb-PE-uZ7"/>
-                            <constraint firstAttribute="width" constant="25" id="4ah-Q0-5rj"/>
-                            <constraint firstAttribute="trailing" secondItem="IdC-6L-Fxa" secondAttribute="trailing" id="eoc-zP-fmD"/>
-                        </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="type" value="pop"/>
-                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
-                                <real key="value" value="0.5"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
-                                <real key="value" value="0.5"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8L-9A-VeV" customClass="Dove" customModule="Casino__di_Venezia" customModuleProvider="target">
                         <rect key="frame" x="16" y="190" width="25" height="25"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -113,42 +82,48 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ar4-sV-iNu" customClass="SpringView" customModule="Spring">
-                        <rect key="frame" x="39" y="31" width="240" height="128"/>
-                        <color key="backgroundColor" red="0.0" green="1" blue="0.89105610589999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciG-J5-hoU" customClass="SpringButton" customModule="Spring">
+                        <rect key="frame" x="276" y="143" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="ECB-Ki-xVq"/>
+                            <constraint firstAttribute="height" constant="35" id="RoR-yd-BgH"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
-                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideDown"/>
-                            <userDefinedRuntimeAttribute type="number" keyPath="force">
-                                <real key="value" value="0.0"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                <real key="value" value="1"/>
                             </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeOut"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="repeatCount">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="squeezeLeft"/>
+                            <userDefinedRuntimeAttribute type="string" keyPath="curve" value="easeIn"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                         </userDefinedRuntimeAttributes>
-                    </view>
+                        <connections>
+                            <action selector="micro_speaking:" destination="GDo-Bt-uY6" eventType="touchUpInside" id="iEC-Vm-7mI"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="lkY-2r-gQG" firstAttribute="top" secondItem="kAx-bd-amr" secondAttribute="bottom" constant="6" id="1lp-9h-ITh"/>
-                <constraint firstItem="Ar4-sV-iNu" firstAttribute="top" secondItem="GDo-Bt-uY6" secondAttribute="top" constant="31" id="6CO-xp-nHT"/>
+                <constraint firstItem="ciG-J5-hoU" firstAttribute="leading" secondItem="wYy-1Z-RfM" secondAttribute="trailing" constant="5" id="4dM-rj-Eev"/>
                 <constraint firstAttribute="trailing" secondItem="kAx-bd-amr" secondAttribute="trailing" id="91I-ci-AkT"/>
-                <constraint firstAttribute="trailingMargin" secondItem="lkY-2r-gQG" secondAttribute="trailing" constant="10" id="9lg-VT-RvJ"/>
                 <constraint firstItem="A8L-9A-VeV" firstAttribute="leading" secondItem="3qr-Kt-yu4" secondAttribute="leading" id="CdQ-Vw-zbW"/>
                 <constraint firstItem="bpT-dN-USl" firstAttribute="leading" secondItem="Ea7-63-BVg" secondAttribute="trailing" constant="5" id="FNS-Hj-0v8"/>
                 <constraint firstItem="kAx-bd-amr" firstAttribute="top" secondItem="GDo-Bt-uY6" secondAttribute="top" id="Hnp-HH-IB4"/>
+                <constraint firstItem="ciG-J5-hoU" firstAttribute="leading" secondItem="3qr-Kt-yu4" secondAttribute="trailing" constant="5" id="JKZ-9Y-Y25"/>
                 <constraint firstItem="Lch-sS-stu" firstAttribute="leading" secondItem="A8L-9A-VeV" secondAttribute="trailing" constant="5" id="KMv-Ta-czj"/>
                 <constraint firstItem="bpT-dN-USl" firstAttribute="leading" secondItem="Ea7-63-BVg" secondAttribute="trailing" constant="5" id="PAC-3f-hec"/>
-                <constraint firstAttribute="trailing" secondItem="Ar4-sV-iNu" secondAttribute="trailing" constant="40" id="PIh-F7-rmI"/>
                 <constraint firstItem="Ea7-63-BVg" firstAttribute="leading" secondItem="Lch-sS-stu" secondAttribute="trailing" constant="5" id="PNC-MV-uaT"/>
                 <constraint firstItem="3qr-Kt-yu4" firstAttribute="leading" secondItem="GDo-Bt-uY6" secondAttribute="leadingMargin" id="PV7-XF-fqw"/>
                 <constraint firstItem="A8L-9A-VeV" firstAttribute="top" secondItem="3qr-Kt-yu4" secondAttribute="bottom" constant="5" id="QMr-FO-z6Q"/>
-                <constraint firstItem="Ar4-sV-iNu" firstAttribute="leading" secondItem="GDo-Bt-uY6" secondAttribute="leading" constant="39" id="RJa-Bh-nw7"/>
-                <constraint firstItem="lkY-2r-gQG" firstAttribute="leading" secondItem="wYy-1Z-RfM" secondAttribute="trailing" constant="8" id="UVc-Xu-0pr"/>
                 <constraint firstItem="Ea7-63-BVg" firstAttribute="top" secondItem="A8L-9A-VeV" secondAttribute="top" id="VTl-ap-IVx"/>
-                <constraint firstItem="3qr-Kt-yu4" firstAttribute="top" secondItem="Ar4-sV-iNu" secondAttribute="bottom" constant="5" id="Weq-7r-UlL"/>
                 <constraint firstItem="wYy-1Z-RfM" firstAttribute="leading" secondItem="GDo-Bt-uY6" secondAttribute="leadingMargin" id="Wij-f1-Lh9"/>
+                <constraint firstItem="ciG-J5-hoU" firstAttribute="top" secondItem="kAx-bd-amr" secondAttribute="bottom" constant="5" id="XWu-lS-LHr"/>
                 <constraint firstItem="kAx-bd-amr" firstAttribute="leading" secondItem="GDo-Bt-uY6" secondAttribute="leading" id="YBH-hc-QSh"/>
-                <constraint firstItem="lkY-2r-gQG" firstAttribute="leading" secondItem="3qr-Kt-yu4" secondAttribute="trailing" constant="8" id="aWC-Kz-L0C"/>
                 <constraint firstItem="Ea7-63-BVg" firstAttribute="leading" secondItem="Lch-sS-stu" secondAttribute="trailing" constant="5" id="d3f-ky-pjc"/>
+                <constraint firstAttribute="trailing" secondItem="ciG-J5-hoU" secondAttribute="trailing" constant="8" id="eiG-zA-ldg"/>
                 <constraint firstAttribute="trailingMargin" secondItem="bpT-dN-USl" secondAttribute="trailing" constant="5" id="fCC-qA-PLo"/>
                 <constraint firstAttribute="bottomMargin" secondItem="A8L-9A-VeV" secondAttribute="bottom" constant="5" id="i3e-u9-W4V"/>
                 <constraint firstItem="Lch-sS-stu" firstAttribute="top" secondItem="A8L-9A-VeV" secondAttribute="top" id="iVM-Rb-HwB"/>
@@ -162,14 +137,13 @@
                 <outlet property="QuandoLabel" destination="bpT-dN-USl" id="yk3-lp-T0F"/>
                 <outlet property="image" destination="kAx-bd-amr" id="afR-k6-l7B"/>
                 <outlet property="intro" destination="3qr-Kt-yu4" id="DM2-kW-oTj"/>
-                <outlet property="speaking" destination="IdC-6L-Fxa" id="xEp-8K-fhC"/>
+                <outlet property="micro" destination="ciG-J5-hoU" id="7bi-ss-XPK"/>
                 <outlet property="titolo" destination="wYy-1Z-RfM" id="Anx-Tx-58A"/>
                 <outlet property="titoloHeight" destination="Jxp-Zh-Ml6" id="pOk-kS-N9d"/>
             </connections>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="micro" width="32" height="58"/>
         <image name="sediciNoni.png" width="1000" height="560"/>
     </resources>
 </document>

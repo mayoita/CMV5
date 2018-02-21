@@ -1,15 +1,30 @@
 PODS:
-  - Bolts (1.8.4):
-    - Bolts/AppLinks (= 1.8.4)
-    - Bolts/Tasks (= 1.8.4)
-  - Bolts/AppLinks (1.8.4):
+  - Bolts (1.9.0):
+    - Bolts/AppLinks (= 1.9.0)
+    - Bolts/Tasks (= 1.9.0)
+  - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
-  - Bolts/Tasks (1.8.4)
+  - Bolts/Tasks (1.9.0)
   - Canvas (0.1.2)
-  - FBSDKCoreKit (4.24.0):
+  - FacebookCore (0.3.0):
+    - Bolts (~> 1.8)
+    - FBSDKCoreKit (~> 4.27)
+  - FacebookLogin (0.3.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.3)
+    - FBSDKCoreKit (~> 4.27)
+    - FBSDKLoginKit (~> 4.27)
+  - FacebookShare (0.3.0):
+    - Bolts (~> 1.8)
+    - FacebookCore (~> 0.3)
+    - FBSDKCoreKit (~> 4.27)
+    - FBSDKShareKit (~> 4.27)
+  - FBSDKCoreKit (4.30.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.24.0):
+  - FBSDKLoginKit (4.30.0):
     - FBSDKCoreKit
+  - FBSDKShareKit (4.30.0):
+    - FBSDKCoreKit (~> 4.30.0)
   - Firebase/Auth (4.0.3):
     - Firebase/Core
     - FirebaseAuth (= 4.0.0)
@@ -80,7 +95,9 @@ PODS:
 
 DEPENDENCIES:
   - Canvas (~> 0.1.2)
-  - FBSDKLoginKit
+  - FacebookCore
+  - FacebookLogin
+  - FacebookShare
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
@@ -104,10 +121,14 @@ CHECKOUT OPTIONS:
     :git: https://github.com/MengTo/Spring.git
 
 SPEC CHECKSUMS:
-  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
-  FBSDKCoreKit: f8c9eb0dd34a9cd277c7b60da4b32226d142502d
-  FBSDKLoginKit: 1214c6d5a1c4995b694d8db8a9ba6910c6028acf
+  FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
+  FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
+  FacebookShare: 0469964297ebd75f052be2c5083389a4208e82b7
+  FBSDKCoreKit: 7c4bba2877781a131ab5d54c0a78c405d4307b62
+  FBSDKLoginKit: fe7a7e82373dc5daad92e1623219e86224ab1fb1
+  FBSDKShareKit: a9427574b51bde4f437262c3f118c4ccfddeef6c
   Firebase: 9e33fdfbca37cab635c693883caa90a4475b842b
   FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
   FirebaseAuth: ebb6abcbabae00fc47446d690c19ce68d8484fde
@@ -126,6 +147,6 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   Spring: 48aad470f3ead043b2da98b64e0bf0630b7ebc42
 
-PODFILE CHECKSUM: 14e779fd41d620a5ecf8dadd9141bf7de5b596f8
+PODFILE CHECKSUM: 522acc09de885f61420e748a5cfff607565b38b0
 
 COCOAPODS: 1.4.0

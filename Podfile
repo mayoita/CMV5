@@ -24,7 +24,10 @@ target 'Casinò di Venezia' do
 
   
 # These are pods used for the auth providers.
-  pod 'FBSDKLoginKit'
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
+
 
 	
   target 'Casinò di VeneziaTests' do

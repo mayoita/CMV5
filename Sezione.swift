@@ -38,6 +38,7 @@ class Sezione: UICollectionViewCell,UICollectionViewDelegateFlowLayout,UICollect
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.register(UINib(nibName: "EventCell", bundle: nil), forCellWithReuseIdentifier: "EventCellId")
         cv.register(UINib(nibName: "GiochiCell", bundle: nil), forCellWithReuseIdentifier: "giochiCellId")
+        
         //cv.register(EventListCell.self, forCellWithReuseIdentifier: "EventCell")
         cv.dataSource = self
         cv.delegate = self
@@ -99,7 +100,7 @@ class Sezione: UICollectionViewCell,UICollectionViewDelegateFlowLayout,UICollect
             } else {
                 cell.QuandoLabel.text = myDate
             }
-    
+            
             cell.titolo.text = feedArray[indexPath.row].Name
             cell.intro.text = feedArray[indexPath.row].Description
             cell.DoveLabel.text = sedi[feedArray[indexPath.row].office]
@@ -176,7 +177,7 @@ class Sezione: UICollectionViewCell,UICollectionViewDelegateFlowLayout,UICollect
     func estimateRect(rect: CGRect, data: String) -> CGFloat {
         let size = CGSize(width: rect.width - 8 - 8 - 25 - 8, height: 1000)
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
-        let attributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 14)]
+        let attributes = [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14)]
         let estimateRect = NSString(string: data).boundingRect(with: size, options: options, attributes: attributes, context: nil)
         return estimateRect.size.height
     }
