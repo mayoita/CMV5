@@ -61,7 +61,7 @@ class GiochiCell: Sezione {
 
         
         cell.titolo.text = giochi![indexPath.row].titolo
-        cell.titolo.font = UIFont(name: "VeniceCasino-Regular", size: 16)
+        //cell.titolo.font = UIFont(name: "VeniceCasino-Regular", size: 18)
         cell.intro.text = giochi![indexPath.row].main
         cell.image.image = UIImage(named: giochi![indexPath.row].immagine)
         

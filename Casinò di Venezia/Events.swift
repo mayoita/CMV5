@@ -30,7 +30,7 @@ class Events: NSObject {
     var office: String
     var URL: String
     var URLBook: String
-    
+    var eventoOriginale: Events?
     override init() {
         self.Book = ""
         self.Description = ""
@@ -64,6 +64,7 @@ class Events: NSObject {
           office:String,
           URL:String,
           URLBook:String
+          
         
         ){
         self.Book = Book

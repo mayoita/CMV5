@@ -71,7 +71,7 @@ class MenuBar: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UIC
     }
     func setupHorizontalBar() {
         let horizontalBarView = UIView()
-        horizontalBarView.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        horizontalBarView.backgroundColor = StyleKit.oroScuro
         horizontalBarView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(horizontalBarView)
         
@@ -115,8 +115,8 @@ class MenuCell: UICollectionViewCell {
     func setupViews () {
         backgroundColor = StyleKit.oro
         addSubview(imageView)
-        addConstraintsWithFormnat(format: "H:[v0(28)]", views: imageView)
-        addConstraintsWithFormnat(format: "V:[v0(28)]", views: imageView)
+        addConstraintsWithFormnat(format: "H:[v0(40)]", views: imageView)
+        addConstraintsWithFormnat(format: "V:[v0(40)]", views: imageView)
         addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1, constant: 0))
         addConstraint(NSLayoutConstraint(item: imageView, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1, constant: 0))
     }

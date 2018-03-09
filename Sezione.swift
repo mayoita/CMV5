@@ -7,10 +7,10 @@
 //
 
 import UIKit
-
+let sedi:[String:String] = ["CN":"Ca' Noghera","VE":"Venezia"]
 class Sezione: UICollectionViewCell,UICollectionViewDelegateFlowLayout,UICollectionViewDelegate, UICollectionViewDataSource, UIViewControllerTransitioningDelegate {
     
-    var sedi:[String:String] = ["CN":"Ca' Noghera","VE":"Venezia"]
+    
     var feedArray = [Events]()
     let formatter = DateFormatter()
     

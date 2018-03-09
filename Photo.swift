@@ -29,40 +29,80 @@
  */
 
 import UIKit
+import Firebase
+import FirebaseStorage
 
-struct Photo {
+class Promo: NSObject {
   
-  var caption: String
-  var comment: String
-  var image: UIImage
-  
-  
-  init(caption: String, comment: String, image: UIImage) {
-    self.caption = caption
-    self.comment = comment
-    self.image = image
-  }
-  
-  init?(dictionary: [String: String]) {
-    guard let caption = dictionary["Caption"], let comment = dictionary["Comment"], let photo = dictionary["Photo"],
-      let image = UIImage(named: photo) else {
-        return nil
-    }
-    self.init(caption: caption, comment: comment, image: image)
-  }
 
-  static func allPhotos() -> [Photo] {
-    var photos = [Photo]()
-    guard let URL = Bundle.main.url(forResource: "Photos", withExtension: "plist"),
-      let photosFromPlist = NSArray(contentsOf: URL) as? [[String:String]] else {
-        return photos
-    }
-    for dictionary in photosFromPlist {
-      if let photo = Photo(dictionary: dictionary) {
-        photos.append(photo)
-      }
-    }
-    return photos
-  }
+  var databaseRef:DatabaseReference  = Database.database().reference()
+static let sharedInstance = Promo()
+  let appDelegate = UIApplication.shared.delegate as! AppDelegate
   
+
+
+    func caricaPromo(completion:  @escaping ([PromozioneStruct]) -> ()){
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        dateFormatter.locale = Locale.current
+        let promos = databaseRef.child("Promozioni")
+        promos.observe(.value, with: {(promoSnapshot)in
+            var promo = [PromozioneStruct]()
+            let promoDictionary = promoSnapshot.value as! NSDictionary
+            for(p) in promoDictionary {
+                let promoDic = p.value as! NSDictionary
+                
+                var Nome = ""
+                let NomeLocale = "Nome" + self.getLocale()
+                if (promoDic.value(forKey: NomeLocale) != nil) {
+                    Nome = promoDic.value(forKey: NomeLocale) as! String!
+                }
+                var Descrizione = ""
+                if (promoDic.value(forKey: "Descrizione") != nil) {
+                    Descrizione = promoDic.value(forKey: "Descrizione") as! String!
+                }
+                var image = ""
+                if (promoDic.value(forKey: "image") != nil) {
+                    let fileName = promoDic.value(forKey: "image") as! String!
+                    image = "https://firebasestorage.googleapis.com/v0/b/cmv-gioco.appspot.com/o/Promotions%2F" + fileName! + "?alt=media&token=b6d4d280-da7d-4428-a508-02db6a6ed526"
+                }
+                var QR = ""
+                if (promoDic.value(forKey: "QR") != nil) {
+                    QR = promoDic.value(forKey: "QR") as! String!
+                }
+                var Inizio = Date()
+                if (promoDic.value(forKey: "Inizio") != nil) {
+                    Inizio = dateFormatter.date(from: promoDic.value(forKey: "Inizio") as! String)! as! Date
+                }
+                var Fine = Date()
+                if (promoDic.value(forKey: "Fine") != nil) {
+                    Fine = dateFormatter.date(from: promoDic.value(forKey: "Fine") as! String)! as! Date
+                }
+                var Attiva = true
+                if (promoDic.value(forKey: "Attiva") != nil) {
+                    Attiva = promoDic.value(forKey: "Attiva") as! Bool!
+                }
+                var Sedi:[String] = []
+                if (promoDic.value(forKey: "Sedi") != nil) {
+                    Sedi = (promoDic.value(forKey: "Sedi")) as! [String]
+                }
+                if Attiva {
+                    promo.append(PromozioneStruct(nome: Nome, descrizione: Descrizione, image: image, qr: QR, inizio: Inizio, fine: Fine, attiva: Attiva, sedi: Sedi))
+                }
+                
+            }
+            completion(promo)
+        })
+       
+    }
+    func getLocale() -> String {
+        var locale = ""
+        if appDelegate.locale?.languageCode != "en" {
+            locale = (appDelegate.locale?.languageCode?.uppercased())!
+            return locale
+        }
+        
+        return locale
+    }
 }

@@ -34,7 +34,7 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate, CAA
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        corpo.font = UIFont(name: "Lato-Regular", size: 12)
+       
         titolo.font = UIFont(name: "VeniceCasino-Regular", size: 22)
         titolo.textColor = StyleKit.oro
         

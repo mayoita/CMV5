@@ -10,8 +10,18 @@ import UIKit
 //Utilizzato per creare un array di classi (array contenente le immagini generate da PaintCode da utilizzare nel Menu)
 
 public struct MyConstants{
-    static let immaginiSelezionate = [StyleKit.imageOfMic(imageSize: CGSize(width: 100, height: 100), highlited: true), StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true)]
-    static let immagini = [StyleKit.imageOfMic(), StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false)]
+    static let immaginiSelezionate = [StyleKit.imageOfEventi(imageSize: CGSize(width: 100, height: 100), highlited: true),
+                                      StyleKit.imageOfGiochi(imageSize: CGSize(width: 100, height: 100), highlited: true),
+                                      StyleKit.imageOfGiochiLista(imageSize: CGSize(width: 100, height: 100), highlited: true),
+                                      StyleKit.imageOfPromozioni(imageSize: CGSize(width: 100, height: 100), highlited: true),
+                                      StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: true),
+                                      StyleKit.imageOfHome(imageSize: CGSize(width: 100, height: 100), highlited: true)]
+    static let immagini = [StyleKit.imageOfEventi(imageSize: CGSize(width: 100, height: 100), highlited: false),
+                           StyleKit.imageOfGiochi(imageSize: CGSize(width: 100, height: 100), highlited: false),
+                           StyleKit.imageOfGiochiLista(imageSize: CGSize(width: 100, height: 100), highlited: false),
+                           StyleKit.imageOfPromozioni(imageSize: CGSize(width: 100, height: 100), highlited: false),
+                           StyleKit.imageOfEvents(imageSize: CGSize(width: 100, height: 100), highlited: false),
+                           StyleKit.imageOfHome(imageSize: CGSize(width: 100, height: 100), highlited: false)]
 }
 enum TipoController {
     case Evento
@@ -20,6 +30,16 @@ enum TipoController {
 enum nomeSedi: Int {
     case VE = 0
     case CN = 1
+}
+extension UIColor {
+    convenience init(colorWithHexValue value: Int, alpha:CGFloat = 1.0){
+        self.init(
+            red: CGFloat((value & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((value & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(value & 0x0000FF) / 255.0,
+            alpha: alpha
+        )
+    }
 }
 struct giochiDB: Codable {
     var immagine: String
@@ -45,6 +65,26 @@ func degreesToRadians (_ value:CGFloat) -> CGFloat {
 
 func radiansToDegrees (_ value:CGFloat) -> CGFloat {
     return value * 180.0 / CGFloat(Double.pi)
+}
+func isIPhoneX () -> Bool {
+    if UIDevice().userInterfaceIdiom == .phone {
+        switch UIScreen.main.nativeBounds.height {
+        case 1136:
+            //print("iPhone 5 or 5S or 5C")
+            return false
+        case 1334:
+            //print("iPhone 6/6S/7/8")
+            return false
+        case 1920, 2208:
+            //print("iPhone 6+/6S+/7+/8+")
+            return false
+        case 2436:
+            return true
+        default:
+            return false
+        }
+    }
+    return false
 }
 
 func dialogBezierPathWithFrame(_ frame: CGRect, arrowOrientation orientation: UIImageOrientation, arrowLength: CGFloat = 20.0) -> UIBezierPath {
@@ -199,3 +239,4 @@ extension EdgeInsetLabel {
         get { return textInsets.bottom }
     }
 }
+

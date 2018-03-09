@@ -20,6 +20,7 @@ target 'Casinò di Venezia' do
   pod 'FirebaseUI/Facebook'
   pod 'lottie-ios'
   pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
+  pod 'JTAppleCalendar', '~> 7.0'
 
 
   

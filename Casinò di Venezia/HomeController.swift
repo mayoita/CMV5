@@ -27,9 +27,10 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     let cellIdTornei = "cellIdTornei"
     let cellGiochi = "giochiCell"
     let cellPromo = "Promozione"
+    let cellCal = "Calendario"
     let appDelegate = UIApplication.shared.delegate
         as! AppDelegate
-    let titoli = ["Home".localized, "Eventi".localized, "Tornei".localized, "Promozioni".localized,"Giochi".localized,"Slot".localized]
+    let titoli = ["EVENTI".localized, "TORNEI".localized, "GIOCHI".localized, "PROMOZIONI".localized,"CALENDARIO".localized,"Slot".localized]
 
 
     
@@ -77,6 +78,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.register(TorneiCell.self, forCellWithReuseIdentifier: cellIdTornei)
         collectionView?.register(GiochiCell.self, forCellWithReuseIdentifier: cellGiochi)
         collectionView?.register(Promozioni.self, forCellWithReuseIdentifier: cellPromo)
+        collectionView?.register(UINib(nibName: "CalendarioView", bundle: nil), forCellWithReuseIdentifier: cellCal)
+       // collectionView?.register(Calendario.self, forCellWithReuseIdentifier: cellCal)
     }
     
     func refreshButtonImage() {
@@ -177,6 +180,8 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
             identifier = cellGiochi
         } else if indexPath.item == 3 {
             identifier = cellPromo
+        } else if indexPath.item == 4 {
+            identifier = cellCal
         } else {
             identifier = cellId
         }

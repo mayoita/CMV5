@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="R6c-F6-BEf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="slu-Nr-jMh">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,6 +13,12 @@
     <customFonts key="customFonts">
         <array key="Georgia.ttf">
             <string>Georgia</string>
+        </array>
+        <array key="Lato-Light.ttf">
+            <string>Lato-Light</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
         </array>
         <array key="venicecasinoregular.ttf">
             <string>VeniceCasino-Regular</string>
@@ -115,7 +121,7 @@
                                                 <constraint firstAttribute="width" constant="120" id="Ncr-JE-r3b"/>
                                                 <constraint firstAttribute="height" constant="21" id="aFO-GO-GkS"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -124,7 +130,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="YHT-qo-8T1"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="12"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -259,7 +265,7 @@
                                 <rect key="frame" x="16" y="299" width="343" height="348"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RWB-qo-ZxZ" customClass="Gradient" customModule="Casino__di_Venezia" customModuleProvider="target">
@@ -623,23 +629,116 @@
             </objects>
             <point key="canvasLocation" x="-36" y="856"/>
         </scene>
-        <!--Facebook View Controller-->
-        <scene sceneID="EDd-C7-jck">
+        <!--Promozione-->
+        <scene sceneID="uZD-7O-L3A">
             <objects>
-                <viewController id="R6c-F6-BEf" customClass="FacebookViewController" customModule="Casino__di_Venezia" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Promozione" id="0bS-YJ-vmo" customClass="Promozione" customModule="Casino__di_Venezia" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nZh-HZ-nXp"/>
-                        <viewControllerLayoutGuide type="bottom" id="YRz-Z1-K3R"/>
+                        <viewControllerLayoutGuide type="top" id="kFe-ce-omP"/>
+                        <viewControllerLayoutGuide type="bottom" id="G0c-Ca-2MJ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="T3b-i2-z1c">
+                    <view key="view" contentMode="scaleToFill" id="6wJ-Su-9wN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bq-Pn-VjO">
+                                <rect key="frame" x="21" y="20" width="303" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="CUY-nW-k8d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VeniceCasino-Regular" family="VeniceCasino" pointSize="20"/>
+                                <color key="textColor" red="0.51138651371002197" green="0.45663517713546753" blue="0.32183349132537842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zTR-Fn-4Mu">
+                                <rect key="frame" x="21" y="49" width="333" height="187.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zTR-Fn-4Mu" secondAttribute="height" multiplier="16:9" id="0k3-4e-apV"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KKI-ds-tic">
+                                <rect key="frame" x="21" y="446" width="333" height="216"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Jd-hD-41z">
+                                <rect key="frame" x="329" y="20" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="RVm-gm-rgC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="Th3-On-2PO"/>
+                                    <constraint firstAttribute="width" constant="25" id="lgC-jb-Sn9"/>
+                                    <constraint firstAttribute="height" constant="25" id="sZl-zg-szv"/>
+                                </constraints>
+                                <state key="normal" image="closeB"/>
+                                <connections>
+                                    <action selector="close:" destination="It4-n6-bD8" eventType="touchUpInside" id="83e-yF-xk1"/>
+                                    <action selector="close:" destination="0bS-YJ-vmo" eventType="touchUpInside" id="Qxn-79-zBJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pEa-c1-bN0">
+                                <rect key="frame" x="112.5" y="241.5" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="EhM-dV-zUD"/>
+                                    <constraint firstAttribute="height" constant="150" id="WN2-FP-Mpp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bX1-5p-4Ck">
+                                <rect key="frame" x="21" y="406" width="333" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="ASm-iN-4Xt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VeniceCasino-Regular" family="VeniceCasino" pointSize="14"/>
+                                <color key="textColor" red="0.51138651371002197" green="0.45663517713546753" blue="0.32183349132537842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dove" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ip1-VH-hfE">
+                                <rect key="frame" x="21" y="427" width="333" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="14" id="xfH-Ui-hke"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="VeniceCasino-Regular" family="VeniceCasino" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bX1-5p-4Ck" firstAttribute="leading" secondItem="6wJ-Su-9wN" secondAttribute="leadingMargin" constant="5" id="6ca-av-GyF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zTR-Fn-4Mu" secondAttribute="trailing" constant="5" id="9dc-yR-mzv"/>
+                            <constraint firstItem="pEa-c1-bN0" firstAttribute="top" secondItem="zTR-Fn-4Mu" secondAttribute="bottom" constant="5" id="Deq-ir-lQW"/>
+                            <constraint firstItem="4Jd-hD-41z" firstAttribute="top" secondItem="kFe-ce-omP" secondAttribute="bottom" id="Hzv-Dy-zgV"/>
+                            <constraint firstItem="ip1-VH-hfE" firstAttribute="top" secondItem="bX1-5p-4Ck" secondAttribute="bottom" constant="5" id="OtZ-mL-aIg"/>
+                            <constraint firstItem="KKI-ds-tic" firstAttribute="top" secondItem="ip1-VH-hfE" secondAttribute="bottom" constant="5" id="QcL-oW-Dd8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4Jd-hD-41z" secondAttribute="trailing" constant="5" id="SgA-rl-FuW"/>
+                            <constraint firstItem="9bq-Pn-VjO" firstAttribute="leading" secondItem="6wJ-Su-9wN" secondAttribute="leadingMargin" constant="5" id="TQw-p4-NHU"/>
+                            <constraint firstItem="4Jd-hD-41z" firstAttribute="leading" secondItem="9bq-Pn-VjO" secondAttribute="trailing" constant="5" id="VrG-pe-Dio"/>
+                            <constraint firstItem="ip1-VH-hfE" firstAttribute="leading" secondItem="6wJ-Su-9wN" secondAttribute="leadingMargin" constant="5" id="eRC-gC-eEH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bX1-5p-4Ck" secondAttribute="trailing" constant="5" id="jMi-39-SD7"/>
+                            <constraint firstItem="pEa-c1-bN0" firstAttribute="centerX" secondItem="zTR-Fn-4Mu" secondAttribute="centerX" id="kkE-6o-ic9"/>
+                            <constraint firstItem="G0c-Ca-2MJ" firstAttribute="top" secondItem="KKI-ds-tic" secondAttribute="bottom" constant="5" id="krN-Ux-99h"/>
+                            <constraint firstItem="KKI-ds-tic" firstAttribute="leading" secondItem="6wJ-Su-9wN" secondAttribute="leadingMargin" constant="5" id="lA5-fc-gaV"/>
+                            <constraint firstItem="zTR-Fn-4Mu" firstAttribute="top" secondItem="9bq-Pn-VjO" secondAttribute="bottom" constant="8" id="nRy-R6-PFP"/>
+                            <constraint firstItem="bX1-5p-4Ck" firstAttribute="top" secondItem="pEa-c1-bN0" secondAttribute="bottom" constant="14.5" id="q5Q-Cj-dl9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KKI-ds-tic" secondAttribute="trailing" constant="5" id="tEh-Ef-wjB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ip1-VH-hfE" secondAttribute="trailing" constant="5" id="vOn-xr-FXv"/>
+                            <constraint firstItem="zTR-Fn-4Mu" firstAttribute="leading" secondItem="6wJ-Su-9wN" secondAttribute="leadingMargin" constant="5" id="w82-PC-RfQ"/>
+                            <constraint firstItem="9bq-Pn-VjO" firstAttribute="top" secondItem="kFe-ce-omP" secondAttribute="bottom" id="wbe-mv-fS1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="altezzaQR" destination="WN2-FP-Mpp" id="NsY-yi-SvM"/>
+                        <outlet property="dove" destination="ip1-VH-hfE" id="AdV-O0-uSU"/>
+                        <outlet property="immagine" destination="zTR-Fn-4Mu" id="Mme-sW-EQv"/>
+                        <outlet property="qrimage" destination="pEa-c1-bN0" id="FsQ-kE-GLq"/>
+                        <outlet property="testo" destination="KKI-ds-tic" id="fgW-4m-vz9"/>
+                        <outlet property="titolo" destination="9bq-Pn-VjO" id="jpc-gO-SV4"/>
+                        <outlet property="validita" destination="bX1-5p-4Ck" id="OsA-UA-0BU"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pzO-9X-VNj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zjf-4x-Hna" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1346" y="-636"/>
+            <point key="canvasLocation" x="1069.5999999999999" y="-856.82158920539734"/>
         </scene>
         <!--Tornei Details-->
         <scene sceneID="ulD-L6-HDB">
@@ -720,7 +819,7 @@
                                 <rect key="frame" x="16" y="299" width="343" height="348"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dE5-lT-i4V" customClass="Gradient" customModule="Casino__di_Venezia" customModuleProvider="target">
@@ -923,7 +1022,7 @@
                                     <constraint firstAttribute="height" constant="150" id="4dG-P8-iMc"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" name="Lato-Light" family="Lato" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lF0-yS-pLJ">
@@ -956,7 +1055,7 @@
                                     <constraint firstAttribute="width" constant="70" id="XqX-DN-e2I"/>
                                     <constraint firstAttribute="height" constant="10" id="ncT-nn-OOH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="10"/>
                                 <color key="textColor" white="0.64260602680000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -966,7 +1065,7 @@
                                     <constraint firstAttribute="height" constant="10" id="met-tK-TbD"/>
                                     <constraint firstAttribute="width" constant="105" id="zNm-mZ-U3f"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="10"/>
                                 <color key="textColor" white="0.64260602680000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -976,7 +1075,7 @@
                                     <constraint firstAttribute="height" constant="10" id="bwd-te-eGb"/>
                                     <constraint firstAttribute="width" constant="95" id="uwm-sD-KGe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="10"/>
                                 <color key="textColor" white="0.64260602680000001" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>

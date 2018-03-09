@@ -26,7 +26,7 @@
 		222A9318203C6D7B0068E0D1 /* Photos.plist in Resources */ = {isa = PBXBuildFile; fileRef = 222A9317203C6D7B0068E0D1 /* Photos.plist */; };
 		222A931A203C6DA40068E0D1 /* Photos.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222A9319203C6DA40068E0D1 /* Photos.xcassets */; };
 		222A931C203C6E4D0068E0D1 /* Promozione.xib in Resources */ = {isa = PBXBuildFile; fileRef = 222A931B203C6E4D0068E0D1 /* Promozione.xib */; };
-		222A931F203D72670068E0D1 /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222A931E203D72670068E0D1 /* FacebookViewController.swift */; };
+		222CD7D82051575100A55F47 /* PromozioneStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222CD7D72051575100A55F47 /* PromozioneStruct.swift */; };
 		22419E9D1F1932F400F4735A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22419E9C1F1932F400F4735A /* SignInViewController.swift */; };
 		2252541D1F06EFA8005F1FF7 /* MapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2252541C1F06EFA8005F1FF7 /* MapsViewController.swift */; };
 		225254221F06F1E0005F1FF7 /* Venezia.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2252541E1F06F1E0005F1FF7 /* Venezia.gpx */; };
@@ -37,6 +37,7 @@
 		22630A1F1F0F98AE00168D1F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22630A1E1F0F98AE00168D1F /* Location.swift */; };
 		22630A251F0FBD9200168D1F /* PersonDetailMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22630A241F0FBD9200168D1F /* PersonDetailMapView.xib */; };
 		22630A271F0FBDAF00168D1F /* PersonDetailMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22630A261F0FBDAF00168D1F /* PersonDetailMapView.swift */; };
+		22678005204EE82D00435B11 /* CalendarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22678004204EE82D00435B11 /* CalendarImageView.swift */; };
 		226B3DEA2038A12000520E88 /* Probabilita.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226B3DE92038A12000520E88 /* Probabilita.swift */; };
 		226B3DEC2038A13100520E88 /* Probabilita.xib in Resources */ = {isa = PBXBuildFile; fileRef = 226B3DEB2038A13100520E88 /* Probabilita.xib */; };
 		226B3DEE203ACB2100520E88 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 226B3DED203ACB2000520E88 /* Lato-Regular.ttf */; };
@@ -54,6 +55,10 @@
 		229583A01EFD13AA00409D7A /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295839F1EFD13AA00409D7A /* Events.swift */; };
 		229AACCC202EFB7800644394 /* heart.json in Resources */ = {isa = PBXBuildFile; fileRef = 229AACCB202EFB7800644394 /* heart.json */; };
 		229AACCE202F0F9E00644394 /* Cuore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229AACCD202F0F9E00644394 /* Cuore.swift */; };
+		22AE94DE204584AC003FA951 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE94DD204584AC003FA951 /* CalendarCell.swift */; };
+		22AE94E020458727003FA951 /* Calendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE94DF20458727003FA951 /* Calendario.swift */; };
+		22AE94E220485FF4003FA951 /* CalendarioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE94E120485FF3003FA951 /* CalendarioView.xib */; };
+		22AE94E420495529003FA951 /* CalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE94E320495529003FA951 /* CalendarCell.xib */; };
 		22C3C301202CAA26004E4145 /* Tornei.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3C300202CAA26004E4145 /* Tornei.swift */; };
 		22C3C303202D9B53004E4145 /* TorneiDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3C302202D9B53004E4145 /* TorneiDetails.swift */; };
 		22C3C305203473CA004E4145 /* GiochiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3C304203473CA004E4145 /* GiochiCell.swift */; };
@@ -73,6 +78,11 @@
 		22E8A908202C68CF000C3CBE /* LoadDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E8A907202C68CF000C3CBE /* LoadDatabase.swift */; };
 		22E93AE11F0BF8D800675342 /* CasinoAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E93AE01F0BF8D800675342 /* CasinoAnnotationView.swift */; };
 		22EB73592024A43200759094 /* Quando.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EB73582024A43200759094 /* Quando.swift */; };
+		22EE37B420403D6E00D33D35 /* Promozione.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE37B320403D6E00D33D35 /* Promozione.swift */; };
+		22EE37C22040513500D33D35 /* CCSwipBackPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE37BE2040512F00D33D35 /* CCSwipBackPresentationController.swift */; };
+		22EE37C32040513500D33D35 /* CCZoomAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE37BF2040513000D33D35 /* CCZoomAnimatedTransitioning.swift */; };
+		22EE37C42040513500D33D35 /* CCZoomTransitioner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE37C02040513200D33D35 /* CCZoomTransitioner.swift */; };
+		22EE37C52040513500D33D35 /* CCZoomTransitionVCExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EE37C12040513300D33D35 /* CCZoomTransitionVCExtension.swift */; };
 		A34396063423EBBAC13846CC /* Pods_Casino__di_Venezia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F7BF60459BDF63750E622B8 /* Pods_Casino__di_Venezia.framework */; };
 		F6EAD3FB606CEFED596C5709 /* Pods_Casino__di_VeneziaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D50E0540626459F2E41608E /* Pods_Casino__di_VeneziaTests.framework */; };
 /* End PBXBuildFile section */
@@ -109,7 +119,7 @@
 		222A9317203C6D7B0068E0D1 /* Photos.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Photos.plist; sourceTree = "<group>"; };
 		222A9319203C6DA40068E0D1 /* Photos.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Photos.xcassets; sourceTree = "<group>"; };
 		222A931B203C6E4D0068E0D1 /* Promozione.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Promozione.xib; sourceTree = "<group>"; };
-		222A931E203D72670068E0D1 /* FacebookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
+		222CD7D72051575100A55F47 /* PromozioneStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromozioneStruct.swift; sourceTree = "<group>"; };
 		22419E9C1F1932F400F4735A /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = "Casinò di Venezia/SignInViewController.swift"; sourceTree = "<group>"; };
 		2252541C1F06EFA8005F1FF7 /* MapsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapsViewController.swift; path = "Casinò di Venezia/MapsViewController.swift"; sourceTree = "<group>"; };
 		2252541E1F06F1E0005F1FF7 /* Venezia.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Venezia.gpx; sourceTree = "<group>"; };
@@ -120,6 +130,7 @@
 		22630A1E1F0F98AE00168D1F /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = "Casinò di Venezia/Location.swift"; sourceTree = "<group>"; };
 		22630A241F0FBD9200168D1F /* PersonDetailMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonDetailMapView.xib; sourceTree = "<group>"; };
 		22630A261F0FBDAF00168D1F /* PersonDetailMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailMapView.swift; sourceTree = "<group>"; };
+		22678004204EE82D00435B11 /* CalendarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarImageView.swift; sourceTree = "<group>"; };
 		226B3DE92038A12000520E88 /* Probabilita.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Probabilita.swift; sourceTree = "<group>"; };
 		226B3DEB2038A13100520E88 /* Probabilita.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Probabilita.xib; sourceTree = "<group>"; };
 		226B3DED203ACB2000520E88 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
@@ -139,6 +150,10 @@
 		229AACCB202EFB7800644394 /* heart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heart.json; sourceTree = "<group>"; };
 		229AACCD202F0F9E00644394 /* Cuore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuore.swift; sourceTree = "<group>"; };
 		22A65A07185EF5AE0018FD0C /* Casinò di Venezia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Casinò di Venezia.entitlements"; sourceTree = "<group>"; };
+		22AE94DD204584AC003FA951 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		22AE94DF20458727003FA951 /* Calendario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendario.swift; sourceTree = "<group>"; };
+		22AE94E120485FF3003FA951 /* CalendarioView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarioView.xib; sourceTree = "<group>"; };
+		22AE94E320495529003FA951 /* CalendarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCell.xib; sourceTree = "<group>"; };
 		22C3C300202CAA26004E4145 /* Tornei.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tornei.swift; sourceTree = "<group>"; };
 		22C3C302202D9B53004E4145 /* TorneiDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneiDetails.swift; sourceTree = "<group>"; };
 		22C3C304203473CA004E4145 /* GiochiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiochiCell.swift; sourceTree = "<group>"; };
@@ -162,6 +177,11 @@
 		22E8A907202C68CF000C3CBE /* LoadDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadDatabase.swift; sourceTree = "<group>"; };
 		22E93AE01F0BF8D800675342 /* CasinoAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CasinoAnnotationView.swift; path = "Casinò di Venezia/CasinoAnnotationView.swift"; sourceTree = "<group>"; };
 		22EB73582024A43200759094 /* Quando.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quando.swift; sourceTree = "<group>"; };
+		22EE37B320403D6E00D33D35 /* Promozione.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promozione.swift; sourceTree = "<group>"; };
+		22EE37BE2040512F00D33D35 /* CCSwipBackPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCSwipBackPresentationController.swift; sourceTree = "<group>"; };
+		22EE37BF2040513000D33D35 /* CCZoomAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCZoomAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		22EE37C02040513200D33D35 /* CCZoomTransitioner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCZoomTransitioner.swift; sourceTree = "<group>"; };
+		22EE37C12040513300D33D35 /* CCZoomTransitionVCExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCZoomTransitionVCExtension.swift; sourceTree = "<group>"; };
 		6F7BF60459BDF63750E622B8 /* Pods_Casino__di_Venezia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Casino__di_Venezia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA45BB608DD76C9B8ED16D0E /* Pods-Casinò di VeneziaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Casinò di VeneziaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Casinò di VeneziaTests/Pods-Casinò di VeneziaTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E39FA7C9CB046AA71D005EB0 /* Pods-Casinò di VeneziaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Casinò di VeneziaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Casinò di VeneziaTests/Pods-Casinò di VeneziaTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -232,20 +252,13 @@
 				222A9317203C6D7B0068E0D1 /* Photos.plist */,
 				222A9319203C6DA40068E0D1 /* Photos.xcassets */,
 				222A9315203C6D4E0068E0D1 /* Photo.swift */,
+				22EE37B320403D6E00D33D35 /* Promozione.swift */,
 				222A930F203C6B9B0068E0D1 /* PinterestLayout.swift */,
 				222A9313203C6D220068E0D1 /* AnnotatedPhotoCell.swift */,
 				222A9311203C6C8B0068E0D1 /* Promozioni.swift */,
 				222A931B203C6E4D0068E0D1 /* Promozione.xib */,
 			);
 			name = Promozioni;
-			sourceTree = "<group>";
-		};
-		222A931D203D72430068E0D1 /* Facebook */ = {
-			isa = PBXGroup;
-			children = (
-				222A931E203D72670068E0D1 /* FacebookViewController.swift */,
-			);
-			path = Facebook;
 			sourceTree = "<group>";
 		};
 		22768108202C8E4C009B308C /* Helper */ = {
@@ -265,10 +278,23 @@
 			name = Lottie;
 			sourceTree = "<group>";
 		};
+		22AE94DC2045845D003FA951 /* Calendario */ = {
+			isa = PBXGroup;
+			children = (
+				22AE94DD204584AC003FA951 /* CalendarCell.swift */,
+				22AE94E320495529003FA951 /* CalendarCell.xib */,
+				22AE94DF20458727003FA951 /* Calendario.swift */,
+				22678004204EE82D00435B11 /* CalendarImageView.swift */,
+				22AE94E120485FF3003FA951 /* CalendarioView.xib */,
+			);
+			name = Calendario;
+			sourceTree = "<group>";
+		};
 		22C3C2FF202CAA05004E4145 /* Data structure */ = {
 			isa = PBXGroup;
 			children = (
 				2295839F1EFD13AA00409D7A /* Events.swift */,
+				222CD7D72051575100A55F47 /* PromozioneStruct.swift */,
 				22C3C300202CAA26004E4145 /* Tornei.swift */,
 			);
 			name = "Data structure";
@@ -290,11 +316,12 @@
 				22C3C3082034776F004E4145 /* Giochi.plist */,
 				225254211F06F1E0005F1FF7 /* SanGeremia.gpx */,
 				2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */,
+				22AE94DC2045845D003FA951 /* Calendario */,
 				229AACC8202EF74000644394 /* Lottie */,
 				22768108202C8E4C009B308C /* Helper */,
 				22E8A8FC20289E2E000C3CBE /* View */,
 				2295838D1EFCFDC700409D7A /* AppDelegate.swift */,
-				222A931D203D72430068E0D1 /* Facebook */,
+				22EE37C62040513E00D33D35 /* CCZoomTRansition */,
 				22208DDC1F066F17007DA39D /* Gradient.swift */,
 				2228F76A1F0A41E500F3C94A /* CanvasButton.swift */,
 				22208DDE1F067CBC007DA39D /* GradientInv.swift */,
@@ -423,6 +450,17 @@
 			name = Maps;
 			sourceTree = "<group>";
 		};
+		22EE37C62040513E00D33D35 /* CCZoomTRansition */ = {
+			isa = PBXGroup;
+			children = (
+				22EE37BE2040512F00D33D35 /* CCSwipBackPresentationController.swift */,
+				22EE37BF2040513000D33D35 /* CCZoomAnimatedTransitioning.swift */,
+				22EE37C02040513200D33D35 /* CCZoomTransitioner.swift */,
+				22EE37C12040513300D33D35 /* CCZoomTransitionVCExtension.swift */,
+			);
+			name = CCZoomTRansition;
+			sourceTree = "<group>";
+		};
 		69CAEFE764E8D28F53DE18B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -540,6 +578,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22AE94E220485FF4003FA951 /* CalendarioView.xib in Resources */,
 				222A9318203C6D7B0068E0D1 /* Photos.plist in Resources */,
 				226B3DF0203ACB3100520E88 /* Lato-Light.ttf in Resources */,
 				22D406D62022216C00D71A6F /* Images.xcassets in Resources */,
@@ -552,6 +591,7 @@
 				22630A251F0FBD9200168D1F /* PersonDetailMapView.xib in Resources */,
 				2295839E1EFD02BB00409D7A /* GoogleService-Info.plist in Resources */,
 				22C3C30D203491AC004E4145 /* venicecasinoregular.ttf in Resources */,
+				22AE94E420495529003FA951 /* CalendarCell.xib in Resources */,
 				2295839A1EFCFDC700409D7A /* Main.storyboard in Resources */,
 				22E8A903202C4754000C3CBE /* EventCell.xib in Resources */,
 				222A931C203C6E4D0068E0D1 /* Promozione.xib in Resources */,
@@ -658,6 +698,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -677,6 +718,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -720,14 +762,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				22208DD91F03F268007DA39D /* EventDetails.swift in Sources */,
+				22AE94DE204584AC003FA951 /* CalendarCell.swift in Sources */,
 				222A9314203C6D230068E0D1 /* AnnotatedPhotoCell.swift in Sources */,
 				22208DDB1F06561A007DA39D /* CloseOnScrollDown.swift in Sources */,
 				22C3C301202CAA26004E4145 /* Tornei.swift in Sources */,
+				22678005204EE82D00435B11 /* CalendarImageView.swift in Sources */,
 				229583971EFCFDC700409D7A /* EventListCell.swift in Sources */,
 				22E93AE11F0BF8D800675342 /* CasinoAnnotationView.swift in Sources */,
+				22AE94E020458727003FA951 /* Calendario.swift in Sources */,
 				22C3C303202D9B53004E4145 /* TorneiDetails.swift in Sources */,
 				22630A271F0FBDAF00168D1F /* PersonDetailMapView.swift in Sources */,
 				229AACCE202F0F9E00644394 /* Cuore.swift in Sources */,
+				222CD7D82051575100A55F47 /* PromozioneStruct.swift in Sources */,
 				22208DDF1F067CBC007DA39D /* GradientInv.swift in Sources */,
 				22208DD31F03C1A7007DA39D /* ButtonSpeaking.swift in Sources */,
 				22E8A901202B5BAC000C3CBE /* Sezione.swift in Sources */,
@@ -738,9 +784,12 @@
 				22E8A905202C660F000C3CBE /* TorneiCell.swift in Sources */,
 				22419E9D1F1932F400F4735A /* SignInViewController.swift in Sources */,
 				22630A1F1F0F98AE00168D1F /* Location.swift in Sources */,
+				22EE37C32040513500D33D35 /* CCZoomAnimatedTransitioning.swift in Sources */,
 				22208DCF1EFD50EA007DA39D /* MenuBar.swift in Sources */,
 				2227FF151F13CDDB0032AA30 /* UIView+BezierPaths.swift in Sources */,
+				22EE37B420403D6E00D33D35 /* Promozione.swift in Sources */,
 				222A9310203C6B9B0068E0D1 /* PinterestLayout.swift in Sources */,
+				22EE37C52040513500D33D35 /* CCZoomTransitionVCExtension.swift in Sources */,
 				22C3C30F2035A8D5004E4145 /* GiochiDettaglio.swift in Sources */,
 				226B3DEA2038A12000520E88 /* Probabilita.swift in Sources */,
 				222A9312203C6C8B0068E0D1 /* Promozioni.swift in Sources */,
@@ -753,15 +802,16 @@
 				2228F76B1F0A41E500F3C94A /* CanvasButton.swift in Sources */,
 				22E8A908202C68CF000C3CBE /* LoadDatabase.swift in Sources */,
 				2252541D1F06EFA8005F1FF7 /* MapsViewController.swift in Sources */,
+				22EE37C42040513500D33D35 /* CCZoomTransitioner.swift in Sources */,
 				22C3C3112035DE69004E4145 /* RegolaCell.swift in Sources */,
 				229583A01EFD13AA00409D7A /* Events.swift in Sources */,
-				222A931F203D72670068E0D1 /* FacebookViewController.swift in Sources */,
 				22899D8D201A00EE000CDE7E /* CMVLogInFirebaseUI.swift in Sources */,
 				22EB73592024A43200759094 /* Quando.swift in Sources */,
 				2227D59F1F0A78B500F09669 /* CircularTransition.swift in Sources */,
 				22208DD71F03E61C007DA39D /* ExpandAnimator.swift in Sources */,
 				22D406DB202328DF00D71A6F /* Dove.swift in Sources */,
 				221DCEB5203A0D1B0013BBC6 /* PopUp.swift in Sources */,
+				22EE37C22040513500D33D35 /* CCSwipBackPresentationController.swift in Sources */,
 				2276810A202C8E61009B308C /* VideoLuncher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

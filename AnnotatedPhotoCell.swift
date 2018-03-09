@@ -33,22 +33,22 @@ import UIKit
 class AnnotatedPhotoCell: UICollectionViewCell {
   
   @IBOutlet fileprivate weak var containerView: UIView!
-  @IBOutlet fileprivate weak var imageView: UIImageView!
-  @IBOutlet fileprivate weak var captionLabel: UILabel!
+  @IBOutlet  weak var imageView: UIImageView!
+  @IBOutlet  weak var captionLabel: UILabel!
   @IBOutlet fileprivate weak var commentLabel: UILabel!
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    containerView.layer.cornerRadius = 6
-    containerView.layer.masksToBounds = true
+    //containerView.layer.cornerRadius = 6
+    //containerView.layer.masksToBounds = true
   }
   
-  var photo: Photo? {
+  var promo: PromozioneStruct? {
     didSet {
-      if let photo = photo {
-        imageView.image = photo.image
-        captionLabel.text = photo.caption
-        commentLabel.text = photo.comment
+      if let promo = promo {
+        imageView.sd_setImage(with: URL(string: promo.image), placeholderImage: UIImage(named: "sediciNoni"))
+        captionLabel.text = promo.Name
+        commentLabel.text = promo.Descrizione
       }
     }
   }
