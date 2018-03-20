@@ -95,7 +95,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="331" height="45"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="anno" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1z-27-eyL">
-                                                <rect key="frame" x="15" y="2" width="50" height="15"/>
+                                                <rect key="frame" x="15" y="4" width="50" height="15"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="15" id="5N4-fW-2H0"/>
                                                     <constraint firstAttribute="width" constant="50" id="RLC-UE-wRz"/>
@@ -105,7 +105,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Mese" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZk-cV-hYq">
-                                                <rect key="frame" x="15" y="19" width="100" height="24"/>
+                                                <rect key="frame" x="15" y="21" width="100" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="UDn-8f-MNH"/>
                                                     <constraint firstAttribute="height" constant="24" id="k0B-Iy-UtV"/>
@@ -121,7 +121,7 @@
                                             <constraint firstItem="gZk-cV-hYq" firstAttribute="top" secondItem="Q1z-27-eyL" secondAttribute="bottom" constant="2" id="gL4-wp-e58"/>
                                             <constraint firstItem="gZk-cV-hYq" firstAttribute="leading" secondItem="Q1z-27-eyL" secondAttribute="leading" id="gff-tf-Qof"/>
                                             <constraint firstAttribute="height" constant="45" id="s8l-k2-7IR"/>
-                                            <constraint firstItem="Q1z-27-eyL" firstAttribute="top" secondItem="XNx-Iz-JvT" secondAttribute="top" constant="2" id="yOs-vf-nVH"/>
+                                            <constraint firstItem="Q1z-27-eyL" firstAttribute="top" secondItem="XNx-Iz-JvT" secondAttribute="top" constant="4" id="yOs-vf-nVH"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qXh-bX-hxc">

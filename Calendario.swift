@@ -90,17 +90,7 @@ class Calendario: UICollectionViewCell {
         
     }
     func creaListaGiorni() {
-        if let keyWindow = UIApplication.shared.keyWindow {
-            if isIPhoneX() {
-                let margine:CGFloat = 15.0
-                let height = keyWindow.frame.height - 88 - 50 - 45 - 20 - 80 - margine
-                altezzaCalendario.constant = height
-                margineTop.constant = margine
-            } else {
-                let height = keyWindow.frame.height - 64 - 50 - 45 - 20 - 80
-                altezzaCalendario.constant = height
-            }
-        }
+        
         let lunedi = formatter.date(from: "01 01 2018")
         formatter.dateFormat = "E"
         lun.text = formatter.string(from: lunedi!)

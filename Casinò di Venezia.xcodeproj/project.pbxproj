@@ -59,6 +59,9 @@
 		22AE94E020458727003FA951 /* Calendario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE94DF20458727003FA951 /* Calendario.swift */; };
 		22AE94E220485FF4003FA951 /* CalendarioView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE94E120485FF3003FA951 /* CalendarioView.xib */; };
 		22AE94E420495529003FA951 /* CalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22AE94E320495529003FA951 /* CalendarCell.xib */; };
+		22B134E0206116DB00B20F62 /* MainHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B134DF206116DB00B20F62 /* MainHome.swift */; };
+		22B134E22061184800B20F62 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 22B134E12061184800B20F62 /* MainView.xib */; };
+		22B134E4206157C400B20F62 /* MarqueeLabelSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B134E3206157C400B20F62 /* MarqueeLabelSwift.swift */; };
 		22C3C301202CAA26004E4145 /* Tornei.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3C300202CAA26004E4145 /* Tornei.swift */; };
 		22C3C303202D9B53004E4145 /* TorneiDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3C302202D9B53004E4145 /* TorneiDetails.swift */; };
 		22C3C305203473CA004E4145 /* GiochiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C3C304203473CA004E4145 /* GiochiCell.swift */; };
@@ -154,6 +157,9 @@
 		22AE94DF20458727003FA951 /* Calendario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calendario.swift; sourceTree = "<group>"; };
 		22AE94E120485FF3003FA951 /* CalendarioView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarioView.xib; sourceTree = "<group>"; };
 		22AE94E320495529003FA951 /* CalendarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCell.xib; sourceTree = "<group>"; };
+		22B134DF206116DB00B20F62 /* MainHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHome.swift; sourceTree = "<group>"; };
+		22B134E12061184800B20F62 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		22B134E3206157C400B20F62 /* MarqueeLabelSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarqueeLabelSwift.swift; sourceTree = "<group>"; };
 		22C3C300202CAA26004E4145 /* Tornei.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tornei.swift; sourceTree = "<group>"; };
 		22C3C302202D9B53004E4145 /* TorneiDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TorneiDetails.swift; sourceTree = "<group>"; };
 		22C3C304203473CA004E4145 /* GiochiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiochiCell.swift; sourceTree = "<group>"; };
@@ -402,6 +408,7 @@
 		22E8A8FC20289E2E000C3CBE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				22B134E3206157C400B20F62 /* MarqueeLabelSwift.swift */,
 				22208DCE1EFD50EA007DA39D /* MenuBar.swift */,
 				226B3DE92038A12000520E88 /* Probabilita.swift */,
 				221DCEB4203A0D1B0013BBC6 /* PopUp.swift */,
@@ -417,6 +424,8 @@
 				22208DD81F03F268007DA39D /* EventDetails.swift */,
 				22C3C302202D9B53004E4145 /* TorneiDetails.swift */,
 				229583901EFCFDC700409D7A /* EventListCell.swift */,
+				22B134DF206116DB00B20F62 /* MainHome.swift */,
+				22B134E12061184800B20F62 /* MainView.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -599,6 +608,7 @@
 				22C3C307203474C7004E4145 /* GiochiCell.xib in Resources */,
 				226B3DF2203ACB3900520E88 /* Lato-Hairline.ttf in Resources */,
 				225254251F06F1E0005F1FF7 /* SanGeremia.gpx in Resources */,
+				22B134E22061184800B20F62 /* MainView.xib in Resources */,
 				226B3DEC2038A13100520E88 /* Probabilita.xib in Resources */,
 				22C3C3092034776F004E4145 /* Giochi.plist in Resources */,
 			);
@@ -699,6 +709,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/Pageboy/Pageboy.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -719,6 +730,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pageboy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -774,6 +786,7 @@
 				22630A271F0FBDAF00168D1F /* PersonDetailMapView.swift in Sources */,
 				229AACCE202F0F9E00644394 /* Cuore.swift in Sources */,
 				222CD7D82051575100A55F47 /* PromozioneStruct.swift in Sources */,
+				22B134E4206157C400B20F62 /* MarqueeLabelSwift.swift in Sources */,
 				22208DDF1F067CBC007DA39D /* GradientInv.swift in Sources */,
 				22208DD31F03C1A7007DA39D /* ButtonSpeaking.swift in Sources */,
 				22E8A901202B5BAC000C3CBE /* Sezione.swift in Sources */,
@@ -788,6 +801,7 @@
 				22208DCF1EFD50EA007DA39D /* MenuBar.swift in Sources */,
 				2227FF151F13CDDB0032AA30 /* UIView+BezierPaths.swift in Sources */,
 				22EE37B420403D6E00D33D35 /* Promozione.swift in Sources */,
+				22B134E0206116DB00B20F62 /* MainHome.swift in Sources */,
 				222A9310203C6B9B0068E0D1 /* PinterestLayout.swift in Sources */,
 				22EE37C52040513500D33D35 /* CCZoomTransitionVCExtension.swift in Sources */,
 				22C3C30F2035A8D5004E4145 /* GiochiDettaglio.swift in Sources */,

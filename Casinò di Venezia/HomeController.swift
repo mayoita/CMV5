@@ -28,6 +28,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     let cellGiochi = "giochiCell"
     let cellPromo = "Promozione"
     let cellCal = "Calendario"
+    let cellHome = "MainView"
     let appDelegate = UIApplication.shared.delegate
         as! AppDelegate
     let titoli = ["EVENTI".localized, "TORNEI".localized, "GIOCHI".localized, "PROMOZIONI".localized,"CALENDARIO".localized,"Slot".localized]
@@ -50,7 +51,6 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     override func viewDidLoad() {
         super.viewDidLoad()
         //navigationItem.title = "  Home".localized
-        //self.collectionView?.contentInset = UIEdgeInsetsMake(44, 0, 0, 0)
         
         let titleLabel = UILabel(frame: CGRect(x: 0,y: 0,width: view.frame.width - 32,height:  view.frame.height))
         titleLabel.text = titoli[0]
@@ -72,13 +72,19 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         }
         collectionView?.isPagingEnabled = true
         collectionView?.backgroundColor = UIColor.white
-        collectionView?.contentInset = UIEdgeInsetsMake(50, 0, 0, 0)
+        if isIPhoneX() {
+            collectionView?.contentInset = UIEdgeInsetsMake(80, 0, 0, 0)
+        } else {
+            collectionView?.contentInset = UIEdgeInsetsMake(44, 0, 0, 0)
+        }
+        
         collectionView?.scrollIndicatorInsets = UIEdgeInsetsMake(50, 0, 0, 0)
         collectionView?.register(Sezione.self, forCellWithReuseIdentifier: cellId)
         collectionView?.register(TorneiCell.self, forCellWithReuseIdentifier: cellIdTornei)
         collectionView?.register(GiochiCell.self, forCellWithReuseIdentifier: cellGiochi)
         collectionView?.register(Promozioni.self, forCellWithReuseIdentifier: cellPromo)
         collectionView?.register(UINib(nibName: "CalendarioView", bundle: nil), forCellWithReuseIdentifier: cellCal)
+        collectionView?.register(UINib(nibName: "MainView", bundle: nil), forCellWithReuseIdentifier: cellHome)
        // collectionView?.register(Calendario.self, forCellWithReuseIdentifier: cellCal)
     }
     
@@ -183,7 +189,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         } else if indexPath.item == 4 {
             identifier = cellCal
         } else {
-            identifier = cellId
+            identifier = cellHome
         }
         
         let cell = collectionView.dequeueReusableCell( withReuseIdentifier: identifier,  for: indexPath)

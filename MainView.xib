@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainView" id="iL4-ro-Kws" customClass="MainHome" customModule="Casino__di_Venezia" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="441" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="441" height="568"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ve" translatesAutoresizingMaskIntoConstraints="NO" id="N5V-mc-qXe">
+                        <rect key="frame" x="0.0" y="0.0" width="441" height="248"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="N5V-mc-qXe" secondAttribute="height" multiplier="16:9" id="MIz-6g-q2L"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cn" translatesAutoresizingMaskIntoConstraints="NO" id="qAB-R8-F5F">
+                        <rect key="frame" x="0.0" y="248" width="441" height="248"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="qAB-R8-F5F" secondAttribute="height" multiplier="16:9" id="AQY-g0-sSh"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bP6-35-ga5" customClass="MarqueeLabelSwift" customModule="Casino__di_Venezia" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="498" width="441" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="og8-bn-cZj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bP6-35-ga5" firstAttribute="leading" secondItem="iL4-ro-Kws" secondAttribute="leading" id="18M-zj-YfG"/>
+                <constraint firstItem="qAB-R8-F5F" firstAttribute="leading" secondItem="iL4-ro-Kws" secondAttribute="leading" id="1VI-hD-4Vv"/>
+                <constraint firstAttribute="trailing" secondItem="N5V-mc-qXe" secondAttribute="trailing" id="6ur-dY-t5p"/>
+                <constraint firstItem="N5V-mc-qXe" firstAttribute="top" secondItem="iL4-ro-Kws" secondAttribute="top" id="KA1-9M-fx7"/>
+                <constraint firstAttribute="trailing" secondItem="bP6-35-ga5" secondAttribute="trailing" id="Upv-c5-Ith"/>
+                <constraint firstItem="qAB-R8-F5F" firstAttribute="top" secondItem="N5V-mc-qXe" secondAttribute="bottom" id="XzL-F9-WKr"/>
+                <constraint firstItem="bP6-35-ga5" firstAttribute="top" secondItem="qAB-R8-F5F" secondAttribute="bottom" constant="2" id="mqN-VS-Wyc"/>
+                <constraint firstAttribute="trailing" secondItem="qAB-R8-F5F" secondAttribute="trailing" id="roJ-uh-SiX"/>
+                <constraint firstItem="N5V-mc-qXe" firstAttribute="leading" secondItem="iL4-ro-Kws" secondAttribute="leading" id="sB0-Mr-JT5"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fON-aG-Z7g"/>
+            <size key="customSize" width="441" height="568"/>
+            <connections>
+                <outlet property="feedNews" destination="bP6-35-ga5" id="fhf-HG-dSf"/>
+            </connections>
+            <point key="canvasLocation" x="-175.5" y="0.0"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cn" width="1600" height="900"/>
+        <image name="ve" width="1600" height="900"/>
+    </resources>
+</document>
