@@ -53,6 +53,7 @@
 		2295839B1EFCFDC700409D7A /* sediciNoni.png in Resources */ = {isa = PBXBuildFile; fileRef = 229583941EFCFDC700409D7A /* sediciNoni.png */; };
 		2295839E1EFD02BB00409D7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */; };
 		229583A01EFD13AA00409D7A /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2295839F1EFD13AA00409D7A /* Events.swift */; };
+		2297374520617B1D004A553F /* SedeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2297374420617B1D004A553F /* SedeController.swift */; };
 		229AACCC202EFB7800644394 /* heart.json in Resources */ = {isa = PBXBuildFile; fileRef = 229AACCB202EFB7800644394 /* heart.json */; };
 		229AACCE202F0F9E00644394 /* Cuore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229AACCD202F0F9E00644394 /* Cuore.swift */; };
 		22AE94DE204584AC003FA951 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AE94DD204584AC003FA951 /* CalendarCell.swift */; };
@@ -150,6 +151,7 @@
 		229583941EFCFDC700409D7A /* sediciNoni.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sediciNoni.png; path = "Casinò di Venezia/sediciNoni.png"; sourceTree = "<group>"; };
 		2295839D1EFD02BB00409D7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2295839F1EFD13AA00409D7A /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Events.swift; path = "Casinò di Venezia/Events.swift"; sourceTree = "<group>"; };
+		2297374420617B1D004A553F /* SedeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SedeController.swift; sourceTree = "<group>"; };
 		229AACCB202EFB7800644394 /* heart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heart.json; sourceTree = "<group>"; };
 		229AACCD202F0F9E00644394 /* Cuore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuore.swift; sourceTree = "<group>"; };
 		22A65A07185EF5AE0018FD0C /* Casinò di Venezia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Casinò di Venezia.entitlements"; sourceTree = "<group>"; };
@@ -426,6 +428,7 @@
 				229583901EFCFDC700409D7A /* EventListCell.swift */,
 				22B134DF206116DB00B20F62 /* MainHome.swift */,
 				22B134E12061184800B20F62 /* MainView.xib */,
+				2297374420617B1D004A553F /* SedeController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -796,6 +799,7 @@
 				22D406D82023281F00D71A6F /* StyleKit.swift in Sources */,
 				22E8A905202C660F000C3CBE /* TorneiCell.swift in Sources */,
 				22419E9D1F1932F400F4735A /* SignInViewController.swift in Sources */,
+				2297374520617B1D004A553F /* SedeController.swift in Sources */,
 				22630A1F1F0F98AE00168D1F /* Location.swift in Sources */,
 				22EE37C32040513500D33D35 /* CCZoomAnimatedTransitioning.swift in Sources */,
 				22208DCF1EFD50EA007DA39D /* MenuBar.swift in Sources */,

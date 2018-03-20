@@ -11,7 +11,18 @@ import Firebase
 import MarqueeLabel
 class MainHome: UICollectionViewCell {
 
-
+let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    @IBAction func apriVE(_ sender: Any) {
+        let mapVC = storyboard.instantiateViewController(withIdentifier: "MapView") as! MapsViewController
+        mapVC.sediNome = ["VE"]
+        
+        //mapVC.transitioningDelegate = self
+        //mapVC.modalPresentationStyle = .custom
+        if let keyWindow = UIApplication.shared.keyWindow?.rootViewController {
+            keyWindow.present(mapVC, animated: true, completion: nil)
+        }
+        
+    }
     
     @IBOutlet weak var feedNews: MarqueeLabel!
     var databaseRef:DatabaseReference  = Database.database().reference()
@@ -59,5 +70,11 @@ class MainHome: UICollectionViewCell {
             continuousLabel2.isPaused ? continuousLabel2.unpauseLabel() : continuousLabel2.pauseLabel()
         }
     }
-
+    @IBAction func callVE(_ sender: Any) {
+        if let url = URL(string:"tel://0415297111"), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
+    
 }
