@@ -29,7 +29,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sediciNoni.png" translatesAutoresizingMaskIntoConstraints="NO" id="kAx-bd-amr">
-                        <rect key="frame" x="0.0" y="0.0" width="319" height="138"/>
+                        <rect key="frame" x="2" y="2" width="315" height="136"/>
                         <color key="backgroundColor" red="0.058823529409999999" green="0.79215686269999996" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titolo" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYy-1Z-RfM">
@@ -38,8 +38,10 @@
                             <constraint firstAttribute="height" constant="21" id="Jxp-Zh-Ml6"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="VeniceCasino-Regular" family="VeniceCasino" pointSize="18"/>
-                        <color key="textColor" red="0.51539540289999997" green="0.45661699770000003" blue="0.32175162429999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         <nil key="highlightedColor"/>
+                        <color key="shadowColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <size key="shadowOffset" width="1" height="0.0"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="intro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qr-Kt-yu4">
                         <rect key="frame" x="16" y="164" width="255" height="21"/>
@@ -47,12 +49,14 @@
                             <constraint firstAttribute="height" constant="21" id="MQO-Mj-dvk"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="14"/>
-                        <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <size key="shadowOffset" width="1" height="0.0"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A8L-9A-VeV" customClass="Dove" customModule="Casino__di_Venezia" customModuleProvider="target">
                         <rect key="frame" x="16" y="190" width="25" height="25"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.75172939559999996" green="0.67124587079999998" blue="0.47308970700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="QCN-Rb-huA"/>
                             <constraint firstAttribute="width" constant="25" id="Zgr-yR-ncQ"/>
@@ -60,7 +64,7 @@
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ea7-63-BVg" customClass="Quando" customModule="Casino__di_Venezia" customModuleProvider="target">
                         <rect key="frame" x="171" y="190" width="25" height="25"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.75172939559999996" green="0.67124587079999998" blue="0.47308970700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="7D6-0N-1gd"/>
                             <constraint firstAttribute="height" constant="25" id="DjX-wQ-YH1"/>
@@ -73,8 +77,10 @@
                             <constraint firstAttribute="height" constant="21" id="pUN-LR-8w0"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <size key="shadowOffset" width="1" height="0.0"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpT-dN-USl">
                         <rect key="frame" x="201" y="190" width="97" height="21"/>
@@ -82,8 +88,10 @@
                             <constraint firstAttribute="height" constant="21" id="ewP-Uu-ts8"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <color key="textColor" red="0.66267138719558716" green="0.66278749704360962" blue="0.66266411542892456" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" white="1" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <size key="shadowOffset" width="1" height="0.0"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ciG-J5-hoU" customClass="SpringButton" customModule="Spring">
                         <rect key="frame" x="276" y="143" width="35" height="35"/>
@@ -107,15 +115,25 @@
                             <action selector="micro_speaking:" destination="GDo-Bt-uY6" eventType="touchUpInside" id="iEC-Vm-7mI"/>
                         </connections>
                     </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DQG-hS-7eg">
+                        <rect key="frame" x="2" y="216" width="315" height="2"/>
+                        <color key="backgroundColor" red="0.51764705879999995" green="0.45882352939999999" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="tpq-tX-grO"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
+            <color key="backgroundColor" red="0.75172939559999996" green="0.67124587079999998" blue="0.47308970700000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="ciG-J5-hoU" firstAttribute="leading" secondItem="wYy-1Z-RfM" secondAttribute="trailing" constant="5" id="4dM-rj-Eev"/>
-                <constraint firstAttribute="trailing" secondItem="kAx-bd-amr" secondAttribute="trailing" id="91I-ci-AkT"/>
+                <constraint firstAttribute="trailing" secondItem="kAx-bd-amr" secondAttribute="trailing" constant="2" id="91I-ci-AkT"/>
                 <constraint firstItem="A8L-9A-VeV" firstAttribute="leading" secondItem="3qr-Kt-yu4" secondAttribute="leading" id="CdQ-Vw-zbW"/>
                 <constraint firstItem="bpT-dN-USl" firstAttribute="leading" secondItem="Ea7-63-BVg" secondAttribute="trailing" constant="5" id="FNS-Hj-0v8"/>
-                <constraint firstItem="kAx-bd-amr" firstAttribute="top" secondItem="GDo-Bt-uY6" secondAttribute="top" id="Hnp-HH-IB4"/>
+                <constraint firstItem="DQG-hS-7eg" firstAttribute="leading" secondItem="GDo-Bt-uY6" secondAttribute="leading" constant="2" id="GXs-Zf-eWd"/>
+                <constraint firstItem="kAx-bd-amr" firstAttribute="top" secondItem="GDo-Bt-uY6" secondAttribute="top" constant="2" id="Hnp-HH-IB4"/>
                 <constraint firstItem="ciG-J5-hoU" firstAttribute="leading" secondItem="3qr-Kt-yu4" secondAttribute="trailing" constant="5" id="JKZ-9Y-Y25"/>
+                <constraint firstAttribute="trailing" secondItem="DQG-hS-7eg" secondAttribute="trailing" constant="2" id="Jt8-0r-c9d"/>
                 <constraint firstItem="Lch-sS-stu" firstAttribute="leading" secondItem="A8L-9A-VeV" secondAttribute="trailing" constant="5" id="KMv-Ta-czj"/>
                 <constraint firstItem="bpT-dN-USl" firstAttribute="leading" secondItem="Ea7-63-BVg" secondAttribute="trailing" constant="5" id="PAC-3f-hec"/>
                 <constraint firstItem="Ea7-63-BVg" firstAttribute="leading" secondItem="Lch-sS-stu" secondAttribute="trailing" constant="5" id="PNC-MV-uaT"/>
@@ -124,11 +142,12 @@
                 <constraint firstItem="Ea7-63-BVg" firstAttribute="top" secondItem="A8L-9A-VeV" secondAttribute="top" id="VTl-ap-IVx"/>
                 <constraint firstItem="wYy-1Z-RfM" firstAttribute="leading" secondItem="GDo-Bt-uY6" secondAttribute="leadingMargin" id="Wij-f1-Lh9"/>
                 <constraint firstItem="ciG-J5-hoU" firstAttribute="top" secondItem="kAx-bd-amr" secondAttribute="bottom" constant="5" id="XWu-lS-LHr"/>
-                <constraint firstItem="kAx-bd-amr" firstAttribute="leading" secondItem="GDo-Bt-uY6" secondAttribute="leading" id="YBH-hc-QSh"/>
+                <constraint firstItem="kAx-bd-amr" firstAttribute="leading" secondItem="GDo-Bt-uY6" secondAttribute="leading" constant="2" id="YBH-hc-QSh"/>
                 <constraint firstItem="Ea7-63-BVg" firstAttribute="leading" secondItem="Lch-sS-stu" secondAttribute="trailing" constant="5" id="d3f-ky-pjc"/>
                 <constraint firstAttribute="trailing" secondItem="ciG-J5-hoU" secondAttribute="trailing" constant="8" id="eiG-zA-ldg"/>
                 <constraint firstAttribute="trailingMargin" secondItem="bpT-dN-USl" secondAttribute="trailing" constant="5" id="fCC-qA-PLo"/>
                 <constraint firstAttribute="bottomMargin" secondItem="A8L-9A-VeV" secondAttribute="bottom" constant="5" id="i3e-u9-W4V"/>
+                <constraint firstAttribute="bottom" secondItem="DQG-hS-7eg" secondAttribute="bottom" constant="2" id="i6G-gB-vBi"/>
                 <constraint firstItem="Lch-sS-stu" firstAttribute="top" secondItem="A8L-9A-VeV" secondAttribute="top" id="iVM-Rb-HwB"/>
                 <constraint firstItem="3qr-Kt-yu4" firstAttribute="top" secondItem="wYy-1Z-RfM" secondAttribute="bottom" id="keJ-IK-af0"/>
                 <constraint firstItem="wYy-1Z-RfM" firstAttribute="top" secondItem="kAx-bd-amr" secondAttribute="bottom" constant="5" id="lnU-Vn-604"/>

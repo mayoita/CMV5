@@ -30,7 +30,8 @@ class PersonDetailMapView: UIView {
         
     
         // appearance
-        backgroundContentButton.applyArrowDialogAppearanceWithOrientation(arrowOrientation: .down)
+         backgroundContentButton.applyArrowDialogAppearanceWithOrientation(arrowOrientation: .down)
+        seeDetailsButton.setTitle("Ottieni indicazioni".localized, for: .normal)
        
     }
     

@@ -1,14 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   SediList.plist
-   Casinò di Venezia
-
-   Created by Massimo Moro on 21/03/18.
-   Copyright (c) 2018 Casinò di Venezia SPA. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<array>
+	<dict>
+		<key>titolo</key>
+		<string>CA&apos;VENDRAMIN CALERGI</string>
+		<key>storia</key>
+		<string>Il cuore del Casinò di Venezia batte sul Canal Grande a Ca&apos; Vendramin Calergi, il sofisticato teatro dei giochi più classici. Nato nel 1638, il Casinò di Venezia si è subito affermato come centro di intrattenimento dalla notorietà internazionale e a partire dagli anni Cinquanta del Novecento si è trasferito in questa sede.
+
+Perfetto esempio di stile patrizio rinascimentale, residenza di dogi e ultima dimora di Richard Wagner, Ca&apos; Vendramin Calergi è uno dei più eleganti palazzi che si affacciano sul Canal Grande.
+
+L’intrattenimento proposto al Casinò di Venezia è davvero unico. Al suo interno un&apos;offerta di gioco completa, dai tavoli francesi a quelli americani e alle più spettacolari slot machines, ma anche il rinomato Ristorante Wagner, che occupa le sale colorate del Palazzo, il Salone delle feste al piano nobile e l’incantevole giardino con affaccio proprio sul Canal Grande.
+
+A Ca’ Vendramin Calergi si trovano Roulette Francese, Fair Roulette, Chemin de Fer, Black Jack, Caribbean Poker, Punto Banco, slot machines. Nel corso dell’anno campionati internazionali di Chemin de fer e le gare di Roulette francese.</string>
+		<key>telefono</key>
+		<string>0415297111</string>
+		<key>immagine</key>
+		<string>ve.jpg</string>
+		<key>orari</key>
+		<string>11:00 - 2:45</string>
+		<key>sede</key>
+		<string>VE</string>
+		<key>aperto1</key>
+		<string>Dal lunedì al venerdì</string>
+		<key>aperto2</key>
+		<string>sabto e prefestivi</string>
+		<key>orari2</key>
+		<string>11:00 - 3:15</string>
+	</dict>
+	<dict>
+		<key>titolo</key>
+		<string>CA&apos;NOGHERA</string>
+		<key>storia</key>
+		<string>Nel 1999, vicino all&apos;aeroporto Marco Polo, è nato Ca&apos; Noghera, il primo Casinò all&apos;americana in Italia.
+
+Facilmente accessibile in auto dalle direttrici più importanti del nord-est d’Italia, è una moderna struttura di oltre 5000 mq con un parco slot da 600 macchine e l’offerta giochi più innovativi. Una sala tavoli da 1000 mq offre il meglio dei giochi americani (Fair Roulette, Black Jack e Poker). Ora anche un’offerta importante di Punto Banco e un tocco di gioco francese con l’arrivo dello Chemin de Fer e della Roulette Francese. 
+
+Nella nuovissima sala San Marco, uno spazio totalmente rinnovato di oltre 1000 mq, è possibile giocare a Fair Roulette, Black Jack, Caribbean Poker, Punto banco, Roulette Francese, Chemin de fer. L’offerta dei giochi elettronici conta oltre 600 slot machines di ultima generazione.
+
+È possibile giocare a Fair Roulette, Black Jack, Caribbean Poker, Punto banco, Roulette Francese, Chemin de fer e un parco di oltre 600 slot machines di ultima generazione.
+
+E per i visitatori che cercano un intrattenimento completo concerti, eventi, promozioni e una proposta completa di ristorazione.</string>
+		<key>telefono</key>
+		<string>0412695888</string>
+		<key>immagine</key>
+		<string>cn.jpg</string>
+		<key>orari</key>
+		<string>11:00 - 3:15</string>
+		<key>sede</key>
+		<string>CN</string>
+		<key>aperto1</key>
+		<string>Dal lunedì al venerdì</string>
+		<key>aperto2</key>
+		<string>sabto e prefestivi</string>
+		<key>orari2</key>
+		<string>11:00 - 3:45</string>
+	</dict>
+</array>
 </plist>

@@ -200,6 +200,20 @@ class LoadDatabase: NSObject {
         })
         
     }
+    func loadFestivita(completion:  @escaping ([String]) -> ()){
+        let events = databaseRef.child("Festivita")
+        events.observe(.value, with: {(eventsSnapshot)in
+            let eventsDictionary = eventsSnapshot.value as! NSDictionary
+            var feedArrayHelper:[String] = []
+           
+            for(p) in eventsDictionary {
+                let events = p.value as! String
+                feedArrayHelper.append(events)
+            }
+            completion(feedArrayHelper)
+        })
+        
+    }
     func getLocale() -> String {
         var locale = ""
         if appDelegate.locale?.languageCode != "en" {

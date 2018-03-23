@@ -7,15 +7,52 @@
 //
 
 import UIKit
+protocol AnnotazioneDelegate: class {
+    func detailsRequestedForPerson(person: Location)
+}
 
 class Annotazione: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    // outlets
+    @IBOutlet weak var backgroundContentButton: UIButton!
+
+    @IBOutlet weak var seeDetailsButton: UIButton!
+    
+    // data
+    var person: Location!
+    weak var delegate: AnnotazioneDelegate?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        
+        // appearance
+        backgroundContentButton.applyArrowDialogAppearanceWithOrientation(arrowOrientation: .down)
+        seeDetailsButton.setTitle("Ottieni indicazioni".localized, for: .normal)
+        
     }
-    */
+    
+    @IBAction func seeDetails(_ sender: Any) {
+        delegate?.detailsRequestedForPerson(person: person)
+    }
+    
+    func configureWithPerson(person: Location) {
+        self.person = person
+
+    }
+    
+    
+    // MARK: - Hit test. We need to override this to detect hits in our custom callout.
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        // Check if it hit our annotation detail view components.
+        
+        // details button
+        if let result = seeDetailsButton.hitTest(convert(point, to: seeDetailsButton), with: event) {
+            return result
+        }
+        
+        // fallback to our background content view
+        return backgroundContentButton.hitTest(convert(point, to: backgroundContentButton), with: event)
+    }
 
 }

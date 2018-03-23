@@ -1077,7 +1077,7 @@ open class MarqueeLabel: UILabel, CAAnimationDelegate {
             
             // Create animation for color change
             let colorAnimation = GradientSetupAnimation(keyPath: "colors")
-            colorAnimation.fromValue = gradientMask.colors
+            colorAnimation.fromValue = UIColor.red.cgColor
             colorAnimation.toValue = adjustedColors
             colorAnimation.fillMode = kCAFillModeForwards
             colorAnimation.isRemovedOnCompletion = false

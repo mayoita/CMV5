@@ -60,7 +60,7 @@ class EventListCell: UICollectionViewCell {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-       backgroundColor = .white
+       
         
         
     }

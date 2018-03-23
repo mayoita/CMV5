@@ -24,6 +24,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
     var rightView:UIView = UIView()
     var imageViewRight:UIImageView = UIImageView()
     let cellId = "cellId"
+    let cellIdHome = "cellIdHome"
     let cellIdTornei = "cellIdTornei"
     let cellGiochi = "giochiCell"
     let cellPromo = "Promozione"
@@ -83,6 +84,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         collectionView?.register(TorneiCell.self, forCellWithReuseIdentifier: cellIdTornei)
         collectionView?.register(GiochiCell.self, forCellWithReuseIdentifier: cellGiochi)
         collectionView?.register(Promozioni.self, forCellWithReuseIdentifier: cellPromo)
+        collectionView?.register(SezioneHome.self, forCellWithReuseIdentifier: cellIdHome)
         collectionView?.register(UINib(nibName: "CalendarioView", bundle: nil), forCellWithReuseIdentifier: cellCal)
         collectionView?.register(UINib(nibName: "MainView", bundle: nil), forCellWithReuseIdentifier: cellHome)
        // collectionView?.register(Calendario.self, forCellWithReuseIdentifier: cellCal)
@@ -189,7 +191,7 @@ class HomeController: UICollectionViewController, UICollectionViewDelegateFlowLa
         } else if indexPath.item == 4 {
             identifier = cellCal
         } else {
-            identifier = cellHome
+            identifier = cellIdHome
         }
         
         let cell = collectionView.dequeueReusableCell( withReuseIdentifier: identifier,  for: indexPath)

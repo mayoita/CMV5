@@ -51,6 +51,17 @@ struct giochiDB: Codable {
     var regola: [[String: String]]
     var orari: String
 }
+struct sediDB: Codable {
+    var immagine: String
+    var titolo: String
+    var telefono: String
+    var storia: String
+    var orari: String
+    var sede: String
+    var orari2: String
+    var aperto1: String
+    var aperto2: String
+}
 
 
 extension String {

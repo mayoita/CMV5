@@ -36,7 +36,7 @@ class EventDetails: UIViewController, UIViewControllerTransitioningDelegate, CAA
         super.viewDidLoad()
        
         titolo.font = UIFont(name: "VeniceCasino-Regular", size: 22)
-        titolo.textColor = StyleKit.oro
+       
         
         map.setImage(StyleKit.imageOfIconaDove(imageSize: CGSize(width: 25, height: 25), color: StyleKit.bianco), for: .normal)
         if  defaults.bool(forKey: suffissoBOOL + event.Name)  {
